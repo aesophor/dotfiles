@@ -1,0 +1,39 @@
+! URxvt settings
+! ============================================================
+URxvt.depth:                32
+URxvt.geometry:             90x30
+URxvt.transparent:          true
+URxvt.shading:		    15
+URxvt.fading:               0
+URxvt.loginShell:           true
+URxvt.saveLines:            500
+URxvt.internalBorder:       1
+URxvt.lineSpace:            2
+URxvt.letterSpace:          0
+
+URxvt.allow_bold:           true
+URxvt*font:                 xft:TamzenForPowerline:pixelsize=16
+URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=16
+
+URxvt.scrollStyle:          rxvt
+URxvt.scrollBar:            false
+
+URxvt.perl-ext-common:      default,matcher
+URxvt.matcher.button:       1
+URxvt.urlLauncher:          /usr/bin/chromium-browser
+
+URxvt.cursorBlink:          false
+URxvt.cursorUnderline:      true
+URxvt.pointerBlank:         true
+
+
+
+URxvt.keysym.C-Up:       perl:font-size:increase
+URxvt.keysym.C-Down:     perl:font-size:decrease
+URxvt.keysym.C-S-Up:     perl:font-size:incglobal
+URxvt.keysym.C-S-Down:   perl:font-size:decglobal
+
+URxvt.keysym.C-Up:       perl:font-size:increase
+URxvt.keysym.C-Down:     perl:font-size:decrease
+URxvt.keysym.C-S-Up:     perl:font-size:incglobal
+URxvt.keysym.C-S-Down:   perl:font-size:decglobal

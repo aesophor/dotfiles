@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# storage
+# 
+# Get the percentage of current disk usage.
+
+df | grep /dev/mapper/vgcrypt-home | awk '{printf("%d\%", $3*100/$2);}'

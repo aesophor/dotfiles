@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+MUTED="$(amixer get Master | grep 'Front Right:' | cut -d '[' -f 3 | cut -d ']' -f 1)"
+VOLUME="$(amixer get Master | grep 'Front Right:' | cut -d '[' -f 2 | cut -d ']' -f 1 | cut -d '%' -f 1)"
+
+# first, check if the audio output is muted.
+if [ "$MUTED" = "off" ]; then
+    echo "mute"
+# secondly, if no muted, get the volume.
+else
+    echo "$VOLUME"
+fi

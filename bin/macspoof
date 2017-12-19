@@ -1,0 +1,55 @@
+#!/usr/bin/env bash
+# macspoof
+#
+# Little script to let you pick a MAC Address from a file,
+# and spoof your mac using the MAC Address you just chose
+# .
+ETH="$(ip link | grep enp | awk '{printf("%s\n", $2);}' | cut -d : -f 1)"
+LOADED_MACS[0]="$(ip link show $ETH | grep link/ether | awk '{printf("%s", $2);}')"
+macfile="/home/decimate/.private/macspoof/macs"
+
+
+# the function to preload MAC Adresses from a file into an array.
+function preload_macs()
+{
+    local index=1
+
+    # load all macs from the file.
+    for mac in `cat $macfile`; do
+        LOADED_MACS[$index]=$mac
+        (( index++ ))
+    done
+}
+
+# the function to pick a random MAC Address for later use.
+function select_mac()
+{
+    PS3="Select a MAC Address from the list: "
+    
+    select selected_mac in ${LOADED_MACS[@]}; do
+        spoof $selected_mac
+        break
+    done
+}
+
+# the function to spoof MAC Address
+function spoof()
+{
+    ip link set dev $ETH down
+    ip link set dev $ETH address $1
+    ip link set dev $ETH up
+    echo "Your mac address of $ETH has been set to $1."
+}
+
+
+if [ $UID -ne 0 ]; then
+    echo "Please run as root. Quitting."
+    exit 1
+elif [ $ETH -z ]; then
+    echo "Please make sure that you have an ethernet interface installed. Quitting."
+    exit 1
+else
+    echo "Loading MAC Addresses from $macfile ..."
+    preload_macs
+    select_mac
+fi

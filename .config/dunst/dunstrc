@@ -1,0 +1,55 @@
+[global]
+    monitor = 0
+    follow = mouse
+    geometry = "350x15-20+40"
+    indicate_hidden = yes
+    shrink = no
+    notification_height = 0
+    separator_height = 2
+    padding = 10
+    horizontal_padding = 10
+    frame_width = 1
+    frame_color = "#2B83A6"
+    separator_color = frame
+    sort = yes
+    idle_threshold = 0
+    font = Tamzen 12
+    line_height = 0
+    markup = full
+    format = "<b>%s %p</b>\n%b"
+    alignment = left
+    show_age_threshold = 60
+    word_wrap = yes
+    ignore_newline = no
+    stack_duplicates = true
+    hide_duplicate_count = false
+    show_indicators = yes
+    icon_position = left
+    max_icon_size = 32
+    sticky_history = yes
+    history_length = 15
+    always_run_script = true
+    startup_notification = false
+    force_xinerama = false
+
+[shortcuts]
+    close = ctrl+space
+    close_all = ctrl+shift+space
+    history = ctrl+grave
+    context = ctrl+shift+period
+
+[urgency_low]
+    background = "#517EA0"
+    foreground = "#F5F5F5"
+    timeout = 10
+
+[urgency_normal]
+    background = "#517EA0"
+    foreground = "#F5F5F5"
+    timeout = 10
+
+[urgency_critical]
+    background = "#AB4642"
+    foreground = "#F5F5F5"
+    frame_color = "#AB4642"
+    timeout = 0 

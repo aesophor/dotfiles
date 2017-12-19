@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+# dotsetup
+# Personal script to update dotfiles.
+#
+
+# prompt user to input username.
+echo -n "[*] Please enter your username: "
+read USERNAME
+
+# check user directory existence.
+if [ -d /home/$USERNAME/ ]; then
+    echo -e "[*] User directory exists. Proceeding...\n"
+else
+    echo "[!] User directory not found. Exiting..."
+    exit 0
+fi
+
+# function to print message, remove old files/directory, 
+# and perform a symlink.
+function symlink
+{
+    # check if old file exists.
+    # remove the old one and create a new symlink.
+    if [ -e $2 ] || [ -L $2 ]; then
+        rm $2
+    elif [ -d $2 ]; then
+        rm -rf $2
+    else
+        true # do nothing statement.
+    fi
+
+    echo "[*] Symlinking: $2 -> $1"
+    ln -s $1 $2
+}
+
+# symlink function call.
+symlink "/home/$USERNAME/.config/dotfiles/.x" "/home/$USERNAME/.x"
+symlink "/home/$USERNAME/.config/dotfiles/.xinitrc" "/home/$USERNAME/.xinitrc"
+symlink "/home/$USERNAME/.config/dotfiles/.xserverrc" "/home/$USERNAME/.xserverrc"
+symlink "/home/$USERNAME/.config/dotfiles/.Xresources" "/home/$USERNAME/.Xresources"
+symlink "/home/$USERNAME/.config/dotfiles/.xbindkeysrc" "/home/$USERNAME/.xbindkeysrc"
+symlink "/home/$USERNAME/.config/dotfiles/.functions" "/home/$USERNAME/.functions"
+
+symlink "/home/$USERNAME/.config/dotfiles/.bashrc" "/home/$USERNAME/.bashrc"
+symlink "/home/$USERNAME/.config/dotfiles/.zshrc" "/home/$USERNAME/.zshrc"
+symlink "/home/$USERNAME/.config/dotfiles/.vim" "/home/$USERNAME/.vim"
+symlink "/home/$USERNAME/.config/dotfiles/.vimrc" "/home/$USERNAME/.vimrc"
+symlink "/home/$USERNAME/.config/dotfiles/.wgetrc" "/home/$USERNAME/.wgetrc"
+symlink "/home/$USERNAME/.config/dotfiles/.curlrc" "/home/$USERNAME/.curlrc"
+
+symlink "/home/$USERNAME/.config/dotfiles/.config/i3" "/home/$USERNAME/.config/i3"
+symlink "/home/$USERNAME/.config/dotfiles/.config/i3blocks" "/home/$USERNAME/.config/i3blocks"
+symlink "/home/$USERNAME/.config/dotfiles/.config/i3lock" "/home/$USERNAME/.config/i3lock"
+symlink "/home/$USERNAME/.config/dotfiles/.config/dunst" "/home/$USERNAME/.config/dunst"
+symlink "/home/$USERNAME/.config/dotfiles/.config/compton" "/home/$USERNAME/.config/compton"
+symlink "/home/$USERNAME/.config/dotfiles/.config/menutray" "/home/$USERNAME/.config/menutray"
+symlink "/home/$USERNAME/.config/dotfiles/.config/plasma-workspace" "/home/$USERNAME/.config/plasma-workspace"
+symlink "/home/$USERNAME/.config/dotfiles/.gtkrc-2.0" "/home/$USERNAME/.gtkrc-2.0"
+symlink "/home/$USERNAME/.gtkrc-2.0" "/home/$USERNAME/.gtkrc-2.0-kde4"
+
+symlink "/home/$USERNAME/.config/dotfiles/.aliases" "/home/$USERNAME/.aliases"
+symlink "/home/$USERNAME/.config/dotfiles/.asoundrc" "/home/$USERNAME/.asoundrc"
+symlink "/home/$USERNAME/.config/dotfiles/.config/neofetch" "/home/$USERNAME/.config/neofetch"
+symlink "/home/$USERNAME/.config/dotfiles/.config/ncmpcpp" "/home/$USERNAME/.ncmpcpp"
+
+symlink "/home/$USERNAME/.config/dotfiles/bin" "/home/$USERNAME/.local/bin"
+symlink "/home/$USERNAME/.config/dotfiles/res/.face.icon" "/home/$USERNAME/.face.icon"
+
+# job finished.
+echo -e "\n[*] Congrats. You have updated all symlinks and dotfiles are now ready to be loaded."

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# vpnconnect
+#
+# Wrapper script that lists all openvpn config under a directory
+# and lets user choose which one to connect to.
+
+declare -a conf_arr
+declare -i index=0
+conf_dir="/home/decimate/.config/143vpn/TCP"
+
+# Read all configs into the array, and print them out.
+for config in `ls $conf_dir | cat`; do
+    if [ "$config" = "ca.crt" ]; then
+        # no-op.
+        :
+    else
+        conf_arr[$index]=$config
+        echo "[$index] $config"
+        (( index++ ))
+    fi
+done
+
+# Read user choice.
+echo -n "Which server would you like to connect to: "
+read choice
+
+# Construct conf_path and conncect to the server.
+conf_path="$conf_dir/${conf_arr[$choice]}"
+cert_path="$conf_dir/ca.crt"
+echo "Loaded vpn configuration file: $conf_path"
+
+sudo openvpn --config $conf_path --ca $cert_path --auth-user-pass ~/.private/143vpn/auth 

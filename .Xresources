@@ -1,0 +1,11 @@
+! Colors
+#include "/home/decimate/.x/colorscheme/tomorrow-night"
+
+! Font Settings
+#include "/home/decimate/.x/fonts"
+
+! URxvt
+#include "/home/decimate/.x/urxvt"
+
+! Rofi Colors
+#include "/home/decimate/.x/rofi"

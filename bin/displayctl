@@ -1,0 +1,30 @@
+#!/usr/bin/env bash
+# displayctl
+#
+# Personal script for setting resolution and wallpaper.
+
+output=eDP1
+res=1920x1200
+tmpbg=/tmp/bg.png
+logo=$HOME/.config/dotfiles/res/logo.png
+wallpaper=$HOME/Pictures/Wallpapers/8-bit/City.png
+
+
+# --------- Set screen resolution and brightness ---------
+xrandr 1>/dev/null && xrandr --output $output --mode $res
+xbacklight -set 60
+
+# --------- Blur and set the wallpaper ---------
+# Blur the original wallpaper and place the logo at the center of it.
+if [ "$1" == '--blur' ]; then
+    echo "running..."
+    ffmpeg -i $wallpaper -video_size $res -y -i $logo -filter_complex "boxblur=5:10,overlay=(main_w-overlay_w)/2:(main_h-overlay_h)/2" -vframes 1 $tmpbg -loglevel quiet
+else
+    cp $wallpaper $tmpbg
+fi
+
+# Set it as the wallpaper.
+feh --bg-fill $tmpbg
+
+# Cleanup.
+rm $tmpbg

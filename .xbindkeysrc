@@ -1,0 +1,29 @@
+# xbacklight and kbdlight (AUR) needed.
+
+# Assign audio keys.
+"amixer -q set Master 5%+ unmute"
+    XF86AudioRaiseVolume
+"amixer -q set Master 5%- unmute"
+    XF86AudioLowerVolume
+"amixer -q set Master toggle"
+    XF86AudioMute
+
+# Assign screen brightness keys.
+"xbacklight -inc 10"
+    XF86MonBrightnessUp
+"xbacklight -dec 10"
+    XF86MonBrightnessDown
+
+# Assign keyboard brightness keys.
+"kbdlight up 10"
+    XF86KbdBrightnessUp
+"kbdlight down 10"
+    XF86KbdBrightnessDown
+
+# Assign screenshot key.
+"~/.local/bin/scrotutl -f"
+    Control+Shift + 3
+"~/.local/bin/scrotutl -s"
+    Control+Shift + 4
+"~/.local/bin/scrotutl -w"
+    Control+Shift + Space + 4
