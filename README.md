@@ -6,4 +6,5 @@ Run <a href="https://github.com/aesophor/dotfiles/blob/master/bin/dotsetup">dots
 
 # Screenshot
 ![ScreenShot](/scrot/screenshot-clean.png)
+
 ![ScreenShot](/scrot/screenshot.png)
