@@ -1,3 +1,6 @@
+! Display
+#include "/home/decimate/.x/display" 
+
 ! Colors
 #include "/home/decimate/.x/colorscheme/tomorrow-night"
 

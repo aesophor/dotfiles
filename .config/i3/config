@@ -89,7 +89,7 @@ bindsym Mod4+t border none
 # switching window with tab
 bindsym $mod+Tab exec --no-startup-id rofi -show window -config ~/.Xresources
 # i3lock
-bindsym $mod+Shift+x exec --no-startup-id /usr/bin/bash -c "~/.config/i3lock/lock.sh"
+bindsym $mod+Shift+x exec --no-startup-id /usr/bin/bash -c "~/.local/bin/displayctl -l --dim"
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3-KDE inplace
@@ -184,6 +184,7 @@ assign [class="(?i)vlc"]                            → $WS6
 assign [class="(?i)mpv"]                            → $WS6
 assign [class="com-yworks-A-B"]                     → $WS7
 assign [class="Wine" instance="photoshop.exe"]      → $WS7
+assign [class="Allegro"]                            → $WS7
 assign [class="Pingendo"]                           → $WS7
 assign [class="Steam"]                              → $WS8
 assign [class="Wine" instance="steam.exe"]          → $WS8
@@ -263,7 +264,7 @@ gaps outer 10
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id menutray
-exec --no-startup-id xautolock -time 15 -locker "~/.config/i3lock/lock.sh"
+exec --no-startup-id xautolock -time 15 -locker "~/.local/bin/displayctl -l --dim"
 
 # adjust screen resolution and wallpaper
 exec --no-startup-id /usr/bin/bash /home/decimate/.local/bin/displayctl

@@ -4,3 +4,8 @@ function mkcd()
 {
     mkdir -p "$1" && cd "$1"
 }
+
+function xrdb_get_record()
+{
+    xrdb -query | grep -i "$1" | cut -d ":" -f 2 | sed -e 's/^[ \t]*//'
+}

@@ -1,0 +1,6 @@
+! Wallpapers for desktop and lockscreen
+! ============================================================
+Display.monitor:         eDP1
+Display.resolution:      1920x1200
+Display.brightness:      60
+Display.wallpaper:       /home/decimate/Pictures/Wallpapers/8-bit/City.png

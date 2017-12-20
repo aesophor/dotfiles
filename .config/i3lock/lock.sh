@@ -4,9 +4,8 @@
 # Screenlock script.
 
 RES=`xdpyinfo | grep dimensions | sed -r 's/^[^0-9]*([0-9]+x[0-9]+).*$/\1/'`
-logo=/home/decimate/.config/dotfiles/res/logo.png
-bgimg=~/Pictures/Wallpapers/Workspaces/Wall.jpg
 tmpbg=/tmp/lock_bg.png
+logo=/home/decimate/.config/dotfiles/res/logo.png
 
 
 function print_help()
