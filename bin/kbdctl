@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# kbdctrl
+#
+# Tiny script to swap alt and win keys.
+
+function print_usage()
+{
+    echo "Usage: $0 <argument>"
+    echo "varmilo - Switch to Varmilo layout."
+    echo "mbp     - Switch to Macbook layout."
+}
+
+
+case "$1" in
+    "")
+        print_usage
+        ;;
+        
+    -m | --macbook)
+        echo "Switching to the layout for Macbook."
+        setxkbmap -option
+        ;;
+        
+    -v | --varmilo)
+        echo "Switching to the layout for Varmilo."
+        setxkbmap -option altwin:swap_alt_win
+        ;;
+        
+    -h | --help)
+        print_usage
+        ;;
+esac

@@ -29,16 +29,13 @@ alias open='xdg-open'
 alias config-i3="vim ~/.config/i3/config"
 alias config-i3blocks="vim ~/.config/i3blocks/i3blocks.conf"
 alias config-i3blocklets="cd ~/.config/i3blocks/scripts"
-alias config-i3lock="vim ~/.config/i3lock/lock.sh"
-alias config-dp="vim ~/.config/dotfiles/bin/displayctl"
-alias config-lock="vim ~/.config/i3lock/lock.sh"
 
 # personal scripts
 alias displayctl='~/.local/bin/displayctl'
 alias vpnconnect='~/.local/bin/vpnconnect'
 alias macspoof='sudo ~/.local/bin/macspoof'
 alias scrotutl='~/.local/bin/scrotutl'
-alias kbdctrl='~/.local/bin/kbdctrl'
+alias kbdctl='~/.local/bin/kbdctl'
 
 # typos
 alias EXIT="exit"
