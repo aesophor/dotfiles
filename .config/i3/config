@@ -4,7 +4,7 @@ exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 # font for window titles and bar
-font pango:xos4 Terminus, Wuncon Siji 10
+font pango:UW Ttyp0 9
 
 # use command as the mod key
 set $mod Mod4

@@ -12,8 +12,8 @@ URxvt.lineSpace:            2
 URxvt.letterSpace:          0
 
 URxvt.allow_bold:           true
-URxvt*font:                 xft:TamzenForPowerline:pixelsize=16
-URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=16
+URxvt*font:                 xft:TamzenForPowerline:pixelsize=14
+URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=14
 
 URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false

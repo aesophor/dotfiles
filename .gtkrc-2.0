@@ -7,7 +7,7 @@ style "user-font"
 	font_name="xos4 Terminus Regular"
 }
 widget_class "*" style "user-font"
-gtk-font-name="xos4 Terminus Regular 11"
+gtk-font-name="xos4 Terminus Regular 8"
 gtk-theme-name="Breeze-Dark"
 gtk-icon-theme-name="AntuDark"
 gtk-fallback-icon-theme="breeze-dark"

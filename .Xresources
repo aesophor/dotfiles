@@ -1,5 +1,5 @@
-! Display
-#include "/home/decimate/.x/display" 
+! displayctl
+#include "/home/decimate/.x/displayctlrc" 
 
 ! Colors
 #include "/home/decimate/.x/colorscheme/tomorrow-night"

@@ -7,7 +7,7 @@ Details:
 * compton
 * urxvt
 * rofi
-* xos4 Terminess Powerline
+* xos4 Terminess Powerline, UW Ttyp0
 * base16-tomorrow colorscheme
 * eastwood_custom zsh theme
 
