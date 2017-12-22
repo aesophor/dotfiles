@@ -17,7 +17,7 @@ Read before you try to execute <a href="https://github.com/aesophor/dotfiles/blo
  
  
 ## Screenshot
-![Screenshot-dirty] (https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot.png)
+![Screenshot-dirty](https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot.png)
  
-![Screenshot-clean] (https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot-clean.png)
+![Screenshot-clean](https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot-clean.png)
  
