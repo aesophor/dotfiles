@@ -4,4 +4,4 @@ rofi.color-normal:          argb:2c1d1f21, #c4cbd4, argb:96404552, #6699CC, #f9f
 rofi.color-urgent:          argb:2c1d1f21, #cc6666, argb:e54b5160, #6699CC, #f9f9f9
 rofi.color-active:          argb:2c1d1f21, #65acff, argb:e44b5160, #6699CC, #f9f9f9
 rofi.color-window:          argb:f22d303b, #7c8389, #86888c
-rofi.font:                  UW Ttyp0 12
+rofi.font:                  Tamzen 13

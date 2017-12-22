@@ -4,7 +4,7 @@ exec --no-startup-id wmctrl -c Plasma
 for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 # font for window titles and bar
-font pango:UW Ttyp0 9
+font pango:Tamzen 9
 
 # use command as the mod key
 set $mod Mod4
@@ -89,7 +89,7 @@ bindsym Mod4+t border none
 # switching window with tab
 bindsym $mod+Tab exec --no-startup-id rofi -show window -config ~/.Xresources
 # i3lock
-bindsym $mod+Shift+x exec --no-startup-id /usr/bin/bash -c "~/.local/bin/displayctl -l --dim"
+bindsym $mod+Shift+x exec --no-startup-id /usr/bin/bash -c "~/.local/bin/displayctl -l --blur"
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3-KDE inplace
@@ -148,6 +148,7 @@ for_window [class="URxvt" instance="ncmpcpp"]       floating enable
 for_window [class="Gcolor2"]                        floating enable
 for_window [class="systemsettings"]                 floating enable
 for_window [class="Steam"]                          floating enable
+for_window [class="PCSX2"]                          floating enable
 for_window [class="VirtualBox"]                     floating enable
 for_window [class="Wine" instance="line.exe"]       floating enable
 for_window [class="Wine" instance="photoshop.exe"]  floating enable
@@ -264,7 +265,7 @@ gaps outer 10
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id menutray
-exec --no-startup-id xautolock -time 15 -locker "~/.local/bin/displayctl -l --dim"
+exec --no-startup-id xautolock -time 15 -locker "~/.local/bin/displayctl -l --blur"
 
 # adjust screen resolution and wallpaper
 exec --no-startup-id /usr/bin/bash /home/decimate/.local/bin/displayctl
