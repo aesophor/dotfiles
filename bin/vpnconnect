@@ -6,7 +6,7 @@
 
 declare -a conf_arr
 declare -i index=0
-conf_dir="/home/decimate/.config/143vpn/TCP"
+conf_dir="/home/$USER/.config/143vpn/TCP"
 
 # Read all configs into the array, and print them out.
 for config in `ls $conf_dir | cat`; do

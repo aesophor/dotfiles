@@ -89,7 +89,7 @@ bindsym Mod4+t border none
 # switching window with tab
 bindsym $mod+Tab exec --no-startup-id rofi -show window -config ~/.Xresources
 # i3lock
-bindsym $mod+Shift+x exec --no-startup-id /usr/bin/bash -c "~/.local/bin/displayctl -l --blur"
+bindsym $mod+Shift+x exec --no-startup-id /usr/bin/bash -c "~/.local/bin/displayctl -l --dim"
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3-KDE inplace
@@ -100,8 +100,8 @@ bindcode 124 exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org.kde.KSM
 
 # customize workspace name
 set $WS1 "1:   ZSH "
-set $WS2 "2:   Dev "
-set $WS3 "3:   Internet "
+set $WS2 "2:   Dev "
+set $WS3 "3:   Chromium "
 set $WS4 "4:   Files "
 set $WS5 "5:   Documents "
 set $WS6 "6:   Media "
@@ -150,9 +150,13 @@ for_window [class="systemsettings"]                 floating enable
 for_window [class="Steam"]                          floating enable
 for_window [class="PCSX2"]                          floating enable
 for_window [class="VirtualBox"]                     floating enable
-for_window [class="Wine" instance="line.exe"]       floating enable
-for_window [class="Wine" instance="photoshop.exe"]  floating enable
+for_window [class="Wine" instance="explorer.exe"]   floating enable
 for_window [class="Wine" instance="steam.exe"]      floating enable
+for_window [class="Wine" instance="line.exe"]       floating enable
+
+# Skyrim X window crash fix.
+# set Skyrim to window mode instead of fullscreen mode
+#for_window [class="Wine" instance="tesv.exe"]       fullscreen enable
 
 # shortcut applications
 bindsym $mod+F1                 exec urxvt
@@ -161,7 +165,7 @@ bindsym $mod+F3 workspace $WS3; exec Chromium
 bindsym $mod+F4 workspace $WS4; exec dolphin
 bindsym $mod+F5 workspace $WS5; exec wps
 bindsym $mod+F6 workspace $WS6; exec urxvt -name ncmpcpp -geometry 110x20+0+0 -e ncmpcpp
-bindsym $mod+F7 workspace $WS7; exec PhotoshopCS6
+bindsym $mod+F7 workspace $WS7; exec gimp
 
 # assign pentest program to workspace.
 assign [class="Ettercap"]                           → $WS2
@@ -172,6 +176,7 @@ assign [class="burp-StartBurp"]                     → $WS2
 assign [class="terminal"]                           → $WS1
 assign [class="Chromium"]                           → $WS3
 assign [class="Tor Browser"]                        → $WS3
+assign [class="Slack"]                              → $WS3
 assign [class="Wine" instance="line.exe"]           → $WS3
 assign [class="dolphin"]                            → $WS4
 assign [class="ark"]                                → $WS4
@@ -179,16 +184,18 @@ assign [class="Et"]                                 → $WS5
 assign [class="Wps"]                                → $WS5
 assign [class="Wpp"]                                → $WS5
 assign [class="feh"]                                → $WS6
-assign [class="(?i)spotify"]                        → $WS6
+assign [class="Spotify"]                            → $WS6
 assign [class="(?i)butter"]                         → $WS6
 assign [class="(?i)vlc"]                            → $WS6
 assign [class="(?i)mpv"]                            → $WS6
 assign [class="com-yworks-A-B"]                     → $WS7
-assign [class="Wine" instance="photoshop.exe"]      → $WS7
+assign [class="Gimp"]                               → $WS7
 assign [class="Allegro"]                            → $WS7
 assign [class="Pingendo"]                           → $WS7
 assign [class="Steam"]                              → $WS8
+assign [class="Wine" instance="explorer.exe"]       → $WS8
 assign [class="Wine" instance="steam.exe"]          → $WS8
+assign [class="Wine" instance="tesv.exe"]           → $WS8
 assign [class="Minecraft 1.7.10"]                   → $WS8
 assign [class="net-minecraft-launcher-Main"]        → $WS8
 assign [class="PCSX2"]                              → $WS8
@@ -265,7 +272,7 @@ gaps outer 10
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id menutray
-exec --no-startup-id xautolock -time 15 -locker "~/.local/bin/displayctl -l --blur"
+exec --no-startup-id xautolock -time 15 -locker "~/.local/bin/displayctl -l --dim"
 
 # adjust screen resolution and wallpaper
-exec --no-startup-id /usr/bin/bash /home/decimate/.local/bin/displayctl
+exec --no-startup-id /usr/bin/bash /home/$USER/.local/bin/displayctl

@@ -3,5 +3,6 @@
 Display.monitor:         eDP1
 Display.resolution:      1680x1050
 Display.brightness:      60
-Display.wallpaper:       /home/decimate/Pictures/Wallpapers/People/FloKarr.jpg
-Display.lockscreen:      /home/decimate/Pictures/Wallpapers/People/FloKarr.jpg
+Display.wallpaper:       /home/aesophor/Pictures/Wallpapers/Landscape/Bus.jpg
+Display.lockscreen:      /home/aesophor/Pictures/Wallpapers/Landscape/Bus.jpg
+

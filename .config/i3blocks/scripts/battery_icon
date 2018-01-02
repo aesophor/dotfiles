@@ -34,4 +34,4 @@ else
     icon_output+=$icon_charge
 fi
 
-echo "$icon_output "
+echo "$icon_output"

@@ -8,16 +8,16 @@ mute=""
 
 # first, check if the audio output is muted.
 if [ "$MUTED" = "off" ]; then
-    echo "$mute  "
+    echo "$mute "
 # secondly, if no muted, get the volume.
 else
     if [ "$VOLUME" -eq "0" ]; then
-        echo "$sound  "
+        echo "$sound "
     elif [ "$VOLUME" -gt "0" ] && [ "$VOLUME" -lt "50" ]; then
-        echo "$sound  "
+        echo "$sound "
     elif [ "$VOLUME" -ge "50" ] && [ "$VOLUME" -le "100" ]; then
-        echo "$sound  "
+        echo "$sound "
     else
-        echo "$sound  "
+        echo "$sound "
     fi
 fi

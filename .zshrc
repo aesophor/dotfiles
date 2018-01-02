@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/decimate/.oh-my-zsh
+export ZSH=/home/aesophor/.oh-my-zsh
 
 # ZSH Themes.
 ZSH_THEME="eastwood_custom"

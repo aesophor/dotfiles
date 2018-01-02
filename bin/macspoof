@@ -6,7 +6,7 @@
 # .
 ETH="$(ip link | grep enp | awk '{printf("%s\n", $2);}' | cut -d : -f 1)"
 LOADED_MACS[0]="$(ip link show $ETH | grep link/ether | awk '{printf("%s", $2);}')"
-macfile="/home/decimate/.private/macspoof/macs"
+macfile="/home/$USERNAME/.private/macspoof/macs"
 
 
 # the function to preload MAC Adresses from a file into an array.

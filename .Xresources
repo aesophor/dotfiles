@@ -1,14 +1,14 @@
 ! displayctl
-#include "/home/decimate/.x/displayctlrc" 
+#include "/home/aesophor/.x/displayctlrc" 
 
 ! Colors
-#include "/home/decimate/.x/colorscheme/tomorrow-night"
+#include "/home/aesophor/.x/colorscheme/tomorrow-night"
 
 ! Font Settings
-#include "/home/decimate/.x/fonts"
+#include "/home/aesophor/.x/fonts"
 
 ! URxvt
-#include "/home/decimate/.x/urxvt"
+#include "/home/aesophor/.x/urxvt"
 
 ! Rofi Colors
-#include "/home/decimate/.x/rofi"
+#include "/home/aesophor/.x/rofi"

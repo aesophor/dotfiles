@@ -4,10 +4,10 @@
 include "/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc"
 style "user-font" 
 {
-	font_name="xos4 Terminus Regular"
+	font_name="Tamzen Regular"
 }
 widget_class "*" style "user-font"
-gtk-font-name="xos4 Terminus Regular 8"
+gtk-font-name="Tamzen Regular 9"
 gtk-theme-name="Breeze-Dark"
 gtk-icon-theme-name="AntuDark"
 gtk-fallback-icon-theme="breeze-dark"

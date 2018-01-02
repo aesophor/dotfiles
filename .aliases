@@ -17,6 +17,7 @@ alias dl='cd ~/Downloads; la'
 alias scp='cd ~/Documents/00-Studies/05-MCNDU\(104-108\)/106-108_UniversityProject; la'
 alias docs='cd ~/Documents; la'
 alias works='cd ~/Workspaces; la'
+alias ctf='cd ~/Workspaces/03-CTF; la'
 alias pics='cd ~/Pictures; la'
 alias vids='cd ~/Videos; la'
 alias musics='cd ~/Music; la'
@@ -26,19 +27,21 @@ alias vpn='cd ~/.config/143vpn/TCP/ && la'
 alias c='clear'
 alias ch='rm ~/.bash_history 2>/dev/null; rm ~/.bash_logout 2>/dev/null; rm ~/.lesshst 2>/dev/null; echo > ~/.zsh_history'
 alias open='xdg-open'
-alias config-i3="vim ~/.config/i3/config"
-alias config-i3blocks="vim ~/.config/i3blocks/i3blocks.conf"
-alias config-i3blocklets="cd ~/.config/i3blocks/scripts"
+alias config-i3='vim ~/.config/i3/config'
+alias config-i3blocks='vim ~/.config/i3blocks/i3blocks.conf'
+alias config-i3blocklets='cd ~/.config/i3blocks/scripts'
+alias config-dp='vim ~/.x/displayctlrc'
 
 # personal scripts
 alias displayctl='~/.local/bin/displayctl'
 alias vpnconnect='~/.local/bin/vpnconnect'
-alias macspoof='sudo ~/.local/bin/macspoof'
+alias macspoof='~/.local/bin/macspoof'
 alias scrotutl='~/.local/bin/scrotutl'
 alias kbdctl='~/.local/bin/kbdctl'
 
 # typos
-alias EXIT="exit"
-alias xit="exit"
+alias EXIT='exit'
+alias eixt='exit'
+alias xit='exit'
 alias :q='exit'
 alias :q!='exit'

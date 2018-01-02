@@ -8,7 +8,7 @@ if_eth="$(ip link | grep enp | awk '{printf("%s\n", $2);}' | cut -d : -f 1)"
 if_wifi='wlp2s0'
 if_vpn='tun0'
 
-icon_wifi=""
+icon_wifi=""
 icon_eth=""
 icon_dns=""
 icon_vpn=""
@@ -33,7 +33,7 @@ if [ -n "$SSID_NAME" ]; then
         true
     fi
 
-    echo "$FINAL_OPT  "
+    echo "$FINAL_OPT "
 
 # secondly, check if an Ethernet connection is active.
 # method: check if we cannot detect wlp2s0 but acutually get a local ip.
@@ -53,9 +53,9 @@ elif [ $CONNECTION_TYPE != "$if_wifi" ] && [ -n "$LOCAL_IPADDR" ]; then
         true
     fi
     
-    echo "$FINAL_OPT  "
+    echo "$FINAL_OPT "
 
 # there's no Internet connection otherwise.
 else
-    echo "$icon_off  "
+    echo "$icon_off "
 fi

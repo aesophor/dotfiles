@@ -2,6 +2,7 @@
     monitor = 0
     follow = mouse
     geometry = "350x15-20+40"
+    transparency = 35
     indicate_hidden = yes
     shrink = no
     notification_height = 0
@@ -9,11 +10,11 @@
     padding = 10
     horizontal_padding = 10
     frame_width = 1
-    frame_color = "#2B83A6"
+    frame_color = "#18181A"
     separator_color = frame
     sort = yes
     idle_threshold = 0
-    font = Tamzen 12
+    font = Tamzen 8
     line_height = 0
     markup = full
     format = "<b>%s %p</b>\n%b"
@@ -39,12 +40,12 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#517EA0"
+    background = "#18181A"
     foreground = "#F5F5F5"
     timeout = 10
 
 [urgency_normal]
-    background = "#517EA0"
+    background = "#18181A"
     foreground = "#F5F5F5"
     timeout = 10
 
