@@ -22,8 +22,8 @@ export BROWSER="chromium"
 export EDITOR="vim"
 
 # Custom command aliases and functions.
-source ~/.aliases
-source ~/.functions
+source ~/.config/zsh/aliases
+source ~/.config/zsh/functions
 
 # fcitx for wps fix.
 export XIM=fcitx

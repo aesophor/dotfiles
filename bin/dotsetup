@@ -5,7 +5,7 @@
 
 
 # print message, remove old files/directory, and perform a symlink.
-function symlink
+function symlink()
 {
     # check if old file exists.
     # remove the old one and create a new symlink.
@@ -21,56 +21,67 @@ function symlink
     ln -s $1 $2
 }
 
+function setup_dotfiles()
+{
+    # X server configuration.
+    symlink "$HOME/.config/dotfiles/.x" "$HOME/.x"
+    symlink "$HOME/.config/dotfiles/.xinitrc" "$HOME/.xinitrc"
+    symlink "$HOME/.config/dotfiles/.xserverrc" "$HOME/.xserverrc"
+    symlink "$HOME/.config/dotfiles/.Xresources" "$HOME/.Xresources"
+    symlink "$HOME/.config/dotfiles/.xbindkeysrc" "$HOME/.xbindkeysrc"
+    
+    # bash, zsh, vim, wget, curl, asoundrc, neofetch, ncmpcpp, git configuration.
+    symlink "$HOME/.config/dotfiles/.bashrc" "$HOME/.bashrc"
+    symlink "$HOME/.config/dotfiles/.zshrc" "$HOME/.zshrc"
+    symlink "$HOME/.config/dotfiles/.vim" "$HOME/.vim"
+    symlink "$HOME/.config/dotfiles/.vimrc" "$HOME/.vimrc"
+    symlink "$HOME/.config/dotfiles/.wgetrc" "$HOME/.wgetrc"
+    symlink "$HOME/.config/dotfiles/.curlrc" "$HOME/.curlrc"
+    symlink "$HOME/.config/dotfiles/.asoundrc" "$HOME/.asoundrc"
+    symlink "$HOME/.config/dotfiles/.config/neofetch" "$HOME/.config/neofetch"
+    symlink "$HOME/.config/dotfiles/.config/ncmpcpp" "$HOME/.ncmpcpp"
+    symlink "$HOME/.private/git/.gitconfig" "$HOME/.gitconfig"
 
-# prompt user to input username.
+    # i3, dunst, compton, menutray, KDE, gtk configuration.
+    symlink "$HOME/.config/dotfiles/.config/i3" "$HOME/.config/i3"
+    symlink "$HOME/.config/dotfiles/.config/i3blocks" "$HOME/.config/i3blocks"
+    symlink "$HOME/.config/dotfiles/.config/i3lock" "$HOME/.config/i3lock"
+    symlink "$HOME/.config/dotfiles/.config/dunst" "$HOME/.config/dunst"
+    symlink "$HOME/.config/dotfiles/.config/compton" "$HOME/.config/compton"
+    symlink "$HOME/.config/dotfiles/.config/menutray" "$HOME/.config/menutray"
+    symlink "$HOME/.config/dotfiles/.config/plasma-workspace" "$HOME/.config/plasma-workspace"
+    symlink "$HOME/.config/dotfiles/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
+    symlink "$HOME/.gtkrc-2.0" "$HOME/.gtkrc-2.0-kde4"
+    
+    # Custom command aliases and functions.
+    symlink "$HOME/.config/dotfiles/.aliases" "$HOME/.config/zsh/aliases"
+    symlink "$HOME/.config/dotfiles/.functions" "$HOME/.config/zsh/functions"
+    
+    # Now bin/* will be accessible under ~/.local/bin/.
+    symlink "$HOME/.config/dotfiles/bin" "$HOME/.local/bin"
+    symlink "$HOME/Workspaces/02-Projects/bash-displayctl/displayctl" "$HOME/.local/bin/displayctl"
+
+    # gdb configuration.
+    symlink "$HOME/.config/dotfiles/.gdbinit" "$HOME/.gdbinit"
+
+    # Misc.
+    symlink "$HOME/.config/dotfiles/res/.face.icon" "$HOME/.face.icon"
+}
+
+
+# Confirmation.
+echo "dotsetup"
+echo "========================================================================="
+echo "Running this script without reading it might lead to devastating results."
 echo -n "Make sure you've read the code before running it. [y/n]: "
 read choice
 
-# check user directory existence.
-if [ -d /home/$USER/ ] && [ "$choice" = "y" ]; then
+# Check user directory existence.
+if [ "$choice" = "y" ]; then
     echo -e "Proceeding...\n"
+    setup_dotfiles
+    echo -e "\n[*] Congrats! You have updated all symlinks and dotfiles are now ready to be loaded."
 else
     echo "Aborted."
     exit 0
 fi
-
-# symlink function call.
-symlink "/home/$USER/.config/dotfiles/.x" "/home/$USER/.x"
-symlink "/home/$USER/.config/dotfiles/.xinitrc" "/home/$USER/.xinitrc"
-symlink "/home/$USER/.config/dotfiles/.xserverrc" "/home/$USER/.xserverrc"
-symlink "/home/$USER/.config/dotfiles/.Xresources" "/home/$USER/.Xresources"
-symlink "/home/$USER/.config/dotfiles/.xbindkeysrc" "/home/$USER/.xbindkeysrc"
-symlink "/home/$USER/.config/dotfiles/.functions" "/home/$USER/.functions"
-
-symlink "/home/$USER/.config/dotfiles/.bashrc" "/home/$USER/.bashrc"
-symlink "/home/$USER/.config/dotfiles/.zshrc" "/home/$USER/.zshrc"
-symlink "/home/$USER/.config/dotfiles/.vim" "/home/$USER/.vim"
-symlink "/home/$USER/.config/dotfiles/.vimrc" "/home/$USER/.vimrc"
-symlink "/home/$USER/.config/dotfiles/.wgetrc" "/home/$USER/.wgetrc"
-symlink "/home/$USER/.config/dotfiles/.curlrc" "/home/$USER/.curlrc"
-
-symlink "/home/$USER/.config/dotfiles/.config/i3" "/home/$USER/.config/i3"
-symlink "/home/$USER/.config/dotfiles/.config/i3blocks" "/home/$USER/.config/i3blocks"
-symlink "/home/$USER/.config/dotfiles/.config/i3lock" "/home/$USER/.config/i3lock"
-symlink "/home/$USER/.config/dotfiles/.config/dunst" "/home/$USER/.config/dunst"
-symlink "/home/$USER/.config/dotfiles/.config/compton" "/home/$USER/.config/compton"
-symlink "/home/$USER/.config/dotfiles/.config/menutray" "/home/$USER/.config/menutray"
-symlink "/home/$USER/.config/dotfiles/.config/plasma-workspace" "/home/$USER/.config/plasma-workspace"
-symlink "/home/$USER/.config/dotfiles/.gtkrc-2.0" "/home/$USER/.gtkrc-2.0"
-symlink "/home/$USER/.gtkrc-2.0" "/home/$USER/.gtkrc-2.0-kde4"
-
-symlink "/home/$USER/.config/dotfiles/.aliases" "/home/$USER/.aliases"
-symlink "/home/$USER/.config/dotfiles/.asoundrc" "/home/$USER/.asoundrc"
-symlink "/home/$USER/.config/dotfiles/.config/neofetch" "/home/$USER/.config/neofetch"
-symlink "/home/$USER/.config/dotfiles/.config/ncmpcpp" "/home/$USER/.ncmpcpp"
-symlink "/home/$USER/.private/git/.gitconfig" "/home/$USER/.gitconfig"
-
-symlink "/home/$USER/.config/dotfiles/bin" "/home/$USER/.local/bin"
-symlink "/home/$USER/.config/dotfiles/res/.face.icon" "/home/$USER/.face.icon"
-symlink "/home/$USER/Workspaces/02-Projects/bash-displayctl/displayctl" "/home/$USER/.local/bin/displayctl"
-
-symlink "/home/$USER/.config/dotfiles/.gdbinit" "/home/$USER/.gdbinit"
-
-
-# job finished.
-echo -e "\n[*] Congrats. You have updated all symlinks and dotfiles are now ready to be loaded."
