@@ -34,7 +34,7 @@ $output = "$percent%";
 
 if($status eq 'Full')
 {
-    $output = "Full";
+    $output = "100%";
 }
 
 # print text

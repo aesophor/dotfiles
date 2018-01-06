@@ -1,31 +1,27 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/home/aesophor/.oh-my-zsh
+export ZSH="$HOME/.config/oh-my-zsh"
 
-# ZSH Themes.
+# ZSH configuration.
+# (1) ZSH Themes
+# (2) Case-sensitive completion
+# (3) Disable auto-setting terminal title,
+# (4) Disable marking untracked files under VCS as dirty.
+# (5) Plugins
 ZSH_THEME="eastwood_custom"
-
-# Case-sensitive completion.
 CASE_SENSITIVE="true"
-
-# Disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
-
-# Disable marking untracked files under VCS as dirty.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# History
-SAVEHIST=2000
-HIST_STAMPS="mm/dd/yyyy"
-
-# Plugins
 plugins=(archive extract git vim-interaction zsh-autosuggestions)
 
+# Load oh-my-zsh.sh
+source $ZSH/oh-my-zsh.sh
+
 # User configuration
-export ZSH="$HOME/.oh-my-zsh"
 export LANG="en_US.UTF-8"
+export BROWSER="chromium"
 export EDITOR="vim"
 
-source $ZSH/oh-my-zsh.sh
+# Custom command aliases and functions.
 source ~/.aliases
 source ~/.functions
 
@@ -35,12 +31,9 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
-# volnoti.
-export $(dbus-launch)
-
 # thefuck configuration.
-eval $(thefuck --alias)
-eval $(thefuck --alias FUCK)
+eval `thefuck --alias`
+eval `thefuck --alias FUCK`
 
 # Print welcome message.
-clear; uname -a; printf "Welcome to your Arch Linux, %s!\n" "$USERNAME"
+clear; uname -a; printf "Welcome to your Arch Linux, %s!\n" "$USER"

@@ -5,18 +5,34 @@ Details:
 * i3-gaps + KDE
 * i3blocks
 * compton
-* urxvt
 * rofi
+* rxvt-unicode-256color
 * Tamzen for Powerline
 * base16-tomorrow colorscheme
-* eastwood_custom zsh theme
+* eastwood_custom theme for oh-my-zsh
 
 
 ## Installation Note
-Read before you try to execute <a href="https://github.com/aesophor/dotfiles/blob/master/bin/dotsetup">dotsetup</a> to setup the dotfiles. The script will ask the user for username (should be the same with the name of your home directory), attempt to remove old directories or files (if exist), and create symlink to ~/.config/dotfiles/blah...
+1. clone this repository to ~/.config/dotfiles/.
+```
+mkdir -p ~/.config/dotfiles
+cd ~/.config/dotfiles && git clone https://github.com/aesophor/dotfiles.git
+```
+
+2. Modify bin/dotsetup to suit your needs!
+```
+vim bin/dotsetup
+```
+
+3. Execute bin/dotsetup (or just copy what you need, if you know what you are doing.)
+```
+./bin/dotsetup
+```
+The script <a href="https://github.com/aesophor/dotfiles/blob/master/bin/dotsetup">dotsetup</a> 
+will attempt to remove old directories or files (if exist), and create symlink to ~/.config/dotfiles/(some_stuff)
  
  
-## Screenshot
+## Screenshots
 ![Screenshot-dirty](https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot-dirty.png)
  
 ![Screenshot-clean](https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot-clean.png)
