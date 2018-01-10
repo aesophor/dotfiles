@@ -9,7 +9,7 @@ Personal dotfiles on my Macbook Pro running Arch Linux
 * Terminal   - urxvt
 * Font       - Tamzen for Powerline
 
-**colorschemes**
+**Colorschemes**
 * oh-my-zsh  - eastwood_custom
 * urxvt      - base16-tomorrow
 * vim        - [base16-minimalist](https://github.com/aesophor/base16-minimalist)
