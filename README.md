@@ -1,15 +1,18 @@
 ## aesophor's dotfiles
-Personal dotfiles on my Macbook Pro running Arch Linux.
+Personal dotfiles on my Macbook Pro running Arch Linux
  
-Details:
-* i3-gaps + KDE
-* i3blocks
-* compton
-* rofi
-* rxvt-unicode-256color
-* Tamzen for Powerline
-* base16-tomorrow colorscheme
-* eastwood_custom theme for oh-my-zsh
+**Details**
+* WM/DE      - i3-gaps + KDE
+* Status Bar - i3blocks
+* Compositor - compton
+* Launcher   - rofi
+* Terminal   - urxvt
+* Font       - Tamzen for Powerline
+
+**colorschemes**
+* oh-my-zsh  - eastwood_custom
+* urxvt      - base16-tomorrow
+* vim        - [base16-minimalist](https://github.com/aesophor/base16-minimalist)
 
 
 ## Installation Note

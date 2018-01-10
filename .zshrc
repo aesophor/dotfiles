@@ -11,12 +11,13 @@ ZSH_THEME="eastwood_custom"
 CASE_SENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(archive extract git vim-interaction zsh-autosuggestions)
+plugins=(archive extract git vim-interaction zsh-autosuggestions zsh-syntax-highlighting)
 
 # Load oh-my-zsh.sh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+export PATH="$PATH:$HOME/.local/bin:$HOME/.local/applications"
 export LANG="en_US.UTF-8"
 export BROWSER="chromium"
 export EDITOR="vim"

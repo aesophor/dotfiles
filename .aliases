@@ -32,13 +32,6 @@ alias config-i3blocks='vim ~/.config/i3blocks/i3blocks.conf'
 alias config-i3blocklets='cd ~/.config/i3blocks/scripts'
 alias config-dp='vim ~/.x/displayctlrc'
 
-# personal scripts
-alias displayctl='~/.local/bin/displayctl'
-alias vpnconnect='~/.local/bin/vpnconnect'
-alias macspoof='~/.local/bin/macspoof'
-alias scrotutl='~/.local/bin/scrotutl'
-alias kbdctl='~/.local/bin/kbdctl'
-
 # typos
 alias EXIT='exit'
 alias eixt='exit'

@@ -6,14 +6,14 @@ URxvt.transparent:          true
 URxvt.shading:		    20
 URxvt.fading:               0
 URxvt.loginShell:           true
-URxvt.saveLines:            500
+URxvt.saveLines:            1000
 URxvt.internalBorder:       1
 URxvt.lineSpace:            2
 URxvt.letterSpace:          0
 
 URxvt.allow_bold:           true
-URxvt*font:                 xft:TamzenForPowerline:pixelsize=14
-URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=14
+URxvt*font:                 xft:TamzenForPowerline:pixelsize=14,xft:WenQuanYi Zen Hei:pixelsize=32
+URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=14,xft:WenQuanYi Zen Hei:pixelsize=32
 
 URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false

@@ -84,7 +84,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'bling/vim-airline'
 Plugin 'dikiaap/minimalist'
-Plugin 'chriskempson/base16-vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
 Plugin 'garbas/vim-snipmate'
@@ -119,7 +118,7 @@ filetype plugin indent on " Enable filetype plugins
 set t_Co=256
 syntax on
 set encoding=utf-8
-colorscheme base16-onedark
+colorscheme base16-minimalist
 
 " Airline.
 let g:airline_theme='minimalist'

@@ -3,7 +3,7 @@
 #
 # Display album art upon music change. For ncmpcpp.
 
-music_dir="/home/aesophor/Music"
+music_dir="$HOME/Music"
 cover_path="/tmp/cover.jpg"
 
 function reset_background
