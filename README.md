@@ -3,11 +3,11 @@ Personal dotfiles on my Macbook Pro running Arch Linux
  
 **Details**
 * WM/DE      - i3-gaps + KDE
-* Status Bar - i3blocks
+* Status Bar - polybar
 * Compositor - compton
 * Launcher   - rofi
 * Terminal   - urxvt
-* Font       - Tamzen for Powerline
+* Font       - Tamzen
 
 **Colorschemes**
 * oh-my-zsh  - eastwood_custom
@@ -16,7 +16,7 @@ Personal dotfiles on my Macbook Pro running Arch Linux
 
 
 ## Installation Note
-1. clone this repository to ~/.config/dotfiles/.
+1. clone this repository into ~/.config/dotfiles/.
 ```
 mkdir -p ~/.config/dotfiles
 cd ~/.config/dotfiles && git clone https://github.com/aesophor/dotfiles.git
@@ -39,5 +39,3 @@ will attempt to remove old directories or files (if exist), and create symlink t
 ![Screenshot-dirty](https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot-dirty.png)
  
 ![Screenshot-clean](https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot-clean.png)
- 
-![Screenshot-lock](https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot-lock.png)

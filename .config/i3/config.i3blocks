@@ -98,7 +98,7 @@ bindsym Mod4+t border none
 # switching window with tab
 bindsym $mod+Tab exec --no-startup-id rofi -show window -config ~/.Xresources
 # i3lock
-bindsym $mod+Shift+x exec --no-startup-id "~/.local/bin/displayctl -l --dim"
+bindsym $mod+Shift+x exec --no-startup-id /usr/bin/bash -c "~/.local/bin/displayctl -l --dim"
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3-KDE inplace
@@ -108,16 +108,15 @@ bindcode 124 exec --no-startup-id qdbus org.kde.ksmserver /KSMServer org.kde.KSM
 
 
 # customize workspace name
-# set $WS? to number to enable index sort in polybar
-set $WS1 "1"
-set $WS2 "2"
-set $WS3 "3"
-set $WS4 "4"
-set $WS5 "5"
-set $WS6 "6"
-set $WS7 "7"
-set $WS8 "8"
-set $WS9 "9"
+set $WS1 "1:   ZSH "
+set $WS2 "2:   Dev "
+set $WS3 "3:   Chromium "
+set $WS4 "4:   Files "
+set $WS5 "5:   Documents "
+set $WS6 "6:   Media "
+set $WS7 "7:   Design "
+set $WS8 "8:   Games "
+set $WS9 "9:   Misc "
 
 # switch to workspace
 bindsym $mod+1 workspace $WS1
@@ -240,6 +239,30 @@ mode "  "
 }
 bindsym $mod+r mode "  "
 
+# start i3bar to display a workspace bar
+bar
+{
+    status_command          i3blocks -c ~/.config/i3blocks/i3blocks.conf
+    tray_output             primary
+    position                top 
+    strip_workspace_numbers yes
+    separator_symbol        "|"
+    workspace_buttons       yes
+
+    colors
+    {
+        background  #18181a
+        statusline  #DDDDDD
+        separator   #666666
+        
+        # class             border  backgr. text
+        focused_workspace   #81a2be #81a2be #FFFFFF
+        active_workspace    #18181a #18181a #FFFFFF
+        inactive_workspace  #18181a #18181a #86888C
+        urgent_workspace    #CC6666 #CC6666 #FFFFFF
+    }
+}
+
 # i3-gaps
 for_window [class="^.*"]                border pixel 0
 for_window [window_role="pop-up"]       floating enable
@@ -247,7 +270,7 @@ for_window [window_role="task_dialog"]  floating enable
 for_window [title="Preferences$"]       floating enable
 
 # class                 border  backgr. text    indicator
-client.focused          #000000 #000000 #FFFFFF #DDDDDD
+client.focused          #31363B #31363B #FFFFFF #DDDDDD
 client.focused_inactive #18181a #18181a #86888C #292D2E
 client.unfocused        #18181a #18181a #86888C #292D2E
 client.urgent           #2F343A #D64E4E #FFFFFF #D64E4E
@@ -260,9 +283,10 @@ gaps outer 10
 # startup applications
 # exec -> On start-up
 # exec_always -> On start-up and reload
-exec --no-startup-id "~/.local/bin/displayctl"
+exec --no-startup-id displayctl
 exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
-exec --no-startup-id xautolock -time 15 -locker "~/.local/bin/displayctl -l --dim"
+exec --no-startup-id xautolock -time 15 -locker "displayctl -l --dim"
 exec_always --no-startup-id ~/.config/polybar/launch.sh
 exec --no-startup-id menutray
+

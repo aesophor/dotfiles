@@ -2,7 +2,7 @@
     monitor = 0
     follow = mouse
     geometry = "350x15-20+40"
-    transparency = 35
+    transparency = 0
     indicate_hidden = yes
     shrink = no
     notification_height = 0

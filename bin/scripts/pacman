@@ -4,7 +4,7 @@
 # Get the numbers of available updates.
 
 PACMAN=$(checkupdates | wc -l)
-PKGCOUNT=$(ls -A -1 /var/cache/pacman/pkg/*.pkg.tar.xz | wc -l)
+PKGCOUNT=$(ls -A -1 /var/cache/pacman/pkg/ | grep .pkg.tar.xz | wc -l)
 echo "$PACMAN/$PKGCOUNT"
 
 

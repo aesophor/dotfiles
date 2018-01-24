@@ -1,0 +1,226 @@
+; ------------ Get color from .Xresources ------------ 
+[colors]
+background   = #E6181818
+background_t = #E63f3f3f
+foreground   = ${xrdb:foreground:#ffffff}
+colour_blk   = ${xrdb:color0:#ffffff}
+colour_gry   = ${xrdb:color20:#ffffff}
+colour_red   = ${xrdb:color1:#ffffff}
+colour_grn   = ${xrdb:color2:#ffffff}
+colour_ylw   = ${xrdb:color3:#ffffff}
+colour_blu   = ${xrdb:color4:#ffffff}
+colour_mag   = ${xrdb:color5:#ffffff}
+colour_cyn   = ${xrdb:color6:#ffffff}
+colour_wht   = ${xrdb:color7:#ffffff}
+
+
+; ------------------- Configuration -------------------
+[bar/top]
+dpi = 112
+monitor = ${env:MONITOR:eDP1}
+top = true
+width = 100%
+height = 23
+offset-x = 0
+offset-y = 0
+radius = 0.0
+fixed-center = true
+
+background = ${colors.background}
+foreground = ${colors.foreground}
+
+line-size = 3
+
+padding-left = 0
+padding-right = 2
+module-margin-left = 1
+module-margin-right = 1
+
+font-0 = Tamzen:size=13;1
+font-1 = Hack:fontformat=truetype:size=9;1
+font-2 = MaterialIcons:size=8;0
+font-3 = FontAwesome:size=9;2
+
+modules-left   = i3
+modules-center = date
+modules-right  = pacman volume wireless-network vpn battery temperature
+
+tray-position = right
+tray-padding = 5
+tray-offset-y = 0%
+tray-offset-x = 0%
+tray-maxsize = 18
+tray-detached = false
+tray-transparent = false
+tray-color = #1D1F21
+
+
+; ---------------------- wm --------------------------
+[global/wm]
+margin-top = 5
+margin-bottom = 5
+wm-restack = i3
+override-redirect = false
+
+
+; ---------------------- i3 --------------------------
+[module/i3]
+type = internal/i3
+
+pin-workspaces = true
+index-sort     = true
+enable-scroll  = false
+
+ws-icon-0 = 1; ZSH 
+ws-icon-1 = 2; Dev 
+ws-icon-2 = 3; Chromium 
+ws-icon-3 = 4; Files 
+ws-icon-4 = 5; Docs 
+ws-icon-5 = 6; Media 
+ws-icon-6 = 7; Design 
+ws-icon-7 = 8; Games 
+ws-icon-8 = 9; Misc 
+ws-icon-default = 
+
+label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.foreground}
+
+label-mode = %icon%
+label-mode-padding = 2
+label-mode-background = ${colors.colour_blu}
+
+label-focused = %icon%
+label-focused-foreground = ${colors.foreground}
+label-focused-background = ${colors.background_t}
+label-focused-underline = ${colors.colour_blu}
+label-focused-padding = 2
+
+label-unfocused = %icon%
+label-unfocused-padding = 2
+
+label-visible = %icon%
+label-visible-underline = ${colors.foreground}
+label-visible-padding = 2
+
+label-urgent = %icon%
+label-urgent-foreground = ${colors.foreground}
+label-urgent-background = ${colors.background}
+label-urgent-underline = ${colors.colour_red}
+label-urgent-padding = 2
+
+
+; -------------------- modules -----------------------
+[module/xwindow]
+type = internal/xwindow
+
+[module/date]
+type = internal/date
+interval = 5
+
+format = <label>
+format-prefix-foreground = ${colors.foreground}
+format-underline = ${colors.colour_blu}
+
+label = %date%, %time%
+
+date = "%a %B %d"
+date-alt = "%d-%m-%Y"
+
+time = "%I:%M %p"
+time-alt = "%H:%M"
+
+[module/volume]
+type = internal/volume
+
+format-muted-background = ${colors.background}
+format-volume-background = ${colors.background}
+format-volume = <label-volume> <bar-volume>
+label-muted = Muted
+
+bar-volume-width = 8
+bar-volume-foreground = ${colors.foreground}
+bar-volume-gradient = false
+bar-volume-indicator= |
+bar-volume-indicator-font = 1
+bar-volume-fill = ─
+bar-volume-fill-font = 1
+bar-volume-empty = ─
+bar-volume-empty-font = 1
+bar-volume-empty-foreground = ${colors.colour_blu}
+
+[module/temperature]
+type = internal/temperature
+thermal-zone = 0
+warn-temperature = 65
+
+format = <label>
+format-warn = <label-warn>
+
+label = %temperature%
+label-warn = %temperature%
+label-warn-foreground = ${colors.colour_red}
+
+
+[module/battery]
+type = internal/battery
+full-at = 98
+
+format-charging = Charging: <label-charging>
+format-discharging = Discharging: <label-discharging>
+format-full = Battery: <label-full>
+
+format-charging-foreground = ${colors.colour_gry}
+format-discharging-foreground = ${colors.colour_gry}
+format-full-foreground = ${colors.colour_gry}
+
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = Charged
+
+label-charging-foreground = ${colors.foreground}
+label-discharging-foreground = ${colors.foreground}
+label-full-foreground = ${colors.foreground}
+
+
+[module/wireless-network]
+type = internal/network
+interface = wlp2s0
+
+interval = 5.0
+accumulate-stats = true
+
+format-connected = Wireless: <label-connected>
+format-connected-foreground = ${colors.colour_gry}
+label-connected = %essid%
+label-connected-foreground = ${colors.foreground}
+
+format-disconnected = Network: <label-disconnected>
+format-disconnected-foreground = ${colors.colour_gry}
+label-disconnected =  offline
+label-disconnected-foreground = ${colors.foreground}
+
+[module/vpn]
+type = internal/network
+interface = tun0
+
+interval = 5.0
+accumulate-stats = true
+format-connected = VPN: <label-connected>
+format-connected-foreground = ${colors.colour_blu}
+format-disconnected = <label-disconnected>
+
+label-connected = Connected
+label-connected-foreground = ${colors.foreground}
+
+label-disconnected = (None)
+label-disconnected-foreground = ${colors.foreground}
+
+
+[module/pacman]
+type = custom/script
+exec = ~/.config/dotfiles/bin/scripts/pacman
+interval = 600.0
+
+format = pacman: <label>
+format-foreground = ${colors.colour_gry}
+label-foreground = ${colors.foreground}

@@ -20,7 +20,6 @@
     | substitutions       : Substitute, by using a regex, in the values of the desktop files.
                             Example: [
                                 {key => 'Exec', re => qr/xterm/, value => 'sakura'},
-                                {key => 'Name', re => qr/^GNU I\w+ M\w+ P\w+/, value => 'GIMP'},
                             ],
 
 || ICON SETTINGS
@@ -58,10 +57,12 @@ our $CONFIG = {
                              terminalize             => 1,
                              unknown_category_key    => "other",
                            },
+  "locale_support"      => 1,
   "menutray_icon"       => "start-here",
   "menutray_title"      => "menutray",
   "menutray_tooltip"    => "Applications",
   "missing_image"       => "gtk-missing-image",
+  "popup_at_cursor"     => 0,
   "tooltips"            => 1,
-  "VERSION"             => 0.51,
+  "VERSION"             => 0.52,
 }

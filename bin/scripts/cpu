@@ -1,5 +1,3 @@
 #!/usr/bin/env bash
-TEMP=`~/.config/i3blocks/scripts/temperature`
 CPU=`ps -Ao %cpu | awk '{s+=$1} END {printf("%.1f",s/8);}'`
-
 echo "$CPU%"

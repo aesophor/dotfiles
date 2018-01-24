@@ -11,10 +11,10 @@ function symlink()
     # remove the old one and create a new symlink.
     if [ -e $2 ] || [ -L $2 ]; then
         rm $2
-    elif [ -d $2 ]; then
+    fi
+
+    if [ -d $2 ]; then
         rm -rf $2
-    else
-        true # do nothing statement.
     fi
 
     echo "[*] $2 -> $1"
@@ -46,6 +46,7 @@ function setup_dotfiles()
     symlink "$HOME/.config/dotfiles/.config/i3" "$HOME/.config/i3"
     symlink "$HOME/.config/dotfiles/.config/i3blocks" "$HOME/.config/i3blocks"
     symlink "$HOME/.config/dotfiles/.config/i3lock" "$HOME/.config/i3lock"
+    symlink "$HOME/.config/dotfiles/.config/polybar" "$HOME/.config/polybar"
     symlink "$HOME/.config/dotfiles/.config/dunst" "$HOME/.config/dunst"
     symlink "$HOME/.config/dotfiles/.config/compton" "$HOME/.config/compton"
     symlink "$HOME/.config/dotfiles/.config/menutray" "$HOME/.config/menutray"
