@@ -3,6 +3,5 @@
 Display.monitor:         eDP1
 Display.resolution:      1680x1050
 Display.brightness:      60
-Display.wallpaper:       /home/aesophor/Pictures/Wallpapers/Minimal/Clock.png
-Display.lockscreen:      /home/aesophor/Pictures/Wallpapers/Minimal/Clock.png
-
+Display.wallpaper:       /home/aesophor/Pictures/Wallpapers/Abstract/FezCube.png
+Display.lockscreen:      /home/aesophor/Pictures/Wallpapers/Abstract/FezCube.png

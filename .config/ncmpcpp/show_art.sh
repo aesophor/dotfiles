@@ -24,7 +24,6 @@ function reset_background
     if [[ -n "$src" ]] ; then
         #resize the image's height to 300px & extent it to cover the urxvt length
         ffmpeg -i "$src" -vf scale=300:300 "$cover_path" -loglevel 8
-        #convert "$src" -resize 300x -background "#2f343f" -extent 1100x400 "$COVER"
         if [[ -f "$cover_path" ]]; then
             printf "\e]20;${cover_path};80x80+3+37:op=keep-aspect\a"
         else

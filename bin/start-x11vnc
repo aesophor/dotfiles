@@ -1,0 +1,2 @@
+#!/usr/bin/env bash
+x11vnc -display :0 -rfbauth ~/.x11vnc/passwd

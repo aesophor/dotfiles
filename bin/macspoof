@@ -6,7 +6,7 @@
 # .
 ETH="$(ip link | grep enp | awk '{printf("%s\n", $2);}' | cut -d : -f 1)"
 LOADED_MACS[0]="$(ip link show $ETH | grep link/ether | awk '{printf("%s", $2);}')"
-macfile="/home/$USERNAME/.private/macspoof/macs"
+macfile="/home/aesophor/.private/macspoof/macs"
 
 
 # the function to preload MAC Adresses from a file into an array.
@@ -45,10 +45,11 @@ function spoof()
 if [ $UID -ne 0 ]; then
     echo "Please run as root. Quitting."
     exit 1
-elif [ $ETH -z ]; then
+elif [ -z $ETH ]; then
     echo "Please make sure that you have an ethernet interface installed. Quitting."
     exit 1
 else
+    echo "Detected ethernet interface $ETH"
     echo "Loading MAC Addresses from $macfile ..."
     preload_macs
     select_mac
