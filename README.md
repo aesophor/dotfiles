@@ -12,6 +12,7 @@
 
 ```
 My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014).
+
 Feel free to take whatever you like.
 
 **Details**
