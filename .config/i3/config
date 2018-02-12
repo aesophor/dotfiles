@@ -66,8 +66,8 @@ bindsym $mod+v split v
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
 # change container layout
-bindsym $mod+s layout stacking
-bindsym $mod+w layout tabbed
+#bindsym $mod+s layout stacking
+#bindsym $mod+w layout tabbed
 bindsym $mod+e layout toggle split
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -91,8 +91,7 @@ hide_edge_borders   none
 #floating_minimum_size 1250 x 750
 
 # shortcut to change window border
-bindsym Mod4+u border normal    0
-bindsym Mod4+y border pixel     1
+bindsym Mod4+y border pixel 1
 bindsym Mod4+t border none
 
 # switching window with tab
@@ -174,7 +173,7 @@ bindsym $mod+F2 workspace $WS2; exec urxvt -e vim
 bindsym $mod+F3 workspace $WS3; exec Chromium
 bindsym $mod+F4 workspace $WS4; exec dolphin
 bindsym $mod+F5 workspace $WS5; exec wps
-bindsym $mod+F6 workspace $WS6; exec urxvt -name ncmpcpp -geometry 110x20+0+0 -e ncmpcpp
+bindsym $mod+F6 workspace $WS6; exec spotify
 bindsym $mod+F7 workspace $WS7; exec gimp
 
 # assign pentest program to workspace.
@@ -260,9 +259,10 @@ gaps outer 10
 # startup applications
 # exec -> On start-up
 # exec_always -> On start-up and reload
-exec --no-startup-id "~/.local/bin/displayctl"
-exec --no-startup-id compton --config ~/.config/compton/compton.conf
+exec --no-startup-id ~/.local/bin/displayctl
+exec --no-startup-id compton --config ~/.config/compton/compton.conf 
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
-exec --no-startup-id xautolock -time 15 -locker "~/.local/bin/displayctl -l --dim"
+exec --no-startup-id pulseaudio --start --log-target=syslog
+exec --no-startup-id mpd
+#exec --no-startup-id xautolock -time 15 -locker "~/.local/bin/displayctl -l --dim"
 exec_always --no-startup-id ~/.config/polybar/launch.sh
-exec --no-startup-id menutray

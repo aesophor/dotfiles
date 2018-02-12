@@ -1,12 +1,14 @@
 ; ------------ Get color from .Xresources ------------ 
 [colors]
-background   = #000000
+background   = #18181a
 background_t = #E63f3f3f
 foreground   = ${xrdb:foreground:#ffffff}
 colour_blk   = ${xrdb:color0:#ffffff}
-colour_gry   = ${xrdb:color20:#ffffff}
+colour_gry   = #656565
+colour_drr   = #8b6c6b
 colour_red   = ${xrdb:color1:#ffffff}
 colour_grn   = #99c794
+colour_org   = #c08054
 colour_ylw   = ${xrdb:color3:#ffffff}
 colour_blu   = ${xrdb:color4:#ffffff}
 colour_mag   = ${xrdb:color5:#ffffff}
@@ -15,12 +17,12 @@ colour_wht   = ${xrdb:color7:#ffffff}
 
 
 ; ------------------- Configuration -------------------
-[bar/top]
+[bar/default]
 dpi = 112
 monitor = ${env:MONITOR:eDP1}
 top = true
 width = 100%
-height = 23
+height = 22
 offset-x = 0
 offset-y = 0
 radius = 0.0
@@ -29,7 +31,7 @@ fixed-center = true
 background = ${colors.background}
 foreground = ${colors.foreground}
 
-line-size = 3
+line-size = 2
 
 padding-left = 1
 padding-right = 1
@@ -38,20 +40,21 @@ module-margin-right = 1
 
 font-0 = Tamzen:size=13;1
 font-1 = Hack:fontformat=truetype:size=9;1
-font-2 = FontAwesome:size=9;2
+font-2 = FontAwesome:size=8;2
+font-3 = Wuncon Siji:pixelsize=10;1
 
-modules-left   = cpu mem temperature storage
+modules-left   = cpu mem temperature storage 
 modules-center = i3
-modules-right  = volume pacman vpn wireless-network battery date powermenu
+modules-right  = volume vpn wireless-network wired-network battery_icon battery_pect date powermenu
 
 tray-position = right
 tray-padding = 5
 tray-offset-y = 0%
 tray-offset-x = 0%
 tray-maxsize = 18
-tray-detached = true
+tray-detached = false
 tray-transparent = false
-tray-color = #1D1F21
+tray-color = ${colors.background}
 
 
 ; ---------------------- wm --------------------------
@@ -70,19 +73,19 @@ pin-workspaces = true
 index-sort     = true
 enable-scroll  = false
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
+ws-icon-0 = 1;
+ws-icon-1 = 2;
 ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
 ws-icon-6 = 7;
 ws-icon-7 = 8;
 ws-icon-8 = 9;
 ws-icon-default = 
 
 label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.foreground}
+label-unfocused-foreground = ${colors.colour_gry}
 
 label-mode = %mode%
 label-mode-padding = 1
@@ -115,31 +118,33 @@ type = internal/xwindow
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 format = <label>
 label = %date% %time%
 date = "%a"
 time = "%H:%M"
+date-alt = "%a"
+time-alt = "%H:%M:%S"
 
 
 [module/volume]
-type = internal/volume
+type = internal/alsa
 
-format-volume =  <label-volume> <bar-volume>
-format-muted  =  <label-muted>
+format-volume =  <label-volume> <bar-volume>
+format-muted  =  <label-muted>
 label-muted   = Muted
 
-format-volume-foreground = #C08054
+format-volume-foreground = ${colors.colour_org}
 format-volume-background = ${colors.background}
 label-volume-foreground  = ${colors.foreground}
 
-format-muted-foreground  = #C08054
+format-muted-foreground  = ${colors.colour_org}
 format-muted-background  = ${colors.background}
 label-muted-foreground   = ${colors.foreground}
 
 bar-volume-width = 7
-bar-volume-foreground = #C08054
+bar-volume-foreground = ${colors.colour_org}
 bar-volume-gradient = false
 bar-volume-indicator= |
 bar-volume-indicator-font = 1
@@ -152,6 +157,8 @@ bar-volume-empty-foreground = ${colors.colour_gry}
 
 [module/battery]
 type = internal/battery
+battery = BAT0
+adapter = ADP1
 full-at = 98
 
 label-charging = %percentage%%
@@ -180,18 +187,60 @@ animation-charging-4 = 
 animation-charging-framerate = 750
 
 
+[module/battery_icon]
+type = custom/script
+exec = ~/.config/dotfiles/bin/scripts/battery_icon
+interval = 3.0
+
+format = <label>
+format-foreground = ${colors.colour_grn}
+
+
+[module/battery_pect]
+type = custom/script
+exec = ~/.config/dotfiles/bin/scripts/battery
+interval = 3.0
+
+format = <label>
+format-offset = -15
+format-foreground = ${colors.foreground}
+
+
 [module/wireless-network]
 type = internal/network
 accumulate-stats = true
 interface = wlp2s0
 interval = 5.0
 
-format-connected =  <label-connected>
+format-connected = <ramp-signal> <label-connected>
 format-connected-foreground = ${colors.colour_cyn}
-format-disconnected =  <label-disconnected>
+format-disconnected =  <label-disconnected>
 format-disconnected-foreground = ${colors.colour_blu}
 
 label-connected = %essid%
+label-connected-foreground = ${colors.foreground}
+label-disconnected = offline
+label-disconnected-foreground = ${colors.foreground}
+
+ramp-signal-4 = 
+ramp-signal-3 = 
+ramp-signal-2 = 
+ramp-signal-1 = 
+ramp-signal-0 = 
+
+
+[module/wired-network]
+type = internal/network
+accumulate-stats = true
+interface = enp0s20u1
+interval = 5.0
+
+format-connected =  <label-connected>
+format-connected-foreground = ${colors.colour_cyn}
+format-disconnected =  <label-disconnected>
+format-disconnected-foreground = ${colors.colour_blu}
+
+label-connected = %ifname%
 label-connected-foreground = ${colors.foreground}
 
 label-disconnected = offline
@@ -220,7 +269,7 @@ type = custom/script
 exec = ~/.config/dotfiles/bin/scripts/cpu
 interval = 5.0
 
-format =  <label>
+format =  <label>
 format-offset = 0
 format-foreground = ${colors.colour_gry}
 label-foreground = ${colors.foreground}
@@ -231,7 +280,7 @@ type = custom/script
 exec = ~/.config/dotfiles/bin/scripts/mem
 interval = 5.0
 
-format =  <label>
+format =  <label>
 format-offset = -5
 format-foreground = ${colors.colour_gry}
 label-foreground = ${colors.foreground}
@@ -242,7 +291,7 @@ type = custom/script
 exec = ~/.config/dotfiles/bin/scripts/temperature
 interval = 5.0
 
-format =  <label>
+format =  <label>
 format-offset = -5
 format-foreground = ${colors.colour_gry}
 label-foreground = ${colors.foreground}
@@ -255,6 +304,16 @@ interval = 5.0
 
 format =  <label>
 format-foreground = ${colors.colour_gry}
+label-foreground = ${colors.foreground}
+
+
+[module/weather]
+type = custom/script
+exec = ~/.config/dotfiles/bin/scripts/weather.py
+interval = 1000.0
+
+format =  <label>
+format-foreground = ${colors.foreground}
 label-foreground = ${colors.foreground}
 
 
@@ -272,5 +331,5 @@ label-foreground = ${colors.foreground}
 type = custom/text
 content =  
 
-content-foreground = #8B6C6B
+content-foreground = ${colors.colour_drr}
 click-left = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1

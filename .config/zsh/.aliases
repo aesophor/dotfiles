@@ -6,7 +6,6 @@ alias al='la'
 alias dir='la'
 
 # corrections
-alias rm='safe-rm'
 alias reboot='sync && sync && sudo reboot'
 alias shutdown='sync && sync && sudo shutdown now'
 
@@ -30,6 +29,7 @@ alias open='xdg-open'
 alias config-dp='vim ~/.x/displayctlrc'
 alias config-i3='vim ~/.config/i3/config'
 alias config-polybar='vim ~/.config/polybar/config'
+alias macspoof='sudo ~/.local/bin/macspoof'
 
 # typos
 alias EXIT='exit'

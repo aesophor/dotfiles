@@ -30,14 +30,13 @@ function setup_dotfiles()
     symlink "$HOME/.config/dotfiles/.Xresources" "$HOME/.Xresources"
     symlink "$HOME/.config/dotfiles/.xbindkeysrc" "$HOME/.xbindkeysrc"
     
-    # bash, zsh, vim, wget, curl, asoundrc, neofetch, ncmpcpp, git configuration.
+    # bash, zsh, vim, wget, curl, neofetch, ncmpcpp, git configuration.
     symlink "$HOME/.config/dotfiles/.bashrc" "$HOME/.bashrc"
     symlink "$HOME/.config/dotfiles/.zshrc" "$HOME/.zshrc"
     symlink "$HOME/.config/dotfiles/.vim" "$HOME/.vim"
     symlink "$HOME/.config/dotfiles/.vimrc" "$HOME/.vimrc"
     symlink "$HOME/.config/dotfiles/.wgetrc" "$HOME/.wgetrc"
     symlink "$HOME/.config/dotfiles/.curlrc" "$HOME/.curlrc"
-    symlink "$HOME/.config/dotfiles/.asoundrc" "$HOME/.asoundrc"
     symlink "$HOME/.config/dotfiles/.config/neofetch" "$HOME/.config/neofetch"
     symlink "$HOME/.config/dotfiles/.config/ncmpcpp" "$HOME/.ncmpcpp"
     symlink "$HOME/.private/git/.gitconfig" "$HOME/.gitconfig"
@@ -55,8 +54,8 @@ function setup_dotfiles()
     symlink "$HOME/.gtkrc-2.0" "$HOME/.gtkrc-2.0-kde4"
     
     # Custom command aliases and functions.
-    symlink "$HOME/.config/dotfiles/.aliases" "$HOME/.config/zsh/aliases"
-    symlink "$HOME/.config/dotfiles/.functions" "$HOME/.config/zsh/functions"
+    symlink "$HOME/.config/dotfiles/.config/zsh/.aliases" "$HOME/.config/zsh/aliases"
+    symlink "$HOME/.config/dotfiles/.config/zsh/.functions" "$HOME/.config/zsh/functions"
     
     # Now bin/* will be accessible under ~/.local/bin/.
     symlink "$HOME/.config/dotfiles/bin" "$HOME/.local/bin"
@@ -67,6 +66,9 @@ function setup_dotfiles()
 
     # Misc.
     symlink "$HOME/.config/dotfiles/res/.face.icon" "$HOME/.face.icon"
+
+    # Copy zsh theme.
+    cp -p "$HOME/.config/dotfiles/.config/oh-my-zsh/themes/coldwood.zsh-theme" "$HOME/.config/oh-my-zsh/themes/."
 }
 
 
@@ -74,12 +76,14 @@ function setup_dotfiles()
 echo "dotsetup"
 echo "========================================================================="
 echo "Running this script without reading it might lead to devastating results."
-echo -n "Make sure you've read the code before running it. [y/n]: "
+echo "Make sure you've read the code before running it, and that you've put"
+echo "these dotfiles under ~/.config/dotfiles"
+echo -n "Proceed? [type yes in uppercase] "
 read choice
 
 # Check user directory existence.
-if [ "$choice" = "y" ]; then
-    echo -e "Proceeding...\n"
+if [ "$choice" = "YES" ]; then
+    echo -e "Running...\n"
     setup_dotfiles
     echo -e "\n[*] Congrats! You have updated all symlinks and dotfiles are now ready to be loaded."
 else

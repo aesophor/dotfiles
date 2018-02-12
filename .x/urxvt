@@ -2,7 +2,8 @@
 ! ============================================================
 URxvt.depth:                32
 URxvt.geometry:             90x30
-URxvt.transparent:          true
+URxvt.background:           #18181a
+URxvt.transparent:          false
 URxvt.shading:		    0
 URxvt.fading:               0
 URxvt.loginShell:           true
@@ -12,19 +13,26 @@ URxvt.lineSpace:            2
 URxvt.letterSpace:          0
 
 URxvt.allow_bold:           true
-URxvt*font:                 xft:TamzenForPowerline:pixelsize=14,xft:WenQuanYi Zen Hei:pixelsize=32
-URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=14,xft:WenQuanYi Zen Hei:pixelsize=32
+URxvt*font:                 xft:TamzenForPowerline:pixelsize=14, xft:WenQuanYi WenQuanYi Bitmap Song:pixelsize=10
+URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=14, xft:WenQuanYi WenQuanYi Bitmap Song:bold:pixelsize=10
 
+URxvt.urlLauncher:          /usr/bin/xdg-open
 URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
-URxvt.urlLauncher:          /usr/bin/chromium-browser
-URxvt.perl-ext-common:      default,matcher,resize-font
-URxvt.matcher.button:       1
-
+! cursor configuration.
 URxvt.cursorBlink:          false
 URxvt.cursorUnderline:      true
 URxvt.pointerBlank:         true
 
-URxvt*iso14755: false
-URxvt*iso14755_52: false
+! urxvt extensions.
+URxvt.perl-ext-common:      default,matcher,resize-font
+
+! matcher configuration.
+URxvt.matcher.button:       1
+
+! resize-font extension configuration.
+URxvt.iso14755:             false
+URxvt.iso14755_52:          false
+URxvt.keysym.C-Down:        resize-font:smaller
+URxvt.keysym.C-Up:          resize-font:bigger
