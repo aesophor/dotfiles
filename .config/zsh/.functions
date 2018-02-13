@@ -1,11 +1,35 @@
-#!/usr/bin/env bash
-
-function mkcd()
-{
+function mkcd() {
     mkdir -p "$1" && cd "$1"
 }
 
-function xrdb_get_record()
-{
+
+function xrdb_get_record() {
     xrdb -query | grep -i "$1" | cut -d ":" -f 2 | sed -e 's/^[ \t]*//'
+}
+
+
+function addpath() {
+    # $1: Where all its subdirectories will be added to $PATH.
+    bindir=$1
+    
+    # Make sure $bindir is ended with a slash.
+    # This is necessary for path concatenation.
+    if [[ "$bindir" != *"/" ]]; then bindir=$bindir\/; fi
+    
+    # @f splits at newlines only.
+    # Make sure to disable ls color to make $PATH work correctly.
+    # This will get all directories excluding *bar (e.g. polybar)
+    DIRS=("${(@f)$(ls --color=never -d $bindir* | grep -v "bar")}")
+    
+    for dir in $DIRS; do
+        export PATH="$PATH:$dir"
+    done
+}
+
+
+function cleanup() {
+    rm ~/.bash_history 2>/dev/null
+    rm ~/.bash_logout 2>/dev/null
+    rm ~/.lesshst 2>/dev/null
+    echo > ~/.zsh_history
 }

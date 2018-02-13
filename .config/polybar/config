@@ -16,99 +16,101 @@ colour_cyn   = ${xrdb:color6:#ffffff}
 colour_wht   = ${xrdb:color7:#ffffff}
 
 
+
 ; ------------------- Configuration -------------------
 [bar/default]
-dpi = 112
-monitor = ${env:MONITOR:eDP1}
-top = true
-width = 100%
-height = 22
-offset-x = 0
-offset-y = 0
-radius = 0.0
+dpi          = 112
+monitor      = ${env:MONITOR:eDP1}
+top          = true
+width        = 100%
+height       = 23
+offset-x     = 0
+offset-y     = 0
+radius       = 0.0
 fixed-center = true
+line-size    = 2
+background   = ${colors.background}
+foreground   = ${colors.foreground}
 
-background = ${colors.background}
-foreground = ${colors.foreground}
-
-line-size = 2
-
-padding-left = 1
-padding-right = 1
-module-margin-left = 1
+padding-left        = 1
+padding-right       = 1
+module-margin-left  = 1
 module-margin-right = 1
+
+modules-left        = cpu mem temperature storage
+modules-center      = i3
+modules-right       = volume vpn wireless-network wired-network battery_icon battery_pect date powermenu
+
+tray-position       = right
+tray-padding        = 5
+tray-offset-y       = 0%
+tray-offset-x       = 0%
+tray-maxsize        = 18
+tray-detached       = false
+tray-transparent    = false
+tray-color          = ${colors.background}
 
 font-0 = Tamzen:size=13;1
 font-1 = Hack:fontformat=truetype:size=9;1
 font-2 = FontAwesome:size=8;2
 font-3 = Wuncon Siji:pixelsize=10;1
 
-modules-left   = cpu mem temperature storage 
-modules-center = i3
-modules-right  = volume vpn wireless-network wired-network battery_icon battery_pect date powermenu
-
-tray-position = right
-tray-padding = 5
-tray-offset-y = 0%
-tray-offset-x = 0%
-tray-maxsize = 18
-tray-detached = false
-tray-transparent = false
-tray-color = ${colors.background}
 
 
 ; ---------------------- wm --------------------------
 [global/wm]
-margin-top = 5
-margin-bottom = 5
-wm-restack = i3
+margin-top        = 5
+margin-bottom     = 5
+wm-restack        = i3
 override-redirect = false
+
 
 
 ; ---------------------- i3 --------------------------
 [module/i3]
 type = internal/i3
 
-pin-workspaces = true
-index-sort     = true
-enable-scroll  = false
+pin-workspaces  = true
+index-sort      = true
+enable-scroll   = false
 
-ws-icon-0 = 1;
-ws-icon-1 = 2;
-ws-icon-2 = 3;
-ws-icon-3 = 4;
-ws-icon-4 = 5;
-ws-icon-5 = 6;
-ws-icon-6 = 7;
-ws-icon-7 = 8;
-ws-icon-8 = 9;
-ws-icon-default = 
+ws-icon-0       = 1;
+ws-icon-1       = 2;
+ws-icon-2       = 3;
+ws-icon-3       = 4;
+ws-icon-4       = 5;
+ws-icon-5       = 6;
+ws-icon-6       = 7;
+ws-icon-7       = 8;
+ws-icon-8       = 9;
+ws-icon-default =    
 
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.colour_gry}
 
-label-mode = %mode%
-label-mode-padding = 1
-label-mode-background = ${colors.colour_red}
+label-mode               = %mode%
+label-mode-padding       = 1
+label-mode-background    = ${colors.colour_red}
 
-label-focused = %icon%
+label-focused            = %icon%
 label-focused-foreground = ${colors.foreground}
 label-focused-background = ${colors.background}
-label-focused-underline = ${colors.colour_blu}
-label-focused-padding = 2
+label-focused-underline  = ${colors.colour_blu}
+label-focused-padding    = 2
 
-label-unfocused = %icon%
-label-unfocused-padding = 2
+label-unfocused          = %icon%
+label-unfocused-padding  = 2
 
-label-visible = %icon%
-label-visible-underline = ${colors.foreground}
-label-visible-padding = 2
+label-visible            = %icon%
+label-visible-underline  = ${colors.foreground}
+label-visible-padding    = 2
 
-label-urgent = %icon%
-label-urgent-foreground = ${colors.foreground}
-label-urgent-background = ${colors.background}
-label-urgent-underline = ${colors.colour_red}
-label-urgent-padding = 2
+label-urgent             = %icon%
+label-urgent-foreground  = ${colors.foreground}
+label-urgent-background  = ${colors.background}
+label-urgent-underline   = ${colors.colour_red}
+label-urgent-padding     = 2
+
 
 
 ; -------------------- modules -----------------------
@@ -116,24 +118,26 @@ label-urgent-padding = 2
 type = internal/xwindow
 
 
+
 [module/date]
-type = internal/date
+type     = internal/date
 interval = 1
 
-format = <label>
-label = %date% %time%
-date = "%a"
-time = "%H:%M"
+format   = <label>
+label    = %date% %time%
+date     = "%a"
+time     = "%H:%M"
 date-alt = "%a"
 time-alt = "%H:%M:%S"
+
 
 
 [module/volume]
 type = internal/alsa
 
-format-volume =  <label-volume> <bar-volume>
-format-muted  =  <label-muted>
-label-muted   = Muted
+format-volume            =  <label-volume>
+format-muted             =  <label-muted>
+label-muted              = Muted
 
 format-volume-foreground = ${colors.colour_org}
 format-volume-background = ${colors.background}
@@ -143,84 +147,44 @@ format-muted-foreground  = ${colors.colour_org}
 format-muted-background  = ${colors.background}
 label-muted-foreground   = ${colors.foreground}
 
-bar-volume-width = 7
-bar-volume-foreground = ${colors.colour_org}
-bar-volume-gradient = false
-bar-volume-indicator= |
-bar-volume-indicator-font = 1
-bar-volume-fill = ─
-bar-volume-fill-font = 1
-bar-volume-empty = ─
-bar-volume-empty-font = 1
-bar-volume-empty-foreground = ${colors.colour_gry}
-
-
-[module/battery]
-type = internal/battery
-battery = BAT0
-adapter = ADP1
-full-at = 98
-
-label-charging = %percentage%%
-label-discharging = %percentage%%
-
-format-charging = <animation-charging> <label-charging>
-format-discharging = <ramp-capacity> <label-discharging>
-format-full = <ramp-capacity> <label-full>
-
-animation-charging-foreground = ${colors.colour_grn}
-ramp-capacity-foreground = ${colors.colour_grn}
-
-ramp-capacity-0 = 
-ramp-capacity-0-foreground = ${colors.colour_red}
-ramp-capacity-1 = 
-ramp-capacity-1-foreground = ${colors.colour_ylw}
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
-
-animation-charging-0 = 
-animation-charging-1 = 
-animation-charging-2 = 
-animation-charging-3 = 
-animation-charging-4 = 
-animation-charging-framerate = 750
 
 
 [module/battery_icon]
-type = custom/script
-exec = ~/.config/dotfiles/bin/scripts/battery_icon
+type     = custom/script
+exec     = ~/.config/dotfiles/bin/polybar/battery_icon
 interval = 3.0
 
-format = <label>
+format            = <label>
 format-foreground = ${colors.colour_grn}
 
 
+
 [module/battery_pect]
-type = custom/script
-exec = ~/.config/dotfiles/bin/scripts/battery
+type     = custom/script
+exec     = ~/.config/dotfiles/bin/polybar/battery
 interval = 3.0
 
-format = <label>
-format-offset = -15
+format            = <label>
+format-offset     = -15
 format-foreground = ${colors.foreground}
 
 
-[module/wireless-network]
-type = internal/network
-accumulate-stats = true
-interface = wlp2s0
-interval = 5.0
 
-format-connected = <ramp-signal> <label-connected>
-format-connected-foreground = ${colors.colour_cyn}
-format-disconnected =  <label-disconnected>
+[module/wireless-network]
+type             = internal/network
+accumulate-stats = true
+interface        = wlp2s0
+interval         = 5.0
+
+format-connected               = <ramp-signal> <label-connected>
+format-connected-foreground    = ${colors.colour_cyn}
+format-disconnected            =  <label-disconnected>
 format-disconnected-foreground = ${colors.colour_blu}
 
-label-connected = %essid%
-label-connected-foreground = ${colors.foreground}
-label-disconnected = offline
-label-disconnected-foreground = ${colors.foreground}
+label-connected                = %essid%
+label-connected-foreground     = ${colors.foreground}
+label-disconnected             = offline
+label-disconnected-foreground  = ${colors.foreground}
 
 ramp-signal-4 = 
 ramp-signal-3 = 
@@ -229,107 +193,114 @@ ramp-signal-1 = 
 ramp-signal-0 = 
 
 
-[module/wired-network]
-type = internal/network
-accumulate-stats = true
-interface = enp0s20u1
-interval = 5.0
 
-format-connected =  <label-connected>
-format-connected-foreground = ${colors.colour_cyn}
-format-disconnected =  <label-disconnected>
+[module/wired-network]
+type             = internal/network
+accumulate-stats = true
+interface        = enp0s20u1
+interval         = 5.0
+
+format-connected               =  <label-connected>
+format-connected-foreground    = ${colors.colour_cyn}
+format-disconnected            =  <label-disconnected>
 format-disconnected-foreground = ${colors.colour_blu}
 
-label-connected = %ifname%
-label-connected-foreground = ${colors.foreground}
+label-connected                = %ifname%
+label-connected-foreground     = ${colors.foreground}
 
-label-disconnected = offline
-label-disconnected-foreground = ${colors.foreground}
+label-disconnected             = offline
+label-disconnected-foreground  = ${colors.foreground}
+
 
 
 [module/vpn]
-type = internal/network
-interface = tun0
-
-interval = 5.0
+type             = internal/network
+interface        = tun0
+interval         = 5.0
 accumulate-stats = true
-format-connected = VPN: <label-connected>
-format-connected-foreground = ${colors.colour_blu}
-format-disconnected = <label-disconnected>
 
-label-connected = Connected
-label-connected-foreground = ${colors.foreground}
+format-connected              = VPN: <label-connected>
+format-connected-foreground   = ${colors.colour_blu}
+format-disconnected           = <label-disconnected>
 
-label-disconnected = (None)
+label-connected               = Connected
+label-connected-foreground    = ${colors.foreground}
+
+label-disconnected            = (None)
 label-disconnected-foreground = ${colors.foreground}
 
 
+
 [module/cpu]
-type = custom/script
-exec = ~/.config/dotfiles/bin/scripts/cpu
+type     = custom/script
+exec     = ~/.config/dotfiles/bin/polybar/cpu
 interval = 5.0
 
-format =  <label>
-format-offset = 0
-format-foreground = ${colors.colour_gry}
-label-foreground = ${colors.foreground}
+format            =  <label>
+format-foreground = ${colors.colour_red}
+label-foreground  = ${colors.foreground}
+
 
 
 [module/mem]
-type = custom/script
-exec = ~/.config/dotfiles/bin/scripts/mem
+type     = custom/script
+exec     = ~/.config/dotfiles/bin/polybar/mem
 interval = 5.0
 
-format =  <label>
-format-offset = -5
-format-foreground = ${colors.colour_gry}
-label-foreground = ${colors.foreground}
+format            =  <label>
+format-foreground = ${colors.colour_org}
+label-foreground  = ${colors.foreground}
+
 
 
 [module/temperature]
-type = custom/script
-exec = ~/.config/dotfiles/bin/scripts/temperature
+type     = custom/script
+exec     = ~/.config/dotfiles/bin/polybar/temperature
 interval = 5.0
 
-format =  <label>
-format-offset = -5
-format-foreground = ${colors.colour_gry}
-label-foreground = ${colors.foreground}
+format            =  <label>
+format-foreground = ${colors.colour_ylw}
+label-foreground  = ${colors.foreground}
+
 
 
 [module/storage]
-type = custom/script
-exec = ~/.config/dotfiles/bin/scripts/storage
+type     = custom/script
+exec     = ~/.config/dotfiles/bin/polybar/storage
 interval = 5.0
 
-format =  <label>
-format-foreground = ${colors.colour_gry}
-label-foreground = ${colors.foreground}
+format            =  <label>
+format-offset     = 3
+format-foreground = ${colors.colour_grn}
+label-foreground  = ${colors.foreground}
+
 
 
 [module/weather]
-type = custom/script
-exec = ~/.config/dotfiles/bin/scripts/weather.py
-interval = 1000.0
+type     = custom/script
+exec     = ~/.config/dotfiles/bin/polybar/weather.py
+interval = 10000.0
 
-format =  <label>
-format-foreground = ${colors.foreground}
-label-foreground = ${colors.foreground}
+format            =  <label>
+format-foreground = ${colors.colour_grn}
+label-foreground  = ${colors.foreground}
+
 
 
 [module/pacman]
-type = custom/script
-exec = ~/.config/dotfiles/bin/scripts/pacman
+type     = custom/script
+exec     = ~/.config/dotfiles/bin/polybar/pacman
 interval = 600.0
 
-format =  <label>
+format            =  <label>
 format-foreground = ${colors.colour_red}
-label-foreground = ${colors.foreground}
+label-foreground  = ${colors.foreground}
+
 
 
 [module/powermenu]
-type = custom/text
+type    = custom/text
 content =  
 
 content-foreground = ${colors.colour_drr}
-click-left = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1

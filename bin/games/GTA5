@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+username=$USER
+cd "$HOME/.wine64/drive_c/Program Files (x86)/Grand Theft Auto V"
+
+# Restiore PulseAudio daemon.
+function on_exit()
+{
+    pulseaudio --start --log-target=syslog
+}
+
+trap 'on_exit' INT TERM
+# Kill PulseAudio while GTA V is running to prevent it hogging CPU.
+pgrep pulseaudio && pulseaudio -k
+sudo nice -n -15 su -c "WINEPREFIX=~/.wine64 wine GTAVLauncher.exe" $username
+on_exit

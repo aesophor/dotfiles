@@ -24,12 +24,11 @@ alias vpn='cd ~/.config/143vpn/TCP/ && la'
 
 # shortcuts
 alias c='clear'
-alias ch='rm ~/.bash_history 2>/dev/null; rm ~/.bash_logout 2>/dev/null; rm ~/.lesshst 2>/dev/null; echo > ~/.zsh_history'
 alias open='xdg-open'
 alias config-dp='vim ~/.x/displayctlrc'
 alias config-i3='vim ~/.config/i3/config'
 alias config-polybar='vim ~/.config/polybar/config'
-alias macspoof='sudo ~/.local/bin/macspoof'
+alias macspoof='sudo ~/.local/bin/scripts/macspoof'
 
 # typos
 alias EXIT='exit'

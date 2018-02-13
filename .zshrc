@@ -16,20 +16,23 @@ plugins=(archive extract git sudo vim-interaction zsh-autosuggestions zsh-syntax
 # Load oh-my-zsh.sh
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
-export PATH="$PATH:$HOME/.local/bin:$HOME/.local/applications"
-export LANG="en_US.UTF-8"
-export BROWSER="chromium"
-export EDITOR="vim"
-
 # Custom command aliases and functions.
 source ~/.config/zsh/aliases
 source ~/.config/zsh/functions
 
+# Add all directories under $HOME/.local/bin/ to $PATH.
+addpath $HOME/.local/bin
+unset -f addpath
+
+# User configuration
+export LANG="en_US.UTF-8"
+export BROWSER="chromium"
+export EDITOR="vim"
+
 # gentoo-zsh-completions
-autoload -U compinit promptinit
-compinit
-promptinit: prompt gentoo
+#autoload -U compinit promptinit
+#compinit
+#promptinit: prompt gentoo
 
 # fcitx for wps fix.
 export XIM=fcitx
@@ -38,8 +41,8 @@ export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
 # thefuck configuration.
-eval `thefuck --alias`
-eval `thefuck --alias FUCK`
+#eval `thefuck --alias`
+#eval `thefuck --alias FUCK`
 
 # Prevent Wine from adding menu entries and desktop links.
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"

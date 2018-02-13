@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.local/bin/colors
+source ~/.local/bin/scripts/colors
 
 kernel=$(uname -rmo)
 cpuspe=$(grep 'model name' /proc/cpuinfo| sed 1q|sed 's/^.*:\ *//')

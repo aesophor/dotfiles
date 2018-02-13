@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+cd "$HOME/.wine/drive_c/Program Files/Visual CertExam Suite"
+wine manager.exe

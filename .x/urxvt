@@ -22,7 +22,7 @@ URxvt.scrollBar:            false
 
 ! cursor configuration.
 URxvt.cursorBlink:          false
-URxvt.cursorUnderline:      true
+URxvt.cursorUnderline:      false
 URxvt.pointerBlank:         true
 
 ! urxvt extensions.

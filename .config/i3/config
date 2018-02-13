@@ -97,7 +97,7 @@ bindsym Mod4+t border none
 # switching window with tab
 bindsym $mod+Tab exec --no-startup-id rofi -show window -config ~/.Xresources
 # i3lock
-bindsym $mod+Shift+x exec --no-startup-id "~/.local/bin/displayctl -l --dim"
+#bindsym $mod+Shift+x exec --no-startup-id displayctl -l --dim
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3-KDE inplace
@@ -259,7 +259,7 @@ gaps outer 10
 # startup applications
 # exec -> On start-up
 # exec_always -> On start-up and reload
-exec --no-startup-id ~/.local/bin/displayctl
+exec --no-startup-id displayctl
 exec --no-startup-id compton --config ~/.config/compton/compton.conf 
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id pulseaudio --start --log-target=syslog
