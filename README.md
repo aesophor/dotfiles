@@ -13,7 +13,7 @@
 ```
 My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014).
 
-Feel free to take whatever you like.
+Ctrl+W should you feel uncomfortable with my rice.
 
 **Details**
 * DE/WM      - KDE Plasma + i3-gaps
