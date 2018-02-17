@@ -13,7 +13,7 @@
 ```
 My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014).
 
-Ctrl+W should you feel uncomfortable with my rice.
+Ctrl+w should you feel uncomfortable with my rice.
 
 **Details**
 * DE/WM      - KDE Plasma + i3-gaps
@@ -30,7 +30,7 @@ Ctrl+W should you feel uncomfortable with my rice.
 
 
 ## Installation Note
-git clone this repo into ~/.config/dotfiles and run ~/.config/dotfiles/dotsetup.
+git clone this repo into ~/.config/dotfiles and run ~/.config/dotfiles/bin/scripts/dotsetup
 
 Read the script before running!
  
