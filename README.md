@@ -30,26 +30,9 @@ Feel free to take whatever you like.
 
 
 ## Installation Note
-1. Prepare the dotfiles in ~/.config/dotfiles/.
-```
-mkdir -p ~/.config/dotfiles
-cd ~/.config/dotfiles && git clone https://github.com/aesophor/dotfiles.git
-```
+git clone this repo into ~/.config/dotfiles and run ~/.config/dotfiles/dotsetup.
 
-2. Modify bin/dotsetup to suit your needs.
-```
-vim bin/dotsetup
-```
-
-3. Execute bin/dotsetup (or just copy what you need, if you know what you are doing.)
-```
-./bin/dotsetup
-```
-The script <a href="https://github.com/aesophor/dotfiles/blob/master/bin/dotsetup">dotsetup</a> 
-will attempt to remove old directories or files (if exist), and create symlink to ~/.config/dotfiles/(some_stuff)
- 
+Read the script before running!
  
 ## Screenshots
-![Screenshot-rofi](https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot-rofi.png)
- 
 ![Screenshot-clean](https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot-clean.png)
