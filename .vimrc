@@ -133,6 +133,7 @@ let g:airline#extensions#hunks#non_zero_only = 1
 " previous tab: gT
 nmap <C-t> :tabnew<CR>:NERDTreeToggle<CR>:wincmd p<CR>
 nmap <C-w> :q!<CR>
+nmap <C-c> :wincmd p<CR>
 
 " NERDTree
 autocmd vimenter * NERDTree

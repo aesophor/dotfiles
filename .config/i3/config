@@ -5,8 +5,6 @@ for_window [title="Desktop — Plasma"] kill; floating enable; border none
 
 # color definition
 set $background       #181818
-set $background_t     #181818dd
-set $foreground_t     #3f3f3fdd
 set $colour_blue      #81a2be
 set $colour_red       #cc6666
 set $colour_white     #ffffff
@@ -143,80 +141,76 @@ bindsym $mod+Shift+9 move container to workspace $WS9
 # i3-KDE integration.
 # avoid tiling popups, dropdown windows from plasma
 # for the first time, manually resize them, i3 will remember the setting for floating windows
-for_window [class="plasmashell"]                      floating enable;
-for_window [class="Plasma"]                           floating enable; border none
-for_window [title="plasma-desktop"]                   floating enable; border none
-for_window [title="win7"]                             floating enable; border none
-for_window [class="krunner"]                          floating enable; border none
-for_window [class="Kmix"]                             floating enable; border none
-for_window [class="Klipper"]                          floating enable; border none
-for_window [class="Plasmoidviewer"]                   floating enable; border none
+for_window [class="plasmashell"]                       floating enable;
+for_window [class="Plasma"]                            floating enable; border none
+for_window [title="plasma-desktop"]                    floating enable; border none
+for_window [title="win7"]                              floating enable; border none
+for_window [class="krunner"]                           floating enable; border none
+for_window [class="Kmix"]                              floating enable; border none
+for_window [class="Klipper"]                           floating enable; border none
+for_window [class="Plasmoidviewer"]                    floating enable; border none
 
 # set floating mode when applications started
-for_window [class="URxvt" instance="ncmpcpp"]         floating enable
-for_window [class="Gcolor2"]                          floating enable
-for_window [class="systemsettings"]                   floating enable
-for_window [class="Steam"]                            floating enable
-for_window [class="PCSX2"]                            floating enable
-for_window [class="VirtualBox"]                       floating enable
-for_window [class="Wine" instance="explorer.exe"]     floating enable
-for_window [class="Wine" instance="steam.exe"]        floating enable
-for_window [class="Wine" instance="line.exe"]         floating enable
+for_window [class="URxvt" instance="ncmpcpp"]          floating enable
+for_window [class="Gcolor2"]                           floating enable
+for_window [class="systemsettings"]                    floating enable
+for_window [class="Steam"]                             floating enable
+for_window [class="PCSX2"]                             floating enable
+for_window [class="VirtualBox"]                        floating enable
+for_window [class="explorer.exe" instance="explorer.exe"]      floating enable
+for_window [class="steam.exe" instance="steam.exe"]         floating enable
+for_window [class="line.exe" instance="line.exe"]          floating enable
 
-# Skyrim X window crash fix.
-# set Skyrim to window mode instead of fullscreen mode
-#for_window [class="Wine" instance="tesv.exe"]       fullscreen enable
+# assign pentest program to workspace.
+assign [class="Ettercap"]                             → $WS2
+assign [class="Wireshark-gtk"]                        → $WS2
+assign [class="burp-StartBurp"]                       → $WS2
+
+# assign program to workspace (for spotify wm_class fix -> spotifywm)
+assign [class="terminal"]                             → $WS1
+assign [class="NetBeans IDE 8.2"]                     → $WS2
+assign [class="Chromium"]                             → $WS3
+assign [class="Tor Browser"]                          → $WS3
+assign [class="Slack"]                                → $WS3
+assign [class="line.exe" instance="line.exe"]         → $WS3
+assign [class="dolphin"]                              → $WS4
+assign [class="ark"]                                  → $WS4
+assign [class="Et"]                                   → $WS5
+assign [class="Wps"]                                  → $WS5
+assign [class="Wpp"]                                  → $WS5
+assign [class="feh"]                                  → $WS6
+assign [class="Spotify"]                              → $WS6
+assign [class="(?i)butter"]                           → $WS6
+assign [class="(?i)vlc"]                              → $WS6
+assign [class="(?i)mpv"]                              → $WS6
+assign [class="Wine" instance="mp3directcut.exe"]     → $WS6
+assign [class="com-yworks-A-B"]                       → $WS7
+assign [class="Gimp"]                                 → $WS7
+assign [class="Allegro"]                              → $WS7
+assign [class="Pingendo"]                             → $WS7
+assign [class="Steam"]                                → $WS8
+assign [class="explorer.exe" instance="explorer.exe"] → $WS8
+assign [class="steam.exe" instance="steam.exe"]       → $WS8
+assign [class="tesv.exe" instance="tesv.exe"]         → $WS8
+assign [class="Minecraft 1.7.10"]                     → $WS8
+assign [class="net-minecraft-launcher-Main"]          → $WS8
+assign [class="PCSX2"]                                → $WS8
+assign [class="Keepassx"]                             → $WS9
+assign [class="Transmission-gtk"]                     → $WS9
+assign [class="Software-properties-gtk"]              → $WS9
+assign [class="VirtualBox"]                           → $WS9
+assign [class="XDosEmu"]                              → $WS9
 
 # shortcut applications
-bindsym $mod+F1                 exec urxvt
-bindsym $mod+F2 workspace $WS2; exec urxvt -e vim
+bindsym $mod+F1 workspace $WS1; exec urxvt
+bindsym $mod+F2 workspace $WS1; exec urxvt -e vim
 bindsym $mod+F3 workspace $WS3; exec Chromium
 bindsym $mod+F4 workspace $WS4; exec dolphin
 bindsym $mod+F5 workspace $WS5; exec wps
 bindsym $mod+F6 workspace $WS6; exec spotify
 bindsym $mod+F7 workspace $WS7; exec gimp
-
-# assign pentest program to workspace.
-assign [class="Ettercap"]                            → $WS2
-assign [class="Wireshark-gtk"]                       → $WS2
-assign [class="burp-StartBurp"]                      → $WS2
-
-# assign program to workspace (for spotify wm_class fix -> spotifywm)
-assign [class="terminal"]                            → $WS1
-assign [class="NetBeans IDE 8.2"]                    → $WS2
-assign [class="Chromium"]                            → $WS3
-assign [class="Tor Browser"]                         → $WS3
-assign [class="Slack"]                               → $WS3
-assign [class="Wine" instance="line.exe"]            → $WS3
-assign [class="dolphin"]                             → $WS4
-assign [class="ark"]                                 → $WS4
-assign [class="Et"]                                  → $WS5
-assign [class="Wps"]                                 → $WS5
-assign [class="Wpp"]                                 → $WS5
-assign [class="feh"]                                 → $WS6
-assign [class="Spotify"]                             → $WS6
-assign [class="(?i)butter"]                          → $WS6
-assign [class="(?i)vlc"]                             → $WS6
-assign [class="(?i)mpv"]                             → $WS6
-assign [class="Wine" instance="mp3directcut.exe"]    → $WS6
-assign [class="com-yworks-A-B"]                      → $WS7
-assign [class="Gimp"]                                → $WS7
-assign [class="Allegro"]                             → $WS7
-assign [class="Pingendo"]                            → $WS7
-assign [class="Steam"]                               → $WS8
-assign [class="Wine" instance="explorer.exe"]        → $WS8
-assign [class="Wine" instance="steam.exe"]           → $WS8
-assign [class="Wine" instance="tesv.exe"]            → $WS8
-assign [class="Wine" instance="gta5.exe"]            → $WS8
-assign [class="Minecraft 1.7.10"]                    → $WS8
-assign [class="net-minecraft-launcher-Main"]         → $WS8
-assign [class="PCSX2"]                               → $WS8
-assign [class="Keepassx"]                            → $WS9
-assign [class="Transmission-gtk"]                    → $WS9
-assign [class="Software-properties-gtk"]             → $WS9
-assign [class="VirtualBox"]                          → $WS9
-assign [class="XDosEmu"]                             → $WS9
-
+bindsym $mod+F8 workspace $WS8; exec steam
+bindsym $mod+F9 workspace $WS9; exec VirtualBox
 
 # resize window
 mode "  "

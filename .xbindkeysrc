@@ -9,9 +9,9 @@
     XF86AudioMute
 
 # Assign screen brightness keys.
-"xbacklight -inc 10"
+"light -A 10"
     XF86MonBrightnessUp
-"xbacklight -dec 10"
+"light -U 10"
     XF86MonBrightnessDown
 
 # Assign keyboard brightness keys.
@@ -21,9 +21,9 @@
     XF86KbdBrightnessDown
 
 # Assign screenshot key.
-"~/.local/bin/scrotutl -f"
+"scrotutl -f"
     Control+Shift + 3
-"~/.local/bin/scrotutl -s"
+"scrotutl -s"
     Control+Shift + 4
-"~/.local/bin/scrotutl -w"
+"scrotutl -w"
     Control+Shift + Space + 4

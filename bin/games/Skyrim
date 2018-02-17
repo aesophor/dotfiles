@@ -9,4 +9,4 @@ HEIGHT=`echo $RESOLUTION | cut -d ' ' -f 1`
 
 cd "$HOME/.wine/drive_c/Program Files/Steam/steamapps/common/Skyrim"
 xrandr --output $OUTPUT --mode "$LENGTH"x"$HEIGHT"
-PULSE_LATENCY_MSEC=50 && wine skse_loader.exe
+wine skse_loader.exe

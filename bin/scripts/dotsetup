@@ -43,8 +43,6 @@ function setup_dotfiles()
 
     # i3, dunst, compton, menutray, KDE, gtk configuration.
     symlink "$HOME/.config/dotfiles/.config/i3" "$HOME/.config/i3"
-    symlink "$HOME/.config/dotfiles/.config/i3blocks" "$HOME/.config/i3blocks"
-    symlink "$HOME/.config/dotfiles/.config/i3lock" "$HOME/.config/i3lock"
     symlink "$HOME/.config/dotfiles/.config/polybar" "$HOME/.config/polybar"
     symlink "$HOME/.config/dotfiles/.config/dunst" "$HOME/.config/dunst"
     symlink "$HOME/.config/dotfiles/.config/compton" "$HOME/.config/compton"
@@ -59,7 +57,6 @@ function setup_dotfiles()
     
     # Now bin/* will be accessible under ~/.local/bin/.
     symlink "$HOME/.config/dotfiles/bin" "$HOME/.local/bin"
-    symlink "$HOME/Workspaces/02-Projects/bash-displayctl/displayctl" "$HOME/.local/bin/displayctl"
 
     # gdb configuration.
     symlink "$HOME/.config/dotfiles/.gdbinit" "$HOME/.gdbinit"

@@ -11,4 +11,4 @@ temperature = w.get_temperature('celsius')
 temperature = temperature['temp_max']
 status = w.get_status()
 
-print(status, int(temperature))
+print( str(int(temperature)) + '°C' )
