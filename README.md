@@ -41,7 +41,7 @@ My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014).
 | ranger | [Good Night America](http://dotshare.it/dots/958/) |
 
 **Wallpapers**
-* Vintage Lamp in the Window [(link)](https://www.walldevil.com/vintage-lamps-in-the-window-wallpaper-858287/)
+* Vintage Lamps in the Window [(link)](https://www.walldevil.com/vintage-lamps-in-the-window-wallpaper-858287/)
 
 ## Installation
 **Please read the script before running!**
