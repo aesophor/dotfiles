@@ -27,7 +27,7 @@ My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014).
 | Font (en/zh_tw) | Tamzen / WenQuanYi Bitmap Song |
 | Font (icons) | Font Awesome 5, Wuncon Siji |
 | Terminal | [rxvt-unicode-wcwidthcallback](https://github.com/blueyed/rxvt-unicode) |
-| File Managee | ranger, dolphin |
+| File Manager | ranger, dolphin |
 | Music Player | ncmpcpp, spotify-client |
 
 **Colorschemes**
