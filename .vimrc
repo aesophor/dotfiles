@@ -108,12 +108,6 @@ Plugin 'mhinz/vim-startify'
 call vundle#end()
 filetype plugin indent on " Enable filetype plugins
 
-" Neobundle.
-"call neobundle#begin(expand('$HOME/.config/nvim/bundle'))
-"NeoBundleFetch 'Shougo/neobundle.vim'
-"NeoBundle 'scrooloose/nerdtree'
-"call neobundle#end()
-
 " Colors and Fonts.
 set t_Co=256
 syntax on
@@ -124,7 +118,7 @@ colorscheme base16-minimalist
 let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#branch#enabled = 1
+let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#whitespace#enabled = 1
 let g:airline#extensions#hunks#non_zero_only = 1
 
@@ -136,6 +130,8 @@ nmap <C-w> :q!<CR>
 nmap <C-c> :wincmd p<CR>
 
 " NERDTree
+let g:NERDTreeMinimalUI = 1
+let g:NERDTreeStatusline = -1
 autocmd vimenter * NERDTree
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif

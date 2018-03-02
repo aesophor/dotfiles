@@ -15,6 +15,9 @@ My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014).
 
 Ctrl+w should you feel uncomfortable with my rice.
 
+## Synopsis
+![Screenshot-clean](https://github.com/aesophor/dotfiles/raw/master/screenshots/screenshot-clean.png)
+
 **Details**
 * DE/WM      - KDE Plasma + i3-gaps
 * Status Bar - Polybar
@@ -29,10 +32,18 @@ Ctrl+w should you feel uncomfortable with my rice.
 * vim        - [base16-minimalist](https://github.com/aesophor/base16-minimalist)
 
 
-## Installation Note
-git clone this repo into ~/.config/dotfiles and run ~/.config/dotfiles/bin/scripts/dotsetup
+## Installation
+git clone this repo into ~/Dotfiles and run ~/Dotfiles/bin/scripts/dotsetup
 
-Read the script before running!
+Please read the script before running!
  
-## Screenshots
-![Screenshot-clean](https://github.com/aesophor/dotfiles/raw/master/scrot/screenshot-clean.png)
+
+## Bugs / Workarounds
+* bug001 - FontAwesome does not render properly in rxvt-unicode-wcwidthcallback
+
+add the following lines to your .zshrc (or your own favorite shell config file).
+
+```
+# URxvt-wcwidth glitch workaround. See #bug001 in README.md.
+if [ `ps -o comm= $PPID` = "urxvt" ]; then urxvt -e exec; fi
+```

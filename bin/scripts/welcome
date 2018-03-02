@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+source ~/.local/bin/scripts/colors
+
+DISTRO=`sed -n 1p /etc/os-release | tr -d 'NAME='`
+KERNEL=`uname -s`
+
+if [ -n "$DISPLAY" ]; then
+    WMNAME=$(xprop -root _NET_WM_NAME|cut -d\" -f2)
+else
+    WMNAME="console"
+fi
+
+PKGNUM=$(ls -d /var/db/pkg/*/* | wc -l)
+
+cat << EOF
+Welcome to your ${DISTRO} ${KERNEL}, ${USER}!
+
+ ${c13}ʕ•ᴥ•ʔ        ${f2}$USER
+ ${c13}colorscheme  ${c01}• ${c02}• ${c03}• ${c04}• ${c05}• ${c06}• ${c07}•
+ ${c13}distro       ${f2}$DISTRO ($PKGNUM packages)
+ ${c13}shell        ${f2}$SHELL
+ ${c13}wm           ${f2}$WMNAME
+
+EOF

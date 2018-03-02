@@ -9,12 +9,12 @@ URxvt.fading:               0
 URxvt.loginShell:           true
 URxvt.saveLines:            1000
 URxvt.internalBorder:       1
-URxvt.lineSpace:            2
+URxvt.lineSpace:            1
 URxvt.letterSpace:          0
 
 URxvt.allow_bold:           true
-URxvt*font:                 xft:TamzenForPowerline:pixelsize=14, xft:WenQuanYi WenQuanYi Bitmap Song:pixelsize=10
-URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=14, xft:WenQuanYi WenQuanYi Bitmap Song:bold:pixelsize=10
+URxvt*font:                 xft:TamzenForPowerline:pixelsize=14, xft:WenQuanYi WenQuanYi Bitmap Song:pixelsize=10, xft:FontAwesome
+URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=14, xft:WenQuanYi WenQuanYi Bitmap Song:bold:pixelsize=10, xft:FontAwesome
 
 URxvt.urlLauncher:          /usr/bin/xdg-open
 URxvt.scrollStyle:          rxvt

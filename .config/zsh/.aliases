@@ -31,6 +31,7 @@ alias config-polybar='vim ~/.config/polybar/config'
 alias macspoof='sudo ~/.local/bin/scripts/macspoof'
 
 # typos
+alias cll='c; ll'
 alias EXIT='exit'
 alias eixt='exit'
 alias xit='exit'

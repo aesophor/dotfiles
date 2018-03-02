@@ -1,3 +1,0 @@
-#!/usr/bin/env bash
-cd "$HOME/.wine/drive_c/Program Files/mp3DirectCut"
-wine mp3DirectCut.exe

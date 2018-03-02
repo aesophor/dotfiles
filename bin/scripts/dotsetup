@@ -3,69 +3,66 @@
 # 
 # Personal script to update dotfiles.
 
+dotfiles_path="$HOME/Dotfiles"
 
 # print message, remove old files/directory, and perform a symlink.
-function symlink()
-{
+function symlink() {
     # check if old file exists.
     # remove the old one and create a new symlink.
-    if [ -e $2 ] || [ -L $2 ]; then
-        rm $2
+    if [ -e "$2" ] || [ -L "$2" ]; then
+        rm "$2"
     fi
 
-    if [ -d $2 ]; then
-        rm -rf $2
+    if [ -d "$2" ]; then
+        rm -rf "$2"
     fi
 
-    echo "[*] $2 -> $1"
-    ln -s $1 $2
+    ln -sv "$1" "$2"
 }
 
-function setup_dotfiles()
-{
+function setup_dotfiles() {
     # X server configuration.
-    symlink "$HOME/.config/dotfiles/.x" "$HOME/.x"
-    symlink "$HOME/.config/dotfiles/.xinitrc" "$HOME/.xinitrc"
-    symlink "$HOME/.config/dotfiles/.xserverrc" "$HOME/.xserverrc"
-    symlink "$HOME/.config/dotfiles/.Xresources" "$HOME/.Xresources"
-    symlink "$HOME/.config/dotfiles/.xbindkeysrc" "$HOME/.xbindkeysrc"
+    symlink "$dotfiles_path/.x" "$HOME/.x"
+    symlink "$dotfiles_path/.xinitrc" "$HOME/.xinitrc"
+    symlink "$dotfiles_path/.xserverrc" "$HOME/.xserverrc"
+    symlink "$dotfiles_path/.Xresources" "$HOME/.Xresources"
+    symlink "$dotfiles_path/.xbindkeysrc" "$HOME/.xbindkeysrc"
     
     # bash, zsh, vim, wget, curl, neofetch, ncmpcpp, git configuration.
-    symlink "$HOME/.config/dotfiles/.bashrc" "$HOME/.bashrc"
-    symlink "$HOME/.config/dotfiles/.zshrc" "$HOME/.zshrc"
-    symlink "$HOME/.config/dotfiles/.vim" "$HOME/.vim"
-    symlink "$HOME/.config/dotfiles/.vimrc" "$HOME/.vimrc"
-    symlink "$HOME/.config/dotfiles/.wgetrc" "$HOME/.wgetrc"
-    symlink "$HOME/.config/dotfiles/.curlrc" "$HOME/.curlrc"
-    symlink "$HOME/.config/dotfiles/.config/neofetch" "$HOME/.config/neofetch"
-    symlink "$HOME/.config/dotfiles/.config/ncmpcpp" "$HOME/.ncmpcpp"
+    symlink "$dotfiles_path/.bashrc" "$HOME/.bashrc"
+    symlink "$dotfiles_path/.zshrc" "$HOME/.zshrc"
+    symlink "$dotfiles_path/.vim" "$HOME/.vim"
+    symlink "$dotfiles_path/.vimrc" "$HOME/.vimrc"
+    symlink "$dotfiles_path/.wgetrc" "$HOME/.wgetrc"
+    symlink "$dotfiles_path/.curlrc" "$HOME/.curlrc"
+    symlink "$dotfiles_path/.config/ncmpcpp" "$HOME/.ncmpcpp"
     symlink "$HOME/.private/git/.gitconfig" "$HOME/.gitconfig"
 
     # i3, dunst, compton, menutray, KDE, gtk configuration.
-    symlink "$HOME/.config/dotfiles/.config/i3" "$HOME/.config/i3"
-    symlink "$HOME/.config/dotfiles/.config/polybar" "$HOME/.config/polybar"
-    symlink "$HOME/.config/dotfiles/.config/dunst" "$HOME/.config/dunst"
-    symlink "$HOME/.config/dotfiles/.config/compton" "$HOME/.config/compton"
-    symlink "$HOME/.config/dotfiles/.config/menutray" "$HOME/.config/menutray"
-    symlink "$HOME/.config/dotfiles/.config/plasma-workspace" "$HOME/.config/plasma-workspace"
-    symlink "$HOME/.config/dotfiles/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
+    symlink "$dotfiles_path/.config/i3" "$HOME/.config/i3"
+    symlink "$dotfiles_path/.config/polybar" "$HOME/.config/polybar"
+    symlink "$dotfiles_path/.config/termite" "$HOME/.config/termite"
+    symlink "$dotfiles_path/.config/dunst" "$HOME/.config/dunst"
+    symlink "$dotfiles_path/.config/compton" "$HOME/.config/compton"
+    symlink "$dotfiles_path/.config/plasma-workspace" "$HOME/.config/plasma-workspace"
+    symlink "$dotfiles_path/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
     symlink "$HOME/.gtkrc-2.0" "$HOME/.gtkrc-2.0-kde4"
     
     # Custom command aliases and functions.
-    symlink "$HOME/.config/dotfiles/.config/zsh/.aliases" "$HOME/.config/zsh/aliases"
-    symlink "$HOME/.config/dotfiles/.config/zsh/.functions" "$HOME/.config/zsh/functions"
+    symlink "$dotfiles_path/.config/zsh/.aliases" "$HOME/.config/zsh/aliases"
+    symlink "$dotfiles_path/.config/zsh/.functions" "$HOME/.config/zsh/functions"
     
     # Now bin/* will be accessible under ~/.local/bin/.
-    symlink "$HOME/.config/dotfiles/bin" "$HOME/.local/bin"
+    symlink "$dotfiles_path/bin" "$HOME/.local/bin"
 
     # gdb configuration.
-    symlink "$HOME/.config/dotfiles/.gdbinit" "$HOME/.gdbinit"
+    symlink "$dotfiles_path/.gdbinit" "$HOME/.gdbinit"
 
     # Misc.
-    symlink "$HOME/.config/dotfiles/res/.face.icon" "$HOME/.face.icon"
+    symlink "$dotfiles_path/.face.icon" "$HOME/.face.icon"
 
     # Copy zsh theme.
-    cp -p "$HOME/.config/dotfiles/.config/oh-my-zsh/themes/coldwood.zsh-theme" "$HOME/.config/oh-my-zsh/themes/."
+    cp -p "$dotfiles_path/.config/oh-my-zsh/themes/coldwood.zsh-theme" "$HOME/.config/oh-my-zsh/themes/."
 }
 
 

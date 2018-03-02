@@ -29,26 +29,17 @@ export LANG="en_US.UTF-8"
 export BROWSER="chromium"
 export EDITOR="vim"
 
-# gentoo-zsh-completions
-#autoload -U compinit promptinit
-#compinit
-#promptinit: prompt gentoo
-
 # fcitx for wps fix.
 export XIM=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
-# thefuck configuration.
-#eval `thefuck --alias`
-#eval `thefuck --alias FUCK`
-
 # Prevent Wine from adding menu entries and desktop links.
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
+# URxvt-wcwidth glitch workaround. See #bug001 in README.md.
+if [ `ps -o comm= $PPID` = "urxvt" ]; then urxvt -e exec; fi
+
 # Print welcome message.
-clear; uname -snmrv; printf "Welcome to your %s %s, %s!\n" \
-    "`cat /etc/os-release | grep 'NAME=' | head -n 1 | cut -d = -f 2`" \
-    "`uname -s`" \
-    "$USER"
+clear; welcome
