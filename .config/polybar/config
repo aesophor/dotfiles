@@ -1,17 +1,19 @@
-; ------------ Get color from .Xresources ------------ 
+; ------------ Get color from .Xresources ------------
 [colors]
-background   = #18181a
-foreground   = ${xrdb:foreground:#ffffff}
-colour_blk   = ${xrdb:color0:#ffffff}
-colour_gry   = #656565
-colour_red   = ${xrdb:color1:#ffffff}
-colour_grn   = #99c794
-colour_org   = #c08054
-colour_ylw   = ${xrdb:color3:#ffffff}
-colour_blu   = ${xrdb:color4:#ffffff}
-colour_mag   = ${xrdb:color5:#ffffff}
-colour_cyn   = ${xrdb:color6:#ffffff}
-colour_wht   = ${xrdb:color7:#ffffff}
+background = ${xrdb:background:#ffffff}
+foreground = ${xrdb:foreground:#ffffff}
+
+colour_blk = ${xrdb:color0:#ffffff}
+colour_gry = ${xrdb:color8:#ffffff}
+colour_wht = ${xrdb:color7:#ffffff}
+
+colour_red = ${xrdb:color1:#ffffff}
+colour_blu = ${xrdb:color4:#ffffff}
+colour_mag = ${xrdb:color5:#ffffff}
+colour_cyn = ${xrdb:color6:#ffffff}
+colour_grn = ${xrdb:color2:#ffffff}
+colour_ylw = ${xrdb:color3:#ffffff}
+colour_org = ${xrdb:color16:#ffffff}
 
 
 ; ------------------- Configuration -------------------
@@ -27,9 +29,10 @@ module-margin-right = 1
 background          = ${colors.background}
 foreground          = ${colors.foreground}
 font-0              = Tamzen:size=13;1
-font-1              = FontAwesome:size=6;2
-font-2              = Wuncon Siji:pixelsize=10;2
-font-3              = WenQuanYi WenQuanYi Bitmap Song:size=10;2
+font-1              = Font Awesome 5 Brands:size=6;2
+font-2              = Font Awesome 5 Free Solid:size=6;2
+font-3              = Wuncon Siji:pixelsize=10;2
+font-4              = WenQuanYi WenQuanYi Bitmap Song:size=10;2
 
 modules-left        = date volume battery_icon battery_pect wired-network wireless-network
 modules-center      = xwindow
@@ -61,7 +64,7 @@ index-sort                 = true
 enable-scroll              = false
 
 ws-icon-0                  = 1;
-ws-icon-1                  = 2; 
+ws-icon-1                  = 2;
 ws-icon-2                  = 3;
 ws-icon-3                  = 4;
 ws-icon-4                  = 5;
@@ -69,7 +72,7 @@ ws-icon-5                  = 6;
 ws-icon-6                  = 7;
 ws-icon-7                  = 8;
 ws-icon-8                  = 9;
-ws-icon-default            =    
+ws-icon-default            =   
 
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.colour_gry}

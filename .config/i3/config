@@ -213,7 +213,7 @@ mode "  "
     bindsym $down       resize grow height 10 px or 10 ppt
     bindsym $up         resize shrink height 10 px or 10 ppt
     bindsym $right      resize grow width 10 px or 10 ppt
-    
+
     # same bindings, but for the arrow keys
     bindsym Left        resize shrink width 10 px or 10 ppt
     bindsym Down        resize grow height 10 px or 10 ppt
@@ -246,7 +246,7 @@ gaps outer 10
 # exec -> On start-up
 # exec_always -> On start-up and reload
 exec --no-startup-id displayctl
-exec --no-startup-id compton --config ~/.config/compton/compton.conf 
+exec --no-startup-id compton --config ~/.config/compton/compton.conf
 exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 exec --no-startup-id pulseaudio --start --log-target=syslog
 exec --no-startup-id mpd

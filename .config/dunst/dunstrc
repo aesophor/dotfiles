@@ -1,7 +1,7 @@
 [global]
     monitor = 0
     follow = mouse
-    geometry = "350x15-20+40"
+    geometry = "300x15-30+50"
     transparency = 0
     indicate_hidden = yes
     shrink = no
@@ -14,7 +14,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 0
-    font = Tamzen 11
+    font = Tamzen 9
     line_height = 0
     markup = full
     format = "<b>%s %p</b>\n%b"
@@ -23,10 +23,11 @@
     word_wrap = yes
     ignore_newline = no
     stack_duplicates = true
-    hide_duplicate_count = false
+    hide_duplicate_count = true
     show_indicators = yes
     icon_position = left
     max_icon_size = 32
+    icon_folders = ~/.local/share/icons/AntuDark/32x32/status/
     sticky_history = yes
     history_length = 15
     always_run_script = true
@@ -53,4 +54,4 @@
     background = "#AB4642"
     foreground = "#F5F5F5"
     frame_color = "#AB4642"
-    timeout = 0 
+    timeout = 0

@@ -12,10 +12,7 @@ open_with w3mimagedisplay
 open_with feh
 open_with 
 searc
-set colorscheme snow
-set colorscheme jungle
 set colorscheme solarized
-set colorscheme default
 linemode devicons
 
 clear
@@ -26,3 +23,7 @@ xdg-open
 chromium
 wq
 delete
+set colorscheme jungle
+set colorscheme snow
+set colorscheme default
+set colorscheme Good Night America

@@ -82,8 +82,8 @@ set nofoldenable " disable folding
 " Plugin.
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'bling/vim-airline'
-Plugin 'dikiaap/minimalist'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
 Plugin 'garbas/vim-snipmate'
@@ -115,11 +115,11 @@ set encoding=utf-8
 colorscheme base16-minimalist
 
 " Airline.
-let g:airline_theme='minimalist'
-let g:airline_powerline_fonts = 0
+let g:airline_theme='distinguished'
+ret g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 0
-let g:airline#extensions#whitespace#enabled = 1
+let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#hunks#non_zero_only = 1
 
 " tabs
@@ -137,8 +137,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 map <C-n> :NERDTreeToggle<CR>:wincmd p<CR>
 
 " Syntastic.
@@ -165,6 +165,4 @@ let g:autoclose_vim_commentmode = 1
 let g:neocomplete#enable_at_startup = 1
 
 " indentLine
-"let g:indentLine_setColors  = 0
-"let g:indentLine_color_term = 239
-let g:indentLine_char = '┆'
+let g:indentLine_char = '¦'

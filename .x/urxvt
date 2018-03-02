@@ -11,28 +11,37 @@ URxvt.saveLines:            1000
 URxvt.internalBorder:       1
 URxvt.lineSpace:            1
 URxvt.letterSpace:          0
-
 URxvt.allow_bold:           true
-URxvt*font:                 xft:TamzenForPowerline:pixelsize=14, xft:WenQuanYi WenQuanYi Bitmap Song:pixelsize=10, xft:FontAwesome:pixelsize=9
-URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=14, xft:WenQuanYi WenQuanYi Bitmap Song:bold:pixelsize=10, xft:FontAwesome
 
 URxvt.urlLauncher:          /usr/bin/xdg-open
 URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
-! cursor configuration.
+! Cursor configuration.
 URxvt.cursorBlink:          false
 URxvt.cursorUnderline:      false
 URxvt.pointerBlank:         true
 
-! urxvt extensions.
+! URxvt extensions.
 URxvt.perl-ext-common:      default,matcher,resize-font
 
-! matcher configuration.
+! Matcher configuration.
 URxvt.matcher.button:       1
 
-! resize-font extension configuration.
+! Resize-font extension configuration.
 URxvt.iso14755:             false
 URxvt.iso14755_52:          false
 URxvt.keysym.C-Down:        resize-font:smaller
 URxvt.keysym.C-Up:          resize-font:bigger
+
+! Fonts
+URxvt*font:                 xft:TamzenForPowerline:pixelsize=14,\
+                            xft:WenQuanYi WenQuanYi Bitmap Song:pixelsize=10,\
+                            xft:Font Awesome 5 Brands:pixelsize=11,\
+                            xft:Font Awesome 5 Free Solid:pixelsize=11
+
+
+URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=14,\
+                            xft:WenQuanYi WenQuanYi Bitmap Song:bold:pixelsize=10,\
+                            xft:Font Awesome 5 Brands:pixelsize=11,\
+                            xft:Font Awesome 5 Free Solid:pixelsize=11

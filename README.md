@@ -15,30 +15,35 @@ My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014).
 Ctrl+w should you feel uncomfortable with my rice.
 
 ## Synopsis
-![Screenshot-clean](https://github.com/aesophor/dotfiles/raw/master/screenshots/screenshot-clean.png)
+[Screenshot](https://github.com/aesophor/dotfiles/raw/master/screenshots/screenshot.png)
 
 **Details**
-* DE/WM      - KDE Plasma + i3-gaps
-* Status Bar - Polybar
-* Compositor - Compton
-* Launcher   - rofi
-* Terminal   - rxvt-unicode
-* Font       - Tamzen, FontAwesome, Siji
+* DE/WM           - KDE Plasma + i3-gaps
+* Bar             - Polybar
+* Compositor      - Compton
+* Launcher        - rofi
+* Font (en/zh_tw) - TamzenForPowerline / WenQuanYi Bitmap Song
+* Font (icons)    - Font Awesome 5, Wuncon Siji
+* Terminal        - [rxvt-unicode-wcwidthcallback](https://github.com/blueyed/rxvt-unicode)
+* File Manager    - ranger, dolphin
+* Music Player    - ncmpcpp, spotify-client
 
 **Colorschemes**
-* oh-my-zsh  - coldwood
-* urxvt      - base16-tomorrow-night
-* vim        - [base16-minimalist](https://github.com/aesophor/base16-minimalist)
+* oh-my-zsh       - coldwood
+* urxvt           - base16-tomorrow-night
+* vim             - [base16-minimalist](https://github.com/aesophor/base16-minimalist)
+* vim-airline     - distinguished
 
+**Wallpapers**
+* Vintage Lamp in the Window [(link)](https://www.walldevil.com/vintage-lamps-in-the-window-wallpaper-858287/)
 
 ## Installation
-git clone this repo into ~/Dotfiles and run ~/Dotfiles/bin/scripts/dotsetup
+**Please read the script before running!**
 
-*Please read the script before running!*
- 
+git clone this repo into ~/Dotfiles and run ~/Dotfiles/bin/scripts/dotsetup 
 
 ## Bugs / Workarounds
-* bug001 - FontAwesome does not render properly in rxvt-unicode-wcwidthcallback
+* #bug001 - FontAwesome does not render properly in rxvt-unicode-wcwidthcallback
 
 Compile URxvt-wcwidth-callback and install it on your machine. Then, 
 add the following lines to your .zshrc (or your own favorite shell config file). 
