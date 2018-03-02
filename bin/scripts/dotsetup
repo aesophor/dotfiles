@@ -41,11 +41,11 @@ function setup_dotfiles() {
     # i3, dunst, compton, menutray, KDE, gtk configuration.
     symlink "$dotfiles_path/.config/i3" "$HOME/.config/i3"
     symlink "$dotfiles_path/.config/polybar" "$HOME/.config/polybar"
-    symlink "$dotfiles_path/.config/termite" "$HOME/.config/termite"
     symlink "$dotfiles_path/.config/dunst" "$HOME/.config/dunst"
     symlink "$dotfiles_path/.config/compton" "$HOME/.config/compton"
     symlink "$dotfiles_path/.config/plasma-workspace" "$HOME/.config/plasma-workspace"
     symlink "$dotfiles_path/.gtkrc-2.0" "$HOME/.gtkrc-2.0"
+    symlink "$dotfiles_path/.config/ranger" "$HOME/.config/ranger"
     symlink "$HOME/.gtkrc-2.0" "$HOME/.gtkrc-2.0-kde4"
     
     # Custom command aliases and functions.
