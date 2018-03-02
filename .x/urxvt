@@ -13,7 +13,7 @@ URxvt.lineSpace:            1
 URxvt.letterSpace:          0
 
 URxvt.allow_bold:           true
-URxvt*font:                 xft:TamzenForPowerline:pixelsize=14, xft:WenQuanYi WenQuanYi Bitmap Song:pixelsize=10, xft:FontAwesome
+URxvt*font:                 xft:TamzenForPowerline:pixelsize=14, xft:WenQuanYi WenQuanYi Bitmap Song:pixelsize=10, xft:FontAwesome:pixelsize=9
 URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=14, xft:WenQuanYi WenQuanYi Bitmap Song:bold:pixelsize=10, xft:FontAwesome
 
 URxvt.urlLauncher:          /usr/bin/xdg-open
