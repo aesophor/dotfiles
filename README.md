@@ -41,7 +41,11 @@ Please read the script before running!
 ## Bugs / Workarounds
 * bug001 - FontAwesome does not render properly in rxvt-unicode-wcwidthcallback
 
+Compile URxvt-wcwidth-callback and install it on your machine. Then, 
+
 add the following lines to your .zshrc (or your own favorite shell config file).
+
+Please read [wcwidth-hack](https://github.com/blueyed/rxvt-unicode/blob/wcwidth-hack/README.md) for details.
 
 ```
 # URxvt-wcwidth glitch workaround. See #bug001 in README.md.
