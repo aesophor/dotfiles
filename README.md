@@ -12,7 +12,6 @@
 
 ```
 My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014). 
-Ctrl+w should you feel uncomfortable with my rice.
 
 ## Synopsis
 ![Screenshot](https://github.com/aesophor/dotfiles/raw/master/screenshots/screenshot.png)
@@ -35,10 +34,11 @@ Ctrl+w should you feel uncomfortable with my rice.
 
 | Program | Colorscheme |
 | --- | --- |
-| zsh | coldwood |
-| URxvt | base16-tomorrow-night |
-| vim | [base16-minimalist](https://github.com/aesophor/base16-minimalist) |
-| vim-airline | distinguished |
+| zsh | [icebrick](https://github.com/aesophor/dotfiles/blob/master/.config/oh-my-zsh/themes/icebrick.zsh-theme) |
+| URxvt | [base16-aesophor](https://github.com/aesophor/base16-aesophor) |
+| vim | [base16-aesophor](https://github.com/aesophor/base16-aesophor) |
+| vim-airline | [minimalist](https://github.com/dikiaap/minimalist) |
+| ranger | [Good Night America](http://dotshare.it/dots/958/) |
 
 **Wallpapers**
 * Vintage Lamp in the Window [(link)](https://www.walldevil.com/vintage-lamps-in-the-window-wallpaper-858287/)
@@ -59,3 +59,6 @@ Please read [wcwidth-hack](https://github.com/blueyed/rxvt-unicode/blob/wcwidth-
 # URxvt-wcwidth glitch workaround. See #bug001 in README.md.
 if [ `ps -o comm= $PPID` = "urxvt" ]; then urxvt -e exec; fi
 ```
+
+## License
+Available under the [MIT License](https://github.com/aesophor/dotfiles/blob/master/LICENSE).

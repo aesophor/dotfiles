@@ -7,7 +7,7 @@ export ZSH="$HOME/.config/oh-my-zsh"
 # (3) Disable auto-setting terminal title,
 # (4) Disable marking untracked files under VCS as dirty.
 # (5) Plugins
-ZSH_THEME="coldwood"
+ZSH_THEME="icebrick"
 CASE_SENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"

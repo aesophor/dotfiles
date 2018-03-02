@@ -112,10 +112,10 @@ filetype plugin indent on " Enable filetype plugins
 set t_Co=256
 syntax on
 set encoding=utf-8
-colorscheme base16-minimalist
+colorscheme base16-aesophor
 
 " Airline.
-let g:airline_theme='distinguished'
+let g:airline_theme='minimalist'
 ret g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 0
@@ -137,8 +137,8 @@ autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-let g:NERDTreeDirArrowExpandable = ''
-let g:NERDTreeDirArrowCollapsible = ''
+let g:NERDTreeDirArrowExpandable = ' '
+let g:NERDTreeDirArrowCollapsible = ' '
 map <C-n> :NERDTreeToggle<CR>:wincmd p<CR>
 
 " Syntastic.

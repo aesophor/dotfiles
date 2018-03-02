@@ -2,7 +2,7 @@
 #include "/home/aesophor/.x/displayctlrc" 
 
 ! Colors
-#include "/home/aesophor/.x/colorscheme/tomorrow-night"
+#include "/home/aesophor/.x/colorscheme/base16-aesophor"
 
 ! Font Settings
 #include "/home/aesophor/.x/fonts"

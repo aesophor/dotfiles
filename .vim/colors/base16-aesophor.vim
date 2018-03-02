@@ -2,17 +2,12 @@
 
 " base16-vim (https://github.com/chriskempson/base16-vim)
 " by Chris Kempson (http://chriskempson.com)
-" OneDark scheme by Lalit Magant (http://github.com/tilal6991)
+" aesophor scheme by aesophor (http://github.com/aesophor)
 
 " This enables the coresponding base16-shell script to run so that
 " :colorscheme works in terminals supported by base16-shell scripts
 " User must set this variable in .vimrc
 "   let g:base16_shell_path=base16-builder/output/shell/
-if !has('gui_running')
-  if exists("g:base16_shell_path")
-    execute "silent !/bin/sh ".g:base16_shell_path."/base16-onedark.sh"
-  endif
-endif
 
 " GUI color definitions
 let s:gui00        = "282c34"
@@ -126,7 +121,7 @@ endif
 " Theme setup
 hi clear
 syntax reset
-let g:colors_name = "base16-minimalist"
+let g:colors_name = "base16-aesophor"
 
 " Highlighting function
 function! g:Base16hi(group, guifg, guibg, ctermfg, ctermbg, attr, guisp)

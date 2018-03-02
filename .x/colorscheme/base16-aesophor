@@ -1,5 +1,5 @@
-! Base16 Tomorrow Night
-! Scheme: Chris Kempson (http://chriskempson.com)
+! base16 aesophor
+! Author: aesophor (github.com/aesophor)
 
 #define base00 #18181a
 #define base01 #282a2e
