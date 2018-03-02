@@ -21,11 +21,11 @@ Ctrl+w should you feel uncomfortable with my rice.
 
 | Item | Program |
 | --- | --- |
-| DE/WM | KDE Plasma + i3-gaps |
+| DE/WM | KDE Plasma / i3-gaps |
 | Bar | Polybar |
 | Compositor | Compton |
 | Launcher | rofi |
-| Font (en/zh_tw) | TamzenForPowerline / WenQuanYi Bitmap Song |
+| Font (en/zh_tw) | Tamzen / WenQuanYi Bitmap Song |
 | Font (icons) | Font Awesome 5, Wuncon Siji |
 | Terminal | [rxvt-unicode-wcwidthcallback](https://github.com/blueyed/rxvt-unicode) |
 | File Managee | ranger, dolphin |
@@ -46,7 +46,7 @@ Ctrl+w should you feel uncomfortable with my rice.
 ## Installation
 **Please read the script before running!**
 
-git clone this repo into ~/Dotfiles and run ~/Dotfiles/bin/scripts/dotsetup 
+git clone this repo into ~/Dotfiles and run `~/Dotfiles/bin/scripts/dotsetup`
 
 ## Bugs / Workarounds
 * #bug001 - FontAwesome does not render properly in rxvt-unicode-wcwidthcallback
