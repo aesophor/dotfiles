@@ -18,6 +18,7 @@ Ctrl+w should you feel uncomfortable with my rice.
 ![Screenshot](https://github.com/aesophor/dotfiles/raw/master/screenshots/screenshot.png)
 
 **Details**
+
 | Item | Program |
 | --- | --- |
 | DE/WM | KDE Plasma + i3-gaps |
@@ -31,6 +32,7 @@ Ctrl+w should you feel uncomfortable with my rice.
 | Music Player | ncmpcpp, spotify-client |
 
 **Colorschemes**
+
 | Program | Colorscheme |
 | --- | --- |
 | zsh | coldwood |
