@@ -82,6 +82,7 @@ set nofoldenable " disable folding
 " Plugin.
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
+Plugin 'aesophor/base16-faded'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
@@ -112,7 +113,7 @@ filetype plugin indent on " Enable filetype plugins
 set t_Co=256
 syntax on
 set encoding=utf-8
-colorscheme base16-aesophor
+colorscheme base16-faded
 
 " Airline.
 let g:airline_theme='minimalist'

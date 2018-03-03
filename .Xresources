@@ -2,7 +2,7 @@
 #include "/home/aesophor/.x/displayctlrc" 
 
 ! Colors
-#include "/home/aesophor/.x/colorscheme/base16-aesophor"
+#include "/home/aesophor/.x/colorscheme/base16-faded"
 
 ! Font Settings
 #include "/home/aesophor/.x/fonts"
