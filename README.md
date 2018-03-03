@@ -34,10 +34,10 @@ My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014).
 
 | Program | Colorscheme |
 | --- | --- |
-| zsh | [icebrick](https://github.com/aesophor/dotfiles/blob/master/.config/oh-my-zsh/themes/icebrick.zsh-theme) |
-| URxvt | [base16-faded](https://github.com/aesophor/base16-faded) |
+| .Xresources | [base16-faded](https://github.com/aesophor/base16-faded) |
 | vim | [base16-faded](https://github.com/aesophor/base16-faded) |
 | vim-airline | [minimalist](https://github.com/dikiaap/minimalist) |
+| zsh | [icebrick](https://github.com/aesophor/dotfiles/blob/master/.config/oh-my-zsh/themes/icebrick.zsh-theme) |
 | ranger | [Good Night America](http://dotshare.it/dots/958/) |
 
 **Wallpapers**
