@@ -37,7 +37,7 @@ My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014).
 | zsh | [icebrick](https://github.com/aesophor/dotfiles/blob/master/.config/oh-my-zsh/themes/icebrick.zsh-theme) |
 | URxvt | [base16-aesophor](https://github.com/aesophor/base16-aesophor) |
 | vim | [base16-aesophor](https://github.com/aesophor/base16-aesophor) |
-| vim-airline | distinguished |
+| vim-airline | [minimalist](https://github.com/dikiaap/minimalist) |
 | ranger | [Good Night America](http://dotshare.it/dots/958/) |
 
 **Wallpapers**

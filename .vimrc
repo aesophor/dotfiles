@@ -115,7 +115,7 @@ set encoding=utf-8
 colorscheme base16-aesophor
 
 " Airline.
-let g:airline_theme='distinguished'
+let g:airline_theme='minimalist'
 ret g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 0

@@ -9,12 +9,12 @@
 #define base05 #c5c8c6
 #define base06 #e0e0e0
 #define base07 #ffffff
-#define base08 #cc6666
-#define base09 #de935f
-#define base0A #ccb178
+#define base08 #b77a76
+#define base09 #cca072
+#define base0A #cbb079
 #define base0B #a3ac7b
 #define base0C #7daea9
-#define base0D #81a2be
+#define base0D #75a1b1
 #define base0E #958090
 #define base0F #a3685a
 
