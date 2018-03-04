@@ -14,7 +14,7 @@
 My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014). 
 
 ## Synopsis
-![Screenshot](https://github.com/aesophor/dotfiles/raw/master/screenshots/screenshot.png)
+![Screenshot](https://github.com/aesophor/dotfiles/raw/master/assets/screenshot.png)
 
 **Details**
 

@@ -17,10 +17,10 @@ font pango:Tamzen 9
 set $mod Mod4
 
 # use these keys for focus, movement, and resize directions
-set $left   j
-set $down   k
-set $up     l
-set $right  semicolon
+set $left   h
+set $down   j
+set $up     k
+set $right  l
 
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -58,7 +58,7 @@ bindsym $mod+Shift+Up       move up
 bindsym $mod+Shift+Right    move right
 
 # split in horizontal orientation
-bindsym $mod+h split h
+bindsym $mod+g split h
 # split in vertical orientation
 bindsym $mod+v split v
 # enter fullscreen mode for the focused container
@@ -141,23 +141,23 @@ bindsym $mod+Shift+9 move container to workspace $WS9
 # i3-KDE integration.
 # avoid tiling popups, dropdown windows from plasma
 # for the first time, manually resize them, i3 will remember the setting for floating windows
-for_window [class="plasmashell"]                        floating enable;
-for_window [class="Plasma"]                             floating enable; border none
-for_window [title="plasma-desktop"]                     floating enable; border none
-for_window [title="win7"]                               floating enable; border none
-for_window [class="krunner"]                            floating enable; border none
-for_window [class="Kmix"]                               floating enable; border none
-for_window [class="Klipper"]                            floating enable; border none
-for_window [class="Plasmoidviewer"]                     floating enable; border none
+for_window [class="plasmashell"]                         floating enable;
+for_window [class="Plasma"]                              floating enable; border none
+for_window [title="plasma-desktop"]                      floating enable; border none
+for_window [title="win7"]                                floating enable; border none
+for_window [class="krunner"]                             floating enable; border none
+for_window [class="Kmix"]                                floating enable; border none
+for_window [class="Klipper"]                             floating enable; border none
+for_window [class="Plasmoidviewer"]                      floating enable; border none
 
 # set floating mode when applications started
-for_window [class="Gcolor2"]                            floating enable
-for_window [class="systemsettings"]                     floating enable
-for_window [class="Steam"]                              floating enable
-for_window [class="PCSX2"]                              floating enable
-for_window [class="VirtualBox"]                         floating enable
-for_window [class="explorer.exe"]                       floating enable
-for_window [class="steam.exe"]                          floating enable
+for_window [class="Gcolor2"]                             floating enable
+for_window [class="systemsettings"]                      floating enable
+for_window [class="Steam"]                               floating enable
+for_window [class="PCSX2"]                               floating enable
+for_window [class="VirtualBox"]                          floating enable
+for_window [class="explorer.exe"]                        floating enable
+for_window [class="steam.exe"]                           floating enable
 
 # assign pentest program to workspace.
 assign [class="Ettercap"]                             → $WS2
