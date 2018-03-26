@@ -4,5 +4,6 @@ Display.monitor:         eDP1
 Display.dpi:             112
 Display.resolution:      1680x1050
 Display.brightness:      60
-Display.wallpaper:       /home/aesophor/Pictures/Wallpapers/Landscape/VintageLamp.jpg
-Display.lockscreen:      /home/aesophor/Pictures/Wallpapers/Landscape/VintageLamp.jpg
+Display.wallpaper:       /home/aesophor/Pictures/Wallpapers/Nature/BouquetFaded.png
+Display.lockscreen:      /home/aesophor/Pictures/Wallpapers/Nature/BouquetFaded.png
+

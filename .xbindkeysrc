@@ -1,24 +1,36 @@
 # xbacklight and kbdlight (AUR) needed.
 
-# Assign audio keys.
-"amixer -q set Master 5%+ unmute"
-    XF86AudioRaiseVolume
-"amixer -q set Master 5%- unmute"
-    XF86AudioLowerVolume
-"amixer -q set Master toggle"
-    XF86AudioMute
-
 # Assign screen brightness keys.
 "light -A 10"
     XF86MonBrightnessUp
 "light -U 10"
     XF86MonBrightnessDown
 
+# F3 will show rofi task manager.
+"rofi -show window"
+    XF86LaunchA
+"rofi -show drun"
+    XF86LaunchB
+
 # Assign keyboard brightness keys.
 "kbdlight up 10"
     XF86KbdBrightnessUp
 "kbdlight down 10"
     XF86KbdBrightnessDown
+
+# Assign audio keys.
+"mpc prev"
+    XF86AudioPrev
+"mpc next"
+    XF86AudioNext
+"mpc toggle"
+    XF86AudioPlay
+"amixer -q set Master 5%+ unmute"
+    XF86AudioRaiseVolume
+"amixer -q set Master 5%- unmute"
+    XF86AudioLowerVolume
+"amixer -q set Master toggle"
+    XF86AudioMute
 
 # Assign screenshot key.
 "scrotutl -f"

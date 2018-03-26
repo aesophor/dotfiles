@@ -116,7 +116,7 @@ set encoding=utf-8
 colorscheme base16-faded
 
 " Airline.
-let g:airline_theme='minimalist'
+let g:airline_theme='distinguished'
 ret g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 0
@@ -151,7 +151,7 @@ set statusline+=%*
 let g:syntastic_phpcs_disable            = 1
 let g:syntastic_phpmd_disable            = 1
 let g:syntastic_php_checkers             = ['php']
-let g:syntastic_python_python_exec       = '/usr/bin/python2.7'
+let g:syntastic_python_python_exec       = '/usr/bin/python2'
 let g:syntastic_quiet_messages           = { "type": "style" }
 let g:syntastic_aggregate_errors         = 1
 let g:syntastic_auto_jump                = 2
@@ -160,6 +160,15 @@ let g:syntastic_check_on_open            = 1
 let g:syntastic_check_on_wq              = 0
 let g:syntastic_always_populate_loc_list = 1
 let g:loaded_syntastic_asm_gcc_checker   = 1
+
+set nocompatible
+if has('python') " if dynamic py|py3, this line already activates python2.
+  let s:python_version = 2
+elseif has('python3')
+  let s:python_version = 3
+else
+  let s:python_version = 0
+endif
 
 " vim-autoclose
 let g:autoclose_vim_commentmode = 1

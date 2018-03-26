@@ -21,7 +21,7 @@ for config in `ls $conf_dir | cat`; do
 done
 
 # Read user choice.
-echo -n "Which server would you like to connect to: "
+echo -en "\nWhich server would you like to connect to: "
 read choice
 
 # Construct conf_path and conncect to the server.

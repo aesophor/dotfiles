@@ -2,25 +2,21 @@
 alias ls='ls --color -hX --group-directories-first'
 alias l='ls'
 alias ll='la'
-alias al='la'
-alias dir='la'
 
 # corrections
 alias reboot='sync && sync && sudo reboot'
 alias shutdown='sync && sync && sudo shutdown now'
 
 # bookmarks
-alias home='cd ~/; la'
-alias dots="cd ~/.config/dotfiles/"
-alias dl='cd ~/Downloads; la'
-alias scp='cd ~/Documents/00-Studies/05-MCNDU\(104-108\)/106-108_UniversityProject; la'
-alias docs='cd ~/Documents; la'
-alias works='cd ~/Workspaces; la'
-alias ctf='cd ~/Workspaces/03-CTF; la'
-alias pics='cd ~/Pictures; la'
-alias vids='cd ~/Videos; la'
-alias musics='cd ~/Music; la'
-alias vpn='cd ~/.config/143vpn/TCP/ && la'
+alias home='cd ~/; ll'
+alias dl='cd ~/Downloads; ll'
+alias docs='cd ~/Documents; ll'
+alias works='cd ~/Workspaces; ll'
+alias pics='cd ~/Pictures; ll'
+alias vids='cd ~/Videos; ll'
+alias musics='cd ~/Music; ll'
+alias dots="cd ~/Dotfiles; ll"
+alias vpn='cd ~/.config/143vpn/TCP; ll'
 
 # shortcuts
 alias c='clear'

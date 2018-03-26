@@ -31,7 +31,7 @@ bindsym $mod+Return workspace $WS1; exec --no-startup-id urxvt
 # kill focused window
 bindsym $mod+Shift+q kill
 # start a program launcher
-bindsym $mod+d exec --no-startup-id rofi -show run -config ~/.Xresources
+bindsym $mod+d exec --no-startup-id rofi -show drun
 
 # change focus
 bindsym $mod+$left  focus left
@@ -93,7 +93,7 @@ bindsym Mod4+y border pixel 1
 bindsym Mod4+t border none
 
 # switching window with tab
-bindsym $mod+Tab exec --no-startup-id rofi -show window -config ~/.Xresources
+bindsym $mod+Tab exec --no-startup-id rofi -show window
 # i3lock
 #bindsym $mod+Shift+x exec --no-startup-id displayctl -l --dim
 # reload the configuration file
@@ -151,6 +151,8 @@ for_window [class="Klipper"]                             floating enable; border
 for_window [class="Plasmoidviewer"]                      floating enable; border none
 
 # set floating mode when applications started
+for_window [class="feh"]                                 floating enable
+for_window [class="mpv"]                                 floating enable
 for_window [class="Gcolor2"]                             floating enable
 for_window [class="systemsettings"]                      floating enable
 for_window [class="Steam"]                               floating enable
@@ -158,6 +160,7 @@ for_window [class="PCSX2"]                               floating enable
 for_window [class="VirtualBox"]                          floating enable
 for_window [class="explorer.exe"]                        floating enable
 for_window [class="steam.exe"]                           floating enable
+for_window [class="hacklympics.*"]                       floating enable
 
 # assign pentest program to workspace.
 assign [class="Ettercap"]                             → $WS2
@@ -174,13 +177,12 @@ assign [class="ark"]                                  → $WS4
 assign [class="Et"]                                   → $WS5
 assign [class="Wps"]                                  → $WS5
 assign [class="Wpp"]                                  → $WS5
-assign [class="feh"]                                  → $WS6
 assign [class="Spotify"]                              → $WS6
 assign [class="Popcorn-Time"]                         → $WS6
-assign [class="(?i)vlc"]                              → $WS6
-assign [class="(?i)mpv"]                              → $WS6
+assign [class="vlc"]                                  → $WS6
 assign [class="Gimp"]                                 → $WS7
 assign [class="Pingendo"]                             → $WS7
+assign [class=".*SceneBuilderApp"]                    → $WS7
 assign [class="Steam"]                                → $WS8
 assign [class="explorer.exe"]                         → $WS8
 assign [class="steam.exe"]                            → $WS8

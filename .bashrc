@@ -7,3 +7,5 @@
 
 alias ls='ls --color=auto'
 PS1='[\u@\H \W]\$ '
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash

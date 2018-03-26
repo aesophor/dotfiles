@@ -1,6 +1,9 @@
 ! Basic configuration
-rofi.width:           40
+rofi.modi:            window,run,ssh,drun
+rofi.show-icons:      true
+rofi.width:           35
 rofi.padding:         10
+rofi.lines:           12
 
 ! Enable the extended coloring options
 rofi.color-enabled:   true
@@ -9,9 +12,9 @@ rofi.color-enabled:   true
 rofi.color-window:    #18181a, #18181a, #282c34
 
 ! Property Name       BG       FG       BG-alt   Head-BG  Head-FG
-rofi.color-normal:    #18181a, #abb2bf, #18181a, #18181a, #81a2be
-rofi.color-active:    #18181a, #61afef, #18181a, #18181a, #b5bd68
-rofi.color-urgent:    #18181a, #e06c75, #18181a, #18181a, #cc6666
+rofi.color-normal:    #18181a, #abb2bf, #18181a, #18181a, #83a2be
+rofi.color-active:    #18181a, #83a2be, #18181a, #18181a, #b4bf86
+rofi.color-urgent:    #18181a, #b77a76, #18181a, #18181a, #b77a76
 
 ! Set the desired separator style
 rofi.separator-style: solid

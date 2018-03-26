@@ -49,8 +49,8 @@ function setup_dotfiles() {
     symlink "$HOME/.gtkrc-2.0" "$HOME/.gtkrc-2.0-kde4"
     
     # Custom command aliases and functions.
-    symlink "$dotfiles_path/.config/zsh/.aliases" "$HOME/.config/zsh/aliases"
-    symlink "$dotfiles_path/.config/zsh/.functions" "$HOME/.config/zsh/functions"
+    symlink "$dotfiles_path/.config/zsh/aliases" "$HOME/.config/zsh/aliases"
+    symlink "$dotfiles_path/.config/zsh/functions" "$HOME/.config/zsh/functions"
     
     # Now bin/* will be accessible under ~/.local/bin/.
     symlink "$dotfiles_path/bin" "$HOME/.local/bin"
@@ -62,7 +62,7 @@ function setup_dotfiles() {
     symlink "$dotfiles_path/.face.icon" "$HOME/.face.icon"
 
     # Copy zsh theme.
-    cp -p "$dotfiles_path/.config/oh-my-zsh/themes/coldwood.zsh-theme" "$HOME/.config/oh-my-zsh/themes/."
+    cp -p "$dotfiles_path/.config/oh-my-zsh/themes/"* "$HOME/.config/oh-my-zsh/themes/."
 }
 
 
@@ -71,7 +71,7 @@ echo "dotsetup"
 echo "========================================================================="
 echo "Running this script without reading it might lead to devastating results."
 echo "Make sure you've read the code before running it, and that you've put"
-echo "these dotfiles under ~/.config/dotfiles"
+echo "these dotfiles under $dotfiles_path"
 echo -n "Proceed? [type yes in uppercase] "
 read choice
 
