@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+source ~/.local/bin/scripts/colors
+
+DISTRO=`cat /etc/lsb-release | cut -d = -f 2 | sed 's/\"//g'`
+KERNEL_NAME=`uname -s`
+KERNEL_RELEASE=`uname -r`
+PKGNUM=`ls -d /var/db/pkg/*/* | wc -l`
+UPTIME=`uptime -p | sed 's/up //'`
+
+if [ -n "$DISPLAY" ]; then
+    WMNAME=`xprop -root _NET_WM_NAME | cut -d \" -f 2`
+else
+    WMNAME="console"
+fi
+
+lastlogin
+
+cat << EOF
+
+`bonsai`
+
+       ${c12}distro     ${c05}$DISTRO $KERNEL_NAME
+       ${c12}kernel     ${c05}$KERNEL_RELEASE
+     ${c12}packages     ${c05}$PKGNUM
+       ${c12}uptime     ${c05}$UPTIME
+        ${c12}shell     ${c05}$SHELL
+           ${c12}wm     ${c05}$WMNAME
+
+EOF

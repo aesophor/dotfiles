@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+TIME=`last $USER | sed '2!d' | awk ' {$1=$2=""; print(substr($0, 3));} '`
+SOURCE=`last $USER | head -n 1 | awk '{ print($2); }'`
+
+echo "Last Login: $TIME from $SOURCE"

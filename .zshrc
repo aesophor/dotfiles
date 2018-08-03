@@ -48,10 +48,10 @@ alias java='java "$_SILENT_JAVA_OPTIONS"'
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
 
-# URxvt-wcwidth glitch workaround. See #bug001 in README.md.
+# URxvt-wcwidth glitch workaround.
 if [ `ps -o comm= $PPID` = "urxvt" ]; then urxvt -e exec; fi
 
 # Print welcome message.
-clear; welcome
+clear; motd
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
