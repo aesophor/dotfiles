@@ -9,6 +9,7 @@ alias shutdown='sync && sync && sudo shutdown now'
 
 # bookmarks
 alias home='cd ~/; ll'
+alias code='cd ~/Code; ll'
 alias dl='cd ~/Downloads; ll'
 alias docs='cd ~/Documents; ll'
 alias works='cd ~/Workspaces; ll'
@@ -17,6 +18,7 @@ alias vids='cd ~/Videos; ll'
 alias musics='cd ~/Music; ll'
 alias dots="cd ~/Dotfiles; ll"
 alias vpn='cd ~/.config/143vpn/TCP; ll'
+alias hack='cd ~/Code/Java/NetBeansProjects/Hacklympics; ll'
 
 # shortcuts
 alias c='clear'
@@ -27,6 +29,7 @@ alias config-polybar='vim ~/.config/polybar/config'
 alias macspoof='sudo ~/.local/bin/scripts/macspoof'
 
 # typos
+alias cl='c; l'
 alias cll='c; ll'
 alias EXIT='exit'
 alias eixt='exit'

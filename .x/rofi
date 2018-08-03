@@ -1,5 +1,4 @@
 ! Basic configuration
-rofi.modi:            window,run,ssh,drun
 rofi.show-icons:      true
 rofi.width:           35
 rofi.padding:         10
@@ -9,13 +8,13 @@ rofi.lines:           12
 rofi.color-enabled:   true
 
 ! Property Name       BG       Border   Separator
-rofi.color-window:    #18181a, #18181a, #282c34
+rofi.color-window:    #262626, #262626, #262626
 
 ! Property Name       BG       FG       BG-alt   Head-BG  Head-FG
-rofi.color-normal:    #18181a, #abb2bf, #18181a, #18181a, #83a2be
-rofi.color-active:    #18181a, #83a2be, #18181a, #18181a, #b4bf86
-rofi.color-urgent:    #18181a, #b77a76, #18181a, #18181a, #b77a76
+rofi.color-normal:    #262626, #7d7d7d, #262626, #262626, #eeeeec
+rofi.color-active:    #262626, #83a2be, #262626, #262626, #b4bf86
+rofi.color-urgent:    #262626, #b77a76, #262626, #262626, #b77a76
 
 ! Set the desired separator style
 rofi.separator-style: solid
-rofi.font:            Tamzen 13
+rofi.font:            UW Ttyp0 12

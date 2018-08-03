@@ -13,7 +13,7 @@ function print_help()
 
 function send_noti()
 {
-    notify-send '  scrotutl' '\nScreenshot has been saved.'
+    notify-send 'scrotutl' 'Screenshot has been saved.'
 }
 
 if [ $# -eq 0 ]; then

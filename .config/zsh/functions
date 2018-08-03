@@ -4,7 +4,7 @@ function mkcd() {
 
 
 function xrdb_get_record() {
-    xrdb -query | grep -i "$1" | cut -d ":" -f 2 | sed -e 's/^[ \t]*//'
+    xrdb -query | grep -i "$1" | sed -e "s/.*:[ \t]//"
 }
 
 

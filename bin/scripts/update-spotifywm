@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+launch_cmd="LD_PRELOAD=/usr/lib/libcurl.so:/usr/share/spotify/spotifywm.so /usr/share/spotify/spotify"
+
+if [ $UID -ne 0 ]; then
+    echo "Please run as root. Quitting."
+    exit 1
+else
+    echo $launch_cmd > /usr/bin/spotify
+    chmod +x /usr/bin/spotify
+fi

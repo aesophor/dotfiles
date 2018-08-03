@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# prints a color text image of a tree
+
+echo -e "              [32m&&"
+echo -e "             [32m&&&&&"
+echo -e "           [32m&&&\/& &&&"
+echo -e "          [32m&&[33m|,/  |/[32m& &&"
+echo -e "           [32m&&[33m/   /  /_[32m&  &&"
+echo -e "             [33m\  {  |_____/_[32m&"
+echo -e "             [33m{  / /          [32m&&&"
+echo -e "             [33m.\`. \\{___\________\/_\}"
+echo -e "              [33m\} \}\{       \\"
+echo -e "              [33m}\{\{         \\____[32m&"
+echo -e "             [33m\{\}\{           \`[32m&[33m\[32m&&"
+echo -e "             [33m{{}             [32m&&"
+echo -e "       [33m, -=-~{ .-^- _"
+echo -e "             \`."

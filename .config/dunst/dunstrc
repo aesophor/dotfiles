@@ -6,16 +6,16 @@
     indicate_hidden = yes
     shrink = no
     notification_height = 0
-    separator_height = 2
+    separator_height = 3
     padding = 10
     horizontal_padding = 10
     frame_width = 1
-    frame_color = "#18181A"
+    frame_color = "#212121"
     separator_color = frame
     sort = yes
     idle_threshold = 0
     font = Tamzen 9
-    line_height = 0
+    line_height = 8
     markup = full
     format = "<b>%s %p</b>\n%b"
     alignment = left
@@ -27,7 +27,7 @@
     show_indicators = yes
     icon_position = left
     max_icon_size = 32
-    ; icon_folders = /home/aesophor/.local/share/icons/AntuDark/status/64/:/home/aesophor/.local/share/icons/AntuDark/devices/64/:/home/aesophor/.local/share/icons/AntuDark/apps/64/
+    icon_folders = /home/aesophor/.local/share/icons/Paper/16x16/status/:/home/aesophor/.local/share/icons/Paper/16x16/devices/:/home/aesophor/.local/share/icons/Paper/16x16/apps/
     sticky_history = yes
     history_length = 15
     always_run_script = true
@@ -41,17 +41,17 @@
     context = ctrl+shift+period
 
 [urgency_low]
-    background = "#18181A"
+    background = "#222222"
     foreground = "#F5F5F5"
     timeout = 10
 
 [urgency_normal]
-    background = "#18181A"
+    background = "#222222"
     foreground = "#F5F5F5"
     timeout = 10
 
 [urgency_critical]
-    background = "#AB4642"
+    background = "#B77A76"
     foreground = "#F5F5F5"
-    frame_color = "#AB4642"
+    frame_color = "#B77A76"
     timeout = 0

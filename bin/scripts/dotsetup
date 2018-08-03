@@ -53,6 +53,7 @@ function setup_dotfiles() {
     symlink "$dotfiles_path/.config/zsh/functions" "$HOME/.config/zsh/functions"
     
     # Now bin/* will be accessible under ~/.local/bin/.
+    mkdir "$HOME/.local" 2>/dev/null
     symlink "$dotfiles_path/bin" "$HOME/.local/bin"
 
     # gdb configuration.
@@ -61,7 +62,10 @@ function setup_dotfiles() {
     # Misc.
     symlink "$dotfiles_path/.face.icon" "$HOME/.face.icon"
 
-    # Copy zsh theme.
+    # Copy oh-my-zsh config and zsh theme.
+    if [ -d "$dotfiles_path/.oh-my-zsh" ]; then
+        mkdir -p "$HOME/.config/oh-my-zsh" && mv -rp "$dotfiles_path/.oh-my-zsh/"* "$HOME/.config/oh-my-zsh/."
+    fi
     cp -p "$dotfiles_path/.config/oh-my-zsh/themes/"* "$HOME/.config/oh-my-zsh/themes/."
 }
 

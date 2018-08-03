@@ -87,11 +87,9 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
-Plugin 'garbas/vim-snipmate'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'L9'
 Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'mattn/emmet-vim'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
@@ -116,7 +114,7 @@ set encoding=utf-8
 colorscheme base16-faded
 
 " Airline.
-let g:airline_theme='distinguished'
+let g:airline_theme='tomorrow'
 ret g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 0
@@ -126,22 +124,25 @@ let g:airline#extensions#hunks#non_zero_only = 1
 " tabs
 " next tab: gt
 " previous tab: gT
-nmap <C-t> :tabnew<CR>:NERDTreeToggle<CR>:wincmd p<CR>
+" Create a new tab with NerdTree opened.
+"nmap <C-t> :tabnew<CR>:NERDTreeToggle<CR>:wincmd p<CR>
+" Create a bew tab without NerdTree opened.
+nmap <C-t> :tabnew<CR>
 nmap <C-w> :q!<CR>
-nmap <C-c> :wincmd p<CR>
 
 " NERDTree
-autocmd vimenter * NERDTree
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-autocmd VimEnter * wincmd p
+"autocmd vimenter * NERDTree
+"autocmd StdinReadPre * let s:std_in=1
+"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+"autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-map <C-n> :NERDTreeToggle<CR>:wincmd p<CR>
 let g:NERDTreeDirArrowExpandable = ' '
 let g:NERDTreeDirArrowCollapsible = ' '
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeStatusline = -1
 let g:NERDTreeWinPos = "left"
+nmap <C-c> :wincmd p<CR>
+nmap <C-n> :NERDTreeToggle<CR>:wincmd p<CR>
 
 
 " Syntastic.
@@ -151,7 +152,7 @@ set statusline+=%*
 let g:syntastic_phpcs_disable            = 1
 let g:syntastic_phpmd_disable            = 1
 let g:syntastic_php_checkers             = ['php']
-let g:syntastic_python_python_exec       = '/usr/bin/python2'
+let g:syntastic_python_python_exec       = '/usr/bin/python3'
 let g:syntastic_quiet_messages           = { "type": "style" }
 let g:syntastic_aggregate_errors         = 1
 let g:syntastic_auto_jump                = 2

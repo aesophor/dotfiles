@@ -1,0 +1,31 @@
+#!/usr/bin/python3.5
+# bdflib-fill, a tool to merge glyphs from two BDF font files
+# Copyright (C) 2009, Timothy Alle
+#
+# This program is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+import sys
+from bdflib import reader, writer, effects
+
+base = open(sys.argv[1], 'r')
+custom = open(sys.argv[2], 'r')
+output = open(sys.argv[3], 'w+')
+
+merged = effects.merge(reader.read_bdf(base), reader.read_bdf(custom))
+
+writer.write_bdf(merged, output)
+
+base.close()
+custom.close()
+output.close()

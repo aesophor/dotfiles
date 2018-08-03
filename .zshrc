@@ -7,7 +7,7 @@ export ZSH="$HOME/.config/oh-my-zsh"
 # (3) Disable auto-setting terminal title,
 # (4) Disable marking untracked files under VCS as dirty.
 # (5) Plugins
-ZSH_THEME="icebrick"
+ZSH_THEME="frisk"
 CASE_SENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -35,11 +35,23 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
+# Make JAVA OPTIONS shut up.
+_SILENT_JAVA_OPTIONS="$_JAVA_OPTIONS"
+unset _JAVA_OPTIONS
+alias java='java "$_SILENT_JAVA_OPTIONS"'
+
+# syntax-hightlighting for cat and less
+#alias cat='highlight -O ansi --force'
+#alias less='cat $1 | /usr/bin/less -N --underline-special'
+
 # Prevent Wine from adding menu entries and desktop links.
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
+
 
 # URxvt-wcwidth glitch workaround. See #bug001 in README.md.
 if [ `ps -o comm= $PPID` = "urxvt" ]; then urxvt -e exec; fi
 
 # Print welcome message.
 clear; welcome
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

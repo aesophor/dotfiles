@@ -2,13 +2,14 @@
 ! ============================================================
 URxvt.depth:                32
 URxvt.geometry:             90x30
-URxvt.background:           #18181a
+URxvt.background:           #212121
+URxvt.borderColor:          #212121
 URxvt.transparent:          false
 URxvt.shading:		    0
 URxvt.fading:               0
 URxvt.loginShell:           true
+URxvt.internalBorder:       12
 URxvt.saveLines:            1000
-URxvt.internalBorder:       1
 URxvt.lineSpace:            1
 URxvt.letterSpace:          0
 URxvt.allow_bold:           true
@@ -35,13 +36,13 @@ URxvt.keysym.C-Down:        resize-font:smaller
 URxvt.keysym.C-Up:          resize-font:bigger
 
 ! Fonts
-URxvt*font:                 xft:TamzenForPowerline:pixelsize=14,\
-                            xft:WenQuanYi WenQuanYi Bitmap Song:pixelsize=10,\
+URxvt*font:                 xft:UW Ttyp0:pixelsize=14,\
+                            xft:WenQuanYi WenQuanYi Bitmap Song:pixelsize=12,\
                             xft:Font Awesome 5 Brands:pixelsize=11,\
                             xft:Font Awesome 5 Free Solid:pixelsize=11
 
 
-URxvt*boldFont:             xft:TamzenForPowerline:bold:pixelsize=14,\
-                            xft:WenQuanYi WenQuanYi Bitmap Song:bold:pixelsize=10,\
+URxvt*boldFont:             xft:UW Ttyp0:bold:pixelsize=14,\
+                            xft:WenQuanYi WenQuanYi Bitmap Song:bold:pixelsize=12,\
                             xft:Font Awesome 5 Brands:pixelsize=11,\
                             xft:Font Awesome 5 Free Solid:pixelsize=11

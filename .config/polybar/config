@@ -1,6 +1,6 @@
 ; ------------ Get color from .Xresources ------------
 [colors]
-background = ${xrdb:background:#ffffff}
+background = #212121
 foreground = ${xrdb:foreground:#ffffff}
 
 colour_blk = ${xrdb:color0:#ffffff}
@@ -18,34 +18,36 @@ colour_org = ${xrdb:color16:#ffffff}
 
 ; ------------------- Configuration -------------------
 [bar/default]
+bottom              = true
 dpi                 = 116
-height              = 23
+height              = 32
 line-size           = 0
-padding-left        = 1
-padding-right       = 1
+padding-left        = 2
+padding-right       = 2
 module-margin-left  = 1
-module-margin-right = 1
+module-margin-right = 2
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
-font-0              = Tamzen:size=13;1
-font-1              = Font Awesome 5 Brands:size=6;2
-font-2              = Font Awesome 5 Free Solid:size=6;2
-font-3              = Wuncon Siji:pixelsize=10;2
-font-4              = WenQuanYi WenQuanYi Bitmap Song:size=10;2
+font-0              = UW Ttyp0:size=13;2
+font-1              = Sans Serif:size=9;2
+font-2              = Font Awesome 5 Brands:size=6;2
+font-3              = Font Awesome 5 Free Solid:size=6;2
+font-4              = Wuncon Siji:pixelsize=10;2
+font-5              = WenQuanYi WenQuanYi Bitmap Song:size=11;2
 
-modules-left        = date volume battery_icon battery_pect wired-network wireless-network
+modules-left        = i3 mpd
 modules-center      = xwindow
-modules-right       = mpd i3
+modules-right       = wireless-network wired-network battery volume date powermenu
 
-tray-position       = right
-tray-padding        = 5
-tray-offset-y       = 0%
-tray-offset-x       = 0%
-tray-maxsize        = 18
-tray-detached       = false
-tray-transparent    = false
-tray-color          = ${colors.background}
+; tray-position       = right
+; tray-padding        = 5
+; tray-offset-y       = 0%
+; tray-offset-x       = 0%
+; tray-maxsize        = 18
+; tray-detached       = false
+; tray-transparent    = false
+; tray-color          = ${colors.background}
 
 
 ; ---------------------- wm --------------------------
@@ -63,16 +65,15 @@ pin-workspaces             = true
 index-sort                 = true
 enable-scroll              = false
 
-ws-icon-0                  = 1;
-ws-icon-1                  = 2;
-ws-icon-2                  = 3;
-ws-icon-3                  = 4;
-ws-icon-4                  = 5;
-ws-icon-5                  = 6;
-ws-icon-6                  = 7;
-ws-icon-7                  = 8;
-ws-icon-8                  = 9;
-ws-icon-default            =   
+ws-icon-0                  = 1;
+ws-icon-1                  = 2;
+ws-icon-2                  = 3;
+ws-icon-3                  = 4;
+ws-icon-4                  = 5;
+ws-icon-5                  = 6;
+ws-icon-6                  = 7;
+ws-icon-7                  = 8;
+ws-icon-8                  = 9;
 
 label-unfocused-background = ${colors.background}
 label-unfocused-foreground = ${colors.colour_gry}
@@ -96,9 +97,9 @@ label-urgent-padding       = 1
 ; -------------------- modules -----------------------
 [module/xwindow]
 type                     = internal/xwindow
-label                    = %title:0:75:...%
-format-prefix            = " "
-format-prefix-foreground = ${colors.colour_blu}
+label                    = %title:0:55:...%
+format-prefix            = " "
+format-prefix-foreground = ${colors.colour_wht}
 
 
 [module/date]
@@ -113,7 +114,7 @@ label-foreground  = ${colors.foreground}
 
 
 [module/volume]
-type                     = internal/alsa
+type                     = internal/volume
 format-volume            =  <label-volume>
 format-muted             =  <label-muted>
 label-muted              = Muted
@@ -125,21 +126,32 @@ format-muted-background  = ${colors.background}
 label-muted-foreground   = ${colors.foreground}
 
 
-[module/battery_icon]
-type              = custom/script
-exec              = ~/.local/bin/polybar/battery_icon
-interval          = 3.0
-format            = <label>
-format-foreground = ${colors.colour_grn}
+[module/battery]
+type = internal/battery
+full-at = 97
 
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-full = %percentage%%
 
-[module/battery_pect]
-type              = custom/script
-exec              = ~/.local/bin/polybar/battery
-interval          = 3.0
-format            = <label>
-format-offset     = -15
-format-foreground = ${colors.foreground}
+format-charging = <animation-charging>  <label-charging>
+format-discharging = <ramp-capacity>  <label-discharging>
+format-full =  <label-full>
+
+animation-charging-foreground = ${colors.colour_grn}
+ramp-capacity-foreground = ${colors.colour_grn}
+label-full-foreground = ${colors.colour_wht}
+format-full-foreground = ${colors.colour_grn}
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = ${colors.colour_red}
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = ${colors.colour_ylw}
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+animation-charging-0 = 
 
 
 [module/wireless-network]
@@ -155,11 +167,11 @@ label-connected                = %essid%
 label-connected-foreground     = ${colors.foreground}
 label-disconnected             = disconnected
 label-disconnected-foreground  = ${colors.foreground}
-ramp-signal-4                  = 
-ramp-signal-3                  = 
+ramp-signal-0                  = 
+ramp-signal-1                  = 
 ramp-signal-2                  = 
-ramp-signal-1                  = 
-ramp-signal-0                  = 
+ramp-signal-3                  = 
+ramp-signal-4                  = 
 
 
 [module/wired-network]
@@ -196,7 +208,7 @@ type                  = internal/mpd
 host                  = 127.0.0.1
 port                  = 6600
 interval              = 2
-format-online         = <label-song>  <icon-prev> <toggle> <icon-next>
+format-online         = <icon-prev> <toggle> <icon-next>  <label-song>
 label-song            = %artist% - %title%
 label-offline         = mpd is offline
 icon-play             = 
@@ -207,3 +219,11 @@ icon-play-foreground  = ${colors.colour_blu}
 icon-pause-foreground = ${colors.colour_blu}
 icon-prev-foreground  = ${colors.colour_blu}
 icon-next-foreground  = ${colors.colour_blu}
+
+
+[module/powermenu]
+type    = custom/text
+content = 
+
+content-foreground = ${colors.colour_red}
+click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
