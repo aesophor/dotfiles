@@ -1,64 +1,27 @@
-## aesophor's dotfiles
-```
-                                           .
-     .vir.                                d$b
-  .d$$$$$$b.    .cd$$b.     .d$$b.   d$$$$$$$$$$$b  .d$$b.      .d$$b.
-  $$$$( )$$$b d$$$()$$$.   d$$$$$$$b Q$$$$$$$P$$$P.$$$$$$$b.  .$$$$$$$b.
-  Q$$$$$$$$$$B$$$$$$$$P"  d$$$PQ$$$$b.   $$$$.   .$$$P' `$$$ .$$$P' `$$$
-    "$$$$$$$P Q$$$$$$$b  d$$$P   Q$$$$b  $$$$b   $$$$b..d$$$ $$$$b..d$$$
-   d$$$$$$P"   "$$$$$$$$ Q$$$     Q$$$$  $$$$$   `Q$$$$$$$P  `Q$$$$$$$P
-  $$$$$$$P       `"""""   ""        ""   Q$$$P     "Q$$$P"     "Q$$$P"
-  `Q$$P"                                  """
+<div align="center">
+DOTFILES
+<img src="https://github.com/aesophor/dotfiles/raw/master/assets/main.png">
 
-```
-My Gentoo dotfiles from Macbook Pro 11,2 (Late 2014). 
+`i3+KDE` `polybar` `Xresources color: base16-faded` 
+</div>
 
-## Synopsis
-![Screenshot](https://github.com/aesophor/dotfiles/raw/master/assets/screenshot.png)
+## Disclaimer
+* I'll help out with any problem you have with my dotfiles, but I'm not responsible for anything  you break anything.
+* The installer script `bin/dotsetup` is for my personal use. If you want to use it, please clone this repo into `~/Dotfiles` before running the script.
+* Feel free to take anything you like :)
 
-**Details**
+## Overview
+I'm currently running [i3](https://github.com/i3/i3) and [KDE](https://en.wikipedia.org/wiki/KDE) together. Here is a list of other applications I use:
+* Bar: [polybar](https://github.com/jaagr/polybar)
+* Application Launcher: [rofi](https://github.com/DaveDavenport/rofi)
+* Terminal: [urxvt (patched)](https://github.com/blueyed/rxvt-unicode) for displaying glyphs
+* Shell: zsh + [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
+* Music Player: mpd + [ncmpcpp](https://github.com/arybczak/ncmpcpp)
+* File Manager: dolphin
+* Web Browser: [chromium](https://chromium.googlesource.com/chromium/src)
 
-| Item | Program |
-| --- | --- |
-| DE/WM | KDE Plasma / i3-gaps |
-| Bar | Polybar |
-| Compositor | Compton |
-| Launcher | rofi |
-| Font (en/zh_tw) | Tamzen / WenQuanYi Bitmap Song |
-| Font (icons) | Font Awesome 5, Wuncon Siji |
-| Terminal | [rxvt-unicode-wcwidthcallback](https://github.com/blueyed/rxvt-unicode) |
-| File Manager | ranger, dolphin |
-| Music Player | ncmpcpp, spotify-client |
-
-**Colorschemes**
-
-| Program | Colorscheme |
-| --- | --- |
-| .Xresources | [base16-faded](https://github.com/aesophor/base16-faded) |
-| vim | [base16-faded](https://github.com/aesophor/base16-faded) |
-| vim-airline | [minimalist](https://github.com/dikiaap/minimalist) |
-| zsh | [icebrick](https://github.com/aesophor/dotfiles/blob/master/.config/oh-my-zsh/themes/icebrick.zsh-theme) |
-| ranger | [Good Night America](http://dotshare.it/dots/958/) |
-
-**Wallpapers**
-* Vintage Lamps in the Window [(link)](https://www.walldevil.com/vintage-lamps-in-the-window-wallpaper-858287/)
-
-## Installation
-**Please read the script before running!**
-
-git clone this repo into ~/Dotfiles and run `~/Dotfiles/bin/scripts/dotsetup`
-
-## Bugs / Workarounds
-* #bug001 - FontAwesome does not render properly in rxvt-unicode-wcwidthcallback
-
-Compile URxvt-wcwidth-callback and install it on your machine. Then, 
-add the following lines to your .zshrc (or your own favorite shell config file). 
-Please read [wcwidth-hack](https://github.com/blueyed/rxvt-unicode/blob/wcwidth-hack/README.md) for details.
-
-```
-# URxvt-wcwidth glitch workaround. See #bug001 in README.md.
-if [ `ps -o comm= $PPID` = "urxvt" ]; then urxvt -e exec; fi
-```
+## More Screenshots
+Please visit [here](https://imgur.com/a/uiT7zni) on imgur.
 
 ## License
 Available under the [MIT License](https://github.com/aesophor/dotfiles/blob/master/LICENSE).
