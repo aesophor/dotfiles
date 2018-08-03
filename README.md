@@ -1,5 +1,6 @@
 <div align="center">
-DOTFILES
+<b>DOTFILES<b>
+
 <img src="https://github.com/aesophor/dotfiles/raw/master/assets/main.png">
 
 `i3+KDE` `polybar` `Xresources color: base16-faded` 
@@ -26,11 +27,11 @@ I'm currently running [i3](https://github.com/i3/i3) and [KDE](https://en.wikipe
 * I manage my resolution/brightness/wallpaper/lockscreen with [displayctl](https://github.com/aesophor/displayctl)
 
 ```
-$ displayctl             # Restore resolution/brightness/wallpaper to last session 
-$ displayctl -l          # Invoke lockscreen (i3lock-color required)
-$ displayctl -l -d -b    # Invoke lockscreen with dim and blur effect
-$ displayctl -w -d -b    # Set wallpaper with dim and blur effect
-$ displayctl -e 1280x800 # Mirrors display to an external monitor
+$ displayctl                  # Restore resolution/brightness/wallpaper to last session 
+$ displayctl -l               # Invoke lockscreen (i3lock-color required)
+$ displayctl -l -d -b         # Invoke lockscreen with dim and blur effect
+$ displayctl -w -d -b         # Set wallpaper with dim and blur effect
+$ displayctl -e 1280x800      # Mirrors display to an external monitor
 ```
 It's quite useful! I recommend that you give it a shot :)
 ## Gallery
