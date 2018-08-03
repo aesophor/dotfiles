@@ -27,6 +27,10 @@ c.url.default_page = 'https://start.duckduckgo.com/'
 # Type: List of FuzzyUrl, or FuzzyUrl
 c.url.start_pages = ['https://www.gentoo.org/', 'https://bamboofox.cs.nctu.edu.tw/', 'https://www.github.com/aesophor']
 
+# Default zoom level.
+# Type: Perc
+c.zoom.default = '110%'
+
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column.
 # Type: List of QtColor, or QtColor
