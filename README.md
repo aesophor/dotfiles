@@ -6,7 +6,7 @@
 </div>
 
 ## Disclaimer
-* I'll help out with any problem you have with my dotfiles, but I'm not responsible for anything  you break anything.
+* I'll help out with any problem you have with my dotfiles, but I'm not responsible for anything if you break anything.
 * The installer script `bin/dotsetup` is for my personal use. If you want to use it, please clone this repo into `~/Dotfiles` before running the script.
 * Feel free to take anything you like :)
 
