@@ -1,6 +1,5 @@
 <div align="center">
-<b>DOTFILES<b>
-
+<h1>DOTFILES
 <img src="https://github.com/aesophor/dotfiles/raw/master/assets/main.png">
 
 `i3+KDE` `polybar` `Xresources color: base16-faded` 
@@ -39,3 +38,4 @@ Please visit [here](https://imgur.com/a/uiT7zni) on imgur.
 
 ## License
 Available under the [MIT License](https://github.com/aesophor/dotfiles/blob/master/LICENSE).
+
