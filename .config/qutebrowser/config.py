@@ -18,6 +18,10 @@ config.set('content.javascript.enabled', True, 'chrome://*/*')
 # Type: Bool
 config.set('content.javascript.enabled', True, 'qute://*/*')
 
+# List of user stylesheet filenames to use.
+# Type: List of File, or File
+c.content.user_stylesheets = []
+
 # Page to open if :open -t/-b/-w is used without URL. Use `about:blank`
 # for a blank page.
 # Type: FuzzyUrl
@@ -25,7 +29,7 @@ c.url.default_page = 'https://start.duckduckgo.com/'
 
 # Page(s) to open at the start.
 # Type: List of FuzzyUrl, or FuzzyUrl
-c.url.start_pages = ['https://www.gentoo.org/', 'https://bamboofox.cs.nctu.edu.tw/', 'https://www.github.com/aesophor']
+c.url.start_pages = ['https://www.gentoo.org/', 'https://www.github.com/aesophor']
 
 # Default zoom level.
 # Type: Perc
@@ -305,7 +309,7 @@ c.colors.tabs.odd.fg = '#EEFFFF'
 
 # Background color of unselected odd tabs.
 # Type: QtColor
-c.colors.tabs.odd.bg = '#212121'
+c.colors.tabs.odd.bg = '#24292E'
 
 # Foreground color of unselected even tabs.
 # Type: QtColor
@@ -313,7 +317,7 @@ c.colors.tabs.even.fg = '#EEFFFF'
 
 # Background color of unselected even tabs.
 # Type: QtColor
-c.colors.tabs.even.bg = '#212121'
+c.colors.tabs.even.bg = '#24292E'
 
 # Foreground color of selected odd tabs.
 # Type: QtColor
@@ -333,14 +337,16 @@ c.colors.tabs.selected.even.bg = '#4A4A4A'
 
 # Bindings for normal mode
 config.bind('+', None)
+config.bind(',m', "set content.user_stylesheets ''")
+config.bind(',n', 'set content.user_stylesheets ~/.config/qutebrowser/css/solarized-dark-all-sites.css')
 config.bind('-', None)
 config.bind('<Ctrl+->', 'zoom-out')
 config.bind('<Ctrl+0>', 'zoom')
 config.bind('<Ctrl+=>', 'zoom-in')
-config.bind('<Ctrl+h>', 'history')
-config.bind('<Ctrl+t>', 'set-cmd-text -s :open -t')
+config.bind('<Ctrl+h>', 'open -t ;; history')
+config.bind('<Ctrl+t>', 'open -t')
 config.bind('=', None)
 config.bind('J', 'tab-prev')
 config.bind('K', 'tab-next')
 config.bind('d', None)
-config.bind('x', 'tab-close')
+config.bind('t', 'set-cmd-text -s :open -t')

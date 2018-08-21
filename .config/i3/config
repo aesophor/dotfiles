@@ -92,7 +92,7 @@ hide_edge_borders   none
 #floating_minimum_size 1250 x 750
 
 # shortcut to change window border
-bindsym Mod4+t border normal    0
+bindsym Mod4+t border normal    1
 bindsym Mod4+y border pixel     3
 bindsym Mod4+u border none
 
@@ -167,6 +167,8 @@ for_window [class="hacklympics.*"]                       floating enable
 for_window [class="Terraria.bin.x86"]                    floating enable
 
 # assign program to workspace (for spotify wm_class fix -> spotifywm)
+assign [class="dolphin-emu"]                          → $WS8
+
 assign [class="urxvt"]                                → $WS1
 assign [class="NetBeans IDE 8.2"]                     → $WS2
 assign [class="Eclipse"]                              → $WS2

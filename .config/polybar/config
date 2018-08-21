@@ -34,11 +34,11 @@ font-1              = Sans Serif:size=9;2
 font-2              = Font Awesome 5 Brands:size=6;2
 font-3              = Font Awesome 5 Free Solid:size=6;2
 font-4              = Wuncon Siji:pixelsize=10;2
-font-5              = WenQuanYi WenQuanYi Bitmap Song:size=11;2
+font-5              = WenQuanYi WenQuanYi Bitmap Song:size=12;2
 
 modules-left        = i3 mpd
 modules-center      = xwindow
-modules-right       = wireless-network wired-network battery volume date powermenu
+modules-right       = wireless-network wired-network battery volume date power
 
 ; tray-position       = right
 ; tray-padding        = 5
@@ -221,7 +221,15 @@ icon-prev-foreground  = ${colors.colour_blu}
 icon-next-foreground  = ${colors.colour_blu}
 
 
-[module/powermenu]
+[module/lock]
+type    = custom/text
+content = 
+
+content-foreground = ${colors.colour_red}
+click-left         = displayctl -l
+
+
+[module/power]
 type    = custom/text
 content = 
 
