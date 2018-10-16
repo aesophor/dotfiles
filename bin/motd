@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-source ~/.local/bin/scripts/colors
+source ~/.local/bin/colors
 
 DISTRO=`cat /etc/lsb-release | cut -d = -f 2 | sed 's/\"//g'`
 KERNEL_NAME=`uname -s`

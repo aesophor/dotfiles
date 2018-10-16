@@ -3,6 +3,9 @@ alias ls='ls --color -hX --group-directories-first'
 alias l='ls'
 alias ll='la'
 
+# safer rm.
+#alias rm='rm -i'
+
 # corrections
 alias reboot='sync && sync && sudo reboot'
 alias shutdown='sync && sync && sudo shutdown now'
@@ -18,7 +21,9 @@ alias vids='cd ~/Videos; ll'
 alias musics='cd ~/Music; ll'
 alias dots="cd ~/Dotfiles; ll"
 alias vpn='cd ~/.config/143vpn/TCP; ll'
+
 alias hack='cd ~/Code/Hacklympics/Hacklympics; ll'
+alias medv='cd ~/Code/games/Medievania; ll'
 
 # shortcuts
 alias c='clear'

@@ -127,6 +127,8 @@ let g:airline#extensions#hunks#non_zero_only = 1
 " Create a new tab with NerdTree opened.
 "nmap <C-t> :tabnew<CR>:NERDTreeToggle<CR>:wincmd p<CR>
 " Create a bew tab without NerdTree opened.
+nmap <S-j> gT
+nmap <S-k> gt
 nmap <C-t> :tabnew<CR>
 nmap <C-w> :q!<CR>
 

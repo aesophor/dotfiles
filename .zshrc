@@ -20,9 +20,8 @@ source $ZSH/oh-my-zsh.sh
 source ~/.config/zsh/aliases
 source ~/.config/zsh/functions
 
-# Add all directories under $HOME/.local/bin/ to $PATH.
-addpath $HOME/.local/bin
-unset -f addpath
+# Add ~/.local/bin to $PATH.
+export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/games"
 
 # User configuration
 export LANG="en_US.UTF-8"

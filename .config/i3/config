@@ -92,7 +92,7 @@ hide_edge_borders   none
 #floating_minimum_size 1250 x 750
 
 # shortcut to change window border
-bindsym Mod4+t border normal    1
+bindsym Mod4+t border normal    0
 bindsym Mod4+y border pixel     3
 bindsym Mod4+u border none
 
@@ -157,19 +157,25 @@ for_window [class="Plasmoidviewer"]                      floating enable; border
 # set floating mode when applications started
 for_window [class="feh"]                                 floating enable
 for_window [class="mpv"]                                 floating enable
+for_window [class="Peek"]                                floating enable
 for_window [class="Gcolor2"]                             floating enable
 for_window [class="systemsettings"]                      floating enable
 for_window [class="Steam"]                               floating enable
 for_window [class="PCSX2"]                               floating enable
 for_window [class="VirtualBox"]                          floating enable
 for_window [class="Wine"]                                floating enable
+for_window [class="Allegro"]                             floating disable
 for_window [class="hacklympics.*"]                       floating enable
 for_window [class="Terraria.bin.x86"]                    floating enable
+for_window [class="Medievania"]                          floating enable
+#for_window [class="Wine" instance="photoshop.exe"]       floating disable
 
 # assign program to workspace (for spotify wm_class fix -> spotifywm)
 assign [class="dolphin-emu"]                          → $WS8
 
 assign [class="urxvt"]                                → $WS1
+assign [class="jetbrains-idea"]                       → $WS2
+assign [class="jetbrains-studio"]                     → $WS2
 assign [class="NetBeans IDE 8.2"]                     → $WS2
 assign [class="Eclipse"]                              → $WS2
 assign [class="Wine" instance="tes5edit.exe"]         → $WS2
@@ -184,9 +190,12 @@ assign [class="Wpp"]                                  → $WS5
 assign [class="Spotify"]                              → $WS6
 assign [class="Popcorn-Time"]                         → $WS6
 assign [class="vlc"]                                  → $WS6
+assign [class="Allegro"]                              → $WS7
 assign [class="Gimp"]                                 → $WS7
 assign [class="Pingendo"]                             → $WS7
 assign [class=".*SceneBuilderApp"]                    → $WS7
+assign [class="tiled"]                                → $WS7
+assign [class="Wine" instance="photoshop.exe"]        → $WS7
 assign [class="Steam"]                                → $WS8
 assign [class="Wine" instance="explorer.exe"]         → $WS8
 assign [class="Wine" instance="steam.exe"]            → $WS8
@@ -234,14 +243,14 @@ mode "  "
 bindsym $mod+r mode "  "
 
 # i3-gaps
-for_window [class="^.*"]                border pixel 0
+for_window [class="^.*"]                border pixel 3
 for_window [class="URxvt"]              border pixel 3
 for_window [window_role="pop-up"]       floating enable
 for_window [window_role="task_dialog"]  floating enable
 for_window [title="Preferences$"]       floating enable
 
 # class                 border  backgr. text    indicator
-client.focused          #CCCCCC #CCCCCC #212121 #DDDDDD
+client.focused          #FFFFFF #FFFFFF #212121 #DDDDDD
 client.focused_inactive #777777 #777777 #CCCCCC #292D2E
 client.unfocused        #4A4A4A #4A4A4A #86888C #292D2E
 client.urgent           #2F343A #D64E4E #FFFFFF #D64E4E

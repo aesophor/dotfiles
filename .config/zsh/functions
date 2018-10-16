@@ -22,14 +22,16 @@ function addpath() {
     DIRS=("${(@f)$(ls --color=never -d $bindir* | grep -v "bar")}")
     
     for dir in $DIRS; do
-        export PATH="$PATH:$dir"
+        if [ -d $dir ]; then
+            export PATH="$PATH:$dir"
+        fi
     done
 }
 
 
 function cleanup() {
-    rm ~/.bash_history 2>/dev/null
-    rm ~/.bash_logout 2>/dev/null
-    rm ~/.lesshst 2>/dev/null
+    rm ~/.bash_history >/dev/null 2>&1
+    rm ~/.bash_logout >/dev/null 2>&1
+    rm ~/.lesshst >/dev/null 2>&1
     echo > ~/.zsh_history
 }
