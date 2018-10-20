@@ -56,6 +56,7 @@ set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set shell=/bin/sh " Use /bin/sh for executing shell commands
 set shiftwidth=4 " The # of spaces for indenting
 set softtabstop=4
+"set softtabstop=0 noexpandtab
 set shortmess=atI " Don't show the intro message when starting vim
 set showtabline=2 " Always show tab bar
 set sidescrolloff=3 " Start scrolling three columns before vertical border of window
