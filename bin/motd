@@ -25,5 +25,5 @@ cat << EOF
        ${c12}uptime     ${c05}$UPTIME
         ${c12}shell     ${c05}$SHELL
            ${c12}wm     ${c05}$WMNAME
-
+${c07}
 EOF

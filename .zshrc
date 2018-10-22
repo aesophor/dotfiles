@@ -53,4 +53,7 @@ if [ `ps -o comm= $PPID` = "urxvt" ]; then urxvt -e exec; fi
 # Print welcome message.
 clear; motd
 
+# Print todo list.
+todo
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

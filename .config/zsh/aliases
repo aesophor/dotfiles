@@ -35,7 +35,9 @@ alias macspoof='sudo ~/.local/bin/scripts/macspoof'
 
 # typos
 alias cl='c; l'
+alias CL='c; l'
 alias cll='c; ll'
+alias CLL='c; ll'
 alias EXIT='exit'
 alias eixt='exit'
 alias xit='exit'
