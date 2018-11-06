@@ -1,5 +1,4 @@
 #!/usr/bin/env sh
-# wine_fontsmooth.sh
 
 TMPFILE=`mktemp` || exit 1
 

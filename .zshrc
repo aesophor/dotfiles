@@ -21,7 +21,7 @@ source ~/.config/zsh/aliases
 source ~/.config/zsh/functions
 
 # Add ~/.local/bin to $PATH.
-export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/games"
+export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/wine"
 
 # User configuration
 export LANG="en_US.UTF-8"

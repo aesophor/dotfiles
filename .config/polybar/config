@@ -1,6 +1,6 @@
 ; ------------ Get color from .Xresources ------------
 [colors]
-background = #212121
+background = ${xrdb:color0:#ffffff}
 foreground = ${xrdb:foreground:#ffffff}
 
 colour_blk = ${xrdb:color0:#ffffff}
@@ -20,7 +20,7 @@ colour_org = ${xrdb:color16:#ffffff}
 [bar/default]
 bottom              = true
 dpi                 = 116
-height              = 32
+height              = 31
 line-size           = 0
 padding-left        = 2
 padding-right       = 2

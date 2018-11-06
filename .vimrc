@@ -79,6 +79,7 @@ set wildmode=list:longest " Complete only until point of ambiguity
 set winminheight=0 " Allow splits to be reduced to a single line
 set wrapscan " Searches wrap around end of file
 set nofoldenable " disable folding
+set relativenumber " relative line numbers
 
 " Plugin.
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -131,7 +132,7 @@ let g:airline#extensions#hunks#non_zero_only = 1
 nmap <S-j> gT
 nmap <S-k> gt
 nmap <C-t> :tabnew<CR>
-nmap <C-w> :q!<CR>
+"nmap <C-w> :q!<CR>
 
 " NERDTree
 "autocmd vimenter * NERDTree

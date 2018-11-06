@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
-# kbdctrl
-#
-# Tiny script to swap alt and win keys.
+# kbdctrl - tiny script to swap alt and win keys
 
-function print_usage()
-{
+function print_usage() {
+    echo ""
     echo "Usage: $0 <argument>"
     echo "varmilo - Switch to Varmilo layout."
     echo "mbp     - Switch to Macbook layout."

@@ -13,9 +13,8 @@ else
     WMNAME="console"
 fi
 
-lastlogin
-
 cat << EOF
+`lastlogin`
 
 `bonsai`
 

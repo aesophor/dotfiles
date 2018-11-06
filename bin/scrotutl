@@ -1,20 +1,17 @@
 #!/usr/bin/env bash
-# scrotutl
-#
-# wrapper script of scrot
+# scrotutl - wrapper script of scrot
 
-function print_help()
-{
+function print_help() {
     echo "Usage: $0 <argument>"
     echo "-f: Fullscreen"
     echo "-s: Select an Area"
     echo "-w: Select a Window"
 }
 
-function send_noti()
-{
+function send_noti() {
     notify-send 'scrotutl' 'Screenshot has been saved.'
 }
+
 
 if [ $# -eq 0 ]; then
     sleep 0.2 && scrot 'scrot-%F_%H%M%S_$wx$h.png' -e 'mv $f ~/Pictures/Screenshots' && send_noti

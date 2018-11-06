@@ -2,8 +2,8 @@
 ! ============================================================
 URxvt.depth:                32
 URxvt.geometry:             90x30
-URxvt.background:           #212121
-URxvt.borderColor:          #212121
+URxvt.background:           #242632
+URxvt.borderColor:          #242632
 URxvt.transparent:          false
 URxvt.shading:		    0
 URxvt.fading:               0

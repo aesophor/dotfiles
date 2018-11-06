@@ -2,8 +2,8 @@
 # macspoof
 #
 # Little script to let you pick a MAC Address from a file,
-# and spoof your mac using the MAC Address you just chose
-# .
+# and spoof your mac using the MAC Address you just chose.
+
 ETH="$(ip link | grep enp | awk '{printf("%s\n", $2);}' | cut -d : -f 1)"
 LOADED_MACS[0]="$(ip link show $ETH | grep link/ether | awk '{printf("%s", $2);}')"
 macfile="/home/aesophor/.private/macspoof/macs"

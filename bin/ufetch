@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
-#
 # ufetch-gentoo - tiny system info for gentoo
-
-## INFO
 
 # user is already defined
 host="$(hostname)"
