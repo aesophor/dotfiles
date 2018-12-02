@@ -163,6 +163,7 @@ for_window [class="mpv"]                                 floating enable
 for_window [class="Peek"]                                floating enable
 for_window [class="Gcolor2"]                             floating enable
 for_window [class="systemsettings"]                      floating enable
+for_window [class="Firefox" instance="Places"]           floating enable
 for_window [class="Steam"]                               floating enable
 for_window [class="PCSX2"]                               floating enable
 for_window [class="VirtualBox"]                          floating enable
@@ -171,18 +172,14 @@ for_window [class="Allegro"]                             floating disable
 for_window [class="hacklympics.*"]                       floating enable
 for_window [class="Terraria.bin.x86"]                    floating enable
 for_window [class="Vigilante"]                           floating enable
+for_window [class="Wine" instance="maplelegendswindowed.exe"] fullscreen enable
 #for_window [class="Wine" instance="photoshop.exe"]       floating disable
 
 # assign program to workspace (for spotify wm_class fix -> spotifywm)
-assign [class="dolphin-emu"]                          → $WS8
-
 assign [class="urxvt"]                                → $WS1
 assign [class="jetbrains-idea"]                       → $WS2
 assign [class="jetbrains-studio"]                     → $WS2
-assign [class="NetBeans IDE 8.2"]                     → $WS2
-assign [class="Eclipse"]                              → $WS2
 assign [class="Wine" instance="tes5edit.exe"]         → $WS2
-assign [class="Chromium"]                             → $WS3
 assign [class="Firefox"]                              → $WS3
 assign [class="qutebrowser"]                          → $WS3
 assign [class="Slack"]                                → $WS3
@@ -248,7 +245,6 @@ bindsym $mod+r mode "  "
 
 # i3-gaps
 for_window [class="^.*"]                border pixel $border_width
-for_window [class="Firefox"]            border pixel 0
 for_window [window_role="pop-up"]       floating enable
 for_window [window_role="task_dialog"]  floating enable
 for_window [title="Preferences$"]       floating enable

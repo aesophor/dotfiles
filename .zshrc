@@ -48,7 +48,7 @@ export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
 
 # URxvt-wcwidth glitch workaround.
-if [ `ps -o comm= $PPID` = "urxvt" ]; then urxvt -e exec; fi
+#if [ `ps -o comm= $PPID` = "urxvt" ]; then urxvt -e exec; fi
 
 # Print welcome message.
 clear; motd

@@ -101,7 +101,7 @@ Plugin 'tomtom/tlib_vim'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-surround'
 Plugin 'spf13/vim-autoclose'
-Plugin 'Shuogo/neocomplete.vim'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'Yggdroot/indentLine'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'wincent/command-t.git'
@@ -149,6 +149,9 @@ nmap <C-c> :wincmd p<CR>
 nmap <C-n> :NERDTreeToggle<CR>:wincmd p<CR>
 
 
+" YouCompleteMe
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+
 " Syntastic.
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -177,9 +180,6 @@ endif
 
 " vim-autoclose
 let g:autoclose_vim_commentmode = 1
-
-" neocomplete
-let g:neocomplete#enable_at_startup = 1
 
 " indentLine
 let g:indentLine_char = '¦'

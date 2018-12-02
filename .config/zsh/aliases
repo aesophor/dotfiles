@@ -5,6 +5,7 @@ alias ll='la'
 
 # safer rm.
 alias rm='rm -i'
+alias rm -rf='rm -irf'
 
 # corrections
 alias reboot='sync && sync && sudo reboot'
@@ -34,6 +35,7 @@ alias macspoof='sudo ~/.local/bin/scripts/macspoof'
 # shortcuts to my personal projects
 alias hack='cd ~/Code/Hacklympics/Hacklympics; ll'
 alias vgl='cd ~/Code/games/Vigilante; ll'
+alias wm='cd ~/Code/Wmderland; ll'
 
 # typos
 alias cl='c; l'

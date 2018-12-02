@@ -11,15 +11,14 @@ bind index G imap-fetch-mail
 set editor = "$EDITOR"
 
 
-#-------- Basic Config {{{
+# Basic Config
+# -----------------------------------------------------
 set ssl_starttls = yes
 set ssl_force_tls = yes
 set imap_check_subscribed
-# set hostname = gmail.com
 set mail_check = 120
 set timeout = 300
 set imap_keepalive = 300
-# set record = "+[GMail]/Sent Mail"
 set move = no
 set include
 set sort = 'threads'
@@ -31,13 +30,17 @@ ignore "DKIM-Signature:"
 hdr_order Date From To Cc
 alternative_order text/plain text/html *
 auto_view text/html
+
+
+# Key bindings
+# -----------------------------------------------------
 bind editor <Tab> complete-query
 bind editor ^T complete
 bind editor <space> noop
-
+ 
 
 # Theme
-#------------------------------------------------------
+# -----------------------------------------------------
 color hdrdefault cyan default
 color attachment yellow default
 

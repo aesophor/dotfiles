@@ -18,14 +18,18 @@ colour_org = ${xrdb:color16:#ffffff}
 
 ; ------------------- Configuration -------------------
 [bar/default]
-bottom              = true
+;bottom              = true 
 dpi                 = 116
-height              = 31
+height              = 30
 line-size           = 0
 padding-left        = 2
 padding-right       = 2
 module-margin-left  = 1
 module-margin-right = 2
+
+modules-left        = i3 mpd
+modules-center      = xwindow
+modules-right       = wireless-network wired-network battery volume date
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -35,10 +39,6 @@ font-2              = Font Awesome 5 Brands:size=6;2
 font-3              = Font Awesome 5 Free Solid:size=6;2
 font-4              = Wuncon Siji:pixelsize=10;2
 font-5              = WenQuanYi WenQuanYi Bitmap Song:size=12;2
-
-modules-left        = i3 mpd
-modules-center      = xwindow
-modules-right       = wireless-network wired-network battery volume date power
 
 ; tray-position       = right
 ; tray-padding        = 5
@@ -97,7 +97,7 @@ label-urgent-padding       = 1
 ; -------------------- modules -----------------------
 [module/xwindow]
 type                     = internal/xwindow
-label                    = %title:0:55:...%
+label                    = %title:0:80:...%
 format-prefix            = " "
 format-prefix-foreground = ${colors.colour_wht}
 

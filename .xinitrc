@@ -27,5 +27,5 @@ fi
 # Start redshift
 redshift &> /dev/null || redshift &> /dev/null &
 
-# Startup i3-KDE
+# Startup KDE-Wmderland
 exec startkde
