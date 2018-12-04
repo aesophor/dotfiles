@@ -1,3 +1,3 @@
 set disassembly-flavor intel
 
-source ~/.gdb/peda/peda.py
+#source ~/.gdb/peda/peda.py
