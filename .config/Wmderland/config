@@ -5,20 +5,46 @@ set gap_width = 15
 set border_width = 3
 set min_window_width = 50
 set min_window_height = 50
-set focused_color = ffffffff
-set unfocused_color = ff41485f
+set focused_color = ff565679
+set unfocused_color = ff393f52
 
 
 ; Spawning Rules (wm_name not implemented)
 ; syntax: assign <wm_class>{,<wm_name>} -> <workspace_id>
 ; ----------------------------------------------------
 assign URxvt -> 1
+assign jetbrains-idea -> 2
+assign jetbrains-studio -> 2
 assign Firefox -> 3
+assign dolphin -> 4
+assign ark -> 4
+assign Et -> 5
+assign Wps -> 5
+assign Wpp -> 5
+assign Spotify -> 6
+assign vlc -> 6
+assign Gimp -> 7
+assign tiled -> 7
+assign Wine,steam.exe -> 8
+assign Steam -> 8
+assign PCSX2 -> 8
+assign VirtualBox -> 9
+assign Transmission -> 9
 
 
-; Floating Rules (Not implemented)
-; syntax: floating <wm_class>{,<wm_name>} enable
+; Floating Rules (wm_name not implemented)
+; syntax: floating <wm_class>{,<wm_name>} true
 ; ----------------------------------------------------
+floating feh true
+floating mpv true
+floating Peek true
+floating Gcolor2 true
+floating Steam true
+floating PCSX2 true
+floating VirtualBox true
+floating Wine true
+floating Wine,steam.exe true
+floating Wine,tesv.exe true
 
 
 ; Keybind (Not implemented)
@@ -46,5 +72,5 @@ exec dispad
 exec compton --config ~/.config/compton/compton.conf &
 exec pulseaudio --start --log-target=syslog
 exec mpd
-exec dunst -config ~/.config/dunst/dunstrc
+;exec dunst
 exec ~/.config/polybar/launch.sh

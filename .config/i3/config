@@ -200,7 +200,6 @@ assign [class="Wine" instance="photoshop.exe"]        → $WS7
 assign [class="Steam"]                                → $WS8
 assign [class="Wine" instance="explorer.exe"]         → $WS8
 assign [class="Wine" instance="steam.exe"]            → $WS8
-assign [class="Wine" instance="game2beta.exe"]        → $WS8
 assign [class="Minecraft 1.7.10"]                     → $WS8
 assign [class="Terraria.bin.x86"]                     → $WS8
 assign [class="net-minecraft-launcher-Main"]          → $WS8

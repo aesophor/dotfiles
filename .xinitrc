@@ -27,5 +27,9 @@ fi
 # Start redshift
 redshift &> /dev/null || redshift &> /dev/null &
 
+# Fix Non-reparenting window managers / Grey window / 
+# Programs not drawing properly
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 # Startup KDE-Wmderland
 exec startkde
