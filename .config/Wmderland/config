@@ -1,5 +1,5 @@
 ; Global Variables
-; syntax: set <key> = <value>
+; syntax: set <Key> = <Value>
 ; ----------------------------------------------------
 set gap_width = 15
 set border_width = 3
@@ -9,8 +9,8 @@ set focused_color = ff565679
 set unfocused_color = ff393f52
 
 
-; Spawning Rules (wm_name not implemented)
-; syntax: assign <wm_class>{,<wm_name>} -> <workspace_id>
+; Spawning Rules
+; syntax: assign <wm_class>{,<wm_instance>} -> <workspace_id>
 ; ----------------------------------------------------
 assign URxvt -> 1
 assign jetbrains-idea -> 2
@@ -32,8 +32,8 @@ assign VirtualBox -> 9
 assign Transmission -> 9
 
 
-; Floating Rules (wm_name not implemented)
-; syntax: floating <wm_class>{,<wm_name>} true
+; Floating Rules
+; syntax: floating <wm_class>{,<wm_instance>} true
 ; ----------------------------------------------------
 floating feh true
 floating mpv true
@@ -47,8 +47,9 @@ floating Wine,steam.exe true
 floating Wine,tesv.exe true
 
 
-; Keybind (Not implemented)
-; syntax: bindsym <Modifier+Key> 
+; Keybind
+; syntax: bindsym <Modifier>+<Key> action
+; syntax: bindsym <Modifier>+<Key> exec command
 ; ----------------------------------------------------
 bindsym Mod4+g tile_horizontally
 bindsym Mod4+v tile_vertically
@@ -56,11 +57,12 @@ bindsym Mod4+h focus_left
 bindsym Mod4+l focus_right
 bindsym Mod4+j focus_down
 bindsym Mod4+k focus_up
-bindsym Mod4+q kill
-bindsym Mod4+f fullscreen
+bindsym Mod4+o toggle_floating
+bindsym Mod4+f toggle_fullscreen
+bindsym Mod4+Shift+q kill
 
-bindsym Mod4+Return exec urxvt &
 bindsym Mod4+d exec rofi -show drun
+bindsym Mod4+Return exec urxvt
 
 
 ; Autostart
