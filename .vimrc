@@ -79,7 +79,7 @@ set wildmode=list:longest " Complete only until point of ambiguity
 set winminheight=0 " Allow splits to be reduced to a single line
 set wrapscan " Searches wrap around end of file
 set nofoldenable " disable folding
-set relativenumber " relative line numbers
+"set relativenumber " relative line numbers
 
 " Plugin.
 set rtp+=~/.vim/bundle/Vundle.vim

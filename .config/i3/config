@@ -254,8 +254,8 @@ client.focused_inactive #777777 #41485F #CCCCCC #292D2E
 client.unfocused        #4A4A4A #41485F #86888C #292D2E
 client.urgent           #2F343A #D64E4E #FFFFFF #D64E4E
 
-gaps inner 14
-gaps outer 6 
+gaps inner 12
+gaps outer 0
 
 # startup applications
 # exec -> On start-up

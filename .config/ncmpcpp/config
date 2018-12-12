@@ -12,7 +12,8 @@ visualizer_type = "spectrum" (spectrum/wave)
 visualizer_look = "∙▋"
 visualizer_color = "blue"
 
-main_window_highlight_color = "white"
+current_item_prefix = "$(white)$r"
+current_item_suffix = "$/r$(end)"
 progressbar_look = "—⯁"
 progressbar_color = "black"
 progressbar_elapsed_color = "blue"
