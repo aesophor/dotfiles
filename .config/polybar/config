@@ -3,17 +3,17 @@
 background = ${xrdb:color0:#ffffff}
 foreground = ${xrdb:foreground:#ffffff}
 
-colour_blk = ${xrdb:color0:#ffffff}
-colour_gry = ${xrdb:color8:#ffffff}
-colour_wht = ${xrdb:color7:#ffffff}
+black = ${xrdb:color0:#ffffff}
+gret = ${xrdb:color8:#ffffff}
+white = ${xrdb:color7:#ffffff}
 
-colour_red = ${xrdb:color1:#ffffff}
-colour_blu = ${xrdb:color4:#ffffff}
-colour_mag = ${xrdb:color5:#ffffff}
-colour_cyn = ${xrdb:color6:#ffffff}
-colour_grn = ${xrdb:color2:#ffffff}
-colour_ylw = ${xrdb:color3:#ffffff}
-colour_org = ${xrdb:color16:#ffffff}
+red = ${xrdb:color1:#ffffff}
+blue = ${xrdb:color4:#ffffff}
+magneta = ${xrdb:color5:#ffffff}
+cyan = ${xrdb:color6:#ffffff}
+green = ${xrdb:color2:#ffffff}
+yellow = ${xrdb:color3:#ffffff}
+orange = ${xrdb:color16:#ffffff}
 
 
 ; ------------------- Configuration -------------------
@@ -34,7 +34,7 @@ modules-right       = wireless-network wired-network battery volume date power
 background          = ${colors.background}
 foreground          = ${colors.foreground}
 font-0              = UW Ttyp0:size=13;2
-font-1              = Sans Serif:size=9;2
+font-1              = Sans Serif:size=7;2
 font-2              = Font Awesome 5 Brands:size=6;2
 font-3              = Font Awesome 5 Free Solid:size=6;2
 font-4              = Wuncon Siji:pixelsize=10;2
@@ -63,6 +63,7 @@ override-redirect = false
 type                       = internal/i3
 pin-workspaces             = true
 index-sort                 = true
+enable-click               = false
 enable-scroll              = false
 
 ws-icon-0                  = 1;
@@ -75,21 +76,22 @@ ws-icon-6                  = 7;
 ws-icon-7                  = 8;
 ws-icon-8                  = 9;
 
-label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.colour_gry}
 label-mode                 = %mode%
 label-mode-padding         = 1
-label-mode-background      = ${colors.colour_red}
+label-mode-background      = ${colors.red}
+
 label-focused              = %icon%
 label-focused-foreground   = ${colors.foreground}
 label-focused-background   = ${colors.background}
 label-focused-padding      = 1
+
 label-unfocused            = %icon%
+label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.gret}
 label-unfocused-padding    = 1
-label-visible              = %icon%
-label-visible-padding      = 1
+
 label-urgent               = %icon%
-label-urgent-foreground    = ${colors.colour_red}
+label-urgent-foreground    = ${colors.red}
 label-urgent-background    = ${colors.background}
 label-urgent-padding       = 1
 
@@ -99,7 +101,7 @@ label-urgent-padding       = 1
 type                     = internal/xwindow
 label                    = %title:0:50:...%
 format-prefix            = " "
-format-prefix-foreground = ${colors.colour_wht}
+format-prefix-foreground = ${colors.white}
 
 
 [module/date]
@@ -109,7 +111,7 @@ format            =  <label>
 label             = %time%
 time              = "%H:%M"
 time-alt          = "%a %H:%M"
-format-foreground = ${colors.colour_red}
+format-foreground = ${colors.red}
 label-foreground  = ${colors.foreground}
 
 
@@ -118,10 +120,10 @@ type                     = internal/volume
 format-volume            =  <label-volume>
 format-muted             =  <label-muted>
 label-muted              = Muted
-format-volume-foreground = ${colors.colour_org}
+format-volume-foreground = ${colors.orange}
 format-volume-background = ${colors.background}
 label-volume-foreground  = ${colors.foreground}
-format-muted-foreground  = ${colors.colour_org}
+format-muted-foreground  = ${colors.orange}
 format-muted-background  = ${colors.background}
 label-muted-foreground   = ${colors.foreground}
 
@@ -138,15 +140,15 @@ format-charging = <animation-charging>  <label-charging>
 format-discharging = <ramp-capacity>  <label-discharging>
 format-full =  <label-full>
 
-animation-charging-foreground = ${colors.colour_grn}
-ramp-capacity-foreground = ${colors.colour_grn}
-label-full-foreground = ${colors.colour_wht}
-format-full-foreground = ${colors.colour_grn}
+animation-charging-foreground = ${colors.green}
+ramp-capacity-foreground = ${colors.green}
+label-full-foreground = ${colors.white}
+format-full-foreground = ${colors.green}
 
 ramp-capacity-0 = 
-ramp-capacity-0-foreground = ${colors.colour_red}
+ramp-capacity-0-foreground = ${colors.red}
 ramp-capacity-1 = 
-ramp-capacity-1-foreground = ${colors.colour_ylw}
+ramp-capacity-1-foreground = ${colors.yellow}
 ramp-capacity-2 = 
 ramp-capacity-3 = 
 ramp-capacity-4 = 
@@ -160,9 +162,9 @@ accumulate-stats               = true
 interface                      = wlp2s0
 interval                       = 5.0
 format-connected               = <ramp-signal> <label-connected>
-format-connected-foreground    = ${colors.colour_blu}
+format-connected-foreground    = ${colors.blue}
 format-disconnected            =  <label-disconnected>
-format-disconnected-foreground = ${colors.colour_blu}
+format-disconnected-foreground = ${colors.blue}
 label-connected                = %essid%
 label-connected-foreground     = ${colors.foreground}
 label-disconnected             = disconnected
@@ -180,9 +182,9 @@ accumulate-stats               = true
 interface                      = enp0s20u1
 interval                       = 5.0
 format-connected               =  <label-connected>
-format-connected-foreground    = ${colors.colour_blu}
+format-connected-foreground    = ${colors.blue}
 format-disconnected            =  <label-disconnected>
-format-disconnected-foreground = ${colors.colour_blu}
+format-disconnected-foreground = ${colors.blue}
 label-connected                = %ifname%
 label-connected-foreground     = ${colors.foreground}
 label-disconnected             = disconnected
@@ -195,7 +197,7 @@ interface                     = tun0
 interval                      = 5.0
 accumulate-stats              = true
 format-connected              = VPN: <label-connected>
-format-connected-foreground   = ${colors.colour_blu}
+format-connected-foreground   = ${colors.blue}
 format-disconnected           = <label-disconnected>
 label-connected               = Connected
 label-connected-foreground    = ${colors.foreground}
@@ -215,23 +217,23 @@ icon-play             = 
 icon-pause            = 
 icon-prev             = 
 icon-next             = 
-icon-play-foreground  = ${colors.colour_blu}
-icon-pause-foreground = ${colors.colour_blu}
-icon-prev-foreground  = ${colors.colour_blu}
-icon-next-foreground  = ${colors.colour_blu}
+icon-play-foreground  = ${colors.blue}
+icon-pause-foreground = ${colors.blue}
+icon-prev-foreground  = ${colors.blue}
+icon-next-foreground  = ${colors.blue}
 
 
 [module/lock]
 type    = custom/text
 content = 
 
-content-foreground = ${colors.colour_red}
+content-foreground = ${colors.red}
 click-left         = displayctl -l
 
 
 [module/power]
 type    = custom/text
-content = 
+content = 
 
-content-foreground = ${colors.colour_red}
+content-foreground = ${colors.red}
 click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
