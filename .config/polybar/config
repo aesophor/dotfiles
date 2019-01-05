@@ -63,7 +63,7 @@ override-redirect = false
 type                       = internal/i3
 pin-workspaces             = true
 index-sort                 = true
-enable-click               = false
+enable-click               = true
 enable-scroll              = false
 
 ws-icon-0                  = 1;

@@ -104,7 +104,6 @@ Plugin 'spf13/vim-autoclose'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Yggdroot/indentLine'
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'wincent/command-t.git'
 Plugin 'mhinz/vim-startify'
 call vundle#end()
 filetype plugin indent on " Enable filetype plugins

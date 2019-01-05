@@ -157,6 +157,7 @@ for_window [class="Kmix"]                                floating enable; border
 for_window [class="Klipper"]                             floating enable; border none
 for_window [class="Plasmoidviewer"]                      floating enable; border none
 
+
 # set floating mode when applications started
 for_window [class="feh"]                                 floating enable
 for_window [class="mpv"]                                 floating enable
@@ -173,6 +174,7 @@ for_window [class="hacklympics.*"]                       floating enable
 for_window [class="Terraria.bin.x86"]                    floating enable
 for_window [class="Vigilante"]                           floating enable
 for_window [class="Wine" instance="maplelegendswindowed.exe"] fullscreen enable
+for_window [class="pyRollCall"]                          floating enable; border none
 #for_window [class="Wine" instance="photoshop.exe"]       floating disable
 
 # assign program to workspace (for spotify wm_class fix -> spotifywm)
