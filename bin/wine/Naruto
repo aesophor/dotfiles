@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 username=$USER
-cd "$HOME/.wine64/drive_c/Program Files/Naruto To Boruto"
-sudo nice -n -15 su -c "WINEPREFIX=~/.wine64 wine LAUNCHER.exe" $username
+cd "$HOME/Games/ShinobiStriker"
+sudo nice -n -15 su -c "WINEPREFIX=~/.wine64 wine NARUTO.exe" $username
