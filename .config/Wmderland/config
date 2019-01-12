@@ -2,7 +2,7 @@
 ; syntax: set <Key> = <Value>
 ;         set $<Variable> = <Value>
 ; -------------------------------------------------------------
-set gap_width = 15
+set gap_width = 12
 set border_width = 3
 set min_window_width = 100
 set min_window_height = 100
