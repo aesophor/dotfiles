@@ -20,16 +20,16 @@ orange = ${xrdb:color16:#ffffff}
 [bar/default]
 ;bottom              = true 
 dpi                 = 116
-height              = 30
+height              = 29
 line-size           = 0
 padding-left        = 2
 padding-right       = 2
 module-margin-left  = 1
 module-margin-right = 2
 
-modules-left        = i3 mpd
+modules-left        = date volume battery wired-network wireless-network
 modules-center      = xwindow
-modules-right       = wireless-network wired-network battery volume date power
+modules-right       = mpd i3 power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -100,8 +100,8 @@ label-urgent-padding       = 1
 [module/xwindow]
 type                     = internal/xwindow
 label                    = %title:0:60:...%
-format-prefix            = " "
-format-prefix-foreground = ${colors.white}
+format-prefix            = " "
+format-prefix-foreground = ${colors.red}
 
 
 [module/date]
