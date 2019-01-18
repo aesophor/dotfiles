@@ -51,7 +51,7 @@ export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 #if [ `ps -o comm= $PPID` = "urxvt" ]; then urxvt -e exec; fi
 
 # Print welcome message.
-clear; motd
+clear; lastlogin; motd
 
 # Print todo list.
 todo

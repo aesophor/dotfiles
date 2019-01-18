@@ -14,15 +14,15 @@ else
 fi
 
 cat << EOF
-`lastlogin`
 
-`bonsai`
+${c01}  .--.---.
+${c01} ( \\'--'/ )
+${c01}( '..-...' )         ${c12}distro   ${c05}$DISTRO $KERNEL_NAME
+${c01} '.'-._.'.'          ${c12}uptime   ${c05}$UPTIME
+${c06}  <'-.,.->           ${c12}kernel   ${c05}$KERNEL_RELEASE
+${c06}     \`\\(           ${c12}packages   ${c05}$PKGNUM
+${c06}     < \\ /\\           ${c12}shell   ${c05}$SHELL
+${c06}     __ \\|/              ${c12}wm   ${c05}$WMNAME
+${c06}         \\${c07}
 
-       ${c12}distro     ${c05}$DISTRO $KERNEL_NAME
-       ${c12}uptime     ${c05}$UPTIME
-       ${c12}kernel     ${c05}$KERNEL_RELEASE
-     ${c12}packages     ${c05}$PKGNUM
-        ${c12}shell     ${c05}$SHELL
-           ${c12}wm     ${c05}$WMNAME
-${c07}
 EOF
