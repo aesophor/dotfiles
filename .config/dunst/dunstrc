@@ -5,11 +5,11 @@
     transparency = 0
     indicate_hidden = yes
     shrink = no
-    notification_height = 0
+    notification_height = 10
     separator_height = 3
     padding = 10
     horizontal_padding = 10
-    frame_width = 1
+    frame_width = 2
     frame_color = "#41485f"
     separator_color = frame
     sort = yes
