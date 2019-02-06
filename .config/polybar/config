@@ -4,7 +4,7 @@ background = ${xrdb:color0:#ffffff}
 foreground = ${xrdb:foreground:#ffffff}
 
 black = ${xrdb:color0:#ffffff}
-gret = ${xrdb:color8:#ffffff}
+grey = ${xrdb:color8:#ffffff}
 white = ${xrdb:color7:#ffffff}
 
 red = ${xrdb:color1:#ffffff}
@@ -28,8 +28,8 @@ module-margin-left  = 1
 module-margin-right = 2
 
 modules-left        = date volume battery wired-network wireless-network
-modules-center      = xwindow
-modules-right       = mpd i3 power
+modules-center      = xworkspaces
+modules-right       = mpd power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -87,7 +87,7 @@ label-focused-padding      = 1
 
 label-unfocused            = %icon%
 label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.gret}
+label-unfocused-foreground = ${colors.grey}
 label-unfocused-padding    = 1
 
 label-urgent               = %icon%
@@ -102,6 +102,32 @@ type                     = internal/xwindow
 label                    = %title:0:60:...%
 format-prefix            = " "
 format-prefix-foreground = ${colors.red}
+
+
+[module/xworkspaces]
+type = internal/xworkspaces
+pin-workspaces = true
+enable-click = false
+enable-scroll = false
+
+format = <label-state>
+
+; %index%, %name% or %icon%
+label-active = ×
+label-active-foreground = ${colors.foreground}
+label-active-padding = 1
+
+label-occupied = -
+label-occupied-padding = 1
+label-occupied-foreground = ${colors.white}
+
+label-urgent = -
+label-urgent-foreground = ${colors.red}
+label-urgent-padding = 1
+
+label-empty = -
+label-empty-foreground = ${colors.grey}
+label-empty-padding = 1
 
 
 [module/date]
