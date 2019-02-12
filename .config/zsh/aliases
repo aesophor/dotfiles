@@ -37,6 +37,7 @@ alias macspoof='sudo ~/.local/bin/scripts/macspoof'
 alias hack='cd ~/Code/Hacklympics/Hacklympics; ll'
 alias vgl='cd ~/Code/games/Vigilante; ll'
 alias wm='cd ~/Code/Wmderland; ll'
+alias os='cd ~/Code/Marcux; ll'
 
 # typos
 alias cl='c; l'

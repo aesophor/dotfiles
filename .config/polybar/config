@@ -33,11 +33,11 @@ modules-right       = mpd power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
-font-0              = UW Ttyp0:size=13;2
+font-0              = Iosevka:size=8;2
 font-1              = Sans Serif:size=7;2
 font-2              = Font Awesome 5 Brands:size=6;2
 font-3              = Font Awesome 5 Free Solid:size=6;2
-font-4              = Wuncon Siji:pixelsize=10;1
+font-4              = Wuncon Siji:pixelsize=10;2
 font-5              = WenQuanYi WenQuanYi Bitmap Song:size=12;2
 
 ; tray-position       = right
@@ -107,7 +107,7 @@ format-prefix-foreground = ${colors.red}
 [module/xworkspaces]
 type = internal/xworkspaces
 pin-workspaces = true
-enable-click = false
+enable-click = true
 enable-scroll = false
 
 format = <label-state>
@@ -119,7 +119,7 @@ label-active-padding = 1
 
 label-occupied = -
 label-occupied-padding = 1
-label-occupied-foreground = ${colors.white}
+label-occupied-foreground = ${colors.red}
 
 label-urgent = -
 label-urgent-foreground = ${colors.red}

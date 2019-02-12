@@ -85,6 +85,7 @@ set nofoldenable " disable folding
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'aesophor/base16-faded'
+Plugin 'kaicataldo/material.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
@@ -115,7 +116,7 @@ set encoding=utf-8
 colorscheme base16-faded
 
 " Airline.
-let g:airline_theme='tomorrow'
+let g:airline_theme='material'
 ret g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 0
@@ -150,6 +151,7 @@ nmap <C-n> :NERDTreeToggle<CR>:wincmd p<CR>
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_confirm_extra_conf=0
 
 " Syntastic.
 set statusline+=%#warningmsg#
@@ -181,4 +183,8 @@ endif
 let g:autoclose_vim_commentmode = 1
 
 " indentLine
+let g:indentLine_color_term = 8
 let g:indentLine_char = '¦'
+
+" git commit msg spell checking and automatic wrapping
+autocmd Filetype gitcommit setlocal spell textwidth=72

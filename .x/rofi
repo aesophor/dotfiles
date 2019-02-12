@@ -9,13 +9,13 @@ rofi.bw:              3
 rofi.color-enabled:   true
 
 ! Property Name       BG       Border   Separator
-rofi.color-window:    #2e3440, #454663, #2e3440
+rofi.color-window:    #353945, #606778, #353945
 
 ! Property Name       BG       FG       BG-alt   Head-BG  Head-FG
-rofi.color-normal:    #2e3440, #7d7d7d, #2e3440, #2e3440, #eeeeec
-rofi.color-active:    #2e3440, #83a2be, #2e3440, #2e3440, #b4bf86
-rofi.color-urgent:    #2e3440, #b77a76, #2e3440, #2e3440, #b77a76
+rofi.color-normal:    #353945, #7d7d7d, #353945, #353945, #eeeeec
+rofi.color-active:    #353945, #83a2be, #353945, #353945, #b4bf86
+rofi.color-urgent:    #353945, #b77a76, #353945, #353945, #b77a76
 
 ! Set the desired separator style
 rofi.separator-style: solid
-rofi.font:            UW Ttyp0 12
+rofi.font:            Iosevka 11
