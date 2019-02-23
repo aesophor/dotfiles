@@ -2,8 +2,8 @@
 ! ============================================================
 URxvt.depth:                32
 URxvt.geometry:             90x30
-URxvt.background:           #2E3440
-URxvt.borderColor:          #2E3440
+URxvt.background:           BACKGROUND
+URxvt.borderColor:          BACKGROUND
 URxvt.transparent:          false
 URxvt.shading:		    0
 URxvt.fading:               0
@@ -19,8 +19,8 @@ URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 
 ! Cursor configuration.
-URxvt.cursorBlink:          false
-URxvt.cursorUnderline:      false
+URxvt.cursorBlink:          true
+URxvt.cursorUnderline:      true
 URxvt.pointerBlank:         true
 
 ! URxvt extensions.

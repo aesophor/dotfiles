@@ -1,0 +1,40 @@
+#include "/home/aesophor/.cache/painter/active_colorscheme"
+
+! special
+*.background: BACKGROUND
+*.foreground: FOREGROUND
+*.cursorColor: FOREGROUND
+*.bar_background: BACKGROUND
+
+! black
+*.color0: BLACK
+*.color8: DARK_GREY
+
+! red
+*.color1: DARK_RED
+*.color9: LITE_RED
+
+! green
+*.color2: DARK_GREEN
+*.color10: LITE_GREEN
+
+! yellow
+*.color3: DARK_YELLOW
+*.color11: LITE_YELLOW
+
+! blue
+*.color4: DARK_BLUE
+*.color12: LITE_BLUE
+
+! magenta
+*.color5: DARK_MAGENTA
+*.color13: LITE_MAGENTA
+
+! cyan
+*.color6: DARK_CYAN
+*.color14: LITE_CYAN
+
+! white
+*.color7: LITE_GREY
+*.color15: WHITE
+

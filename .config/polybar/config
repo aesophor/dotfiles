@@ -1,19 +1,18 @@
 ; ------------ Get color from .Xresources ------------
 [colors]
-background = ${xrdb:color0:#ffffff}
+background = ${xrdb:bar_background:#ffffff}
 foreground = ${xrdb:foreground:#ffffff}
 
-black = ${xrdb:color0:#ffffff}
-grey = ${xrdb:color8:#ffffff}
-white = ${xrdb:color7:#ffffff}
+black = ${xrdb:color0}
+grey = ${xrdb:color8}
+white = ${xrdb:color7}
 
-red = ${xrdb:color1:#ffffff}
-blue = ${xrdb:color4:#ffffff}
-magneta = ${xrdb:color5:#ffffff}
-cyan = ${xrdb:color6:#ffffff}
-green = ${xrdb:color2:#ffffff}
-yellow = ${xrdb:color3:#ffffff}
-orange = ${xrdb:color16:#ffffff}
+red = ${xrdb:color1}
+blue = ${xrdb:color4}
+magneta = ${xrdb:color5}
+cyan = ${xrdb:color6}
+green = ${xrdb:color2}
+yellow = ${xrdb:color3}
 
 
 ; ------------------- Configuration -------------------
@@ -146,10 +145,10 @@ type                     = internal/volume
 format-volume            =  <label-volume>
 format-muted             =  <label-muted>
 label-muted              = Muted
-format-volume-foreground = ${colors.orange}
+format-volume-foreground = ${colors.yellow}
 format-volume-background = ${colors.background}
 label-volume-foreground  = ${colors.foreground}
-format-muted-foreground  = ${colors.orange}
+format-muted-foreground  = ${colors.yellow}
 format-muted-background  = ${colors.background}
 label-muted-foreground   = ${colors.foreground}
 
@@ -168,7 +167,7 @@ format-full =  <label-full>
 
 animation-charging-foreground = ${colors.green}
 ramp-capacity-foreground = ${colors.green}
-label-full-foreground = ${colors.white}
+label-full-foreground = ${colors.foreground}
 format-full-foreground = ${colors.green}
 
 ramp-capacity-0 = 

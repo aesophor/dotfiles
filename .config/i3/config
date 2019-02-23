@@ -209,7 +209,7 @@ assign [class="PCSX2"]                                → $WS8
 assign [class="Keepassx"]                             → $WS9
 assign [class="Transmission"]                         → $WS9
 assign [class="Software-properties-gtk"]              → $WS9
-assign [class="VirtualBox"]                           → $WS9
+#assign [class="VirtualBox"]                           → $WS9
 assign [class="XDosEmu"]                              → $WS9
 
 # shortcut applications

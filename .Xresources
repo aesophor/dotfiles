@@ -1,8 +1,8 @@
 ! displayctl
 #include "/home/aesophor/.x/displayctlrc" 
 
-! Colors
-#include "/home/aesophor/.x/colorscheme/base16-faded"
+! Colorscheme
+#include "/home/aesophor/.x/colorscheme"
 
 ! Font Settings
 #include "/home/aesophor/.x/fonts"
