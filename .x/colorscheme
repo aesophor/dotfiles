@@ -5,6 +5,7 @@
 *.foreground: FOREGROUND
 *.cursorColor: FOREGROUND
 *.bar_background: BACKGROUND
+*.border: BACKGROUND
 
 ! black
 *.color0: BLACK

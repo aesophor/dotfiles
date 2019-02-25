@@ -8,13 +8,13 @@ rofi.bw:              3
 ! Enable the extended coloring options
 rofi.color-enabled:   true
 
-! Property Name       BG       Border   Separator
+! Property Name       BG          Border     Separator
 rofi.color-window:    BACKGROUND, DARK_GREY, BACKGROUND
 
-! Property Name       BG      FG      BG-alt  Head-BG Head-FG
+! Property Name       BG          FG         BG-alt      Head-BG     Head-FG
 rofi.color-normal:    BACKGROUND, DARK_GREY, BACKGROUND, BACKGROUND, LITE_GREY
 rofi.color-active:    BACKGROUND, DARK_BLUE, BACKGROUND, BACKGROUND, DARK_GREEN
-rofi.color-urgent:    BACKGROUND, DARK_RED, BACKGROUND, BACKGROUND, DARK_RED
+rofi.color-urgent:    BACKGROUND, DARK_RED,  BACKGROUND, BACKGROUND, DARK_RED
 
 ! Set the desired separator style
 rofi.separator-style: solid

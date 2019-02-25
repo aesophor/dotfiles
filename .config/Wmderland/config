@@ -76,7 +76,7 @@ fullscreen Wine,tesv.exe true
 ; [Prohibit Rules]
 ; Applications that should be prohibited from being launched
 ; -----------------------------------------------------------------------
-prohibit plasmashell true
+prohibit plasmashell,plasmashell true
 
 
 ; [Keybind]
@@ -113,6 +113,7 @@ bindsym $Mod+Shift+space toggle_floating
 bindsym $Mod+f toggle_fullscreen
 bindsym $Mod+Shift+q kill
 bindsym $Mod+Shift+Escape exit
+bindsym $Mod+Shift+r reload
 
 bindsym $Mod+d exec rofi -show drun
 bindsym $Mod+Return goto_workspace 1; exec urxvt
