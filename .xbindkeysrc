@@ -32,6 +32,10 @@
 "amixer -q set Master toggle"
     XF86AudioMute
 
+# Assign power key.
+"qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1"
+    XF86PowerOff
+
 # Assign screenshot key.
 "scrotutl -f"
     Control+Shift + 3
