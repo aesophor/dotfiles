@@ -14,7 +14,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 0
-    font = UW Ttyp0 9
+    font = Iosevka 9
     line_height = 8
     markup = full
     format = "<b>%s %p</b>\n%b"
