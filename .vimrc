@@ -54,8 +54,8 @@ set report=0 " Show all changes
 set ruler " Show the cursor position
 set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set shell=/bin/sh " Use /bin/sh for executing shell commands
-set shiftwidth=4 " The # of spaces for indenting
-set softtabstop=4
+set shiftwidth=2 " The # of spaces for indenting
+set softtabstop=2
 "set softtabstop=0 noexpandtab
 set shortmess=atI " Don't show the intro message when starting vim
 set showtabline=2 " Always show tab bar
