@@ -28,7 +28,7 @@ module-margin-right = 2
 
 modules-left        = date volume battery wired-network wireless-network
 modules-center      = xworkspaces
-modules-right       = mpd power
+modules-right       = bus mpd power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -37,7 +37,7 @@ font-1              = Sans Serif:size=7;2
 font-2              = Font Awesome 5 Brands:size=6;2
 font-3              = Font Awesome 5 Free Solid:size=6;2
 font-4              = Wuncon Siji:pixelsize=10;2
-font-5              = WenQuanYi WenQuanYi Bitmap Song:size=12;2
+font-5              = WenQuanYi WenQuanYi Bitmap Song:size=12;3
 
 ; tray-position       = right
 ; tray-padding        = 5
@@ -262,3 +262,11 @@ content = 
 
 content-foreground = ${colors.red}
 click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+
+
+[module/bus]
+type     = custom/script
+exec     = bustrck_diff 中國電視公司 0 藍22 817
+format-prefix = " "
+format-prefix-foreground = ${colors.cyan}
+interval = 180

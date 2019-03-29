@@ -1,0 +1,49 @@
+#!/usr/bin/env python3
+# -*- encoding: utf-8 -*-
+
+import re
+import sys
+import subprocess
+
+def usage():
+    return " ".join(["usage:", sys.argv[0], "<公車站名>", "<0:去程/1:返程>", "<路線...>"])
+
+if __name__ == '__main__':
+    if len(sys.argv) < 4:
+        print(usage())
+        sys.exit(1)
+
+    stop_name = sys.argv[1]   # '中國電視公司'
+    direction = sys.argv[2]   # '0':去程 '1':返程
+    bus_routes = sys.argv[3:] # ['藍22', '817']
+
+    min_route = bus_routes[0]
+    min_time = 9999
+
+    for route in bus_routes:
+        s = subprocess.check_output(['bustrck', route, direction]).decode('utf-8')
+
+        for info in s.split('\n'):
+            if stop_name in info:
+                time = 0
+                time_str = info.split(' ')[1]
+
+                if re.findall('\d+分', time_str):
+                    # e.g., 11分, strip '分'
+                    time = int(time_str[:-1])
+                elif time_str == '末班已過':
+                    time = 9999
+                
+                if time < min_time:
+                    min_route = route
+                    min_time = time
+
+    time_str = ''
+    if min_time == 9999:
+        time_str = '末班已過'
+    elif min_time == 0:
+        time_str = '將進站'
+    else:
+        time_str = str(min_time) + '分'
+
+    print(stop_name + '(' + min_route + ') ' + time_str)
