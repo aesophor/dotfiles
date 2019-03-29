@@ -32,6 +32,7 @@ assign jetbrains-idea 2
 assign jetbrains-studio 2
 assign processing-app-Base,sun-awt-X11-XFramePeer 2
 assign Firefox 3
+assign Google-chrome 3
 assign dolphin 4
 assign ark 4
 assign Et 5

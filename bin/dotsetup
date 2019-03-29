@@ -3,7 +3,7 @@
 # 
 # Personal script to update dotfiles.
 
-dotfiles_path="$HOME/Dotfiles"
+dotfiles_path="$HOME/Dots"
 
 # print message, remove old files/directory, and perform a symlink.
 function symlink() {
