@@ -1,0 +1,52 @@
+#!/usr/bin/env python3
+# -*- encoding: utf-8 -*-
+
+import re
+import sys
+import requests
+import urllib.request
+from bs4 import BeautifulSoup
+
+query_url = 'http://pda.5284.com.tw/MQS/businfo2.jsp?routename='
+
+class BusInfo:
+    """ A class representation of bus arrival information. """
+    def __init__(self, bus_stop_name, arr_time):
+        self.bus_stop_name = bus_stop_name
+        self.arr_time = arr_time # 到站時間
+    
+    def __str__(self):
+        return ' '.join([self.bus_stop_name, self.arr_time])
+
+
+def usage():
+    return " ".join(["usage:", sys.argv[0], "<公車路線>", "<0:去程/1:返程>"])
+
+if __name__ == '__main__':
+    if len(sys.argv) < 3:
+        print(usage())
+    else:
+        response = requests.get(query_url + sys.argv[1])
+        soup = BeautifulSoup(response.text, 'html.parser')
+
+        direction = int(sys.argv[2])
+        assert direction == 0 or direction == 1, "方向只有 0:去程 or 1:返程"
+        tr_class_name_odd = 'ttego1' if direction == 0 else 'tteback1'
+        tr_class_name_even = 'ttego2' if direction == 0 else 'tteback2'
+
+        res_odd = soup.findAll('tr', {'class': tr_class_name_odd}) # 奇數rows
+        res_even = soup.findAll('tr', {'class': tr_class_name_even}) # 偶數rows @_@...
+        bus_info = []
+
+        for odd, even in zip(res_odd, res_even):
+            raw_odd = ' '.join(odd.findAll(text=True))
+            raw_even = ' '.join(even.findAll(text=True))
+            odd_stop_name = raw_odd.split(' ')[0]
+            odd_stop_time = raw_odd.split(' ')[1]
+            even_stop_name = raw_even.split(' ')[0]
+            even_stop_time = raw_even.split(' ')[1]
+            bus_info.append(BusInfo(odd_stop_name, odd_stop_time))
+            bus_info.append(BusInfo(even_stop_name, even_stop_time))
+
+        for info in bus_info:
+            print(info)
