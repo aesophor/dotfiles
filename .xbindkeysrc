@@ -25,11 +25,11 @@
     XF86AudioNext
 "mpc toggle"
     XF86AudioPlay
-"amixer -q set Master 5%+ unmute"
+"amixer -q -D pulse set Master 5%+ unmute"
     XF86AudioRaiseVolume
-"amixer -q set Master 5%- unmute"
+"amixer -q -D pulse set Master 5%- unmute"
     XF86AudioLowerVolume
-"amixer -q set Master toggle"
+"amixer -q -D pulse set Master toggle"
     XF86AudioMute
 
 # Assign power key.

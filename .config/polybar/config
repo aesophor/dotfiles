@@ -141,7 +141,7 @@ label-foreground  = ${colors.foreground}
 
 
 [module/volume]
-type                     = internal/volume
+type                     = internal/pulseaudio
 format-volume            =  <label-volume>
 format-muted             =  <label-muted>
 label-muted              = Muted
