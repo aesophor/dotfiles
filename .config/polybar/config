@@ -266,7 +266,7 @@ click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterfa
 
 [module/bus]
 type     = custom/script
-exec     = bustrck_diff 中國電視公司 0 藍22 817
+exec     = bustrck_diff 中國電視公司 藍22 0 817 0 市民小巴15 1
 exec-if  = check_connection.sh
 format-prefix = " "
 format-prefix-foreground = ${colors.cyan}

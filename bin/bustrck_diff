@@ -6,23 +6,23 @@ import sys
 import subprocess
 
 def usage():
-    return " ".join(["usage:", sys.argv[0], "<公車站名>", "<0:去程/1:返程>", "<路線...>"])
+    return " ".join(["usage:", sys.argv[0], "<公車站名> <路線 0:去程/1:返程 ...>"])
 
 if __name__ == '__main__':
     if len(sys.argv) < 4:
         print(usage())
         sys.exit(1)
 
-    stop_name = sys.argv[1]   # '中國電視公司'
-    direction = sys.argv[2]   # '0':去程 '1':返程
-    bus_routes = sys.argv[3:] # ['藍22', '817']
+    stop_name = sys.argv[1]     # '中國電視公司'
+    bus_routes = sys.argv[2::2] # ['藍22', '817']
+    directions = sys.argv[3::2] # '0':去程 '1':返程
 
     min_route = bus_routes[0]
     min_time = 9999
     discard_less_than = 3
 
-    for route in bus_routes:
-        s = subprocess.check_output(['bustrck', route, direction]).decode('utf-8')
+    for route, dir in zip(bus_routes, directions):
+        s = subprocess.check_output(['bustrck', route, dir]).decode('utf-8')
 
         for info in s.split('\n'):
             if stop_name in info:
