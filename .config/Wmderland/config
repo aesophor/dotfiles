@@ -126,10 +126,10 @@ bindsym $Mod+Return goto_workspace 1; exec urxvt
 ; Applications to execute when WM starts up (DON'T append '&' at the end)
 ; -----------------------------------------------------------------------
 exec wmctrl -c Plasma
-exec displayctl
-exec dispad
-exec compton --config ~/.config/compton/compton.conf
 exec pulseaudio --start --log-target=syslog
 exec mpd
-exec ~/.config/polybar/launch.sh
 exec dunst
+exec dispad
+exec displayctl
+exec compton --config ~/.config/compton/compton.conf
+exec ~/.config/polybar/launch.sh

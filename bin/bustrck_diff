@@ -19,6 +19,7 @@ if __name__ == '__main__':
 
     min_route = bus_routes[0]
     min_time = 9999
+    discard_less_than = 3
 
     for route in bus_routes:
         s = subprocess.check_output(['bustrck', route, direction]).decode('utf-8')
@@ -34,7 +35,7 @@ if __name__ == '__main__':
                 elif time_str == '末班已過':
                     time = 9999
                 
-                if time < min_time:
+                if time >= discard_less_than and time < min_time:
                     min_route = route
                     min_time = time
 
