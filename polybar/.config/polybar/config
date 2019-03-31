@@ -1,8 +1,5 @@
 ; ------------ Get color from .Xresources ------------
 [colors]
-background = ${xrdb:bar_background:#ffffff}
-foreground = ${xrdb:foreground:#ffffff}
-
 black = ${xrdb:color0}
 grey = ${xrdb:color8}
 white = ${xrdb:color7}
@@ -14,10 +11,12 @@ cyan = ${xrdb:color6}
 green = ${xrdb:color2}
 yellow = ${xrdb:color3}
 
+background = ${xrdb:background}
+foreground = ${xrdb:foreground}
 
 ; ------------------- Configuration -------------------
 [bar/default]
-;bottom              = true 
+bottom              = true 
 dpi                 = 116
 height              = 30
 line-size           = 0
