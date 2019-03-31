@@ -1,40 +1,46 @@
 <div align="center">
-<h3>DOTFILES</h3>
+<h3>.dotfiles</h3>
 <img src="https://github.com/aesophor/dotfiles/raw/master/.meta/main.png">
 
-`i3+KDE` `polybar` `Xresources color: base16-faded` 
+`KDE / Wmderland` `Polybar` `base16-faded`
 </div>
 
-## Disclaimer
-* I'll help out with any problem you have with my dotfiles, but I'm not responsible for anything if you break anything.
-* The installer script `bin/dotsetup` is for my personal use. If you want to use it, please clone this repo into `~/Dotfiles` before running the script.
-* Feel free to take anything you like :)
-
-## Overview
-I'm currently running [i3](https://github.com/i3/i3) and [KDE](https://en.wikipedia.org/wiki/KDE) together. Here is a list of other applications I use:
-* Bar: [polybar](https://github.com/jaagr/polybar)
-* Application Launcher: [rofi](https://github.com/DaveDavenport/rofi)
-* Lockscreen: [i3lock-color](https://github.com/PandorasFox/i3lock-color) + [displayctl](https://github.com/aesophor/displayctl)
-* Terminal: [urxvt (patched)](https://github.com/blueyed/rxvt-unicode)
-* Shell: zsh + [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)
-* Web Browser: [chromium](https://chromium.googlesource.com/chromium/src)
-* Music Player: mpd + [ncmpcpp](https://github.com/arybczak/ncmpcpp)
-* File Manager: dolphin
-
-
-## Related Repositories
-* I manage my resolution/brightness/wallpaper/lockscreen with [displayctl](https://github.com/aesophor/displayctl)
-
-```
-$ displayctl                  # Restore resolution/brightness/wallpaper to last session 
-$ displayctl -l               # Invoke lockscreen (i3lock-color required)
-$ displayctl -l -d -b         # Invoke lockscreen with dim and blur effect
-$ displayctl -w -d -b         # Set wallpaper with dim and blur effect
-$ displayctl -e 1280x800      # Mirrors display to an external monitor
-```
-It's quite useful! I recommend that you give it a shot :)
-## Gallery
-Please visit [here](https://imgur.com/a/uiT7zni) on imgur.
-
-## License
-Available under the [MIT License](https://github.com/aesophor/dotfiles/blob/master/LICENSE).
+## Details
+* CLI
+  * [zsh](https://github.com/zsh-users/zsh) - extended Bourne shell with a large number of improvements
+    * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) - framework for managing your zsh configuration
+    * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - suggest commands as you type, based on command history
+    * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - fish shell-like syntax highlighting for zsh
+  * [URxvt](https://github.com/exg/rxvt-unicode) - a customizable terminal emulator forked from rxvt
+    * [urxvt-resize-font](https://github.com/simmel/urxvt-resize-font) - resize the font with keybinds
+    * [urxvt-config-reload](https://github.com/regnarg/urxvt-config-reload) - reload urxvt configuration at runtime
+    * [Iosevka](https://github.com/be5invis/Iosevka) 14px - terminal font
+    * [wqy-bitmapfont](https://packages.gentoo.org/packages/media-fonts/wqy-bitmapfont) - chinese font
+  * [vim](https://github.com/vim/vim) - I code in C/C++ & Python in Vim. Java in IntelliJ IDE.
+    * [Vundle](https://github.com/VundleVim/Vundle.vim) - plugin manager
+    * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - code-completion engine (C/C++, Java, Python...)
+    * [syntastic](https://github.com/vim-syntastic/syntastic) - syntax checking
+    * [vim-polyglot](https://github.com/sheerun/vim-polyglot) - syntax highlighting
+    * [vim-autoclose](https://github.com/Townk/vim-autoclose) - type an `(` and automatically insert `)` for you
+    * [vim-airline](https://github.com/vim-airline/vim-airline) - lean & mean status/tabline
+    * [nerdtree](https://github.com/scrooloose/nerdtree) - tree filesystem explorer
+    * [indentLine](https://github.com/Yggdroot/indentLine) - display indention levels with vertical lines
+    * [base16-faded](https://github.com/aesophor/base16-faded/tree/master/colors) - my personal vim colorscheme
+  * [displayctl](https://github.com/aesophor/displayctl) - resolution, brightness, wallpaper, lockscreen manager
+  * [py-todo](https://github.com/aesophor/py-todo) - lightweight cli todo-list
+  * [painter](https://github.com/aesophor/Painter) - X colorscheme manager
+  * [motd](https://github.com/aesophor/dotfiles/blob/master/scripts/.local/bin/motd) - display system info
+  * [scrotutl](https://github.com/aesophor/dotfiles/blob/master/scripts/.local/bin/scrotutl) - bring macOS screenshot keybinds to Linux
+  * [ncmpcpp](https://github.com/arybczak/ncmpcpp) - ncurses based music player
+    
+* GUI
+  * [Wmderland](https://github.com/aesophor/Wmderland) - my tree-based dynamic WM written in C++11
+  * [Polybar](https://github.com/jaagr/polybar) - fast and easy-to-use status bar
+    * [siji](https://github.com/stark/siji) - iconic bitmap font based on Stlarch with additional glyphs
+  * [rofi](https://github.com/davatorium/rofi) - window switcher, application launcher and dmenu replacement
+  * [dunst](https://github.com/dunst-project/dunst) - lightweight and customizable notification daemon
+  * [compton](https://github.com/chjj/compton) - compositor for X11
+  * [Papirus-icon](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) - free and open source SVG icon theme for Linux, based on the Paper icon theme
+  * [Iosevka](https://github.com/be5invis/Iosevka) 14px - GUI font
+  * [dolphin](https://github.com/KDE/dolphin) - KDE file manager
+  * [ark](https://github.com/KDE/ark) - KDE file archiver
