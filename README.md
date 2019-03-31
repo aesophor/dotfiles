@@ -60,5 +60,6 @@ $ ./.install.sh
   * [Iosevka](https://github.com/be5invis/Iosevka) 14px - GUI font
   * [arc-theme](https://github.com/horst3180/arc-theme) - flat theme with transparent elements for GTK 3, GTK 2
   * [arc-kde](https://github.com/PapirusDevelopmentTeam/arc-kde) - Arc KDE customization for plasma 5
+  * [Kvantum](https://github.com/tsujan/Kvantum) - linux SVG-based theme engine for Qt4/Qt5 and KDE
   * [dolphin](https://github.com/KDE/dolphin) - KDE file manager
   * [ark](https://github.com/KDE/ark) - KDE file archiver
