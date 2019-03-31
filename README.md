@@ -74,7 +74,7 @@ $ ./.install.sh
 <br>
 <img src="https://github.com/aesophor/dotfiles/raw/master/.meta/settings.png">
 <br>
-<img src="https://github.com/aesophor/dotfiles/raw/master/.meta/rofi.png">
-</div>
 <img src="https://github.com/aesophor/dotfiles/raw/master/.meta/clean.png">
+</div>
+<img src="https://github.com/aesophor/dotfiles/raw/master/.meta/rofi.png">
 </div>
