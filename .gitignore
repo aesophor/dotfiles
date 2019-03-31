@@ -2,3 +2,4 @@ vim/.vim/undo/*
 vim/.vim/swaps/*
 vim/.vim/backups/*
 scripts/.local/bin/django-admin*
+scripts/.local/bin/pip-autoremove
