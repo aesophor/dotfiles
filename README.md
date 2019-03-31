@@ -40,6 +40,8 @@ $ ./.install.sh
     * [nerdtree](https://github.com/scrooloose/nerdtree) - tree filesystem explorer
     * [indentLine](https://github.com/Yggdroot/indentLine) - display indention levels with vertical lines
     * [base16-faded](https://github.com/aesophor/base16-faded/tree/master/colors) - my personal vim colorscheme
+  * [git](https://github.com/git/git) - distributed version-control system
+    * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - git diff made human-readable!
   * [displayctl](https://github.com/aesophor/displayctl) - resolution, brightness, wallpaper, lockscreen manager
   * [py-todo](https://github.com/aesophor/py-todo) - lightweight cli todo-list
   * [painter](https://github.com/aesophor/Painter) - X colorscheme manager
