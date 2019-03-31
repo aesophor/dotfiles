@@ -2,7 +2,7 @@
 <h3>.dotfiles</h3>
 <img src="https://github.com/aesophor/dotfiles/raw/master/.meta/main.png">
 
-`KDE / Wmderland` `Polybar` `base16-faded`
+`Gentoo` `KDE / Wmderland` `Polybar` `base16-faded`
 </div>
 
 ## Installation
