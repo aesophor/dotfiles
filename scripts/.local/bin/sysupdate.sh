@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# update.sh - Updates the system
+# sysupdate.sh - Update the system
 
 # Fetch latest ebuilds.
 sudo emerge --sync

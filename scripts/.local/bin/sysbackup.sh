@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Root Partition System Backup
+# sysbackup.sh - Backup root partition to an external drive
 
 # Labels for backup name
 host=Veil
