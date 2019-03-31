@@ -4,12 +4,12 @@
 include "/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc"
 style "user-font" 
 {
-	font_name="Tamzen Regular"
+	font_name="Iosevka Regular"
 }
 widget_class "*" style "user-font"
-gtk-font-name="Tamzen Regular 9"
+gtk-font-name="Iosevka Regular 9"
 gtk-theme-name="Breeze-Dark"
-gtk-icon-theme-name="AntuDark"
+gtk-icon-theme-name="Papirus-Dark"
 gtk-fallback-icon-theme="AntuDark"
 gtk-cursor-theme-name="Adwaita"
 gtk-toolbar-style=GTK_TOOLBAR_TEXT

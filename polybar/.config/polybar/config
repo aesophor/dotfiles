@@ -28,7 +28,7 @@ module-margin-right = 2
 
 modules-left        = date volume battery wired-network wireless-network
 modules-center      = xworkspaces
-modules-right       = bus mpd power
+modules-right       = mpd power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -235,7 +235,7 @@ type                  = internal/mpd
 host                  = 127.0.0.1
 port                  = 6600
 interval              = 2
-format-online         = <icon-prev> <toggle> <icon-next>  <label-song>
+format-online         = <label-song>  <icon-prev> <toggle> <icon-next> 
 label-song            = %artist% - %title%
 label-offline         = mpd is offline
 icon-play             = 
@@ -251,7 +251,6 @@ icon-next-foreground  = ${colors.blue}
 [module/lock]
 type    = custom/text
 content = 
-
 content-foreground = ${colors.red}
 click-left         = displayctl -l
 
@@ -259,7 +258,6 @@ click-left         = displayctl -l
 [module/power]
 type    = custom/text
 content = 
-
 content-foreground = ${colors.red}
 click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
 
@@ -268,6 +266,6 @@ click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterfa
 type     = custom/script
 exec     = bustrck_diff 中國電視公司 藍22 0 817 0 市民小巴15 1
 exec-if  = check_connection.sh
+interval = 180
 format-prefix = " "
 format-prefix-foreground = ${colors.cyan}
-interval = 180

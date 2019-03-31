@@ -25,7 +25,7 @@ export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/wine"
 
 # User configuration
 export LANG="en_US.UTF-8"
-export BROWSER="chromium"
+export BROWSER="google-chrome-stable"
 export EDITOR="vim"
 
 # fcitx for wps fix.
@@ -39,21 +39,11 @@ _SILENT_JAVA_OPTIONS="$_JAVA_OPTIONS"
 unset _JAVA_OPTIONS
 alias java='java "$_SILENT_JAVA_OPTIONS"'
 
-# syntax-hightlighting for cat and less
-#alias cat='highlight -O ansi --force'
-#alias less='cat $1 | /usr/bin/less -N --underline-special'
-
 # Prevent Wine from adding menu entries and desktop links.
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
-
-
-# URxvt-wcwidth glitch workaround.
-#if [ `ps -o comm= $PPID` = "urxvt" ]; then urxvt -e exec; fi
 
 # Print welcome message.
 clear; lastlogin; motd
 
 # Print todo list.
 todo
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

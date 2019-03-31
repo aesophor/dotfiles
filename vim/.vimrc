@@ -120,7 +120,7 @@ colorscheme base16-faded
 
 " Airline.
 let g:airline_theme='tomorrow'
-ret g:airline_powerline_fonts = 0
+let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0

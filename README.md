@@ -1,6 +1,6 @@
 <div align="center">
 <h3>DOTFILES</h3>
-<img src="https://github.com/aesophor/dotfiles/raw/master/assets/main.png">
+<img src="https://github.com/aesophor/dotfiles/raw/master/.meta/main.png">
 
 `i3+KDE` `polybar` `Xresources color: base16-faded` 
 </div>
