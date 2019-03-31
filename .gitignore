@@ -3,3 +3,4 @@ vim/.vim/swaps/*
 vim/.vim/backups/*
 scripts/.local/bin/django-admin*
 scripts/.local/bin/pip-autoremove
+scripts/.local/bin/diff-so-fancy
