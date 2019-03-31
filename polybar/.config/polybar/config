@@ -16,7 +16,7 @@ foreground = ${xrdb:foreground}
 
 ; ------------------- Configuration -------------------
 [bar/default]
-bottom              = true 
+;bottom              = true 
 dpi                 = 116
 height              = 30
 line-size           = 0
