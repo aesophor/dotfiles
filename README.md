@@ -63,3 +63,10 @@ $ ./.install.sh
   * [Kvantum](https://github.com/tsujan/Kvantum) - linux SVG-based theme engine for Qt4/Qt5 and KDE
   * [dolphin](https://github.com/KDE/dolphin) - KDE file manager
   * [ark](https://github.com/KDE/ark) - KDE file archiver
+
+## Screenshots
+<div align="center">
+<img src="https://github.com/aesophor/dotfiles/raw/master/.meta/dolphin.png">
+<br>
+<img src="https://github.com/aesophor/dotfiles/raw/master/.meta/rofi.png">
+</div>
