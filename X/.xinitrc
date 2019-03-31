@@ -33,4 +33,3 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 
 # Startup KDE-Wmderland
 exec startkde
-#exec Wmderland
