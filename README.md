@@ -13,8 +13,9 @@ To install a specific package of dotfiles (take dunst for example)
 $ stow dunst
 ```
 
-To install everything (it temporarily makes README.md hidden and run `stow *`)
+To install everything
 ```
+$ # This script temporarily hides README.md, and execute `stow *`
 $ ./.install.sh
 ```
 
