@@ -5,6 +5,19 @@
 `KDE / Wmderland` `Polybar` `base16-faded`
 </div>
 
+## Installation
+**Requires [GNU stow](https://www.gnu.org/software/stow/).**
+
+To install a specific package of dotfiles (take dunst for example)
+```
+$ stow dunst
+```
+
+To install everything
+```
+$ ./.install.sh
+```
+
 ## Details
 * CLI
   * [zsh](https://github.com/zsh-users/zsh) - extended Bourne shell with a large number of improvements
