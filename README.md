@@ -66,6 +66,8 @@ $ ./.install.sh
 
 ## Screenshots
 <div align="center">
+<img src="https://github.com/aesophor/dotfiles/raw/master/.meta/code.png">
+<br>
 <img src="https://github.com/aesophor/dotfiles/raw/master/.meta/dolphin.png">
 <br>
 <img src="https://github.com/aesophor/dotfiles/raw/master/.meta/chrome.png">
