@@ -58,5 +58,7 @@ $ ./.install.sh
   * [compton](https://github.com/chjj/compton) - compositor for X11
   * [Papirus-icon](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) - free and open source SVG icon theme for Linux, based on the Paper icon theme
   * [Iosevka](https://github.com/be5invis/Iosevka) 14px - GUI font
+  * [arc-theme](https://github.com/horst3180/arc-theme) - flat theme with transparent elements for GTK 3, GTK 2
+  * [arc-kde](https://github.com/PapirusDevelopmentTeam/arc-kde) - Arc KDE customization for plasma 5
   * [dolphin](https://github.com/KDE/dolphin) - KDE file manager
   * [ark](https://github.com/KDE/ark) - KDE file archiver
