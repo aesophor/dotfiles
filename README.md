@@ -48,7 +48,7 @@ $ ./.install.sh
   * [motd](https://github.com/aesophor/dotfiles/blob/master/scripts/.local/bin/motd) - display system info
   * [scrotutl](https://github.com/aesophor/dotfiles/blob/master/scripts/.local/bin/scrotutl) - bring macOS screenshot keybinds to Linux
   * [ncmpcpp](https://github.com/arybczak/ncmpcpp) - ncurses based music player
-    
+
 * GUI
   * [Wmderland](https://github.com/aesophor/Wmderland) - my tree-based dynamic WM written in C++11
   * [Polybar](https://github.com/jaagr/polybar) - fast and easy-to-use status bar
@@ -67,6 +67,8 @@ $ ./.install.sh
 ## Screenshots
 <div align="center">
 <img src="https://github.com/aesophor/dotfiles/raw/master/.meta/dolphin.png">
+<br>
+<img src="https://github.com/aesophor/dotfiles/raw/master/.meta/chrome.png">
 <br>
 <img src="https://github.com/aesophor/dotfiles/raw/master/.meta/settings.png">
 <br>
