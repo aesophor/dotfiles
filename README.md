@@ -70,9 +70,9 @@ $ ./.install.sh
 <br>
 <img src="https://github.com/aesophor/dotfiles/raw/master/.meta/dolphin.png">
 <br>
-<img src="https://github.com/aesophor/dotfiles/raw/master/.meta/chrome.png">
-<br>
 <img src="https://github.com/aesophor/dotfiles/raw/master/.meta/settings.png">
+<br>
+<img src="https://github.com/aesophor/dotfiles/raw/master/.meta/chrome.png">
 <br>
 <img src="https://github.com/aesophor/dotfiles/raw/master/.meta/clean.png">
 </div>
