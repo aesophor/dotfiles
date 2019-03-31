@@ -1,6 +1,3 @@
-.vim/undo/*
-.vim/swaps/*
-.vim/backups/*
-.config/qutebrowser/bookmakrs/*
-.config/qutebrowser/css/*
-.config/qutebrowser/quickmarks/*
+vim/.vim/undo/*
+vim/.vim/swaps/*
+vim/.vim/backups/*
