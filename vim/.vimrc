@@ -111,6 +111,7 @@ filetype plugin indent on " Enable filetype plugins
 
 " Filetype specific indentation.
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
+autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 " Colors and Fonts.
 set t_Co=256

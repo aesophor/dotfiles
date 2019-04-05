@@ -78,7 +78,7 @@ fullscreen Wine,tesv.exe true
 ; [Prohibit Rules]
 ; Applications that should be prohibited from being launched
 ; -----------------------------------------------------------------------
-prohibit plasmashell,plasmashell true
+prohibit plasmashell,plasmashell,Desktop — Plasma true
 prohibit Wine,Wine System Tray true
 
 
@@ -125,7 +125,6 @@ bindsym $Mod+Return goto_workspace 1; exec urxvt
 ; [Autostart]
 ; Applications to execute when WM starts up (DON'T append '&' at the end)
 ; -----------------------------------------------------------------------
-exec wmctrl -c Plasma
 exec pulseaudio --start --log-target=syslog
 exec mpd
 exec dunst
