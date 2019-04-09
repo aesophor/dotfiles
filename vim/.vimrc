@@ -120,7 +120,7 @@ set encoding=utf-8
 colorscheme base16-faded
 
 " Airline.
-let g:airline_theme='tomorrow'
+let g:airline_theme='minimalist'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
@@ -147,7 +147,7 @@ nmap <C-w> :bp<CR>:bd #<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeStatusline = " "
-let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinPos = "right"
 nmap <C-c> :wincmd p<CR>
 nmap <C-n> :NERDTreeToggle<CR>:wincmd p<CR>
 
