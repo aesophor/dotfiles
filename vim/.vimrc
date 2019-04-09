@@ -123,6 +123,7 @@ colorscheme base16-faded
 let g:airline_theme='tomorrow'
 let g:airline_powerline_fonts = 0
 let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#hunks#non_zero_only = 1
@@ -133,10 +134,10 @@ let g:airline#extensions#hunks#non_zero_only = 1
 " Create a new tab with NerdTree opened.
 "nmap <C-t> :tabnew<CR>:NERDTreeToggle<CR>:wincmd p<CR>
 " Create a bew tab without NerdTree opened.
-nmap <S-j> gT
-nmap <S-k> gt
-nmap <C-t> :tabnew<CR>
-"nmap <C-w> :q!<CR>
+nmap <S-j> :bp<CR>
+nmap <S-k> :bn<CR>
+nmap <C-t> :e newfile<CR>
+nmap <C-w> :bp<CR>:bd #<CR>
 
 " NERDTree
 "autocmd vimenter * NERDTree
@@ -144,14 +145,11 @@ nmap <C-t> :tabnew<CR>
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 "autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-" let g:NERDTreeDirArrowExpandable = ' '
-" let g:NERDTreeDirArrowCollapsible = ' '
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeStatusline = -1
 let g:NERDTreeWinPos = "left"
 nmap <C-c> :wincmd p<CR>
 nmap <C-n> :NERDTreeToggle<CR>:wincmd p<CR>
-
 
 " YouCompleteMe
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
