@@ -146,7 +146,7 @@ nmap <C-w> :bp<CR>:bd #<CR>
 "autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeMinimalUI = 1
-let g:NERDTreeStatusline = -1
+let g:NERDTreeStatusline = " "
 let g:NERDTreeWinPos = "left"
 nmap <C-c> :wincmd p<CR>
 nmap <C-n> :NERDTreeToggle<CR>:wincmd p<CR>
