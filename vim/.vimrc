@@ -85,7 +85,6 @@ set nofoldenable " disable folding
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'aesophor/base16-faded'
-Plugin 'kaicataldo/material.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
@@ -128,18 +127,13 @@ let g:airline#extensions#branch#enabled = 0
 let g:airline#extensions#whitespace#enabled = 0
 let g:airline#extensions#hunks#non_zero_only = 1
 
-" tabs
-" next tab: gt
-" previous tab: gT
-" Create a new tab with NerdTree opened.
-"nmap <C-t> :tabnew<CR>:NERDTreeToggle<CR>:wincmd p<CR>
-" Create a bew tab without NerdTree opened.
+" Buffers.
 nmap <S-j> :bp<CR>
 nmap <S-k> :bn<CR>
 nmap <C-t> :e newfile<CR>
 nmap <C-w> :bp<CR>:bd #<CR>
 
-" NERDTree
+" NERDTree.
 "autocmd vimenter * NERDTree
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
@@ -151,7 +145,7 @@ let g:NERDTreeWinPos = "right"
 nmap <C-c> :wincmd p<CR>
 nmap <C-n> :NERDTreeToggle<CR>:wincmd p<CR>
 
-" YouCompleteMe
+" YouCompleteMe.
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
 
