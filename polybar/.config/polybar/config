@@ -47,7 +47,6 @@ font-5              = WenQuanYi WenQuanYi Bitmap Song:size=12;3
 ; tray-transparent    = false
 ; tray-color          = ${colors.background}
 
-
 ; ---------------------- wm --------------------------
 [global/wm]
 margin-top        = 5
