@@ -97,8 +97,7 @@ label-urgent-padding       = 1
 ; -------------------- modules -----------------------
 [module/xwindow]
 type                     = internal/xwindow
-label                    = %title:0:60:...%
-format-pefix-foreground  = ${colors.red}
+label                    = %title:0:65:...%
 
 
 [module/xworkspaces]
@@ -296,4 +295,3 @@ exec-if            = check_connection.sh
 exec               = bus.sh
 interval           = 180
 format-prefix      = " "
-format-prefix-foreground = ${colors.cyan}
