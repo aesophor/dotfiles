@@ -23,11 +23,11 @@ line-size           = 0
 padding-left        = 2
 padding-right       = 2
 module-margin-left  = 1
-module-margin-right = 2
+module-margin-right = 1
 
-modules-left        = date volume battery wired-network wireless-network
-modules-center      = xworkspaces
-modules-right       = mpd power
+modules-left        = gentoo xworkspaces
+modules-center      = xwindow
+modules-right       = wireless-network wired-network battery volume date search power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -46,13 +46,6 @@ font-5              = WenQuanYi WenQuanYi Bitmap Song:size=12;3
 ; tray-detached       = false
 ; tray-transparent    = false
 ; tray-color          = ${colors.background}
-
-; ---------------------- wm --------------------------
-[global/wm]
-margin-top        = 5
-margin-bottom     = 5
-wm-restack        = i3
-override-redirect = false
 
 
 ; ---------------------- i3 --------------------------
@@ -97,8 +90,7 @@ label-urgent-padding       = 1
 [module/xwindow]
 type                     = internal/xwindow
 label                    = %title:0:60:...%
-format-prefix            = " "
-format-prefix-foreground = ${colors.red}
+format-pefix-foreground  = ${colors.red}
 
 
 [module/xworkspaces]
@@ -110,21 +102,31 @@ enable-scroll = false
 format = <label-state>
 
 ; %index%, %name% or %icon%
-label-active = ×
+label-active = %index%
 label-active-foreground = ${colors.foreground}
 label-active-padding = 1
 
-label-occupied = -
+label-occupied = %index%
 label-occupied-padding = 1
 label-occupied-foreground = ${colors.red}
 
-label-urgent = -
+label-urgent = %index%
 label-urgent-foreground = ${colors.red}
 label-urgent-padding = 1
 
-label-empty = -
+label-empty = %index%
 label-empty-foreground = ${colors.grey}
 label-empty-padding = 1
+
+icon-0 = 1;
+icon-1 = 2;
+icon-2 = 3;
+icon-3 = 4;
+icon-4 = 5;
+icon-5 = 6;
+icon-6 = 7;
+icon-7 = 8;
+icon-8 = 9;
 
 
 [module/date]
@@ -233,7 +235,7 @@ type                  = internal/mpd
 host                  = 127.0.0.1
 port                  = 6600
 interval              = 2
-format-online         = <label-song>  <icon-prev> <toggle> <icon-next> 
+format-online         = <icon-prev> <toggle> <icon-next>  <label-song>
 label-song            = %artist% - %title%
 label-offline         = mpd is offline
 icon-play             = 
@@ -246,24 +248,27 @@ icon-prev-foreground  = ${colors.blue}
 icon-next-foreground  = ${colors.blue}
 
 
-[module/lock]
-type    = custom/text
-content = 
-content-foreground = ${colors.red}
-click-left         = displayctl -l
+[module/search]
+type       = custom/text
+content    = 
+click-left = rofi -show drun
 
 
 [module/power]
-type    = custom/text
-content = 
-content-foreground = ${colors.red}
-click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+type       = custom/text
+content    = 
+click-left = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+
+
+[module/gentoo]
+type       = custom/text
+content    =  Gentoo
 
 
 [module/bus]
-type     = custom/script
-exec     = bustrck_diff 中國電視公司 藍22 0 817 0 市民小巴15 1
-exec-if  = check_connection.sh
-interval = 180
+type       = custom/script
+exec-if    = check_connection.sh
+exec       = bus.sh
+interval   = 180
 format-prefix = " "
 format-prefix-foreground = ${colors.cyan}
