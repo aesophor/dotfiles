@@ -130,6 +130,7 @@ exec mpd
 exec dunst
 exec dispad
 exec displayctl
+exec klipper
 exec killall krunner
 exec compton --config ~/.config/compton/compton.conf
 exec ~/.config/polybar/launch.sh
