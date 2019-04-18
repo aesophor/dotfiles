@@ -138,15 +138,16 @@ icon-8 = 9;
 
 
 [module/date]
-type              = internal/date
-interval          = 1
-format            =  <label>
-format-padding    = ${user.padding}
-label             = %time%
-time              = "%a %H:%M"
-time-alt          = "%d %b %Y"
-format-foreground = ${colors.red}
-label-foreground  = ${colors.foreground}
+type                = internal/date
+interval            = 1
+format              =  <label>
+format-padding      = ${user.padding}
+label               = %time%
+label-padding-right = 1
+time                = "%a %H:%M"
+time-alt            = "%d %b %Y"
+format-foreground   = ${colors.red}
+label-foreground    = ${colors.foreground}
 
 
 [module/volume]
