@@ -1,18 +1,22 @@
 ; ------------ Get color from .Xresources ------------
 [colors]
-black = ${xrdb:color0}
-grey = ${xrdb:color8}
-white = ${xrdb:color7}
+black   = ${xrdb:color0}
+grey    = ${xrdb:color8}
+white   = ${xrdb:color7}
 
-red = ${xrdb:color1}
-blue = ${xrdb:color4}
+red     = ${xrdb:color1}
+blue    = ${xrdb:color4}
 magneta = ${xrdb:color5}
-cyan = ${xrdb:color6}
-green = ${xrdb:color2}
-yellow = ${xrdb:color3}
+cyan    = ${xrdb:color6}
+green   = ${xrdb:color2}
+yellow  = ${xrdb:color3}
 
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
+
+; ------------------- Custom variables ----------------
+[user]
+padding = 1
 
 ; ------------------- Configuration -------------------
 [bar/default]
@@ -20,10 +24,10 @@ foreground = ${xrdb:foreground}
 dpi                 = 116
 height              = 30
 line-size           = 0
-padding-left        = 2
-padding-right       = 2
-module-margin-left  = 1
-module-margin-right = 1
+padding-left        = 0
+padding-right       = 0
+module-margin-left  = 0
+module-margin-right = 0
 
 modules-left        = gentoo xworkspaces
 modules-center      = xwindow
@@ -100,6 +104,7 @@ enable-click = true
 enable-scroll = false
 
 format = <label-state>
+format-padding = ${user.padding}
 
 ; %index%, %name% or %icon%
 label-active = %index%
@@ -133,6 +138,7 @@ icon-8 = 9;
 type              = internal/date
 interval          = 1
 format            =  <label>
+format-padding    = ${user.padding}
 label             = %time%
 time              = "%a %H:%M"
 time-alt          = "%d %b %Y"
@@ -143,7 +149,9 @@ label-foreground  = ${colors.foreground}
 [module/volume]
 type                     = internal/pulseaudio
 format-volume            =  <label-volume>
+format-volume-padding    = ${user.padding}
 format-muted             =  <label-muted>
+format-muted-padding     = ${user.padding}
 label-muted              = Muted
 format-volume-foreground = ${colors.yellow}
 format-volume-background = ${colors.background}
@@ -162,8 +170,11 @@ label-discharging = %percentage%%
 label-full = %percentage%%
 
 format-charging = <animation-charging>  <label-charging>
+format-charging-padding = ${user.padding}
 format-discharging = <ramp-capacity>  <label-discharging>
+format-discharging-padding = ${user.padding}
 format-full =  <label-full>
+format-full-padding = ${user.padding}
 
 animation-charging-foreground = ${colors.green}
 ramp-capacity-foreground = ${colors.green}
@@ -187,8 +198,10 @@ accumulate-stats               = true
 interface                      = wlp2s0
 interval                       = 5.0
 format-connected               = <ramp-signal> <label-connected>
+format-connected-padding       = ${user.padding}
 format-connected-foreground    = ${colors.blue}
 format-disconnected            =  <label-disconnected>
+format-disconnected-padding    = ${user.padding}
 format-disconnected-foreground = ${colors.blue}
 label-connected                = %essid%
 label-connected-foreground     = ${colors.foreground}
@@ -207,8 +220,10 @@ accumulate-stats               = true
 interface                      = enp0s20u1
 interval                       = 5.0
 format-connected               =  <label-connected>
+format-connected-padding       = ${user.padding}
 format-connected-foreground    = ${colors.blue}
 format-disconnected            =  <label-disconnected>
+format-disconnected-padding    = ${user.padding}
 format-disconnected-foreground = ${colors.blue}
 label-connected                = %ifname%
 label-connected-foreground     = ${colors.foreground}
@@ -251,18 +266,24 @@ icon-next-foreground  = ${colors.blue}
 [module/search]
 type       = custom/text
 content    = 
+content-padding = ${user.padding}
+content-background = #292f3b
 click-left = rofi -show drun
 
 
 [module/power]
 type       = custom/text
 content    = 
+content-padding = ${user.padding}
+content-background = #232937
 click-left = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
 
 
 [module/gentoo]
 type       = custom/text
 content    =  Gentoo
+content-padding    = 2
+content-background = #232937
 
 
 [module/bus]
