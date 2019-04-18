@@ -108,6 +108,7 @@ enable-scroll  = false
 
 format         = <label-state>
 format-padding = ${user.padding}
+format-background = ${colors.dark1}
 
 ; %index%, %name% or %icon%
 label-active              = %index%
@@ -115,8 +116,8 @@ label-active-foreground   = ${colors.foreground}
 label-active-padding      = 1
 
 label-occupied            = %index%
-label-occupied-padding    = 1
 label-occupied-foreground = ${colors.red}
+label-occupied-padding    = 1
 
 label-urgent              = %index%
 label-urgent-foreground   = ${colors.red}
