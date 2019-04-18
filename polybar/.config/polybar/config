@@ -283,10 +283,11 @@ click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterfa
 
 
 [module/gentoo]
-type               = custom/text
-content            =  Gentoo
-content-padding    = 2
-content-background = ${colors.dark2}
+type               = custom/script
+exec               = echo " "`xprop -root _NET_WM_NAME | cut -d \" -f 2`
+format-prefix      = 
+format-background  = ${colors.dark2}
+format-padding     = 2
 
 
 [module/bus]
