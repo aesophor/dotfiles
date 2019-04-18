@@ -33,7 +33,7 @@ padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
 
-modules-left        = gentoo xworkspaces
+modules-left        = wm xworkspaces
 modules-center      = xwindow
 modules-right       = wireless-network wired-network battery volume date search power
 
@@ -282,7 +282,7 @@ content-background = ${colors.dark2}
 click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
 
 
-[module/gentoo]
+[module/wm]
 type               = custom/script
 exec               = echo " "`xprop -root _NET_WM_NAME | cut -d \" -f 2`
 format-prefix      = 
