@@ -11,11 +11,15 @@ cyan    = ${xrdb:color6}
 green   = ${xrdb:color2}
 yellow  = ${xrdb:color3}
 
+dark1   = #292f3b
+dark2   = #232937
+
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
 
 ; ------------------- Custom variables ----------------
 [user]
+; module padding are set individually instead of using global variable
 padding = 1
 
 ; ------------------- Configuration -------------------
@@ -98,30 +102,30 @@ format-pefix-foreground  = ${colors.red}
 
 
 [module/xworkspaces]
-type = internal/xworkspaces
+type           = internal/xworkspaces
 pin-workspaces = true
-enable-click = true
-enable-scroll = false
+enable-click   = true
+enable-scroll  = false
 
-format = <label-state>
+format         = <label-state>
 format-padding = ${user.padding}
 
 ; %index%, %name% or %icon%
-label-active = %index%
-label-active-foreground = ${colors.foreground}
-label-active-padding = 1
+label-active              = %index%
+label-active-foreground   = ${colors.foreground}
+label-active-padding      = 1
 
-label-occupied = %index%
-label-occupied-padding = 1
+label-occupied            = %index%
+label-occupied-padding    = 1
 label-occupied-foreground = ${colors.red}
 
-label-urgent = %index%
-label-urgent-foreground = ${colors.red}
-label-urgent-padding = 1
+label-urgent              = %index%
+label-urgent-foreground   = ${colors.red}
+label-urgent-padding      = 1
 
-label-empty = %index%
-label-empty-foreground = ${colors.grey}
-label-empty-padding = 1
+label-empty               = %index%
+label-empty-foreground    = ${colors.grey}
+label-empty-padding       = 1
 
 icon-0 = 1;
 icon-1 = 2;
@@ -165,31 +169,31 @@ label-muted-foreground   = ${colors.foreground}
 type = internal/battery
 full-at = 97
 
-label-charging = %percentage%%
+label-charging    = %percentage%%
 label-discharging = %percentage%%
-label-full = %percentage%%
+label-full        = %percentage%%
 
-format-charging = <animation-charging>  <label-charging>
-format-charging-padding = ${user.padding}
-format-discharging = <ramp-capacity>  <label-discharging>
+format-charging            = <animation-charging>  <label-charging>
+format-charging-padding    = ${user.padding}
+format-discharging         = <ramp-capacity>  <label-discharging>
 format-discharging-padding = ${user.padding}
-format-full =  <label-full>
-format-full-padding = ${user.padding}
+format-full                =  <label-full>
+format-full-padding        = ${user.padding}
 
 animation-charging-foreground = ${colors.green}
-ramp-capacity-foreground = ${colors.green}
-label-full-foreground = ${colors.foreground}
-format-full-foreground = ${colors.green}
+ramp-capacity-foreground      = ${colors.green}
+label-full-foreground         = ${colors.foreground}
+format-full-foreground        = ${colors.green}
 
-ramp-capacity-0 = 
+ramp-capacity-0            = 
 ramp-capacity-0-foreground = ${colors.red}
-ramp-capacity-1 = 
+ramp-capacity-1            = 
 ramp-capacity-1-foreground = ${colors.yellow}
-ramp-capacity-2 = 
-ramp-capacity-3 = 
-ramp-capacity-4 = 
+ramp-capacity-2            = 
+ramp-capacity-3            = 
+ramp-capacity-4            = 
 
-animation-charging-0 = 
+animation-charging-0       = 
 
 
 [module/wireless-network]
@@ -264,32 +268,32 @@ icon-next-foreground  = ${colors.blue}
 
 
 [module/search]
-type       = custom/text
-content    = 
-content-padding = ${user.padding}
-content-background = #292f3b
-click-left = rofi -show drun
+type               = custom/text
+content            = 
+content-padding    = ${user.padding}
+content-background = ${colors.dark1}
+click-left         = rofi -show drun
 
 
 [module/power]
-type       = custom/text
-content    = 
-content-padding = ${user.padding}
-content-background = #232937
-click-left = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+type               = custom/text
+content            = 
+content-padding    = ${user.padding}
+content-background = ${colors.dark2}
+click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
 
 
 [module/gentoo]
-type       = custom/text
-content    =  Gentoo
+type               = custom/text
+content            =  Gentoo
 content-padding    = 2
-content-background = #232937
+content-background = ${colors.dark2}
 
 
 [module/bus]
-type       = custom/script
-exec-if    = check_connection.sh
-exec       = bus.sh
-interval   = 180
-format-prefix = " "
+type               = custom/script
+exec-if            = check_connection.sh
+exec               = bus.sh
+interval           = 180
+format-prefix      = " "
 format-prefix-foreground = ${colors.cyan}
