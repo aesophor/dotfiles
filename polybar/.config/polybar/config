@@ -11,8 +11,8 @@ cyan    = ${xrdb:color6}
 green   = ${xrdb:color2}
 yellow  = ${xrdb:color3}
 
-dark1   = #292f3b
-dark2   = #232937
+dark1   = #262c37
+dark2   = #1f2533
 
 background = ${xrdb:background}
 foreground = ${xrdb:foreground}
@@ -290,6 +290,7 @@ interval           = 99999
 format-prefix      = 
 format-background  = ${colors.dark2}
 format-padding     = 2
+click-left         = select_wm
 
 
 [module/bus]

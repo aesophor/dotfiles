@@ -1,0 +1,39 @@
+#!/usr/bin/env bash
+# setkdewm - Set KDEWM.
+
+# This script modifies ~/.config/plasma-workspace/env/wm.sh
+# that tells KDE which WM to use.
+
+# The path to the script which overrides KDEWM
+script="$HOME/.config/plasma-workspace/env/wm.sh"
+new_wm=""
+content="export KDEWM="
+
+function print_usage() {
+    echo "Usage: $0 <argument>"
+    echo "i3        - Start KDE with i3 the next time"
+    echo "Wmderland - Start KDE with Wmderland the next time"
+}
+
+case "$1" in
+    "")
+        print_usage
+        exit
+        ;;
+
+    i3)
+        new_wm="i3"
+        ;;
+
+    Wmderland)
+        new_wm="Wmderland"
+        ;;
+
+    -h | --help)
+        print_usage
+        exit
+        ;;
+esac
+
+notify-send "setkdewm" "Override KDEWM with: $new_wm "
+echo $content`which $1` > $script
