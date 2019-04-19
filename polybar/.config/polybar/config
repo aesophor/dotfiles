@@ -45,54 +45,6 @@ font-3              = Font Awesome 5 Free Solid:size=6;2
 font-4              = Wuncon Siji:pixelsize=10;2
 font-5              = WenQuanYi WenQuanYi Bitmap Song:size=12;3
 
-; tray-position       = right
-; tray-padding        = 5
-; tray-offset-y       = 0%
-; tray-offset-x       = 0%
-; tray-maxsize        = 18
-; tray-detached       = false
-; tray-transparent    = false
-; tray-color          = ${colors.background}
-
-
-; ---------------------- i3 --------------------------
-[module/i3]
-type                       = internal/i3
-pin-workspaces             = true
-index-sort                 = true
-enable-click               = true
-enable-scroll              = false
-
-ws-icon-0                  = 1;
-ws-icon-1                  = 2;
-ws-icon-2                  = 3;
-ws-icon-3                  = 4;
-ws-icon-4                  = 5;
-ws-icon-5                  = 6;
-ws-icon-6                  = 7;
-ws-icon-7                  = 8;
-ws-icon-8                  = 9;
-
-label-mode                 = %mode%
-label-mode-padding         = 1
-label-mode-background      = ${colors.red}
-
-label-focused              = %icon%
-label-focused-foreground   = ${colors.foreground}
-label-focused-background   = ${colors.background}
-label-focused-padding      = 1
-
-label-unfocused            = %icon%
-label-unfocused-background = ${colors.background}
-label-unfocused-foreground = ${colors.grey}
-label-unfocused-padding    = 1
-
-label-urgent               = %icon%
-label-urgent-foreground    = ${colors.red}
-label-urgent-background    = ${colors.background}
-label-urgent-padding       = 1
-
-
 ; -------------------- modules -----------------------
 [module/xwindow]
 type                     = internal/xwindow
