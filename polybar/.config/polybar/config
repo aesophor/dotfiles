@@ -6,7 +6,7 @@ white   = ${xrdb:color7}
 
 red     = ${xrdb:color1}
 blue    = ${xrdb:color4}
-magneta = ${xrdb:color5}
+magenta = ${xrdb:color5}
 cyan    = ${xrdb:color6}
 green   = ${xrdb:color2}
 yellow  = ${xrdb:color3}
@@ -24,10 +24,9 @@ padding = 1
 
 ; ------------------- Configuration -------------------
 [bar/default]
-;bottom              = true 
 dpi                 = 116
 height              = 30
-line-size           = 0
+line-size           = 2
 padding-left        = 0
 padding-right       = 0
 module-margin-left  = 0
@@ -114,6 +113,7 @@ format-background = ${colors.dark1}
 label-active              = %index%
 label-active-foreground   = ${colors.foreground}
 label-active-padding      = 1
+label-active-underline    = ${colors.magenta}
 
 label-occupied            = %index%
 label-occupied-foreground = ${colors.red}
@@ -141,12 +141,11 @@ icon-8 = 9;
 [module/date]
 type                = internal/date
 interval            = 1
-format              =  <label>
+format              = %{A1:calendar:} <label>%{A}
 format-padding      = ${user.padding}
 label               = %time%
 label-padding-right = 1
 time                = "%a %H:%M"
-time-alt            = "%d %b %Y"
 format-foreground   = ${colors.red}
 label-foreground    = ${colors.foreground}
 
