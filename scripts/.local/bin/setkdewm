@@ -35,5 +35,5 @@ case "$1" in
         ;;
 esac
 
-notify-send "setkdewm" "Override KDEWM with: $new_wm "
+notify-send "Window Manager" "Selected: $new_wm "
 echo $content`which $1` > $script
