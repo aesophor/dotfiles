@@ -35,5 +35,5 @@ case "$1" in
         ;;
 esac
 
-notify-send "Window Manager" "Selected: $new_wm "
+notify-send "Window Manager: $new_wm" "Logout to take effect."
 echo $content`which $1` > $script
