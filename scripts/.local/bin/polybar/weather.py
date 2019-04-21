@@ -1,14 +1,11 @@
-#!/usr/bin/python3
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
 import pyowm
 
 apikey = 'fddd58ea30939805a18d5c75fe235c79'
 owm = pyowm.OWM(apikey)
-observation = owm.weather_at_place("Taipei, Taiwan")
-w = observation.get_weather()
-temperature = w.get_temperature('celsius')
-temperature = temperature['temp_max']
-status = w.get_status()
+w = owm.weather_at_place('Taipei, Taiwan').get_weather()
 
-print( str(int(temperature)) + '°C' )
+print('{s} {t}°C'.format(
+    s=w.get_temperature('celsius')['temp_max'], t=w.get_status()))

@@ -202,21 +202,25 @@ label-disconnected-foreground = ${colors.foreground}
 
 
 [module/mpd]
-type                  = internal/mpd
-host                  = 127.0.0.1
-port                  = 6600
-interval              = 2
-format-online         = <icon-prev> <toggle> <icon-next>  <label-song>
-label-song            = %artist% - %title%
-label-offline         = mpd is offline
-icon-play             = 
-icon-pause            = 
-icon-prev             = 
-icon-next             = 
-icon-play-foreground  = ${colors.blue}
-icon-pause-foreground = ${colors.blue}
-icon-prev-foreground  = ${colors.blue}
-icon-next-foreground  = ${colors.blue}
+type                     = internal/mpd
+host                     = 127.0.0.1
+port                     = 6600
+interval                 = 2
+format-online            =  <label-song>
+format-online-padding    = ${user.padding}
+format-online-foreground = ${colors.magenta}
+label-song               = %artist% - %title%
+label-offline            = mpd is offline
+label-song-foreground    = ${colors.foreground}
+label-offline-foreground = ${colors.foreground}
+icon-play                = 
+icon-pause               = 
+icon-prev                = 
+icon-next                = 
+icon-play-foreground     = ${colors.blue}
+icon-pause-foreground    = ${colors.blue}
+icon-prev-foreground     = ${colors.blue}
+icon-next-foreground     = ${colors.blue}
 
 
 [module/search]
@@ -238,16 +242,26 @@ click-left         = qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterfa
 [module/wm]
 type               = custom/script
 exec               = echo " "`xprop -root _NET_WM_NAME | cut -d \" -f 2`
-interval           = 99999
+interval           = 2147483647
 format-prefix      = 
 format-background  = ${colors.dark2}
 format-padding     = 2
 click-left         = select_wm
 
 
+[module/weather]
+type               = custom/script
+exec               = ~/.local/bin/polybar/weather.py
+exec-if            = check_connection.sh
+interval           = 43200
+format-prefix      = " "
+format-padding     = ${user.padding}
+format-prefix-foreground = ${colors.cyan}
+
+
 [module/bus]
 type               = custom/script
-exec-if            = check_connection.sh
 exec               = bus.sh
+exec-if            = check_connection.sh
 interval           = 180
 format-prefix      = " "
