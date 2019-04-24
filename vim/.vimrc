@@ -109,7 +109,10 @@ call vundle#end()
 filetype plugin indent on " Enable filetype plugins
 
 " Filetype specific indentation.
+autocmd FileType c setlocal shiftwidth=2 tabstop=2
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
+autocmd FileType java setlocal shiftwidth=2 tabstop=2
+autocmd FileType php setlocal shiftwidth=2 tabstop=2
 autocmd FileType html setlocal shiftwidth=2 tabstop=2
 
 " Colors and Fonts.

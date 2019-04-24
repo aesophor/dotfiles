@@ -39,6 +39,7 @@ alias vgl='cd ~/Code/games/Vigilante; ll'
 alias wm='cd ~/Code/Wmderland; ll'
 alias os='cd ~/Code/Marcux; ll'
 alias googler='cd ~/Code/future-googler; ll'
+alias web='cd /var/www/localhost/htdocs; ll'
 
 # typos
 alias cl='c; l'
