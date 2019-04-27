@@ -1,17 +1,17 @@
 # File created by KDE Gtk Config
 # Configs for GTK2 programs 
 
-include "/usr/share/themes/Breeze-Dark/gtk-2.0/gtkrc"
+include "/usr/share/themes/Arc-Dark/gtk-2.0/gtkrc"
 style "user-font" 
 {
 	font_name="Iosevka Regular"
 }
 widget_class "*" style "user-font"
 gtk-font-name="Iosevka Regular 9"
-gtk-theme-name="Breeze-Dark"
+gtk-theme-name="Arc-Dark"
 gtk-icon-theme-name="Papirus-Dark"
 gtk-fallback-icon-theme="AntuDark"
-gtk-cursor-theme-name="Adwaita"
+gtk-cursor-theme-name="OSX-ElCap"
 gtk-toolbar-style=GTK_TOOLBAR_TEXT
 gtk-menu-images=0
 gtk-button-images=1
