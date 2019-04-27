@@ -1,3 +1,2 @@
 #!/usr/bin/env bash
-cd $HOME/.minecraft/ || exit 1
-java -jar launcher.jar
+java -jar $HOME/.minecraft/launcher.jar

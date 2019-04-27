@@ -1,5 +1,5 @@
 [Desktop Entry]
-Exec=Maplestory
 Name=Maplestory
+Exec=maplestory
 Type=Application
-Icon=/home/aesophor/Pictures/Icons/maplestory_48x48.png
+Icon=/home/aesophor/.local/share/icons/custom/maplestory.png

@@ -66,6 +66,7 @@ floating Wine,steam.exe true
 floating Wine,tesv.exe true
 floating VirtualBox Machine true
 floating Vigilante true
+floating net-minecraft-launcher-Main true
 
 
 ; [Fullscreen Rules]

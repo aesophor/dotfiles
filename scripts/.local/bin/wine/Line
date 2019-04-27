@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-cd $HOME"/.wine/drive_c/users/"$USER"/Local Settings/Application Data/LINE/bin/" && wine LineLauncher.exe

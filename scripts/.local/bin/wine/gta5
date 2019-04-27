@@ -3,8 +3,7 @@ username=$USER
 cd "$HOME/.wine64/drive_c/Program Files (x86)/Grand Theft Auto V"
 
 # Restiore PulseAudio daemon.
-function on_exit()
-{
+function on_exit() {
     pulseaudio --start --log-target=syslog
 }
 
