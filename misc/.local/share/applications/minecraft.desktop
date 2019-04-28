@@ -1,5 +1,5 @@
 [Desktop Entry]
 Name=Minecraft
-Exec=minecraft
+Exec=/home/aesophor/Games/minecraft/minecraft-launcher/minecraft-launcher
 Type=Application
 Icon=/home/aesophor/.local/share/icons/custom/minecraft.png
