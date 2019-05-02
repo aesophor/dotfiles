@@ -27,6 +27,7 @@ alias vpn='cd ~/.config/143vpn/TCP; ll'
 # shortcuts
 alias c='clear'
 alias open='xdg-open'
+alias vim='nvim'
 alias config-dp='vim ~/.xorg/displayctlrc'
 alias config-wm='vim ~/.config/Wmderland/config'
 alias config-i3='vim ~/.config/i3/config'
