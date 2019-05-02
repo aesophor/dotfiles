@@ -30,7 +30,7 @@ $ ./.install.sh
     * [urxvt-config-reload](https://github.com/regnarg/urxvt-config-reload) - reload urxvt configuration at runtime
     * [Iosevka](https://github.com/be5invis/Iosevka) 14px - terminal font
     * [wqy-bitmapfont](https://packages.gentoo.org/packages/media-fonts/wqy-bitmapfont) - chinese font
-  * [neovim](https://github.com/vim/vim) - I write C/C++, Python, shellscripts in Neovim, and Java in IntelliJ IDE.
+  * [Neovim](https://github.com/vim/vim) - I write C/C++, Python, shellscripts in Neovim, and Java in IntelliJ IDE.
     * [Vundle](https://github.com/VundleVim/Vundle.vim) - plugin manager
     * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - code-completion engine (C/C++, Java, Python...)
     * [syntastic](https://github.com/vim-syntastic/syntastic) - syntax checking
