@@ -7,8 +7,6 @@ import re
 
 C_BASE_FLAGS = [
         '-Wall',
-        '-Wextra',
-        '-Werror',
         '-Wno-long-long',
         '-Wno-variadic-macros',
         '-fexceptions',

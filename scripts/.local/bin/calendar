@@ -7,7 +7,7 @@ if pgrep -f "dzen2 -title-name Calendar" > /dev/null; then
 fi
 
 
-cal=`cal | sed "2,$ s/\($(date +%e)\)/^fg(#1f2533)^bg(#ffffff)\1^fg()^bg()/"`
+cal=`cal | sed "2,$ s/ \($(date +%e)\)/ ^fg(#1f2533)^bg(#ffffff)\1^fg()^bg()/"`
 lines=`echo $cal | wc -l`
 
 echo -e "\n"$cal | dzen2 \

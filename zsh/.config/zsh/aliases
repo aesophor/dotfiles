@@ -36,7 +36,7 @@ alias macspoof='sudo ~/.local/bin/scripts/macspoof'
 
 # shortcuts to my personal projects
 alias hack='cd ~/Code/Hacklympics/Hacklympics; ll'
-alias vgl='cd ~/Code/games/Vigilante; ll'
+alias vgl='cd ~/Code/Vigilante/Classes; ll'
 alias wm='cd ~/Code/Wmderland; ll'
 alias os='cd ~/Code/Marcux; ll'
 alias googler='cd ~/Code/future-googler; ll'

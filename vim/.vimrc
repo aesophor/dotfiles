@@ -90,6 +90,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'ervandew/supertab'
 Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'vim-scripts/a.vim'
 Plugin 'L9'
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
@@ -135,6 +136,12 @@ nmap <S-j> :bp<CR>
 nmap <S-k> :bn<CR>
 nmap <C-t> :e newfile<CR>
 nmap <C-w> :bp<CR>:bd #<CR>
+
+" Annoying commands should choke on a dick and die.
+cmap WQ wq
+cmap W w
+cmap Q q
+cmap a A
 
 " NERDTree.
 "autocmd vimenter * NERDTree
