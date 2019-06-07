@@ -137,12 +137,6 @@ nmap <S-k> :bn<CR>
 nmap <C-t> :e newfile<CR>
 nmap <C-w> :bp<CR>:bd #<CR>
 
-" Annoying commands should choke on a dick and die.
-cmap WQ wq
-cmap W w
-cmap Q q
-cmap a A
-
 " NERDTree.
 "autocmd vimenter * NERDTree
 "autocmd StdinReadPre * let s:std_in=1
