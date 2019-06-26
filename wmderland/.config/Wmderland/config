@@ -29,8 +29,6 @@ set $Mod = Mod4
 ; -----------------------------------------------------------------------
 assign URxvt 1
 assign jetbrains-idea 2
-assign jetbrains-studio 2
-assign processing-app-Base,sun-awt-X11-XFramePeer 2
 assign Firefox 3
 assign Google-chrome 3
 assign dolphin 4
@@ -40,6 +38,7 @@ assign Wps 5
 assign Wpp 5
 assign Spotify 6
 assign vlc 6
+assign Allegro 7
 assign Gimp-2.10 7
 assign tiled 7
 assign Wine,steam.exe 8
