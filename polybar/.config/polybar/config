@@ -42,7 +42,7 @@ font-0              = Iosevka:size=8;2
 font-1              = Sans Serif:size=7;2
 font-2              = Font Awesome 5 Brands:size=6;2
 font-3              = Font Awesome 5 Free Solid:size=6;2
-font-4              = Siji:pixelsize=10;2
+font-4              = Siji:pixelsize=10;1
 font-5              = WenQuanYi Bitmap Song:size=12;3
 
 ; -------------------- modules -----------------------
