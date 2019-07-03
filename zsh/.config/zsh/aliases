@@ -1,6 +1,7 @@
 # make ls list directories first.
-alias ls='ls --color -hX --group-directories-first'
 alias l='ls'
+alias ls='ls --color -hX --group-directories-first'
+alias la='ls -lAh'
 alias ll='la'
 
 # safer rm.
