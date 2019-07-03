@@ -12,7 +12,6 @@ set autoindent " Copy indent from last line when starting new line
 set autoread " Set to auto read when a file is changed from the outside
 set backspace=indent,eol,start
 set cursorline " Highlight current line
-set expandtab " Expand tabs to spaces
 set foldcolumn=0 " Column to show folds
 set foldenable " Enable folding
 set foldlevel=0 " Close all folds by default
@@ -54,9 +53,9 @@ set report=0 " Show all changes
 set ruler " Show the cursor position
 set scrolloff=3 " Start scrolling three lines before horizontal border of window
 set shell=/bin/sh " Use /bin/sh for executing shell commands
-set shiftwidth=4 " The # of spaces for indenting
-set softtabstop=4
-"set softtabstop=0 noexpandtab
+set expandtab " Expand tabs to spaces
+set shiftwidth=2 " # of spaces to indent
+set softtabstop=2 " # of spaces to convert a tab to
 set shortmess=atI " Don't show the intro message when starting vim
 set showtabline=2 " Always show tab bar
 set sidescrolloff=3 " Start scrolling three columns before vertical border of window
@@ -84,48 +83,37 @@ set relativenumber " relative line numbers
 " Plugin.
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'aesophor/base16-faded'
-Plugin 'vim-airline/vim-airline'
+Plugin 'VundleVim/Vundle.vim' " Plugin manager
+Plugin 'L9' " Vim-script library
+Plugin 'tomtom/tlib_vim' " Some utility functions
+Plugin 'MarcWeber/vim-addon-mw-utils' " Interpret a file by function and cache file automatically
+Plugin 'vim-airline/vim-airline' " Lean & mean status/tabline
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'ervandew/supertab'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'vim-scripts/a.vim'
-Plugin 'L9'
-Plugin 'MarcWeber/vim-addon-mw-utils'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
-Plugin 'sheerun/vim-polyglot'
-Plugin 'stanangeloff/php.vim'
-Plugin 'tomtom/tlib_vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-surround'
-Plugin 'spf13/vim-autoclose'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'Yggdroot/indentLine'
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'mhinz/vim-startify'
+Plugin 'aesophor/base16-faded'
+Plugin 'vim-scripts/a.vim' " Switch between .c/.cc/.cpp and .h/.hh/.hpp
+Plugin 'scrooloose/nerdtree' " Tree filesystem explorer
+Plugin 'Valloric/YouCompleteMe' " Code-completion engine (C/C++, Java, Python...)
+Plugin 'scrooloose/syntastic' " Syntax checking
+Plugin 'sheerun/vim-polyglot' " Syntax highlighting
+Plugin 'tpope/vim-surround' " Change surrounding characters
+Plugin 'spf13/vim-autoclose' " Automatically insert closing parentheses/brackets
+Plugin 'Yggdroot/indentLine' " Display indentation levels with vertical lines
 call vundle#end()
-filetype plugin indent on " Enable filetype plugins
 
 " Filetype specific indentation.
-autocmd FileType c setlocal shiftwidth=2 tabstop=2
-autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
-autocmd FileType java setlocal shiftwidth=2 tabstop=2
-autocmd FileType php setlocal shiftwidth=2 tabstop=2
-autocmd FileType html setlocal shiftwidth=2 tabstop=2
+filetype plugin indent on " Enable filetype plugins
+autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 " Colors and Fonts.
-set t_Co=256
 syntax on
+set t_Co=256
 set encoding=utf-8
 colorscheme base16-faded
 
 " Airline.
 let g:airline_theme = 'minimalist'
 let g:airline_powerline_fonts = 0
-let g:airline_section_z = " line: %l/%L (%p%%)  col: %c" 
+let g:airline_section_z = "%p%% %l:%c" 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#tab_nr_type = 1
 let g:airline#extensions#branch#enabled = 0
@@ -139,10 +127,6 @@ nmap <C-t> :e newfile<CR>
 nmap <C-w> :bp<CR>:bd #<CR>
 
 " NERDTree.
-"autocmd vimenter * NERDTree
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-"autocmd VimEnter * wincmd p
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeStatusline = " "

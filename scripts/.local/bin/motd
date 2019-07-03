@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 source ~/.local/bin/colors
 
-DISTRO=`cat /etc/lsb-release | cut -d = -f 2 | sed 's/\"//g'`
+DISTRO=`cat /etc/lsb-release | grep DISTRIB_ID | cut -d = -f 2 | sed 's/\"//g'`
 KERNEL_NAME=`uname -s`
 KERNEL_RELEASE=`uname -r`
 PKGNUM=`ls -d /var/db/pkg/*/* | wc -l`
