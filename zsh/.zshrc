@@ -23,10 +23,13 @@ source ~/.config/zsh/functions
 # Add ~/.local/bin to $PATH.
 export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/wine"
 
-# User configuration
+# User configuration.
 export LANG="en_US.UTF-8"
 export BROWSER="google-chrome-stable"
 export EDITOR="vim"
+
+# Fix incorrect backspace behavior on urxvt+zsh+ssh.
+export TERM=xterm-256color
 
 # fcitx for wps fix.
 export XIM=fcitx

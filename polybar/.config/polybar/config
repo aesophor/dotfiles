@@ -65,7 +65,7 @@ format-background = ${colors.dark1}
 label-active              = %index%
 label-active-foreground   = ${colors.foreground}
 label-active-padding      = 1
-label-active-underline    = #606778
+label-active-underline    = ${colors.magenta}
 
 label-occupied            = %index%
 label-occupied-foreground = ${colors.red}
@@ -173,7 +173,7 @@ ramp-signal-4                  = 
 [module/wired-network]
 type                           = internal/network
 accumulate-stats               = true
-interface                      = enp0s20u1
+interface                      = enp0s20u2u4
 interval                       = 5.0
 format-connected               =  <label-connected>
 format-connected-padding       = ${user.padding}
