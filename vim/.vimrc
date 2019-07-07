@@ -102,6 +102,7 @@ call vundle#end()
 
 " Filetype specific indentation.
 filetype plugin indent on " Enable filetype plugins
+autocmd FileType json setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 
 " Colors and Fonts.
