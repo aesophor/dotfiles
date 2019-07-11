@@ -161,7 +161,7 @@ format-disconnected-padding    = ${user.padding}
 format-disconnected-foreground = ${colors.blue}
 label-connected                = %essid%
 label-connected-foreground     = ${colors.foreground}
-label-disconnected             = disconnected
+label-disconnected             = offline
 label-disconnected-foreground  = ${colors.foreground}
 ramp-signal-0                  = 
 ramp-signal-1                  = 
@@ -183,7 +183,7 @@ format-disconnected-padding    = ${user.padding}
 format-disconnected-foreground = ${colors.blue}
 label-connected                = %ifname%
 label-connected-foreground     = ${colors.foreground}
-label-disconnected             = disconnected
+label-disconnected             = offline
 label-disconnected-foreground  = ${colors.foreground}
 
 
