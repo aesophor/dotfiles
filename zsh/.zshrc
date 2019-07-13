@@ -45,12 +45,8 @@ alias java='java "$_SILENT_JAVA_OPTIONS"'
 # Prevent Wine from adding menu entries and desktop links.
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
-# Print welcome message.
-clear; lastlogin; motd
-
-# Print todo list.
-todo
-
+# Print welcome message and todo list.
+clear; lastlogin; motd; todo
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT="/home/aesophor/Code/cocos2d-x-3.17.1/tools/cocos2d-console/bin"
