@@ -42,6 +42,7 @@ alias wm='cd ~/Code/Wmderland; ll'
 alias os='cd ~/Code/Marcux; ll'
 alias googler='cd ~/Code/future-googler; ll'
 alias web='cd /var/www/localhost/htdocs; ll'
+alias syno='cd ~/Code/Synology/; ll'
 
 # typos
 alias cl='c; l'

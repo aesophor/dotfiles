@@ -28,9 +28,6 @@ export LANG="en_US.UTF-8"
 export BROWSER="google-chrome-stable"
 export EDITOR="vim"
 
-# Fix incorrect backspace behavior on urxvt+zsh+ssh.
-export TERM=xterm-256color
-
 # fcitx for wps fix.
 export XIM=fcitx
 export GTK_IM_MODULE=fcitx
