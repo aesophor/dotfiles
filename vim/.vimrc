@@ -104,6 +104,7 @@ call vundle#end()
 filetype plugin indent on " Enable filetype plugins
 autocmd FileType json setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
+autocmd FileType gitconfig setlocal shiftwidth=8 tabstop=8 noexpandtab
 
 " Colors and Fonts.
 syntax on

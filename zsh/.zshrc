@@ -26,7 +26,7 @@ export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/wine"
 # User configuration.
 export LANG="en_US.UTF-8"
 export BROWSER="google-chrome-stable"
-export EDITOR="vim"
+export EDITOR="nvim"
 
 # Fix incorrect backspace behavior on urxvt+zsh+ssh.
 # However, this will cause zsh-autosuggestion to work buggy.
