@@ -40,7 +40,7 @@ alias hack='cd ~/Code/Hacklympics/Hacklympics; ll'
 alias vgl='cd ~/Code/Vigilante/Classes; ll'
 alias wm='cd ~/Code/Wmderland; ll'
 alias os='cd ~/Code/Marcux; ll'
-alias googler='cd ~/Code/future-googler; ll'
+alias googler='cd ~/Code/Googler; ll'
 alias web='cd /var/www/localhost/htdocs; ll'
 alias syno='cd ~/Code/Synology/; ll'
 

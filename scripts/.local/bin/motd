@@ -19,7 +19,7 @@ ${c03}                        ${c07}$USER @ $HOSTNAME
 ${c03}                        ${c12}distro    ${c05}$DISTRO $KERNEL_NAME
 ${c03}      |\\__/,|    (\`\\    ${c12}uptime    ${c05}$UPTIME
 ${c03}    _.|o o  |_    ) )   ${c12}kernel    ${c05}$KERNEL_RELEASE
-${c01}===(((===(((==========  ${c12}packages  ${c05}$PKGNUM
+${c01}===${c03}(((${c01}===${c03}(((${c01}==========  ${c12}packages  ${c05}$PKGNUM
 ${c01}                        ${c12}shell     ${c05}$SHELL
 ${c01}                        ${c12}wm        ${c05}$WMNAME${c07}
 
