@@ -24,7 +24,7 @@ URxvt.cursorUnderline:      true
 URxvt.pointerBlank:         true
 
 ! URxvt extensions.
-URxvt.perl-ext-common:      default,matcher,resize-font
+URxvt.perl-ext-common:      default,matcher,resize-font,ibeamcursor
 
 ! Matcher configuration.
 URxvt.matcher.button:       1
