@@ -19,8 +19,8 @@ set gap_width = 12
 set border_width = 3
 set min_window_width = 100
 set min_window_height = 100
-set focused_color = ff606778
-set unfocused_color = ff3e4055
+set focused_color = ff4c5d70
+set unfocused_color = ff32455c
 set $Mod = Mod4
 
 
