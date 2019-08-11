@@ -38,11 +38,6 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
-# Make JAVA OPTIONS shut up.
-_SILENT_JAVA_OPTIONS="$_JAVA_OPTIONS"
-unset _JAVA_OPTIONS
-alias java='java "$_SILENT_JAVA_OPTIONS"'
-
 # Prevent Wine from adding menu entries and desktop links.
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 

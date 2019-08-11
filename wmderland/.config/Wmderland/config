@@ -45,6 +45,7 @@ assign Wine,steam.exe 8
 assign Steam 8
 assign PCSX2 8
 assign PPSSPPQt 8
+assign Minecraft Launcher 8
 assign antimicro 9
 assign VirtualBox Manager 9
 assign Transmission 9
@@ -67,7 +68,6 @@ floating Wine,steam.exe true
 floating Wine,tesv.exe true
 floating VirtualBox Machine true
 floating Vigilante true
-floating net-minecraft-launcher-Main true
 floating xfreerdp true
 
 
@@ -109,12 +109,12 @@ bindsym $Mod+Shift+7 move_app_to_workspace 7
 bindsym $Mod+Shift+8 move_app_to_workspace 8
 bindsym $Mod+Shift+9 move_app_to_workspace 9
 
+bindsym $Mod+h navigate_left
+bindsym $Mod+l navigate_right
+bindsym $Mod+j navigate_down
+bindsym $Mod+k navigate_up
 bindsym $Mod+g tile_horizontally
 bindsym $Mod+v tile_vertically
-bindsym $Mod+h focus_left
-bindsym $Mod+l focus_right
-bindsym $Mod+j focus_down
-bindsym $Mod+k focus_up
 bindsym $Mod+Shift+space toggle_floating
 bindsym $Mod+f toggle_fullscreen
 bindsym $Mod+Shift+q kill
@@ -136,4 +136,4 @@ exec displayctl
 exec klipper
 exec killall krunner
 exec compton --config ~/.config/compton/compton.conf
-exec ~/.config/polybar/launch.sh
+exec_on_reload ~/.config/polybar/launch.sh
