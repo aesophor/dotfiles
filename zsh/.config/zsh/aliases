@@ -9,6 +9,7 @@ alias rm='rm -i'
 alias rm -rf='rm -irf'
 
 # corrections
+alias bitch='sudo'
 alias reboot='sync && sync && sudo reboot'
 alias shutdown='sync && sync && sudo shutdown now'
 
@@ -42,7 +43,8 @@ alias wm='cd ~/Code/Wmderland; ll'
 alias os='cd ~/Code/Marcux; ll'
 alias googler='cd ~/Code/Googler; ll'
 alias web='cd /var/www/localhost/htdocs; ll'
-alias syno='cd ~/Code/Synology/; ll'
+alias syno='cd ~/Code/Synology; ll'
+alias sb='cd ~/Code/samba/; ll'
 
 # typos
 alias cl='c; l'
