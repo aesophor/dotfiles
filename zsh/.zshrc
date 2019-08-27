@@ -24,7 +24,10 @@ source ~/.config/zsh/functions
 export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/wine"
 
 # User configuration.
-export LANG="en_US.UTF-8"
+USER_LANGUAGE="en_US.UTF-8"
+export LC_ALL=${USER_LANGUAGE}
+export LANG=${USER_LANGUAGE}
+export LANGUAGE=${USER_LANGUAGE}
 export BROWSER="google-chrome-stable"
 export EDITOR="nvim"
 
