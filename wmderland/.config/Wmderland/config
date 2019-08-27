@@ -69,6 +69,7 @@ floating Wine,tesv.exe true
 floating VirtualBox Machine true
 floating Vigilante true
 floating xfreerdp true
+floating com.hacklympics.main.Main true
 
 
 ; [Fullscreen Rules]
