@@ -139,6 +139,7 @@ nmap <C-n> :NERDTreeToggle<CR>:wincmd p<CR>
 " YouCompleteMe.
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 let g:ycm_confirm_extra_conf=0
+nnoremap <C-]> :YcmCompleter GoToDefinitionElseDeclaration<CR>
 
 " Syntastic.
 set statusline+=%#warningmsg#
