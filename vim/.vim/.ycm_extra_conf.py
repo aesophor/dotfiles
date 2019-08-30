@@ -6,58 +6,58 @@ import ycm_core
 import re
 
 C_BASE_FLAGS = [
-        '-Wall',
-        '-Wno-long-long',
-        '-Wno-variadic-macros',
-        '-fexceptions',
-        '-ferror-limit=10000',
-        '-DNDEBUG',
-        '-std=c11',
-        '-I/usr/lib/',
-        '-I/usr/include/'
-        ]
+    '-Wall',
+    '-Wno-long-long',
+    '-Wno-variadic-macros',
+    '-fexceptions',
+    '-ferror-limit=10000',
+    '-DNDEBUG',
+    '-std=c11',
+    '-I/usr/lib/',
+    '-I/usr/include/'
+]
 
 CPP_BASE_FLAGS = [
-        '-Wall',
-        '-Wextra',
-        '-Wno-long-long',
-        '-Wno-variadic-macros',
-        '-fexceptions',
-        '-ferror-limit=10000',
-        '-DNDEBUG',
-        '-std=c++1z',
-        '-xc++',
-        '-I/usr/lib/',
-        '-I/usr/include/'
-        ]
+    '-Wall',
+    '-Wextra',
+    '-Wno-long-long',
+    '-Wno-variadic-macros',
+    '-fexceptions',
+    '-ferror-limit=10000',
+    '-DNDEBUG',
+    '-std=c++1z',
+    '-xc++',
+    '-I/usr/lib/',
+    '-I/usr/include/'
+]
 
 C_SOURCE_EXTENSIONS = [
-        '.c'
-        ]
+    '.c'
+]
 
 CPP_SOURCE_EXTENSIONS = [
-        '.cpp',
-        '.cxx',
-        '.cc',
-        '.m',
-        '.mm'
-        ]
+    '.cpp',
+    '.cxx',
+    '.cc',
+    '.m',
+    '.mm'
+]
 
 SOURCE_DIRECTORIES = [
-        'src',
-        'lib'
-        ]
+    'src',
+    'lib'
+]
 
 HEADER_EXTENSIONS = [
-        '.h',
-        '.hxx',
-        '.hpp',
-        '.hh'
-        ]
+    '.h',
+    '.hxx',
+    '.hpp',
+    '.hh'
+]
 
 HEADER_DIRECTORIES = [
-        'include'
-        ]
+    'include'
+]
 
 BUILD_DIRECTORY = 'build';
 
