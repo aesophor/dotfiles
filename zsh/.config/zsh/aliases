@@ -23,6 +23,7 @@ alias works='cd ~/Workspaces; ll'
 alias pics='cd ~/Pictures; ll'
 alias vids='cd ~/Videos; ll'
 alias musics='cd ~/Music; ll'
+alias games='cd ~/Games; ll'
 alias dots="cd ~/Dots; ll"
 alias vpn='cd ~/.config/143vpn/TCP; ll'
 
