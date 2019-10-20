@@ -10,6 +10,7 @@ alias rm -rf='rm -irf'
 
 # corrections
 alias bitch='sudo'
+alias bitchedit='sudoedit'
 alias reboot='sync && sync && sudo reboot'
 alias shutdown='sync && sync && sudo shutdown now'
 
@@ -37,16 +38,6 @@ alias config-i3='vim ~/.config/i3/config'
 alias config-polybar='vim ~/.config/polybar/config'
 alias macspoof='sudo ~/.local/bin/scripts/macspoof'
 
-# shortcuts to my personal projects
-alias hack='cd ~/Code/Hacklympics/Hacklympics; ll'
-alias vgl='cd ~/Code/Vigilante/Classes; ll'
-alias wm='cd ~/Code/Wmderland; ll'
-alias os='cd ~/Code/Marcux; ll'
-alias googler='cd ~/Code/Googler; ll'
-alias web='cd /var/www/localhost/htdocs; ll'
-alias syno='cd ~/Code/Synology; ll'
-alias sb='cd ~/Code/samba/; ll'
-
 # typos
 alias cl='c; l'
 alias CL='c; l'
@@ -57,3 +48,14 @@ alias eixt='exit'
 alias xit='exit'
 alias :q='exit'
 alias :q!='exit'
+
+# shortcuts to my personal projects
+alias hack='cd ~/Code/Hacklympics/Hacklympics; ll'
+alias vgl='cd ~/Code/Vigilante/Classes; ll'
+alias wm='cd ~/Code/Wmderland; ll'
+alias os='cd ~/Code/Marcux; ll'
+alias googler='cd ~/Code/Googler; ll'
+alias web='cd /var/www/localhost/htdocs; ll'
+alias syno='cd ~/Code/Synology; ll'
+alias sb='cd ~/Code/samba/; ll'
+alias ctf='cd ~/Code/ctf-playground; ll'
