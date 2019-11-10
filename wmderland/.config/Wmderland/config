@@ -149,7 +149,7 @@ bindsym $Mod+Return goto_workspace 1; exec urxvt
 ; Applications to execute when WM starts up (DON'T append '&' at the end)
 ; -----------------------------------------------------------------------
 exec pulseaudio --start --log-target=syslog
-exec mpd
+exec ~/.config/mpd/launch.sh
 exec dunst
 exec dispad
 exec displayctl
