@@ -15,7 +15,7 @@
 ; `set <Key> = <Value>` to set a builtin varaible
 ; `set $<Variable> = <Value>` to define your own variable
 ; -----------------------------------------------------------------------
-set gap_width = 12
+set gap_width = 10
 set border_width = 3
 set min_window_width = 100
 set min_window_height = 100
