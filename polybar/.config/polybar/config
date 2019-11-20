@@ -39,11 +39,11 @@ modules-right       = wireless-network wired-network battery volume date search 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
 font-0              = Iosevka:size=8;2
-font-1              = Sans Serif:size=7;2
-font-2              = Font Awesome 5 Brands:size=6;2
-font-3              = Font Awesome 5 Free Solid:size=6;2
-font-4              = Siji:pixelsize=10;1
-font-5              = WenQuanYi Bitmap Song:size=12;2
+font-1              = WenQuanYi Bitmap Song:size=12;2
+font-2              = Siji:pixelsize=10;1
+;font-3              = Font Awesome 5 Brands:size=6;2
+;font-4              = Font Awesome 5 Free Solid:size=6;2
+
 
 ; -------------------- modules -----------------------
 [module/xwindow]
