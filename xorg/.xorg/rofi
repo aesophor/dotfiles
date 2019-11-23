@@ -1,20 +1,21 @@
 ! Basic configuration
 rofi.show-icons:      true
-rofi.width:           35
-rofi.padding:         10
+rofi.width:           45
+rofi.padding:         18
 rofi.lines:           12
 rofi.bw:              3
+rofi.columns:         2
 
 ! Enable the extended coloring options
 rofi.color-enabled:   true
 
-! Property Name       BG          Border     Separator
-rofi.color-window:    BACKGROUND, DARK_GREY, BACKGROUND
+! Property Name       BG          Border      Separator
+rofi.color-window:    BACKGROUND, #394859,    BACKGROUND
 
-! Property Name       BG          FG         BG-alt      Head-BG     Head-FG
-rofi.color-normal:    BACKGROUND, DARK_GREY, BACKGROUND, BACKGROUND, LITE_GREY
-rofi.color-active:    BACKGROUND, DARK_BLUE, BACKGROUND, BACKGROUND, DARK_GREEN
-rofi.color-urgent:    BACKGROUND, DARK_RED,  BACKGROUND, BACKGROUND, DARK_RED
+! Property Name       BG          FG          BG-alt      Head-BG     Head-FG
+rofi.color-normal:    BACKGROUND, DARK_GREY,  BACKGROUND, BACKGROUND, LITE_GREY
+rofi.color-active:    BACKGROUND, DARK_BLUE,  BACKGROUND, BACKGROUND, DARK_GREEN
+rofi.color-urgent:    BACKGROUND, DARK_RED,   BACKGROUND, BACKGROUND, DARK_RED
 
 ! Set the desired separator style
 rofi.separator-style: solid
