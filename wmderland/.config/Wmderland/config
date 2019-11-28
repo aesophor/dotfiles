@@ -74,6 +74,7 @@ floating com.hacklympics.main.Main true
 ; Applications that should be fullscreen by default
 ; -----------------------------------------------------------------------
 fullscreen Wine,maplelegendswindowed.exe true
+fullscreen insurgency_linux true
 fullscreen steam_app_72850 tesv_original.exe true
 
 
