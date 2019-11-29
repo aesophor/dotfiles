@@ -98,6 +98,7 @@ Plugin 'sheerun/vim-polyglot' " Syntax highlighting
 Plugin 'tpope/vim-surround' " Change surrounding characters
 Plugin 'spf13/vim-autoclose' " Automatically insert closing parentheses/brackets
 Plugin 'Yggdroot/indentLine' " Display indentation levels with vertical lines
+Plugin 'osyo-manga/vim-anzu' " Display search status
 call vundle#end()
 
 " Filetype specific indentation.
