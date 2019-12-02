@@ -52,6 +52,8 @@ assign Transmission 9
 ; [Floating Rules]
 ; Applications that should be floating by default
 ; -----------------------------------------------------------------------
+floating plasmashell true
+floating krunner true
 floating systemsettings true
 floating SimpleScreenRecorder true
 floating Sxiv true

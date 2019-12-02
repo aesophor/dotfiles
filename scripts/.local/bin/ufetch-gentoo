@@ -1,0 +1,59 @@
+#!/bin/sh
+
+# ufetch-gentoo - tiny system info for gentoo
+# modified by @aesophor
+
+# user is already defined
+host=`hostname`
+os=`cat /etc/lsb-release | grep DISTRIB_ID | head -n 1 | cut -d = -f 2 | sed 's/\"//g'`
+kernel=`uname -r`
+arch=`uname -m`
+uptime=`uptime -p | sed 's/up //'`
+packages=`ls -d /var/db/pkg/*/* | wc -l`
+shell=`basename ${SHELL}`
+
+if [ -n "$DISPLAY" ]; then
+  envtype='WM'
+  envname=`xprop -root _NET_WM_NAME | cut -d \" -f 2`
+  if [ "${XDG_CURRENT_DESKTOP}" ]; then
+    envtype='DE/WM'
+    envname="${XDG_CURRENT_DESKTOP}/${envname}"
+  fi
+else
+  WM="console"
+fi
+
+## DEFINE COLORS
+# probably don't change these
+bold="$(tput bold)"
+black="$(tput setaf 0)"
+red="$(tput setaf 1)"
+green="$(tput setaf 2)"
+yellow="$(tput setaf 3)"
+blue="$(tput setaf 4)"
+magenta="$(tput setaf 5)"
+cyan="$(tput setaf 6)"
+white="$(tput setaf 7)"
+reset="$(tput sgr0)"
+
+# you can change these
+lc="${reset}${bold}${magenta}"  # labels
+nc="${reset}${bold}${magenta}"  # user and hostname
+ic="${reset}${white}"           # info
+c0="${reset}${bold}${magenta}"  # first color
+c1="${reset}${magenta}"         # second color
+
+## OUTPUT
+# art from gentoo prefix project's bootstrap-prefix.sh
+cat <<EOF
+
+${c0}     .vir.       ${nc}${USER}${ic}@${nc}${host}${reset}
+${c0}   .d\$\$\$\$${c1}\$\$b.    ${lc}OS:        ${ic}${os}${reset}
+${c0}   \$\$\$\$${c1}( )${c0}\$${c1}\$\$b   ${lc}KERNEL:    ${ic}${kernel}${reset}
+${c0}   Q\$\$\$\$\$\$\$\$${c1}\$\$B  ${lc}Arch:      ${ic}${arch}${reset} 
+${c0}     "\$\$\$\$\$${c1}\$\$P   ${lc}UPTIME:    ${ic}${uptime}${reset}
+${c0}    d\$\$\$\$${c1}\$\$P"    ${lc}PACKAGES:  ${ic}${packages}${reset}
+${c0}  \$\$\$\$\$${c1}\$\$P       ${lc}SHELL:     ${ic}${shell}${reset}
+${c0}  \`Q\$\$${c1}P"         ${lc}${envtype}:     ${ic}${envname}${reset}
+
+EOF
