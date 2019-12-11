@@ -1,1 +1,1 @@
-export KDEWM=/usr/local/bin/Wmderland
+export KDEWM=/usr/bin/Wmderland

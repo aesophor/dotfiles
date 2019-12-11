@@ -10,7 +10,7 @@ URxvt.fading:               0
 URxvt.loginShell:           true
 URxvt.internalBorder:       12
 URxvt.saveLines:            2048
-URxvt.lineSpace:            -2
+URxvt.lineSpace:            2
 URxvt.letterSpace:          0
 URxvt.allow_bold:           true
 
@@ -36,5 +36,5 @@ URxvt.keysym.C-Down:        resize-font:smaller
 URxvt.keysym.C-Up:          resize-font:bigger
 
 ! Fonts
-URxvt*font: xft:Iosevka:pixelsize=14,xft:WenQuanYi Bitmap Song:pixelsize=16
-URxvt*boldFont: xft:Iosevka:bold:pixelsize=14,xft:WenQuanYi Bitmap Song:bold:pixelsize=16
+URxvt*font: xft:UW Ttyp0:pixelsize=14,xft:WenQuanYi Bitmap Song:pixelsize=16
+URxvt*boldFont: xft:UW Ttyp0:bold:pixelsize=14,xft:WenQuanYi Bitmap Song:bold:pixelsize=16
