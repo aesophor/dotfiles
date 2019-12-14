@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-cd $HOME"/.wine/drive_c/Program Files/MapleLegends/" && wine MapleLegendsWindowed.exe
+cd $HOME"/Games/MapleLegendsHD/" && wine MapleLegends.exe
