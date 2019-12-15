@@ -30,6 +30,7 @@ set $Mod = Mod4
 assign URxvt 1
 assign jetbrains-idea 2
 assign Google-chrome 3
+assign Firefox 3
 assign dolphin 4
 assign ark 4
 assign Et 5
