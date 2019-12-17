@@ -28,7 +28,7 @@ USER_LANGUAGE="en_US.UTF-8"
 export LC_ALL=${USER_LANGUAGE}
 export LANG=${USER_LANGUAGE}
 export LANGUAGE=${USER_LANGUAGE}
-export BROWSER="google-chrome-stable"
+export BROWSER="firefox"
 export EDITOR="nvim"
 
 # Fix incorrect backspace behavior on urxvt+zsh+ssh.
