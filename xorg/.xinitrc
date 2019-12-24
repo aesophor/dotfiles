@@ -28,4 +28,4 @@ fi
 redshift &> /dev/null || redshift &> /dev/null &
 
 # Startup KDE-Wmderland
-exec startkde
+exec startplasma-x11
