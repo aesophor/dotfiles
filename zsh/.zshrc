@@ -41,6 +41,9 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS="@im=fcitx"
 
+# KDE Plasma integration with Firefox
+export GTK_USE_PORTAL=1
+
 # Prevent Wine from adding menu entries and desktop links.
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
@@ -58,6 +61,3 @@ export PATH=$COCOS_X_ROOT:$PATH
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
 export COCOS_TEMPLATES_ROOT="/home/aesophor/Code/cocos2d-x-3.17.1/templates"
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
-
-# KDE Plasma integration with Firefox
-export GTK_USE_PORTAL=1
