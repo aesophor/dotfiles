@@ -92,7 +92,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'aesophor/base16-faded'
 Plugin 'vim-scripts/a.vim' " Switch between .c/.cc/.cpp and .h/.hh/.hpp
 Plugin 'scrooloose/nerdtree' " Tree filesystem explorer
-Plugin 'Valloric/YouCompleteMe' " Code-completion engine (C/C++, Java, Python...)
+Plugin 'ycm-core/YouCompleteMe' " Code-completion engine (C/C++, Java, Python...)
 Plugin 'scrooloose/syntastic' " Syntax checking
 Plugin 'sheerun/vim-polyglot' " Syntax highlighting
 Plugin 'tpope/vim-surround' " Change surrounding characters
