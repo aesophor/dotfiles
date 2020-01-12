@@ -1,8 +1,17 @@
-# make ls list directories first.
+# shortcuts
+alias r='cd `pwd`'
 alias l='ls'
-alias ls='ls --color -hX --group-directories-first'
+alias ls='r; ls --color -hX --group-directories-first'
 alias la='ls -lAh'
 alias ll='la'
+alias c='clear'
+alias cll='c; ll'
+alias open='xdg-open'
+alias vim='nvim'
+alias config-dp='vim ~/.xorg/displayctlrc'
+alias config-wm='vim ~/.config/Wmderland/config'
+alias config-i3='vim ~/.config/i3/config'
+alias config-polybar='vim ~/.config/polybar/config'
 
 # safer rm.
 alias rm='rm -i'
@@ -13,6 +22,16 @@ alias bitch='sudo'
 alias bitchedit='sudoedit'
 alias reboot='sync && sync && sudo reboot'
 alias shutdown='sync && sync && sudo shutdown now'
+
+# typos
+alias cl='c; l'
+alias CL='c; l'
+alias CLL='c; ll'
+alias EXIT='exit'
+alias eixt='exit'
+alias xit='exit'
+alias :q='exit'
+alias :q!='exit'
 
 # bookmarks
 alias home='cd ~/; ll'
@@ -28,30 +47,9 @@ alias games='cd ~/Games; ll'
 alias dots="cd ~/Dots; ll"
 alias vpn='cd ~/.config/143vpn/TCP; ll'
 
-# shortcuts
-alias c='clear'
-alias open='xdg-open'
-alias vim='nvim'
-alias config-dp='vim ~/.xorg/displayctlrc'
-alias config-wm='vim ~/.config/Wmderland/config'
-alias config-i3='vim ~/.config/i3/config'
-alias config-polybar='vim ~/.config/polybar/config'
-alias macspoof='sudo ~/.local/bin/scripts/macspoof'
-
-# typos
-alias cl='c; l'
-alias CL='c; l'
-alias cll='c; ll'
-alias CLL='c; ll'
-alias EXIT='exit'
-alias eixt='exit'
-alias xit='exit'
-alias :q='exit'
-alias :q!='exit'
-
 # shortcuts to my personal projects
 alias hack='cd ~/Code/hacklympics/Hacklympics; ll'
-alias vgl='cd ~/Code/Vigilante/Classes; ll'
+alias vgl='cd ~/Code/vigilante/Classes; ll'
 alias wm='cd ~/Code/wmderland; ll'
 alias os='cd ~/Code/marcux; ll'
 alias algo='cd ~/Code/algorithms; ll'
