@@ -1,7 +1,7 @@
 # shortcuts
 alias r='cd `pwd`'
 alias l='ls'
-alias ls='r; ls --color -hX --group-directories-first'
+alias ls='ls --color -hX --group-directories-first'
 alias la='ls -lAh'
 alias ll='la'
 alias c='clear'
