@@ -8,10 +8,6 @@ alias c='clear'
 alias cll='c; ll'
 alias open='xdg-open'
 alias vim='nvim'
-alias config-dp='vim ~/.xorg/displayctlrc'
-alias config-wm='vim ~/.config/Wmderland/config'
-alias config-i3='vim ~/.config/i3/config'
-alias config-polybar='vim ~/.config/polybar/config'
 
 # safer rm.
 alias rm='rm -i'
@@ -32,6 +28,12 @@ alias eixt='exit'
 alias xit='exit'
 alias :q='exit'
 alias :q!='exit'
+
+# configuration shortcuts
+alias config-dp='vim ~/.xorg/displayctlrc'
+alias config-wm='vim ~/.config/Wmderland/config'
+alias config-i3='vim ~/.config/i3/config'
+alias config-polybar='vim ~/.config/polybar/config'
 
 # bookmarks
 alias home='cd ~/; ll'

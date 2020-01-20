@@ -77,6 +77,7 @@ floating com.hacklympics.main.Main true
 ; -----------------------------------------------------------------------
 fullscreen Wine,maplelegendswindowed.exe true
 fullscreen insurgency_linux true
+;fullscreen csgo_linux64 true
 fullscreen steam_app_72850 tesv_original.exe true
 
 
@@ -153,7 +154,7 @@ bindsym $Mod+Return goto_workspace 1; exec urxvt
 ; Applications to execute when WM starts up (DON'T append '&' at the end)
 ; -----------------------------------------------------------------------
 exec pulseaudio --start --log-target=syslog
-exec ~/.config/mpd/launch.sh
+exec_on_reload ~/.config/mpd/launch.sh
 exec dunst
 exec dispad
 exec displayctl
