@@ -35,7 +35,7 @@ module-margin-right = 0
 
 modules-left        = wm xworkspaces
 modules-center      = xwindow
-modules-right       = wireless-network wired-network battery volume date search power
+modules-right       = openvpn wireless-network wired-network battery volume date search power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -259,6 +259,13 @@ format-prefix      = " "
 format-padding     = ${user.padding}
 format-prefix-foreground = ${colors.cyan}
 
+[module/openvpn]
+type               = custom/script
+exec               = ~/.local/bin/polybar/openvpn
+interval           = 5
+format-prefix      = " "
+format-padding     = ${user.padding}
+format-prefix-foreground = ${colors.cyan}
 
 [module/bus]
 type               = custom/script
