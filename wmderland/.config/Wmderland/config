@@ -19,7 +19,7 @@ set gap_width = 10
 set border_width = 3
 set min_window_width = 100
 set min_window_height = 100
-set focused_color = ff4c5d70
+set focused_color = ff596e84
 set unfocused_color = ff394859
 set $Mod = Mod4
 
@@ -77,8 +77,8 @@ floating com.hacklympics.main.Main true
 ; -----------------------------------------------------------------------
 fullscreen Wine,maplelegendswindowed.exe true
 fullscreen insurgency_linux true
-;fullscreen csgo_linux64 true
 fullscreen steam_app_72850 tesv_original.exe true
+fullscreen PCSX2 true
 
 
 ; [Prohibit Rules]

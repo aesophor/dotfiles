@@ -35,7 +35,7 @@ module-margin-right = 0
 
 modules-left        = wm xworkspaces
 modules-center      = xwindow
-modules-right       = openvpn wireless-network wired-network battery volume date search power
+modules-right       = vpn wireless-network wired-network battery volume date search power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -49,7 +49,7 @@ font-2              = Siji:pixelsize=10;1
 ; -------------------- modules -----------------------
 [module/xwindow]
 type                     = internal/xwindow
-label                    = %title:0:60:...%
+label                    = %title:0:50:...%
 
 
 [module/xworkspaces]
@@ -193,12 +193,14 @@ type                          = internal/network
 interface                     = tun0
 interval                      = 5.0
 accumulate-stats              = true
-format-connected              = VPN: <label-connected>
-format-connected-foreground   = ${colors.blue}
-format-disconnected           = <label-disconnected>
-label-connected               = Connected
+format-connected              =  <label-connected>
+format-connected-padding      = ${user.padding}
+format-connected-foreground   = ${colors.cyan}
+format-disconnected           =  <label-disconnected>
+format-disconnected-padding   = ${user.padding}
+label-connected               = enabled
 label-connected-foreground    = ${colors.foreground}
-label-disconnected            = (None)
+label-disconnected            = disabled
 label-disconnected-foreground = ${colors.foreground}
 
 
@@ -259,13 +261,6 @@ format-prefix      = " "
 format-padding     = ${user.padding}
 format-prefix-foreground = ${colors.cyan}
 
-[module/openvpn]
-type               = custom/script
-exec               = ~/.local/bin/polybar/openvpn
-interval           = 5
-format-prefix      = " "
-format-padding     = ${user.padding}
-format-prefix-foreground = ${colors.cyan}
 
 [module/bus]
 type               = custom/script
