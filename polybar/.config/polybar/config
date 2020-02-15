@@ -35,7 +35,7 @@ module-margin-right = 0
 
 modules-left        = wm xworkspaces
 modules-center      = xwindow
-modules-right       = vpn wireless-network wired-network battery volume date search power
+modules-right       = vpn wired-network wireless-network battery volume date search power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}

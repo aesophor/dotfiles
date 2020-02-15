@@ -70,6 +70,7 @@ floating xfreerdp true
 floating steam_app_72850 true
 floating steam_app_105600 true
 floating com.hacklympics.main.Main true
+floating pyRollCall true
 
 
 ; [Fullscreen Rules]
@@ -78,7 +79,7 @@ floating com.hacklympics.main.Main true
 fullscreen Wine,maplelegendswindowed.exe true
 fullscreen insurgency_linux true
 fullscreen steam_app_72850 tesv_original.exe true
-fullscreen PCSX2 true
+fullsrceen postal2-bin true
 
 
 ; [Prohibit Rules]

@@ -10,7 +10,7 @@ URxvt.fading:               0
 URxvt.loginShell:           true
 URxvt.internalBorder:       12
 URxvt.saveLines:            2048
-URxvt.lineSpace:            2
+URxvt.lineSpace:            1
 URxvt.letterSpace:          0
 URxvt.allow_bold:           true
 

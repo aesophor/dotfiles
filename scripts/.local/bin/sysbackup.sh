@@ -21,7 +21,7 @@ fi
 echo "Performing full system backup (/ partition only)"
 echo ""
 echo "Destination: $backup_file"
-echo "/dev, /mnt, /proc, /sys, /tmp, /lost+found and /home will be excluded from this backup."
+echo "/dev, /mnt, /opt, /proc, /sys, /tmp, /lost+found and /home will be excluded from this backup."
 echo ""
 echo "To restore from the backup later, boot into a LiveCD, mount the disk on /mnt/mountpoint,"
 echo "cd into the mountpoint and run: tar --xattrs -xvzpf $backup_file -C /mnt/mountpoint"
@@ -31,5 +31,16 @@ read executeback
 
 # Execute backup.
 if [ $executeback == "y" ]; then
-  sudo tar --xattrs -cvzpf $backup_file --exclude=$backup_file --exclude=/boot/EFI --exclude=/dev --exclude=/mnt --exclude=/proc --exclude=/sys --exclude=/tmp --exclude=/lost+found --exclude=/home /
+  sudo tar --xattrs -cvzpf $backup_file\
+    --exclude=$backup_file\
+    --exclude=/boot/EFI\
+    --exclude=/dev\
+    --exclude=/mnt\
+    --exclude=/opt\
+    --exclude=/proc\
+    --exclude=/sys\
+    --exclude=/tmp\
+    --exclude=/lost+found\
+    --exclude=/home\
+    /
 fi
