@@ -1,17 +1,28 @@
 #!/usr/bin/env zsh
+#
 # dzen2 calendar script
 
 if pgrep -f "dzen2 -title-name Calendar" > /dev/null; then
-    pkill -f "dzen2 -title-name Calendar"
-    exit
+  pkill -f "dzen2 -title-name Calendar"
+  exit
 fi
 
 
-cal=`cal | sed "2,$ s/ \($(date +%e)\)/ ^fg(#1f2533)^bg(#ffffff)\1^fg()^bg()/"`
-lines=`echo $cal | wc -l`
+CAL=`cal`
+SPACED_CAL=""
 
-echo -e "\n"$cal | dzen2 \
--title-name 'Calendar' \
--p -x "-230" -y "40" -w "180" -h "18" -l $lines \
--sa 'c' -ta 'c' \
--e 'onstart=uncollapse;button1=exit;button3=exit' &
+# For each line in the output of `cal`, prepend a space to it.
+while IFS= read -r line; do
+  SPACED_CAL+=" $line \n"
+done <<< "$CAL"
+
+# Highlight today's date.
+CAL=`echo $SPACED_CAL | sed "2,$ s/ \($(date +%e)\)/ ^fg(#1f2533)^bg(#ffffff)\1^fg()^bg()/"`
+LINES=`echo $CAL | wc -l`
+
+
+echo -e "\n"$CAL | dzen2 \
+  -title-name 'Calendar' \
+  -p -x "-230" -y "45" -w "180" -h "18" -l $LINES \
+  -sa 'c' -ta 'c' \
+  -e 'onstart=uncollapse;button1=exit;button3=exit' &
