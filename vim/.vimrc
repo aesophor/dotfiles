@@ -113,7 +113,7 @@ set t_Co=256
 set encoding=utf-8
 colorscheme base16-faded
 
-" Airline.j
+" Airline
 let g:airline_theme = 'tomorrow'
 let g:airline_powerline_fonts = 0
 let g:airline_section_z = "%p%% %l:%c" 
