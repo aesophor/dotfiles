@@ -113,7 +113,7 @@ set t_Co=256
 set encoding=utf-8
 colorscheme base16-faded
 
-" Airline.
+" Airline.j
 let g:airline_theme = 'tomorrow'
 let g:airline_powerline_fonts = 0
 let g:airline_section_z = "%p%% %l:%c" 
@@ -174,6 +174,7 @@ let g:autoclose_vim_commentmode = 1
 " indentLine
 let g:indentLine_color_term = 8
 let g:indentLine_char = '¦'
+let g:indentLine_fileTypeExclude = ['tex', 'markdown']
 
 " git commit msg spell checking and automatic wrapping
 autocmd Filetype gitcommit setlocal spell textwidth=72

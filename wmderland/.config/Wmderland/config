@@ -54,6 +54,7 @@ assign Transmission 9
 ; -----------------------------------------------------------------------
 floating plasmashell true
 floating krunner true
+floating kcalc true
 floating systemsettings true
 floating SimpleScreenRecorder true
 floating Sxiv true

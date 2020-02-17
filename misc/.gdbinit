@@ -1,3 +1,6 @@
-set disassembly-flavor intel
+# Load pwndbg
+source /usr/share/pwndbg/gdbinit.py
 
-source ~/.gdb/peda/peda.py
+# Personal preferences
+set disassembly-flavor intel
+set history save off
