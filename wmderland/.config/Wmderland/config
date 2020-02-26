@@ -1,4 +1,5 @@
-; Wmderland configuration file
+; wmderland configuration file
+;
 ; To describe a window, run `xprop` and click on the target window, and
 ; you will get something like this as output:
 ;
@@ -21,6 +22,7 @@ set min_window_width = 100
 set min_window_height = 100
 set focused_color = ff596e84
 set unfocused_color = ff394859
+set focus_follows_mouse = true
 set $Mod = Mod4
 
 
@@ -80,7 +82,7 @@ floating pyRollCall true
 fullscreen Wine,maplelegendswindowed.exe true
 fullscreen insurgency_linux true
 fullscreen steam_app_72850 tesv_original.exe true
-fullsrceen postal2-bin true
+fullscreen postal2-bin true
 
 
 ; [Prohibit Rules]

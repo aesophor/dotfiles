@@ -31,7 +31,7 @@ set $right  l
 # use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 # control focused window when follows the mouse movements
-focus_follows_mouse no
+focus_follows_mouse yes
 # start a terminal
 bindsym $mod+Return workspace $WS1; exec --no-startup-id urxvt
 # kill focused window

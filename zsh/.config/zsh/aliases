@@ -32,7 +32,7 @@ alias :q!='exit'
 
 # configuration shortcuts
 alias config-dp='vim ~/.xorg/displayctlrc'
-alias config-wm='vim ~/.config/Wmderland/config'
+alias config-wm='vim ~/.config/wmderland/config'
 alias config-i3='vim ~/.config/i3/config'
 alias config-polybar='vim ~/.config/polybar/config'
 
