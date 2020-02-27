@@ -12,7 +12,7 @@ green   = ${xrdb:color2}
 yellow  = ${xrdb:color3}
 
 dark1   = #262c37
-dark2   = #1f2533
+dark2   = #20252f
 
 background = ${xrdb:color0}
 foreground = ${xrdb:foreground}
