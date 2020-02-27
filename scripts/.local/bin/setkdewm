@@ -25,8 +25,8 @@ case "$1" in
         new_wm="i3"
         ;;
 
-    Wmderland)
-        new_wm="Wmderland"
+    wmderland)
+        new_wm="wmderland"
         ;;
 
     -h | --help)
