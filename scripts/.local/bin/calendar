@@ -9,7 +9,7 @@ fi
 
 
 CAL=`cal`
-SPACED_CAL=""
+SPACED_CAL="\n"
 
 # For each line in the output of `cal`, prepend a space to it.
 while IFS= read -r line; do
@@ -17,12 +17,12 @@ while IFS= read -r line; do
 done <<< "$CAL"
 
 # Highlight today's date.
-CAL=`echo $SPACED_CAL | sed "2,$ s/ \($(date +%e)\)/ ^fg(#1f2533)^bg(#ffffff)\1^fg()^bg()/"`
+CAL=`echo -n $SPACED_CAL | sed "2,$ s/ \($(date +%e)\)/ ^fg(#1f2533)^bg(#ffffff)\1^fg()^bg()/"`
 LINES=`echo $CAL | wc -l`
 
 
 echo -e "\n"$CAL | dzen2 \
   -title-name 'Calendar' \
-  -p -x "-230" -y "45" -w "180" -h "18" -l $LINES \
+  -p -x "-230" -y "-55" -w "180" -h "18" -l $LINES \
   -sa 'c' -ta 'c' \
   -e 'onstart=uncollapse;button1=exit;button3=exit' &

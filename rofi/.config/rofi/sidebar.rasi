@@ -2,7 +2,7 @@ configuration {
   show-icons: true;
   drun-display-format: "{name}";
   icon-theme: "Papirus-Dark";
-  location: 5; // bottom-right
+  location: 3; // top-right
 }
 
 * {

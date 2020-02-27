@@ -26,6 +26,7 @@ padding = 1
 [bar/default]
 dpi                 = 116
 height              = 30
+bottom              = true
 line-size           = 2
 border-size         = 0
 padding-left        = 0
@@ -33,8 +34,7 @@ padding-right       = 0
 module-margin-left  = 0
 module-margin-right = 0
 
-modules-left        = wm xworkspaces
-modules-center      = xwindow
+modules-left        = wm xworkspaces xwindow
 modules-right       = vpn wired-network wireless-network battery volume date search power
 
 background          = ${colors.background}
@@ -48,8 +48,9 @@ font-2              = Siji:pixelsize=10;1
 
 ; -------------------- modules -----------------------
 [module/xwindow]
-type                     = internal/xwindow
-label                    = %title:0:50:...%
+type          = internal/xwindow
+label         = %title:0:50:...%
+label-padding = 2
 
 
 [module/xworkspaces]
@@ -58,27 +59,27 @@ pin-workspaces = true
 enable-click   = true
 enable-scroll  = false
 
-format         = <label-state>
-format-padding = ${user.padding}
+format            = <label-state>
+format-padding    = ${user.padding}
 format-background = ${colors.dark1}
 
 ; %index%, %name% or %icon%
 label-active              = %index%
 label-active-foreground   = ${colors.foreground}
-label-active-padding      = 1
+label-active-padding      = ${user.padding}
 label-active-underline    = #4c5d70
 
 label-occupied            = %index%
 label-occupied-foreground = ${colors.red}
-label-occupied-padding    = 1
+label-occupied-padding    = ${user.padding}
 
 label-urgent              = %index%
 label-urgent-foreground   = ${colors.red}
-label-urgent-padding      = 1
+label-urgent-padding      = ${user.padding}
 
 label-empty               = %index%
 label-empty-foreground    = ${colors.grey}
-label-empty-padding       = 1
+label-empty-padding       = ${user.padding}
 
 icon-0 = 0;
 icon-1 = 1;
@@ -93,11 +94,11 @@ icon-8 = 8;
 
 [module/date]
 type                = internal/date
-interval            = 1
+interval            = ${user.padding}
 format              = %{A1:calendar:} <label>%{A}
 format-padding      = ${user.padding}
 label               = %time%
-label-padding-right = 1
+label-padding-right = ${user.padding}
 time                = "%a %H:%M"
 format-foreground   = ${colors.red}
 label-foreground    = ${colors.foreground}
