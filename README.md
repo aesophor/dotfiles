@@ -50,7 +50,7 @@ $ ./.install.sh
   * [ncmpcpp](https://github.com/arybczak/ncmpcpp) - ncurses based music player
 
 * GUI
-  * [Wmderland](https://github.com/aesophor/Wmderland) - my tree-based dynamic WM written in C++11
+  * [wmderland](https://github.com/aesophor/Wmderland) - my tiling WM using space partitioning trees (C++)
   * [Polybar](https://github.com/jaagr/polybar) - fast and easy-to-use status bar
     * [siji](https://github.com/stark/siji) - iconic bitmap font based on Stlarch with additional glyphs
   * [rofi](https://github.com/davatorium/rofi) - window switcher, application launcher and dmenu replacement
