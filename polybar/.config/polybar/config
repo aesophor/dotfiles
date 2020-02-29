@@ -50,7 +50,7 @@ font-2              = Siji:pixelsize=10;1
 [module/xwindow]
 type          = internal/xwindow
 label         = %title:0:50:...%
-label-padding = 2
+label-padding = 3
 
 
 [module/xworkspaces]
