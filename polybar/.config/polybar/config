@@ -67,7 +67,7 @@ format-background = ${colors.dark1}
 label-active              = %index%
 label-active-foreground   = ${colors.foreground}
 label-active-padding      = ${user.padding}
-label-active-underline    = #4c5d70
+label-active-underline    = #4b6f76
 
 label-occupied            = %index%
 label-occupied-foreground = ${colors.red}
