@@ -6,7 +6,7 @@ configuration {
 }
 
 * {
-  background-color: #262c37;
+  background-color: #232635;
   text-color: white;
 }
 
@@ -24,7 +24,7 @@ entry {
   horizontal-align: 0.5;
   margin: 8% 5% 0% 5%;
   color: #fff;
-  background-color: #383f4c;
+  background-color: #161828;
   font: "UW Ttyp0 10";
   border-radius: 30px;
   placeholder: "Search";
@@ -44,7 +44,7 @@ element {
 
 element selected {
   text-color: #fff;
-  background-color: #1a1e26;
+  background-color: #161828;
   border-radius: 10px;
 }
 

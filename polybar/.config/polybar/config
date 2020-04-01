@@ -11,8 +11,8 @@ cyan    = ${xrdb:color6}
 green   = ${xrdb:color2}
 yellow  = ${xrdb:color3}
 
-dark1   = #262c37
-dark2   = #20252f
+dark1   = #232635
+dark2   = #1d1f2c
 
 background = ${xrdb:color0}
 foreground = ${xrdb:foreground}
@@ -67,7 +67,7 @@ format-background = ${colors.dark1}
 label-active              = %index%
 label-active-foreground   = ${colors.foreground}
 label-active-padding      = ${user.padding}
-label-active-underline    = #4b6f76
+label-active-underline    = #565679
 
 label-occupied            = %index%
 label-occupied-foreground = ${colors.red}
