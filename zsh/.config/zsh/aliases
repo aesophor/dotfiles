@@ -52,7 +52,7 @@ alias vpn='cd ~/.config/143vpn/TCP; ll'
 
 # shortcuts to my personal projects
 alias hack='cd ~/Code/hacklympics/Hacklympics; ll'
-alias vgl='cd ~/Code/vigilante/Classes; ll'
+alias vgl='cd ~/Code/vigilante; ll'
 alias wm='cd ~/Code/wmderland; ll'
 alias os='cd ~/Code/marcux; ll'
 alias algo='cd ~/Code/algorithms; ll'
