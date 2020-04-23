@@ -18,6 +18,7 @@
 ; -----------------------------------------------------------------------
 set gap_width = 10
 set border_width = 3
+set corner_radius = 5
 set min_window_width = 100
 set min_window_height = 100
 set float_move_step = 10
