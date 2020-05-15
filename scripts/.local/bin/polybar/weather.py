@@ -8,4 +8,4 @@ owm = pyowm.OWM(apikey)
 w = owm.weather_at_place('Taipei, Taiwan').get_weather()
 
 print('{s} {t}°C'.format(
-    s=w.get_temperature('celsius')['temp_max'], t=w.get_status()))
+    s=w.get_status(), t=w.get_temperature('celsius')['temp_max']))

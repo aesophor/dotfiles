@@ -263,6 +263,15 @@ format-padding     = ${user.padding}
 format-prefix-foreground = ${colors.cyan}
 
 
+[module/temperature]
+type               = custom/script
+exec               = ~/.local/bin/polybar/temperature
+interval           = 180
+format-prefix      = " "
+format-padding     = ${user.padding}
+format-prefix-foreground = ${colors.cyan}
+
+
 [module/bus]
 type               = custom/script
 exec               = bus.sh

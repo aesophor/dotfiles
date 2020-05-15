@@ -21,7 +21,7 @@ done <<< "$(echo -e "$TEMP_OUTPUT")"
 
 AVERAGE_TEMP=$(echo "scale=0;${TOTAL_TEMP}/${TOTAL_COUNT}" | bc -l)
 
-echo "${AVERAGE_TEMP}° "
+echo "${AVERAGE_TEMP}°"
 
 if [[ "${IS_URGENT}" -eq 1 ]]; then
     exit 33
