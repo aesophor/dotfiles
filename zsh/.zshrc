@@ -11,17 +11,25 @@ ZSH_THEME="frisk"
 CASE_SENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(archive extract git sudo vim-interaction zsh-autosuggestions zsh-syntax-highlighting gentoo-zsh-completions)
+plugins=(archive extract git sudo vim-interaction zsh-autosuggestions zsh-syntax-highlighting)
+
+# Fix hyper terminal's % charracter on startup
+unsetopt PROMPT_SP
 
 # Load oh-my-zsh.sh
+ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
 
 # Custom command aliases and functions.
 source ~/.config/zsh/aliases
 source ~/.config/zsh/functions
 
+# Make GNU commands available
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
+export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
+
 # Add ~/.local/bin to $PATH.
-export PATH="$PATH:$HOME/.local/bin:$HOME/.local/bin/wine"
+export PATH="$PATH:$HOME/.local/bin"
 
 # User configuration.
 USER_LANGUAGE="en_US.UTF-8"
@@ -31,21 +39,5 @@ export LANGUAGE=${USER_LANGUAGE}
 export BROWSER="firefox"
 export EDITOR="nvim"
 
-# Fix incorrect backspace behavior on urxvt+zsh+ssh.
-# However, this will cause zsh-autosuggestion to work buggy.
-#export TERM=xterm-256color
-
-# fcitx for wps fix.
-export XIM=fcitx
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=fcitx
-export XMODIFIERS="@im=fcitx"
-
-# KDE Plasma integration with Firefox
-export GTK_USE_PORTAL=1
-
-# Prevent Wine from adding menu entries and desktop links.
-export WINEDLLOVERRIDES="winemenubuilder.exe=d"
-
 # Print welcome message and todo list.
-clear; lastlogin; ufetch-gentoo; todo
+echo ; ufetch; echo; todo

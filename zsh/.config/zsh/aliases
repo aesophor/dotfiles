@@ -1,17 +1,15 @@
 # shortcuts
-alias r='cd `pwd`'
+alias ls="/usr/local/opt/coreutils/libexec/gnubin/ls --color -hX --group-directories-first"
 alias l='ls'
-alias ls='ls --color -hX --group-directories-first'
 alias la='ls -lAh'
 alias ll='la'
 alias c='clear'
 alias cll='c; ll'
-alias open='xdg-open'
 alias vim='nvim'
 
 # safer rm.
 alias rm='rm -i'
-alias rm -rf='rm -irf'
+#alias rm -rf='rm -irf'
 
 # corrections
 alias bitch='sudo'
