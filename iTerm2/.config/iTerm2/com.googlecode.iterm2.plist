@@ -158,11 +158,13 @@ Paste</string>
 	<key>NSNavLastRootDirectory</key>
 	<string>~/Dots/iTerm2/.config/iTerm2</string>
 	<key>NSNavLastUserSetHideExtensionButtonState</key>
-	<true/>
+	<false/>
 	<key>NSNavPanelExpandedSizeForOpenMode</key>
 	<string>{992, 585}</string>
 	<key>NSNavPanelExpandedSizeForSaveMode</key>
-	<string>{712, 448}</string>
+	<string>{841, 501}</string>
+	<key>NSNavPanelExpandedStateForSaveMode</key>
+	<true/>
 	<key>NSOverlayScrollersFallBackForAccessoryViews</key>
 	<false/>
 	<key>NSQuotedKeystrokeBinding</key>
@@ -209,7 +211,7 @@ Paste</string>
 	<key>NSWindow Frame iTerm Window 0</key>
 	<string>54 0 1386 877 0 0 1440 877 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>390 198 1050 679 0 0 1440 877 </string>
+	<string>155 95 1155 696 0 0 1440 877 </string>
 	<key>New Bookmarks</key>
 	<array>
 		<dict>
@@ -864,7 +866,7 @@ Paste</string>
 			<key>Open Toolbelt</key>
 			<false/>
 			<key>Option Key Sends</key>
-			<integer>0</integer>
+			<integer>2</integer>
 			<key>Prompt Before Closing 2</key>
 			<integer>2</integer>
 			<key>Right Option Key Sends</key>
@@ -976,7 +978,7 @@ Paste</string>
 	<key>NoSyncLastTipTime</key>
 	<real>615709871.41902101</real>
 	<key>NoSyncLaunchExperienceControllerRunCount</key>
-	<integer>72</integer>
+	<integer>76</integer>
 	<key>NoSyncNextAnnoyanceTime</key>
 	<real>615945841.80536401</real>
 	<key>NoSyncOnboardingWindowHasBeenShown</key>
@@ -1715,6 +1717,11 @@ Paste</string>
 	</dict>
 	<key>NoSyncRestoreWindowsCount</key>
 	<integer>0</integer>
+	<key>NoSyncSavePanelSavedSettings_SaveProfile</key>
+	<dict>
+		<key>Initial Directory</key>
+		<string>/Users/aesophor/Dots/iTerm2/.config/iTerm2</string>
+	</dict>
 	<key>NoSyncTipOfTheDayEligibilityBeganTime</key>
 	<real>615643498.89754999</real>
 	<key>NoSyncTipsToNotShow</key>
@@ -1782,8 +1789,12 @@ Paste</string>
 	<integer>10</integer>
 	<key>TerminalVMargin</key>
 	<integer>10</integer>
+	<key>TmuxUsesDedicatedProfile</key>
+	<true/>
 	<key>UseBorder</key>
 	<false/>
+	<key>UseTmuxStatusBar</key>
+	<true/>
 	<key>VisualIndicatorForEsc</key>
 	<false/>
 	<key>iTerm Version</key>
