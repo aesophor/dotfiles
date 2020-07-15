@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Brawlhalla
+Comment=Play this game on Steam
+Exec=steam steam://rungameid/291550
+Icon=steam_icon_291550
+Terminal=false
+Type=Application
+Categories=Game;
