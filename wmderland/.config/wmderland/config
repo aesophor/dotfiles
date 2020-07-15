@@ -46,6 +46,7 @@ assign Wps 5
 assign Wpp 5
 assign vlc 6
 assign Popcorn-Time 6
+assign Aseprite 7
 assign krita 7
 assign tiled 7
 assign Steam 8
@@ -53,8 +54,7 @@ assign PCSX2 8
 assign PPSSPPQt 8
 assign Minecraft Launcher 8
 assign antimicro 9
-assign VirtualBox Manager 9
-assign VirtualBox Machine 9
+assign Vmware 9
 assign Transmission 9
 
 
