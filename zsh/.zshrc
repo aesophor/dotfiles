@@ -48,4 +48,4 @@ export GTK_USE_PORTAL=1
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
 # Print welcome message and todo list.
-clear; lastlogin; ufetch-gentoo; todo
+clear; lastlogin; ufetch-arch; todo

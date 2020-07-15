@@ -96,6 +96,7 @@ fullscreen postal2-bin true
 ; Applications that should be prohibited from being launched
 ; -----------------------------------------------------------------------
 prohibit plasmashell,plasmashell,Desktop — Plasma true
+prohibit plasmashell,plasmashell,Plasma true
 prohibit Wine,Wine System Tray true
 
 
@@ -172,12 +173,12 @@ bindsym $Mod+Return goto_workspace 1; exec urxvt
 ; [Autostart]
 ; Applications to execute when WM starts up (DON'T append '&' at the end)
 ; -----------------------------------------------------------------------
-exec pulseaudio --start --log-target=syslog
-exec_on_reload ~/.config/mpd/launch.sh
-exec dunst
-exec dispad
+;exec_on_reload ~/.config/mpd/launch.sh
 exec displayctl
-exec klipper
-exec killall krunner
 exec compton --config ~/.config/compton/compton.conf
+exec dunst
+;exec dispad
+;exec klipper
+exec killall krunner
+exec pulseaudio --start
 exec_on_reload ~/.config/polybar/launch.sh

@@ -36,5 +36,5 @@ URxvt.keysym.C-Down:        resize-font:smaller
 URxvt.keysym.C-Up:          resize-font:bigger
 
 ! Fonts
-URxvt*font: xft:UW Ttyp0:pixelsize=14,xft:WenQuanYi Bitmap Song:pixelsize=14
-URxvt*boldFont: xft:UW Ttyp0:bold:pixelsize=14,xft:WenQuanYi Bitmap Song:bold:pixelsize=14
+URxvt*font: xft:UW Ttyp0:pixelsize=14,xft:WenQuanYi WenQuanYi Bitmap Song:pixelsize=14
+URxvt*boldFont: xft:UW Ttyp0:bold:pixelsize=14,xft:WenQuanYi WenQuanYi Bitmap Song:bold:pixelsize=14

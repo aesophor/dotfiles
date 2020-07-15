@@ -40,10 +40,8 @@ modules-right       = vpn wired-network wireless-network battery volume date sea
 background          = ${colors.background}
 foreground          = ${colors.foreground}
 font-0              = UW Ttyp0:size=13;2
-font-1              = WenQuanYi Bitmap Song:size=12;2
+font-1              = WenQuanYi WenQuanYi Bitmap Song:size=12;2
 font-2              = Siji:pixelsize=10;1
-;font-3              = Font Awesome 5 Brands:size=6;2
-;font-4              = Font Awesome 5 Free Solid:size=6;2
 
 
 ; -------------------- modules -----------------------
@@ -121,7 +119,7 @@ label-muted-foreground   = ${colors.foreground}
 
 [module/battery]
 type = internal/battery
-full-at = 97
+full-at = 100
 
 label-charging    = %percentage%%
 label-discharging = %percentage%%
