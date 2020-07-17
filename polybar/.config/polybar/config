@@ -93,7 +93,7 @@ icon-8 = 8;
 [module/date]
 type                = internal/date
 interval            = ${user.padding}
-format              = %{A1:calendar:} <label>%{A}
+format              = %{A1:calendar-dzen2:} <label>%{A}
 format-padding      = ${user.padding}
 label               = %time%
 label-padding-right = ${user.padding}
@@ -248,7 +248,7 @@ interval           = 2147483647
 format-prefix      = 
 format-background  = ${colors.dark2}
 format-padding     = 2
-click-left         = select_wm
+click-left         = setkdewm-dzen2
 
 
 [module/weather]
