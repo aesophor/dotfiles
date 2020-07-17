@@ -20,7 +20,7 @@ if [ -n "$DISPLAY" ]; then
     envname="${XDG_CURRENT_DESKTOP}/${envname}"
   fi
 else
-  WM="console"
+  envname="console"
 fi
 
 ## DEFINE COLORS

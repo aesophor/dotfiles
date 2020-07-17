@@ -12,27 +12,19 @@ uptime="$(uptime -p | sed 's/up //')"
 packages="$(pacman -Q | wc -l)"
 shell="$(basename "$SHELL")"
 
-## UI DETECTION
-
-if [ -n "${DE}" ]; then
-	ui="${DE}"
-	uitype='DE'
-elif [ -n "${WM}" ]; then
-	ui="${WM}"
-	uitype='WM'
-elif [ -n "${XDG_CURRENT_DESKTOP}" ]; then
-	ui="${XDG_CURRENT_DESKTOP}"
-	uitype='DE'
-elif [ -n "${DESKTOP_SESSION}" ]; then
-	ui="${DESKTOP_SESSION}"
-	uitype='DE'
+if [ -n "$DISPLAY" ]; then
+  envtype='WM:'
+  envname=`xprop -root _NET_WM_NAME | cut -d \" -f 2`
+  if [ "${XDG_CURRENT_DESKTOP}" ]; then
+    envtype='DE/WM:'
+    envname="${XDG_CURRENT_DESKTOP}/${envname}"
+  fi
 else
-	ui='unknown'
-	uitype='UI'
+  envtype=""
+  envname=""
 fi
 
 ## DEFINE COLORS
-
 # probably don't change these
 if [ -x "$(command -v tput)" ]; then
 	bold="$(tput bold)"
@@ -63,6 +55,6 @@ ${c0}      /\\   \\       ${lc}KERNEL:    ${ic}${kernel}${reset}
 ${c0}     /  __  \\      ${lc}UPTIME:    ${ic}${uptime}${reset}
 ${c0}    /  (  )  \\     ${lc}PACKAGES:  ${ic}${packages}${reset}
 ${c0}   / __|  |__\\\\    ${lc}SHELL:     ${ic}${shell}${reset}
-${c0}  /.\`        \`.\\   ${lc}${uitype}:        ${ic}${ui}${reset}
+${c0}  /.\`        \`.\\   ${lc}${envtype}     ${ic}${envname}${reset}
 
 EOF
