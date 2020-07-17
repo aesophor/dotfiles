@@ -14,7 +14,7 @@ URxvt.lineSpace:            1
 URxvt.letterSpace:          0
 URxvt.allow_bold:           true
 
-URxvt.urlLauncher:          /usr/bin/xdg-open
+URxvt.url-launcher:         /usr/bin/xdg-open
 URxvt.scrollStyle:          rxvt
 URxvt.scrollBar:            false
 

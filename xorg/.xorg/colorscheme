@@ -1,4 +1,22 @@
-#include "/home/aesophor/.cache/painter/active_colorscheme"
+#define BACKGROUND #2e3440
+#define FOREGROUND #ffffff
+#define BLACK #2e3440
+#define DARK_GREY #606778
+#define LITE_GREY #c5c8c6
+#define WHITE #FFFFFF
+#define LITE_RED #b77a76
+#define DARK_RED #b77a76
+#define LITE_GREEN #b4bf86
+#define DARK_GREEN #b4bf86
+#define LITE_YELLOW #cbb079
+#define DARK_YELLOW #cbb079
+#define LITE_BLUE #83a2be
+#define DARK_BLUE #83a2be
+#define LITE_MAGENTA #958090
+#define DARK_MAGENTA #958090
+#define LITE_CYAN #7daea9
+#define DARK_CYAN #7daea9
+
 
 ! special
 *.background: BACKGROUND

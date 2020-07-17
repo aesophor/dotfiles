@@ -1,0 +1,6 @@
+[Desktop Entry]
+Exec=feh %f
+MimeType=image/png;
+Name=feh
+NoDisplay=true
+Type=Application
