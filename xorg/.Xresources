@@ -10,5 +10,5 @@
 ! URxvt
 #include "/home/aesophor/.xorg/urxvt"
 
-! Rofi Colors
-#include "/home/aesophor/.xorg/rofi"
+! dzen2
+#include "/home/aesophor/.xorg/dzen2"
