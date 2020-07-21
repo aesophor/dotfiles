@@ -170,7 +170,8 @@ bindsym XF86AudioPlay exec mpc toggle
 bindsym XF86AudioMute exec amixer -q -D pulse set Master toggle
 bindsym XF86AudioRaiseVolume exec amixer -q -D pulse set Master 5%+ unmute
 bindsym XF86AudioLowerVolume exec amixer -q -D pulse set Master 5%- unmute
-bindsym XF86PowerOff exec toggle_screen.sh
+bindsym XF86PowerOff exec qdbus org.kde.ksmserver /KSMServer org.kde.KSMServerInterface.logout -1 -1 -1
+bindsym $Mod+Escape exec toggle_screen.sh
 
 bindsym Control+Shift+3 exec scrotutl -f
 bindsym Control+Shift+4 exec scrotutl -s
@@ -186,8 +187,6 @@ bindsym $Mod+Return goto_workspace 1; exec urxvt
 exec_on_reload ~/.config/mpd/launch.sh
 exec displayctl
 exec compton --config ~/.config/compton/compton.conf
-exec dunst
 exec dispad
-;exec klipper
 exec killall krunner
 exec_on_reload ~/.config/polybar/launch.sh

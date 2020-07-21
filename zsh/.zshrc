@@ -44,6 +44,10 @@ export XMODIFIERS="@im=fcitx"
 # KDE Plasma integration with Firefox
 export GTK_USE_PORTAL=1
 
+# Allow user-wide installations for npm.
+PATH="$HOME/.node_modules/bin:$PATH"
+export npm_config_prefix=~/.node_modules
+
 # Prevent Wine from adding menu entries and desktop links.
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
