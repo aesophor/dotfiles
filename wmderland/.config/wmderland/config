@@ -184,9 +184,10 @@ bindsym $Mod+Return goto_workspace 1; exec urxvt
 ; [Autostart]
 ; Applications to execute when WM starts up (DON'T append '&' at the end)
 ; -----------------------------------------------------------------------
-exec_on_reload ~/.config/mpd/launch.sh
+exec killall redshift
+exec redshift
+exec dunst
+exec dispad
 exec displayctl
 exec compton --config ~/.config/compton/compton.conf
-exec dispad
-exec killall krunner
 exec_on_reload ~/.config/polybar/launch.sh
