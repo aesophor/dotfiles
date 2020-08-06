@@ -35,7 +35,7 @@ module-margin-left  = 0
 module-margin-right = 0
 
 modules-left        = wm xworkspaces xwindow
-modules-right       = vpn wired-network wireless-network battery volume date search power
+modules-right       = vpn wireless ethernet battery volume weather date search power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -65,7 +65,7 @@ format-background = ${colors.dark1}
 label-active              = %index%
 label-active-foreground   = ${colors.foreground}
 label-active-padding      = ${user.padding}
-label-active-underline    = #565679
+label-active-underline    = #8f00ff
 
 label-occupied            = %index%
 label-occupied-foreground = ${colors.red}
@@ -98,7 +98,7 @@ format-padding      = ${user.padding}
 label               = %time%
 label-padding-right = ${user.padding}
 time                = "%a %H:%M"
-format-foreground   = ${colors.red}
+format-foreground   = ${colors.magenta}
 label-foreground    = ${colors.foreground}
 
 
@@ -148,7 +148,7 @@ ramp-capacity-4            = 
 animation-charging-0       = 
 
 
-[module/wireless-network]
+[module/wireless]
 type                           = internal/network
 accumulate-stats               = true
 interface                      = wlp2s0
@@ -170,7 +170,7 @@ ramp-signal-3                  = 
 ramp-signal-4                  = 
 
 
-[module/wired-network]
+[module/ethernet]
 type                           = internal/network
 accumulate-stats               = true
 interface                      = enp0s20u2u4
@@ -258,7 +258,7 @@ exec-if            = check_connection.sh
 interval           = 43200
 format-prefix      = " "
 format-padding     = ${user.padding}
-format-prefix-foreground = ${colors.cyan}
+format-prefix-foreground = ${colors.red}
 
 
 [module/temperature]

@@ -1,6 +1,6 @@
-#define BACKGROUND #2e3440
+#define BACKGROUND #292d3f
 #define FOREGROUND #ffffff
-#define BLACK #2e3440
+#define BLACK #292d3e
 #define DARK_GREY #606778
 #define LITE_GREY #c5c8c6
 #define WHITE #FFFFFF

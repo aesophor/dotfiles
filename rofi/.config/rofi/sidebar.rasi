@@ -1,7 +1,7 @@
 configuration {
   show-icons: true;
   drun-display-format: "{name}";
-  location: 3; // top-right
+  location: 3;  // top-right
 }
 
 * {

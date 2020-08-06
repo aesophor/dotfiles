@@ -16,14 +16,14 @@
 ; `set <Key> = <Value>` to set a builtin varaible
 ; `set $<Variable> = <Value>` to define your own variable
 ; -----------------------------------------------------------------------
-set gap_width = 10
+set gap_width = 8
 set border_width = 3
 set corner_radius = 5
 set min_window_width = 100
 set min_window_height = 100
 set float_move_step = 10
 set float_resize_step = 10
-set focused_color = ff596e84
+set focused_color = ff58577b
 set unfocused_color = ff394859
 set focus_follows_mouse = true
 
@@ -36,8 +36,7 @@ set $Mod = $Cmd
 ; Assign an application to a specific workspace
 ; -----------------------------------------------------------------------
 assign URxvt 1
-assign jetbrains-idea 2
-assign Google-chrome 3
+assign TelegramDesktop 2
 assign firefox 3
 assign dolphin 4
 assign ark 4
@@ -47,7 +46,7 @@ assign Wpp 5
 assign vlc 6
 assign Popcorn-Time 6
 assign Aseprite 7
-assign krita 7
+assign Gimp-2.10 7
 assign tiled 7
 assign Steam 8
 assign PCSX2 8

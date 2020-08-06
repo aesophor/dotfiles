@@ -5,7 +5,8 @@ import pyowm
 
 apikey = 'fddd58ea30939805a18d5c75fe235c79'
 owm = pyowm.OWM(apikey)
-w = owm.weather_at_place('Taipei, Taiwan').get_weather()
+mgr = owm.weather_manager()
+w = mgr.weather_at_place('Hsinchu, Taiwan').weather
 
 print('{s} {t}°C'.format(
-    s=w.get_status(), t=w.get_temperature('celsius')['temp_max']))
+    s=w.status, t=int(w.temperature('celsius')['temp_max'])))
