@@ -9,7 +9,7 @@ echo "[*] Done."
 
 
 cat <<EOF
-[*] Do you want to install additional packages?
+[*] Do you want to install additional packages? (If you're not sure, answer "no")
 
     * Dependencies (make sure they have been installed):
       + curl (for fetching oh-my-zsh installer script)
