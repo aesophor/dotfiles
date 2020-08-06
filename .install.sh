@@ -3,6 +3,8 @@
 # Use GNU Stow to install dotfiles
 echo "[*] Symlinking dotfiles ..."
 mv README.md .README.md
+mv ~/.bashrc ~/.bashrc.old
+mv ~/.zshrc ~/.zshrc.old
 stow *
 mv .README.md README.md
 echo "[*] Done."
@@ -73,12 +75,12 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
 
   if [ ! -d $displayctl_clone_dest ]; then
     git clone https://github.com/aesophor/displayctl.git "$displayctl_clone_dest"
-    sudo cp -a "$displayctl_clone_dest/displayctl" /usr/local/bin/displayctl
+    sudo cp -a $displayctl_clone_dest/displayctl /usr/local/bin/displayctl
   fi
 
   if [ ! -d ~/Code/py-todo ]; then
     git clone https://github.com/aesophor/py-todo.git "$py_todo_clone_dest"
-    sudo cp -a "$py_todo_clone_dest/todo" /usr/local/bin/todo
+    sudo cp -a $py_todo_clone_dest/todo /usr/local/bin/todo
   fi
 
 
