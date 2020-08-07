@@ -1,7 +1,7 @@
 ! displayctlrc
 ! =======================================================
-Display.monitor:    eDP1
+Display.monitor:    HDMI1
 Display.dpi:        112
 Display.resolution: 1680x1050
 Display.brightness: 30
-Display.wallpaper:  /home/aesophor/Pictures/Wallpapers/Workspaces/KeyboardsFaded.jpg
+Display.wallpaper:  /home/aesophor/Pictures/Wallpapers/retro-pc.jpg

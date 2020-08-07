@@ -11,7 +11,7 @@ ZSH_THEME="frisk"
 CASE_SENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(archive extract git sudo vim-interaction zsh-autosuggestions zsh-syntax-highlighting gentoo-zsh-completions)
+plugins=(archive extract git sudo vim-interaction zsh-autosuggestions zsh-syntax-highlighting)
 
 # Load oh-my-zsh.sh
 source $ZSH/oh-my-zsh.sh

@@ -173,7 +173,7 @@ ramp-signal-4                  = 
 [module/ethernet]
 type                           = internal/network
 accumulate-stats               = true
-interface                      = enp0s20u2u4
+interface                      = enp1s0
 interval                       = 5.0
 format-connected               =  <label-connected>
 format-connected-padding       = ${user.padding}
