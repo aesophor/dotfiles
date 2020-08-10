@@ -185,6 +185,7 @@ bindsym $Mod+Return goto_workspace 1; exec urxvt
 ; -----------------------------------------------------------------------
 exec killall redshift
 exec redshift
+exec fcitx5
 exec dunst
 exec dispad
 exec displayctl
