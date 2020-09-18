@@ -33,12 +33,17 @@
     always_run_script = true
     startup_notification = false
     force_xinerama = false
+    history_file = ~/.cache/dunst/history
 
 [shortcuts]
     close = ctrl+space
     close_all = ctrl+shift+space
     history = ctrl+grave
     context = ctrl+shift+period
+
+[play_sound]
+    summary = "*"
+    script = ~/.local/bin/_play_notification_sound.sh
 
 [urgency_low]
     background = "#292d3f"

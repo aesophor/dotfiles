@@ -23,8 +23,8 @@ set min_window_width = 100
 set min_window_height = 100
 set float_move_step = 10
 set float_resize_step = 10
-set focused_color = ff58577b
-set unfocused_color = ff394859
+set focused_color = ff7f7eb3
+set unfocused_color = ff58577b
 set focus_follows_mouse = true
 
 set $Alt = Mod1
@@ -36,7 +36,8 @@ set $Mod = $Cmd
 ; Assign an application to a specific workspace
 ; -----------------------------------------------------------------------
 assign URxvt 1
-assign TelegramDesktop 2
+assign Cutter 2
+assign TelegramDesktop 3
 assign firefox 3
 assign dolphin 4
 assign ark 4

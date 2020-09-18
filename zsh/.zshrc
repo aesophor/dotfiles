@@ -11,7 +11,7 @@ ZSH_THEME="frisk"
 CASE_SENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(archive extract git sudo vim-interaction zsh-autosuggestions zsh-syntax-highlighting gentoo-zsh-completions)
+plugins=(archive extract git sudo vim-interaction zsh-autosuggestions zsh-syntax-highlighting)
 
 # Load oh-my-zsh.sh
 source $ZSH/oh-my-zsh.sh
@@ -52,4 +52,4 @@ export npm_config_prefix=~/.node_modules
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
 # Print welcome message and todo list.
-clear; lastlogin; ufetch-arch; todo
+clear; lastlogin; ufetch-arch; todo; #echo; dunst-notif-center-cli -l

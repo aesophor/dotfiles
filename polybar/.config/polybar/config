@@ -35,7 +35,7 @@ module-margin-left  = 0
 module-margin-right = 0
 
 modules-left        = wm xworkspaces xwindow
-modules-right       = vpn wireless ethernet battery volume weather date search power
+modules-right       = wireless ethernet battery volume weather date search power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -150,7 +150,6 @@ animation-charging-0       = 
 
 [module/wireless]
 type                           = internal/network
-accumulate-stats               = true
 interface                      = wlp2s0
 interval                       = 5.0
 format-connected               = <ramp-signal> <label-connected>
@@ -172,7 +171,6 @@ ramp-signal-4                  = 
 
 [module/ethernet]
 type                           = internal/network
-accumulate-stats               = true
 interface                      = enp0s20u2u4
 interval                       = 5.0
 format-connected               =  <label-connected>
@@ -189,7 +187,7 @@ label-disconnected-foreground  = ${colors.foreground}
 
 [module/vpn]
 type                          = internal/network
-interface                     = tun0
+interface                     = proton0
 interval                      = 5.0
 accumulate-stats              = true
 format-connected              =  <label-connected>
@@ -269,6 +267,23 @@ format-prefix      = " "
 format-padding     = ${user.padding}
 format-prefix-foreground = ${colors.cyan}
 
+
+[module/dunst]
+type = custom/script
+exec = ~/.local/bin/polybar/dunst_notification.py
+interval = 10
+format-prefix      = " "
+format-padding     = ${user.padding}
+format-prefix-foreground = ${colors.red}
+
+
+[module/pacman]
+type = custom/script
+exec = ~/.local/bin/polybar/pacman_update_helper.sh
+interval = 600
+format-prefix      = " "
+format-padding     = ${user.padding}
+format-prefix-foreground = ${colors.red}
 
 [module/bus]
 type               = custom/script

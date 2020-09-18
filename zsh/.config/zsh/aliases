@@ -51,6 +51,7 @@ alias dots="cd ~/Dots; ll"
 alias vpn='cd ~/.config/143vpn/TCP; ll'
 
 # shortcuts to my personal projects
+alias ctf='cd ~/CTF; ll'
 alias hack='cd ~/Code/hacklympics/Hacklympics; ll'
 alias vgl='cd ~/Code/vigilante; ll'
 alias wm='cd ~/Code/wmderland; ll'
@@ -59,5 +60,4 @@ alias algo='cd ~/Code/algorithms; ll'
 alias web='cd /var/www/localhost/htdocs; ll'
 alias syno='cd ~/Code/Synology; ll'
 alias sb='cd ~/Code/samba/; ll'
-alias pwn='cd ~/Code/pwnnn; ll'
 alias rkt='cd ~/Code/satan; ll'
