@@ -1,5 +1,5 @@
 # shortcuts
-alias ls="/usr/local/opt/coreutils/libexec/gnubin/ls --color -hX --group-directories-first"
+alias ls="gls --color=auto -hX --group-directories-first"
 alias l='ls'
 alias la='ls -lAh'
 alias ll='la'
@@ -59,3 +59,4 @@ alias syno='cd ~/Code/Synology; ll'
 alias sb='cd ~/Code/samba/; ll'
 alias pwn='cd ~/Code/pwnnn; ll'
 alias rkt='cd ~/Code/satan; ll'
+alias ctf='cd ~/CTF; ll'

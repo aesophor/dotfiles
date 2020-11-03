@@ -1,0 +1,40 @@
+[user]
+	email = m.aesophor@gmail.com
+	name = Marco Wang
+[alias]
+	co = checkout
+	st = status
+	ci = commit
+	br = branch
+	df = diff
+	pick = cherry-pick
+	fp = format-patch
+	la = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	ll = log --graph --decorate --pretty=oneline --abbrev-commit
+	lf = log --stat --decorate --format=fuller abbrev-commit
+[core]
+	pager = diff-so-fancy | less --tabs=4 -RFX
+	filemode = true
+	editor = nvim
+[color]
+	ui = auto
+	diff = auto
+	status = auto
+	branch = auto
+	log = auto
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 32
+	newNormal = green bold
+	newHighlight = green bold 20
+[color "diff"]
+	meta = yellow
+	frag = magenta bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
+	whitespace = black reverse
+[push]
+	default = simple
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
