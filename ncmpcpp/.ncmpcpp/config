@@ -12,6 +12,7 @@ visualizer_type = "spectrum" (spectrum/wave)
 visualizer_look = "∙▋"
 visualizer_color = "blue"
 
+user_interface = alternative
 current_item_prefix = "$(white)$r"
 current_item_suffix = "$/r$(end)"
 progressbar_look = "—⯁"
@@ -34,4 +35,4 @@ playlist_display_mode = "columns" (classic/columns)
 autocenter_mode = "yes"
 titles_visibility = "no"
 enable_window_title = "no"
-execute_on_song_change = notify-send "Now Playing" "$(mpc current)"
+#execute_on_song_change = notify-send "Now Playing" "$(mpc current)"
