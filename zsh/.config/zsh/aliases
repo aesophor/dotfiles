@@ -14,8 +14,6 @@ alias rm='rm -i'
 # corrections
 alias bitch='sudo'
 alias bitchedit='sudoedit'
-alias reboot='sync && sync && sudo reboot'
-alias shutdown='sync && sync && sudo shutdown now'
 alias gdb='gdb -q'
 
 # typos

@@ -11,7 +11,7 @@ ZSH_THEME="frisk"
 CASE_SENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
-plugins=(archive extract git sudo vim-interaction zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(archive extract git sudo vim-interaction zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
 
 # Load oh-my-zsh.sh
 ZSH_DISABLE_COMPFIX=true
@@ -44,4 +44,6 @@ _ls_colors="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 zstyle ':completion:*:default' list-colors "${(s.:.)_ls_colors}"
 
 # Print welcome message and todo list.
-clear; lastlogin; echo; pfetch; todo
+clear; lastlogin; echo
+PF_ASCII="darwin" pfetch
+todo
