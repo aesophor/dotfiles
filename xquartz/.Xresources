@@ -1,0 +1,14 @@
+! displayctl
+!#include "/home/aesophor/.xorg/displayctlrc" 
+
+! Colorscheme
+#include "/Users/aesophor/.xquartz/colorscheme"
+
+! Font Settings
+!#include "/home/aesophor/.xorg/fonts"
+
+! URxvt
+#include "/Users/aesophor/.xquartz/urxvt"
+
+! dzen2
+!#include "/home/aesophor/.xorg/dzen2"
