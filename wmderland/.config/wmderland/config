@@ -16,7 +16,7 @@
 ; `set <Key> = <Value>` to set a builtin varaible
 ; `set $<Variable> = <Value>` to define your own variable
 ; -----------------------------------------------------------------------
-set gap_width = 8
+set gap_width = 10
 set border_width = 3
 set corner_radius = 5
 set min_window_width = 100
@@ -37,7 +37,7 @@ set $Mod = $Cmd
 ; -----------------------------------------------------------------------
 assign URxvt 1
 assign Cutter 2
-assign TelegramDesktop 3
+assign TelegramDesktop 2
 assign firefox 3
 assign dolphin 4
 assign ark 4
@@ -178,17 +178,13 @@ bindsym Control+Shift+4 exec scrotutl -s
 bindsym Control+Shift+space+4 exec
 
 bindsym $Mod+d exec rofi -show drun
-bindsym $Mod+Return goto_workspace 1; exec urxvt
+bindsym $Mod+Return goto_workspace 1; exec urxvtc
 
 
 ; [Autostart]
 ; Applications to execute when WM starts up (DON'T append '&' at the end)
 ; -----------------------------------------------------------------------
-exec killall redshift
-exec redshift
+exec_on_reload displayctl
 exec fcitx5
-exec dunst
-exec dispad
-exec displayctl
 exec compton --config ~/.config/compton/compton.conf
 exec_on_reload ~/.config/polybar/launch.sh
