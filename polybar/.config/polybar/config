@@ -35,7 +35,7 @@ module-margin-left  = 0
 module-margin-right = 0
 
 modules-left        = wm xworkspaces xwindow
-modules-right       = wireless ethernet battery volume weather date search power
+modules-right       = mpd wireles ethernet battery volume weather date search power
 
 background          = ${colors.background}
 foreground          = ${colors.foreground}
@@ -65,10 +65,10 @@ format-background = ${colors.dark1}
 label-active              = %index%
 label-active-foreground   = ${colors.foreground}
 label-active-padding      = ${user.padding}
-label-active-underline    = #8f00ff
+label-active-underline    = #bc0fca
 
 label-occupied            = %index%
-label-occupied-foreground = ${colors.red}
+label-occupied-foreground = ${colors.grey}
 label-occupied-padding    = ${user.padding}
 
 label-urgent              = %index%
@@ -171,7 +171,7 @@ ramp-signal-4                  = 
 
 [module/ethernet]
 type                           = internal/network
-interface                      = enp0s20u2u4
+interface                      = enp3s0
 interval                       = 5.0
 format-connected               =  <label-connected>
 format-connected-padding       = ${user.padding}
@@ -206,9 +206,9 @@ type                     = internal/mpd
 host                     = 127.0.0.1
 port                     = 6600
 interval                 = 2
-format-online            =  <label-song>
-format-online-padding    = ${user.padding}
-format-online-foreground = ${colors.magenta}
+format-online            =  <label-song> <icon-prev> <toggle> <icon-next>
+format-online-padding    = 2
+format-online-foreground = ${colors.cyan}
 label-song               = %artist% - %title%
 label-offline            = mpd is offline
 label-song-foreground    = ${colors.foreground}
@@ -217,10 +217,10 @@ icon-play                = 
 icon-pause               = 
 icon-prev                = 
 icon-next                = 
-icon-play-foreground     = ${colors.blue}
-icon-pause-foreground    = ${colors.blue}
-icon-prev-foreground     = ${colors.blue}
-icon-next-foreground     = ${colors.blue}
+icon-play-foreground     = ${colors.cyan}
+icon-pause-foreground    = ${colors.cyan}
+icon-prev-foreground     = ${colors.cyan}
+icon-next-foreground     = ${colors.cyan}
 
 
 [module/search]
