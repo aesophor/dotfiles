@@ -9,7 +9,7 @@ with open(apikey_location, 'r') as f: apikey = f.readline().strip()
 
 owm = pyowm.OWM(apikey)
 mgr = owm.weather_manager()
-w = mgr.weather_at_place('Hsinchu, Taiwan').weather
+w = mgr.one_call(lat=24.8138, lon=120.9675).current
 
 print('{s} {t}°C'.format(
-    s=w.status, t=int(w.temperature('celsius')['temp_max'])))
+    s = w.status, t = int(w.temperature('celsius')['temp'])))
