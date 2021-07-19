@@ -14,7 +14,7 @@
     separator_color = frame
     sort = yes
     idle_threshold = 0
-    font = UW Ttyp0 9
+    font = Terminus 8
     line_height = 8
     markup = full
     format = "<b>%s %p</b>\n%b"
@@ -40,10 +40,6 @@
     close_all = ctrl+shift+space
     history = ctrl+grave
     context = ctrl+shift+period
-
-[play_sound]
-    summary = "*"
-    script = ~/.local/bin/_play_notification_sound.sh
 
 [urgency_low]
     background = "#292d3f"
