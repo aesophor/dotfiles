@@ -11,9 +11,9 @@ configuration {
 
 window {
   fullscreen: false;
-  font: "UW Ttyp0 9";
+  font: "Terminus 9";
   width: 28%;
-  height: 97.2%;
+  height: 97.3%;
 }
 
 prompt { enabled: false; }
@@ -24,7 +24,7 @@ entry {
   margin: 8% 5% 0% 5%;
   color: #fff;
   background-color: #161828;
-  font: "UW Ttyp0 10";
+  font: "Terminus 9";
   border-radius: 30px;
   placeholder: "Search";
 }
