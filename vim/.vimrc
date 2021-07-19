@@ -104,6 +104,7 @@ call vundle#end()
 " Filetype specific indentation.
 filetype plugin indent on " Enable filetype plugins
 autocmd FileType c setlocal shiftwidth=8 tabstop=8 expandtab textwidth=0
+autocmd FileType cpp setlocal shiftwidth=2 tabstop=2 expandtab textwidth=0
 autocmd FileType arduino setlocal shiftwidth=8 tabstop=8 expandtab textwidth=0
 autocmd FileType json setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
