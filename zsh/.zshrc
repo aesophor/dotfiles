@@ -52,4 +52,4 @@ export npm_config_prefix=~/.node_modules
 export WINEDLLOVERRIDES="winemenubuilder.exe=d"
 
 # Print welcome message and todo list.
-clear; lastlogin; ufetch-arch; todo; #echo; dunst-notif-center-cli -l
+clear; lastlogin; ufetch-arch; todo
