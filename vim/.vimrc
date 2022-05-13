@@ -80,6 +80,9 @@ set wrapscan " Searches wrap around end of file
 set nofoldenable " disable folding
 set relativenumber " relative line numbers
 
+" Plugin configurations that need to be declared before the plugins are loaded.
+let g:polyglot_disabled = ['r-lang']
+
 " Plugin.
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -92,8 +95,8 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'aesophor/base16-faded'
 Plugin 'vim-scripts/a.vim' " Switch between .c/.cc/.cpp and .h/.hh/.hpp
 Plugin 'scrooloose/nerdtree' " Tree filesystem explorer
-Plugin 'ycm-core/YouCompleteMe' " Code-completion engine (C/C++, Java, Python...)
-Plugin 'scrooloose/syntastic' " Syntax checking
+"Plugin 'ycm-core/YouCompleteMe' " Code-completion engine (C/C++, Java, Python...)
+"Plugin 'scrooloose/syntastic' " Syntax checking
 Plugin 'sheerun/vim-polyglot' " Syntax highlighting
 Plugin 'tpope/vim-surround' " Change surrounding characters
 Plugin 'spf13/vim-autoclose' " Automatically insert closing parentheses/brackets
@@ -103,6 +106,7 @@ call vundle#end()
 
 " Filetype specific indentation.
 filetype plugin indent on " Enable filetype plugins
+autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
 autocmd FileType json setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType gitconfig setlocal shiftwidth=8 tabstop=8 noexpandtab
@@ -178,3 +182,8 @@ let g:indentLine_fileTypeExclude = ['tex', 'markdown']
 
 " git commit msg spell checking and automatic wrapping
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" Hide underline at current line number.
+hi CursorLineNr term=bold cterm=bold ctermfg=012 gui=bold
+
+

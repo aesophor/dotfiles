@@ -1,21 +1,21 @@
-#define BACKGROUND #292d3f
+#define BACKGROUND #292d3e
 #define FOREGROUND #ffffff
 #define BLACK #292d3e
-#define DARK_GREY #606778
-#define LITE_GREY #c5c8c6
+#define DARK_GREY #4f546a
+#define LITE_GREY #d0d0d0
 #define WHITE #FFFFFF
-#define LITE_RED #b77a76
-#define DARK_RED #b77a76
-#define LITE_GREEN #b4bf86
-#define DARK_GREEN #b4bf86
-#define LITE_YELLOW #cbb079
-#define DARK_YELLOW #cbb079
-#define LITE_BLUE #83a2be
-#define DARK_BLUE #83a2be
-#define LITE_MAGENTA #958090
-#define DARK_MAGENTA #958090
-#define LITE_CYAN #7daea9
-#define DARK_CYAN #7daea9
+#define LITE_RED #ff8b92
+#define DARK_RED #f07178
+#define LITE_GREEN #ddffa7
+#define DARK_GREEN #c3e88d
+#define LITE_YELLOW #ffe585
+#define DARK_YELLOW #ffcb6b
+#define LITE_BLUE #9cc4ff
+#define DARK_BLUE #82aaff
+#define LITE_MAGENTA #d3a2ee
+#define DARK_MAGENTA #c792ea
+#define LITE_CYAN #a3f7ff
+#define DARK_CYAN #89ddff
 
 
 ! special

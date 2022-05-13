@@ -45,5 +45,7 @@ zstyle ':completion:*:default' list-colors "${(s.:.)_ls_colors}"
 
 # Print welcome message and todo list.
 clear; lastlogin; echo
-PF_ASCII="darwin" pfetch
+PF_ASCII="macOS" pfetch
 todo
+
+export PATH=$PATH:/Users/aesophor/Library/Python/3.9/bin
