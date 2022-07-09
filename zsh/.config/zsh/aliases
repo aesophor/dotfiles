@@ -5,7 +5,7 @@ alias la='ls -lAh'
 alias ll='la'
 alias c='clear'
 alias cll='c; ll'
-alias vim='nvim'
+alias x86brew='arch -x86_64 /usr/local/bin/brew'
 
 # safer rm.
 alias rm='rm -i'

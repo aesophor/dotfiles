@@ -1,6 +1,15 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/oh-my-zsh"
 
+# Add homebrew to path on a M1 mac.
+if [[ $OSTYPE == darwin* ]]; then
+  if [[ $CPUTYPE == arm64 ]]; then
+    export PATH=/opt/homebrew/bin:$PATH
+  else
+    export PATH=/usr/local/bin:$PATH
+  fi
+fi
+
 # ZSH configuration.
 # (1) ZSH Themes
 # (2) Case-sensitive completion
