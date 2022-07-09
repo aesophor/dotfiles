@@ -1,22 +1,27 @@
 <div align="center">
 <h3>.dotfiles</h3>
-<img src="https://github.com/aesophor/dotfiles/raw/master/.meta/main.png">
+<img src="/.meta/cover.png">
 
-`Gentoo` `KDE / wmderland` `Polybar` `base16-faded`
+`macOS Monterey (12.4)`
 </div>
 
+## Requirements
+
+```sh
+brew install stow
+```
+
 ## Installation
-**Requires [GNU stow](https://www.gnu.org/software/stow/).**
 
-To install a specific package of dotfiles (take dunst for example)
+To install a specific package of dotfiles (take `nvim` for example)
 ```
-$ stow dunst
+stow nvim
 ```
 
-To install everything
+To install all the available packages
 ```
-$ # This script temporarily hides README.md, and execute `stow *`
-$ ./.install.sh
+# This script temporarily hides README.md, and execute `stow *`
+./.install.sh
 ```
 
 ## Details
@@ -31,35 +36,19 @@ $ ./.install.sh
     * [Iosevka](https://github.com/be5invis/Iosevka) 14px - terminal font
     * [wqy-bitmapfont](https://packages.gentoo.org/packages/media-fonts/wqy-bitmapfont) - chinese font
   * [Neovim](https://github.com/vim/vim) - I write C/C++, Python, shellscripts in Neovim, and Java in IntelliJ IDE.
-    * [Vundle](https://github.com/VundleVim/Vundle.vim) - plugin manager
-    * [YouCompleteMe](https://github.com/Valloric/YouCompleteMe) - code-completion engine (C/C++, Java, Python...)
-    * [syntastic](https://github.com/vim-syntastic/syntastic) - syntax checking
+    * [vim-plug](https://github.com/junegunn/vim-plug) - plugin manager
     * [vim-polyglot](https://github.com/sheerun/vim-polyglot) - syntax highlighting
     * [vim-autoclose](https://github.com/Townk/vim-autoclose) - type an `(` and automatically insert `)` for you
     * [vim-airline](https://github.com/vim-airline/vim-airline) - lean & mean status/tabline
-    * [nerdtree](https://github.com/scrooloose/nerdtree) - tree filesystem explorer
+    * [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) - icon pack for bufferline.nvim
+    * [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) - file explorer
+    * [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - tabline
     * [indentLine](https://github.com/Yggdroot/indentLine) - display indention levels with vertical lines
+    * [a.vim](https://github.com/vim-scripts/a.vim) - fast switching between *.h/*.hpp and *.c/*.cpp
     * [base16-faded](https://github.com/aesophor/base16-faded/tree/master/colors) - my personal vim colorscheme
   * [git](https://github.com/git/git) - distributed version-control system
     * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - git diff made human-readable!
   * [displayctl](https://github.com/aesophor/displayctl) - resolution, brightness, wallpaper, lockscreen manager
   * [py-todo](https://github.com/aesophor/py-todo) - lightweight cli todo-list
-  * [painter](https://github.com/aesophor/Painter) - X colorscheme manager
-  * [motd](https://github.com/aesophor/dotfiles/blob/master/scripts/.local/bin/motd) - display system info
-  * [scrotutl](https://github.com/aesophor/dotfiles/blob/master/scripts/.local/bin/scrotutl) - bring macOS screenshot keybinds to Linux
+  * [pfetch](https://github.com/dylanaraps/pfetch) - display system info
   * [ncmpcpp](https://github.com/arybczak/ncmpcpp) - ncurses based music player
-
-* GUI
-  * [wmderland](https://github.com/aesophor/Wmderland) - my tiling WM using space partitioning trees (C++)
-  * [Polybar](https://github.com/jaagr/polybar) - fast and easy-to-use status bar
-    * [siji](https://github.com/stark/siji) - iconic bitmap font based on Stlarch with additional glyphs
-  * [rofi](https://github.com/davatorium/rofi) - window switcher, application launcher and dmenu replacement
-  * [dunst](https://github.com/dunst-project/dunst) - lightweight and customizable notification daemon
-  * [compton](https://github.com/chjj/compton) - compositor for X11
-  * [Papirus-icon](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) - free and open source SVG icon theme for Linux, based on the Paper icon theme
-  * [Iosevka](https://github.com/be5invis/Iosevka) 14px - GUI font
-  * [arc-theme](https://github.com/horst3180/arc-theme) - flat theme with transparent elements for GTK 3, GTK 2
-  * [arc-kde](https://github.com/PapirusDevelopmentTeam/arc-kde) - Arc KDE customization for plasma 5
-  * [Kvantum](https://github.com/tsujan/Kvantum) - linux SVG-based theme engine for Qt4/Qt5 and KDE
-  * [dolphin](https://github.com/KDE/dolphin) - KDE file manager
-  * [ark](https://github.com/KDE/ark) - KDE file archiver
