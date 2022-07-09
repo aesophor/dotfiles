@@ -22,7 +22,6 @@ Plug 'kyazdani42/nvim-tree.lua'  " A file explorer tree
 Plug 'vim-scripts/a.vim'  " Switch between .c/.cc/.cpp and .h/.hh/.hpp
 Plug 'akinsho/bufferline.nvim'  " tabline
 Plug 'aesophor/base16-faded'  " Colorscheme
-"Plug 'folke/tokyonight.nvim', { 'branch': 'main' } " Colorscheme
 call plug#end()
 
 " Colors and Fonts.

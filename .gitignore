@@ -1,8 +1,8 @@
 .DS_Store
 error.log
-vim/.vim/undo/*
-vim/.vim/swaps/*
-vim/.vim/backups/*
+nvim/.nvim/undo/*
+nvim/.nvim/swaps/*
+nvim/.nvim/backups/*
 scripts/.local/bin/django-admin*
 scripts/.local/bin/pip-autoremove
 scripts/.local/bin/diff-so-fancy
