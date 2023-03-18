@@ -38,3 +38,5 @@
 	default = simple
 [url "ssh://git@github.com/"]
 	insteadOf = https://github.com/
+[core]
+	trustctime = false

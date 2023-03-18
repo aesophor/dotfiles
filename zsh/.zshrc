@@ -16,7 +16,7 @@ fi
 # (3) Disable auto-setting terminal title,
 # (4) Disable marking untracked files under VCS as dirty.
 # (5) Plugins
-ZSH_THEME="frisk"
+ZSH_THEME="af-magic"
 CASE_SENSITIVE="true"
 DISABLE_AUTO_TITLE="true"
 DISABLE_UNTRACKED_FILES_DIRTY="true"
@@ -31,11 +31,14 @@ source ~/.config/zsh/aliases
 source ~/.config/zsh/functions
 
 # Make GNU commands available
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
+export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:${PATH}"
+export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:${MANPATH}"
 
 # Add ~/.local/bin to $PATH.
 export PATH="$PATH:$HOME/.local/bin"
+
+# golang version manager
+source /Users/aesophor/.gvm/scripts/gvm
 
 # User configuration.
 USER_LANGUAGE="en_US.UTF-8"
@@ -53,8 +56,7 @@ _ls_colors="rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:
 zstyle ':completion:*:default' list-colors "${(s.:.)_ls_colors}"
 
 # Print welcome message and todo list.
-clear; lastlogin; echo
-PF_ASCII="macOS" pfetch
+clear
+lastlogin
+bunnyfetch
 todo
-
-export PATH=$PATH:/Users/aesophor/Library/Python/3.9/bin

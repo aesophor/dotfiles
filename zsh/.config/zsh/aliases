@@ -5,6 +5,7 @@ alias la='ls -lAh'
 alias ll='la'
 alias c='clear'
 alias cll='c; ll'
+alias rcd='cd $(pwd)'
 alias x86brew='arch -x86_64 /usr/local/bin/brew'
 
 # safer rm.
@@ -26,12 +27,6 @@ alias xit='exit'
 alias :q='exit'
 alias :q!='exit'
 
-# configuration shortcuts
-alias config-dp='vim ~/.xorg/displayctlrc'
-alias config-wm='vim ~/.config/wmderland/config'
-alias config-i3='vim ~/.config/i3/config'
-alias config-polybar='vim ~/.config/polybar/config'
-
 # bookmarks
 alias home='cd ~/; ll'
 alias code='cd ~/Code; ll'
@@ -47,10 +42,9 @@ alias dots="cd ~/Dots; ll"
 alias vpn='cd ~/.config/143vpn/TCP; ll'
 
 # shortcuts to my personal projects
-alias hack='cd ~/Code/hacklympics/Hacklympics; ll'
+alias blog='cd ~/Code/aesophor.github.io; ll'
+alias ctf='cd ~/Code/ctf; ll'
 alias vgl='cd ~/Code/vigilante; ll'
 alias wm='cd ~/Code/wmderland; ll'
 alias os='cd ~/Code/valkyrie; ll'
 alias uva='cd ~/Code/UVa; ll'
-alias web='cd /var/www/localhost/htdocs; ll'
-alias ctf='cd ~/CTF; ll'

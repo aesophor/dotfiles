@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-PATH=$PATH:/usr/local/bin
+PATH=$PATH:/opt/homebrew/bin
 
-#USERWM=/usr/local/bin/dwm
-USERWM=/Users/aesophor/Code/wmderland/build/wmderland
+#USERWM=/opt/homebrew/bin/dwm
+USERWM=/Users/aesophor/Code/Personal/wmderland/build/wmderland
 chdir /Users/aesophor

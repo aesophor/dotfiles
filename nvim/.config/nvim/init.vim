@@ -10,25 +10,28 @@ set number
 
 " Plugins.
 call plug#begin()
-Plug 'vim-airline/vim-airline'  " Lean & mean status/tabline
-Plug 'vim-airline/vim-airline-themes'
+Plug 'kyazdani42/nvim-web-devicons'  " NvimTree icons
+Plug 'kyazdani42/nvim-tree.lua'  " A file explorer tree
+Plug 'akinsho/bufferline.nvim'  " Tabline
+Plug 'nvim-lualine/lualine.nvim'  " Statusline
+Plug 'vim-scripts/a.vim'  " Switch between .c/.cc/.cpp and .h/.hh/.hpp
 Plug 'sheerun/vim-polyglot'  " Syntax highlighting
 Plug 'tpope/vim-surround'  " Change surrounding characters
 Plug 'spf13/vim-autoclose'  " Automatically insert closing parentheses/brackets
 Plug 'Yggdroot/indentLine'  " Display indentation levels with vertical lines
 Plug 'osyo-manga/vim-anzu'  " Display search status
-Plug 'kyazdani42/nvim-web-devicons'  " NvimTree icons
-Plug 'kyazdani42/nvim-tree.lua'  " A file explorer tree
-Plug 'vim-scripts/a.vim'  " Switch between .c/.cc/.cpp and .h/.hh/.hpp
-Plug 'akinsho/bufferline.nvim'  " tabline
-Plug 'aesophor/base16-faded'  " Colorscheme
+Plug 'drewtempelmeyer/palenight.vim'  " Colorscheme
+Plug 'ntpeters/vim-better-whitespace'  " Display trailing whitespaces
+Plug 'kien/ctrlp.vim'  " Fuzzy search
+Plug 'tpope/vim-fugitive'  " Git
 call plug#end()
 
 " Colors and Fonts.
 syntax enable
 set t_Co=256
 set encoding=utf-8
-colorscheme base16-faded
+set termguicolors
+colorscheme palenight
 
 " Configuration.
 set autoindent " Copy indent from last line when starting new line
@@ -67,7 +70,6 @@ set magic " Enable extended regexes
 set mouse=a " Enable mouse in all in all modes
 set noerrorbells " Disable error bells
 set nojoinspaces " Only insert single space after a '.', '?' and '!' with a join command
-set noshowmode " Don't show the current mode (airline.vim takes care of us)
 set nostartofline " Don't reset cursor to start of line when moving around
 set nowrap " Do not wrap lines
 set ofu=syntaxcomplete#Complete " Set omni-completion method
@@ -102,27 +104,8 @@ set winminheight=0 " Allow splits to be reduced to a single line
 set wrapscan " Searches wrap around end of file
 set nofoldenable " disable folding
 set relativenumber " relative line numbers
-
-" bufferline.nvim
-lua << EOF
-require("bufferline").setup {
-  options = {
-    buffer_close_icon = '×',
-    modified_icon = '●',
-    offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "left"}}
-  }
-}
-EOF
-
-" Airline
-let g:airline_theme = 'tomorrow'
-let g:airline_powerline_fonts = 0
-let g:airline_section_z = "%p%% %l:%c"
-let g:airline#extensions#tabline#enabled = 0
-let g:airline#extensions#tabline#tab_nr_type = 1
-let g:airline#extensions#branch#enabled = 0
-let g:airline#extensions#whitespace#enabled = 0
-let g:airline#extensions#hunks#non_zero_only = 1
+set tags=tags " ctags
+set shell=/bin/zsh
 
 " Buffers.
 nmap <S-j> :bp<CR>
@@ -130,12 +113,48 @@ nmap <S-k> :bn<CR>
 nmap <C-t> :e newfile<CR>
 nmap <C-w> :bp<CR>:bd #<CR>
 
-" NvimTree
+" Panes.
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+nmap <silent> <c-\> :vsp<CR>
+
 lua << EOF
-require("nvim-tree").setup {}
+require("bufferline").setup {
+  options = {
+    buffer_close_icon = ' ×',
+    modified_icon = ' •',
+    offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "left"}},
+  }
+}
+require('lualine').setup {
+  options = {
+    theme = 'nightfly',
+    component_separators = { left = '|', right = '|'},
+    section_separators = { left = '', right = ''}
+  }
+}
+require("nvim-tree").setup { view = { width = 35 } }
+local function open_nvim_tree()
+  require("nvim-tree.api").tree.toggle({ focus = false })
+end
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 EOF
+
 nmap <C-c> :wincmd p<CR>
-nmap <C-n> :NvimTreeToggle<CR>:wincmd p<CR>
+nmap <C-f> :NvimTreeToggle<CR>:wincmd p<CR>
+
+" Custom commands.
+cnoremap q qa
+command Term :vsp | term
+
+" Comfortable motion
+"let g:comfortable_motion_no_default_key_mappings = 1
+"let g:comfortable_motion_friction = 30.0
+"let g:comfortable_motion_air_drag = 10.0
+"noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(20)<CR>
+"noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-20)<CR>
 
 " vim-autoclose
 let g:autoclose_vim_commentmode = 1
@@ -147,6 +166,7 @@ let g:indentLine_fileTypeExclude = ['tex', 'markdown']
 
 " Filetype specific indentation.
 filetype plugin indent on " Enable filetype plugins
+autocmd FileType c setlocal shiftwidth=2 tabstop=2
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
 autocmd FileType json setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4

@@ -2,6 +2,8 @@ clear Mod1
 clear Mod4
 clear Mod2
 keycode 66 = Alt_L
+keycode 69 = Alt_R
 keycode 63 = Super_L
 add Mod2 = Alt_L
+add Mod2 = Alt_R
 add Mod4 = Super_L

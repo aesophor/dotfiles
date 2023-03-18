@@ -36,8 +36,8 @@ URxvt.keysym.C-Down:        resize-font:smaller
 URxvt.keysym.C-Up:          resize-font:bigger
 
 ! Terminfo
-URxvt*termName:             rxvt-unicode-256color
+URxvt*termName:             rxvt-256color
 
 ! Fonts
-URxvt*font: xft:Terminus (TTF):pixelsize=12
-URxvt*boldFont: xft:Terminus (TTF):bold:pixelsize=12
+URxvt*font: xft:Greybeard 13px:pixelsize=13
+URxvt*boldFont: xft:Greybeard 13px:bold:pixelsize=13
