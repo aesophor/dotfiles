@@ -20,7 +20,7 @@ Plug 'tpope/vim-surround'  " Change surrounding characters
 Plug 'spf13/vim-autoclose'  " Automatically insert closing parentheses/brackets
 Plug 'Yggdroot/indentLine'  " Display indentation levels with vertical lines
 Plug 'osyo-manga/vim-anzu'  " Display search status
-Plug 'drewtempelmeyer/palenight.vim'  " Colorscheme
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }  " Colorscheme
 Plug 'ntpeters/vim-better-whitespace'  " Display trailing whitespaces
 Plug 'kien/ctrlp.vim'  " Fuzzy search
 Plug 'tpope/vim-fugitive'  " Git
@@ -31,7 +31,7 @@ syntax enable
 set t_Co=256
 set encoding=utf-8
 set termguicolors
-colorscheme palenight
+colorscheme catppuccin-frappe
 
 " Configuration.
 set autoindent " Copy indent from last line when starting new line
@@ -126,11 +126,11 @@ require("bufferline").setup {
     buffer_close_icon = ' ×',
     modified_icon = ' •',
     offsets = {{filetype = "NvimTree", text = "File Explorer", text_align = "left"}},
+    separator_style = 'thin',
   }
 }
 require('lualine').setup {
   options = {
-    theme = 'nightfly',
     component_separators = { left = '|', right = '|'},
     section_separators = { left = '', right = ''}
   }
