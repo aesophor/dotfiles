@@ -21,10 +21,12 @@ Plug 'spf13/vim-autoclose'  " Automatically insert closing parentheses/brackets
 Plug 'Yggdroot/indentLine'  " Display indentation levels with vertical lines
 Plug 'osyo-manga/vim-anzu'  " Display search status
 Plug 'catppuccin/nvim', { 'as': 'catppuccin' }  " Colorscheme
-Plug 'Exafunction/codeium.vim'  " Copilot
 Plug 'ntpeters/vim-better-whitespace'  " Display trailing whitespaces
 Plug 'kien/ctrlp.vim'  " Fuzzy search
 Plug 'tpope/vim-fugitive'  " Git
+Plug 'neovim/nvim-lspconfig'
+Plug 'SmiteshP/nvim-navic'
+Plug 'utilyre/barbecue.nvim'
 call plug#end()
 
 " Colors and Fonts.
@@ -163,6 +165,44 @@ require("lualine").setup({
   tabline = {},
   extensions = {},
 })
+vim.diagnostic.disable()
+local navic = require("nvim-navic")
+navic.setup {
+  icons = {
+    File = ' ',
+    Module = ' ',
+    Namespace = ' ',
+    Package = ' ',
+    Class = ' ',
+    Method = ' ',
+    Property = ' ',
+    Field = ' ',
+    Constructor = ' ',
+    Enum = ' ',
+    Interface = ' ',
+    Function = ' ',
+    Variable = ' ',
+    Constant = ' ',
+    String = ' ',
+    Number = ' ',
+    Boolean = ' ',
+    Array = ' ',
+    Object = ' ',
+    Key = ' ',
+    Null = ' ',
+    EnumMember = ' ',
+    Struct = ' ',
+    Event = ' ',
+    Operator = ' ',
+    TypeParameter = ' '
+  }
+}
+require("lspconfig").clangd.setup {
+    on_attach = function(client, bufnr)
+        navic.attach(client, bufnr)
+    end
+}
+require("barbecue").setup()
 require("nvim-tree").setup { view = { width = 35 } }
 local function open_nvim_tree()
   require("nvim-tree.api").tree.toggle({ focus = false })
