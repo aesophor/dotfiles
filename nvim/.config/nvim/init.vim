@@ -10,23 +10,23 @@ set number
 
 " Plugins.
 call plug#begin()
-Plug 'kyazdani42/nvim-web-devicons'  " NvimTree icons
-Plug 'kyazdani42/nvim-tree.lua'  " A file explorer tree
-Plug 'akinsho/bufferline.nvim'  " Tabline
-Plug 'nvim-lualine/lualine.nvim'  " Statusline
-Plug 'vim-scripts/a.vim'  " Switch between .c/.cc/.cpp and .h/.hh/.hpp
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }  " Colorscheme
+Plug 'neovim/nvim-lspconfig'  " Nvim lsp
 Plug 'sheerun/vim-polyglot'  " Syntax highlighting
 Plug 'tpope/vim-surround'  " Change surrounding characters
 Plug 'spf13/vim-autoclose'  " Automatically insert closing parentheses/brackets
 Plug 'Yggdroot/indentLine'  " Display indentation levels with vertical lines
 Plug 'osyo-manga/vim-anzu'  " Display search status
-Plug 'catppuccin/nvim', { 'as': 'catppuccin' }  " Colorscheme
 Plug 'ntpeters/vim-better-whitespace'  " Display trailing whitespaces
-Plug 'kien/ctrlp.vim'  " Fuzzy search
-Plug 'tpope/vim-fugitive'  " Git
-Plug 'neovim/nvim-lspconfig'
-Plug 'SmiteshP/nvim-navic'
-Plug 'utilyre/barbecue.nvim'
+Plug 'kyazdani42/nvim-web-devicons'  " NvimTree icons
+Plug 'kyazdani42/nvim-tree.lua'  " A file explorer tree
+Plug 'akinsho/bufferline.nvim'  " Tabline
+Plug 'nvim-lualine/lualine.nvim'  " Statusline
+Plug 'SmiteshP/nvim-navic'  " Winbar/statusline plugin showing current code context
+Plug 'utilyre/barbecue.nvim'  " Make nvim-navic look like vscode winbar
+Plug 'vim-scripts/a.vim'  " Switch between .c/.cc/.cpp and .h/.hh/.hpp
+Plug 'dinhhuy258/git.nvim'  " Git
+Plug 'mileszs/ack.vim'  " Run your favorite search tool from Vim
 call plug#end()
 
 " Colors and Fonts.
@@ -124,6 +124,11 @@ nmap <silent> <C-l> :wincmd l<CR>
 nmap <silent> <c-\> :vsp<CR>
 
 lua << EOF
+require("nvim-tree").setup { view = { width = 35 } }
+local function open_nvim_tree()
+  require("nvim-tree.api").tree.toggle({ focus = false })
+end
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 require("bufferline").setup {
   options = {
     buffer_close_icon = ' ×',
@@ -165,34 +170,30 @@ require("lualine").setup({
   tabline = {},
   extensions = {},
 })
-vim.diagnostic.disable()
-require("nvim-navic").setup()
+vim.diagnostic.enable(false)
+require('git').setup({
+  winbar = true,
+})
+local navic = require("nvim-navic")
 require("lspconfig").clangd.setup {
     on_attach = function(client, bufnr)
         navic.attach(client, bufnr)
     end
 }
 require("barbecue").setup()
-require("nvim-tree").setup { view = { width = 35 } }
-local function open_nvim_tree()
-  require("nvim-tree.api").tree.toggle({ focus = false })
-end
-vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 EOF
 
 nmap <C-c> :wincmd p<CR>
 nmap <C-f> :NvimTreeToggle<CR>:wincmd p<CR>
 
+" Ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
+
 " Custom commands.
 cnoremap q qa
 command Term :vsp | term
-
-" Comfortable motion
-"let g:comfortable_motion_no_default_key_mappings = 1
-"let g:comfortable_motion_friction = 30.0
-"let g:comfortable_motion_air_drag = 10.0
-"noremap <silent> <ScrollWheelDown> :call comfortable_motion#flick(20)<CR>
-"noremap <silent> <ScrollWheelUp>   :call comfortable_motion#flick(-20)<CR>
 
 " vim-autoclose
 let g:autoclose_vim_commentmode = 1
@@ -210,6 +211,9 @@ autocmd FileType json setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
 autocmd FileType gitconfig setlocal shiftwidth=8 tabstop=8 noexpandtab
 autocmd Filetype gitcommit setlocal spell textwidth=72
+
+" Auto wrap for markdown
+au BufRead,BufNewFile *.md setlocal wrap
 
 " Cursor fix
 hi CursorLineNr term=bold cterm=bold ctermfg=012 gui=bold
