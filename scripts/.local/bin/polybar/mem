@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-free -h | grep Mem: | awk '{printf("%s", $3);}'

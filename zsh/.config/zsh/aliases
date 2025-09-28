@@ -40,11 +40,13 @@ alias musics='cd ~/Music; ll'
 alias games='cd ~/Games; ll'
 alias dots="cd ~/Dots; ll"
 alias vpn='cd ~/.config/143vpn/TCP; ll'
+alias icloud='cd /Users/aesophor/Library/Mobile\ Documents/com~apple~CloudDocs'
 
 # shortcuts to my personal projects
 alias blog='cd ~/Code/aesophor.github.io; ll'
 alias ctf='cd ~/Code/ctf; ll'
-alias vgl='cd ~/Code/vigilante; ll'
+alias req='cd ~/Code/requiem; ll'
 alias wm='cd ~/Code/wmderland; ll'
 alias os='cd ~/Code/valkyrie; ll'
 alias uva='cd ~/Code/UVa; ll'
+alias havoc='cd ~/Code/havoc.cc; ll'

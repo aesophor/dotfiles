@@ -2,25 +2,23 @@ function mkcd() {
     mkdir -p "$1" && cd "$1"
 }
 
-
 function xrdb_get_record() {
     xrdb -query | grep -i "$1" | sed -e "s/.*:[ \t]//"
 }
 
-
 function addpath() {
     # $1: Where all its subdirectories will be added to $PATH.
     bindir=$1
-    
+
     # Make sure $bindir is ended with a slash.
     # This is necessary for path concatenation.
     if [[ "$bindir" != *"/" ]]; then bindir=$bindir\/; fi
-    
+
     # @f splits at newlines only.
     # Make sure to disable ls color to make $PATH work correctly.
     # This will get all directories excluding *bar (e.g. polybar)
     DIRS=("${(@f)$(ls --color=never -d $bindir* | grep -v "bar")}")
-    
+
     for dir in $DIRS; do
         if [ -d $dir ]; then
             export PATH="$PATH:$dir"
@@ -28,10 +26,25 @@ function addpath() {
     done
 }
 
-
 function cleanup() {
     rm ~/.bash_history >/dev/null 2>&1
     rm ~/.bash_logout >/dev/null 2>&1
     rm ~/.lesshst >/dev/null 2>&1
     echo > ~/.zsh_history
+}
+
+function init_conda() {
+    # >>> conda initialize >>>
+    # !! Contents within this block are managed by 'conda init' !!
+    __conda_setup="$('/opt/homebrew/Caskroom/miniconda/base/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+    if [ $? -eq 0 ]; then
+        eval "$__conda_setup"
+    else
+        if [ -f "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh" ]; then
+            . "/opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh"
+        else
+            export PATH="/opt/homebrew/Caskroom/miniconda/base/bin:$PATH"
+        fi
+    fi
+    unset __conda_setup
 }

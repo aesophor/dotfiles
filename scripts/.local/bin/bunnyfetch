@@ -27,6 +27,9 @@ shell=$(basename $SHELL)
 o=os
 os="$(uname -s)"
 
+p=pk
+pkginfo="brew ($(brew list | wc -l) pkgs installed)"
+
 colors=$(for i in {0..7}; do echo -en "\e[${1}$((30 + $i))m▁▁▁"; done)
 
 # (\ /)
@@ -39,8 +42,8 @@ colors=$(for i in {0..7}; do echo -en "\e[${1}$((30 + $i))m▁▁▁"; done)
 
 cat << EOF
 
-  (\ /)    $f2$k $t~ $os
-  ( · ·$t)   $f3$h $t~ $kernel
-  c($f1"$t)($f1"$t)  $f1$sh $t~ $shell
+  (\ /)    $f2$k $t~ $os $kernel
+  ( · ·$t)   $f3$sh $t~ $shell
+  c($f1"$t)($f1"$t)  $f1$p $t~ $pkginfo
 
 EOF

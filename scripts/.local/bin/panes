@@ -2,22 +2,25 @@
 
 # Author: GekkoP
 # Source: http://linuxbbq.org/bbs/viewtopic.php?f=4&t=1656#p33189
- 
-f=3 b=4
+# Adapted for macOS by removing use of printf -v
+
+f=3
+b=4
+
+# Create color variables f0-f7 and b0-b7
 for j in f b; do
   for i in {0..7}; do
-    printf -v $j$i %b "\e[${!j}${i}m"
+    eval "${j}${i}=\$(printf '\e[%s%sm' \${!j} $i)"
   done
 done
-d=$'\e[1m'
-t=$'\e[0m'
-v=$'\e[7m'
- 
- 
-cat << EOF
- 
- $f1███$d▄$t  $f2███$d▄$t  $f3███$d▄$t  $f4███$d▄$t  $f5███$d▄$t  $f6███$d▄$t  $f7███$d▄$t  
- $f1███$d█$t  $f2███$d█$t  $f3███$d█$t  $f4███$d█$t  $f5███$d█$t  $f6███$d█$t  $f7███$d█$t  
- $f1███$d█$t  $f2███$d█$t  $f3███$d█$t  $f4███$d█$t  $f5███$d█$t  $f6███$d█$t  $f7███$d█$t  
- $d$f1 ▀▀▀   $f2▀▀▀   $f3▀▀▀   $f4▀▀▀   $f5▀▀▀   $f6▀▀▀   $f7▀▀▀  
-EOF
+
+d=$'\e[1m'   # bold
+t=$'\e[0m'   # reset
+v=$'\e[7m'   # reverse video (defined but not used)
+
+# Print the color blocks
+echo
+echo -e " ${f1}███${d}▄${t}  ${f2}███${d}▄${t}  ${f3}███${d}▄${t}  ${f4}███${d}▄${t}  ${f5}███${d}▄${t}  ${f6}███${d}▄${t}  ${f7}███${d}▄${t}"
+echo -e " ${f1}███${d}█${t}  ${f2}███${d}█${t}  ${f3}███${d}█${t}  ${f4}███${d}█${t}  ${f5}███${d}█${t}  ${f6}███${d}█${t}  ${f7}███${d}█${t}"
+echo -e " ${f1}███${d}█${t}  ${f2}███${d}█${t}  ${f3}███${d}█${t}  ${f4}███${d}█${t}  ${f5}███${d}█${t}  ${f6}███${d}█${t}  ${f7}███${d}█${t}"
+echo -e " ${d}${f1} ▀▀▀   ${f2}▀▀▀   ${f3}▀▀▀   ${f4}▀▀▀   ${f5}▀▀▀   ${f6}▀▀▀   ${f7}▀▀▀${t}"

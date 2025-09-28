@@ -1,2 +1,0 @@
-#!/usr/bin/env bash
-cd $HOME"/Games/MapleLegendsHD/" && wine MapleLegends.exe
