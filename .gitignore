@@ -1,5 +1,8 @@
 .DS_Store
 error.log
+mpd/.mpd/mpdstate
+mpd/.mpd/mpd.db
+mpd/.mpd/mpd.pid
 nvim/.nvim/undo/*
 nvim/.nvim/swaps/*
 nvim/.nvim/backups/*
