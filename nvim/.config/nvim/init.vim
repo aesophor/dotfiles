@@ -178,11 +178,12 @@ require('git').setup({
   winbar = true,
 })
 local navic = require("nvim-navic")
-require("lspconfig").clangd.setup {
+vim.lsp.config('clangd', {
     on_attach = function(client, bufnr)
         navic.attach(client, bufnr)
     end
-}
+})
+vim.lsp.enable('clangd')
 require("barbecue").setup()
 vim.api.nvim_set_hl(0, "MsgArea", { bg = "#2a2c3d" })
 EOF
