@@ -16,6 +16,7 @@ alias rm='rm -i'
 alias bitch='sudo'
 alias bitchedit='sudoedit'
 alias gdb='gdb -q'
+alias tmux='tmux new-session -A -s tmux'
 
 # typos
 alias cl='c; l'
