@@ -130,6 +130,9 @@ local function open_nvim_tree()
 end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 require("bufferline").setup {
+  highlights = {
+    fill = { bg = 'none' },
+  },
   options = {
     buffer_close_icon = ' ×',
     modified_icon = ' •',
@@ -181,6 +184,7 @@ require("lspconfig").clangd.setup {
     end
 }
 require("barbecue").setup()
+vim.api.nvim_set_hl(0, "MsgArea", { bg = "#2a2c3d" })
 EOF
 
 nmap <C-c> :wincmd p<CR>
@@ -205,7 +209,7 @@ let g:indentLine_fileTypeExclude = ['tex', 'markdown']
 
 " Filetype specific indentation.
 filetype plugin indent on " Enable filetype plugins
-autocmd FileType c setlocal shiftwidth=2 tabstop=2
+autocmd FileType c setlocal shiftwidth=8 tabstop=8
 autocmd FileType cpp setlocal shiftwidth=2 tabstop=2
 autocmd FileType json setlocal shiftwidth=4 tabstop=4
 autocmd FileType python setlocal shiftwidth=4 tabstop=4
