@@ -107,6 +107,7 @@ set winminheight=0 " Allow splits to be reduced to a single line
 set wrapscan " Searches wrap around end of file
 set nofoldenable " disable folding
 set relativenumber " relative line numbers
+set clipboard+=unnamedplus " Copy/paste with system clipboard
 set tags=tags " ctags
 set shell=/bin/zsh
 
