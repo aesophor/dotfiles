@@ -2,7 +2,7 @@
 <h3>.dotfiles</h3>
 <img src="/.meta/cover.png">
 
-`macOS Monterey (12.4)`
+`macOS Tahoe (26.3)`
 </div>
 
 ## Requirements
@@ -30,25 +30,31 @@ To install all the available packages
     * [oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh) - framework for managing your zsh configuration
     * [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - suggest commands as you type, based on command history
     * [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting) - fish shell-like syntax highlighting for zsh
-  * [URxvt](https://github.com/exg/rxvt-unicode) - a customizable terminal emulator forked from rxvt
-    * [urxvt-resize-font](https://github.com/simmel/urxvt-resize-font) - resize the font with keybinds
-    * [urxvt-config-reload](https://github.com/regnarg/urxvt-config-reload) - reload urxvt configuration at runtime
+  * [iTerm2](https://iterm2.com) - macOS terminal replacement
     * [Iosevka](https://github.com/be5invis/Iosevka) 14px - terminal font
-    * [wqy-bitmapfont](https://packages.gentoo.org/packages/media-fonts/wqy-bitmapfont) - chinese font
-  * [Neovim](https://github.com/vim/vim) - I write C/C++, Python, shellscripts in Neovim, and Java in IntelliJ IDE.
+  * [Neovim](https://github.com/vim/vim) - I do 99% of my work in neovim
     * [vim-plug](https://github.com/junegunn/vim-plug) - plugin manager
     * [vim-polyglot](https://github.com/sheerun/vim-polyglot) - syntax highlighting
     * [vim-autoclose](https://github.com/Townk/vim-autoclose) - type an `(` and automatically insert `)` for you
-    * [vim-airline](https://github.com/vim-airline/vim-airline) - lean & mean status/tabline
+    * [indentLine](https://github.com/Yggdroot/indentLine) - display indention levels with vertical lines
+    * [vim-anzu](https://github.com/osyo-manga/vim-anzu) - search status
     * [nvim-web-devicons](https://github.com/kyazdani42/nvim-web-devicons) - icon pack for bufferline.nvim
     * [nvim-tree.lua](https://github.com/kyazdani42/nvim-tree.lua) - file explorer
     * [bufferline.nvim](https://github.com/akinsho/bufferline.nvim) - tabline
-    * [indentLine](https://github.com/Yggdroot/indentLine) - display indention levels with vertical lines
+    * [lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) - statusline
+    * [barbecue.nvim](https://github.com/utilyre/barbecue.nvim) - vscode inspired breadcrumbs
     * [a.vim](https://github.com/vim-scripts/a.vim) - fast switching between *.h/*.hpp and *.c/*.cpp
-    * [base16-faded](https://github.com/aesophor/base16-faded/tree/master/colors) - my personal vim colorscheme
+    * [git.nvim](https://github.com/dinhhuy258/git.nvim) - git blame the god damn bastard who wrote this line
   * [git](https://github.com/git/git) - distributed version-control system
     * [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy) - git diff made human-readable!
-  * [displayctl](https://github.com/aesophor/displayctl) - resolution, brightness, wallpaper, lockscreen manager
+  * [rmpc](https://github.com/mierak/rmpc) - modern, configurable, terminal based MPD Client
   * [py-todo](https://github.com/aesophor/py-todo) - lightweight cli todo-list
-  * [pfetch](https://github.com/dylanaraps/pfetch) - display system info
-  * [ncmpcpp](https://github.com/arybczak/ncmpcpp) - ncurses based music player
+
+* GUI
+  * [Alcove](https://tryalcove.com) - Dynamic island for you mac ($13.99)
+  * [AltTab](https://alt-tab-macos.netlify.app) - Windows alt-tab on macOS (free)
+  * [BetterDisplay](https://betterdisplay.pro) - Unlock HiDPI for any screen (free)
+  * [BetterMouse](https://better-mouse.com) - Comprehensive mouse utility ($7.99)
+  * [BetterZip](https://macitbetter.com) - The most advanced zip and rar archiver ($24.95)
+  * [Ice](https://github.com/jordanbaird/Ice) - Powerful menu bar manager for macOS (free)
+  * [LittleSnitch](https://www.obdev.at/products/littlesnitch) - (€59.00)
