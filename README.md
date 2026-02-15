@@ -1,6 +1,6 @@
 <div align="center">
 <h3>.dotfiles</h3>
-<img src="https://github.com/aesophor/dotfiles/raw/master/.meta/main.png">
+<img src="https://github.com/aesophor/dotfiles/raw/linux/.meta/main.png">
 
 `Arch` `KDE / wmderland` `Polybar` `base16-material-palenight`
 </div>
@@ -45,8 +45,8 @@ $ ./.install.sh
   * [displayctl](https://github.com/aesophor/displayctl) - resolution, brightness, wallpaper, lockscreen manager
   * [py-todo](https://github.com/aesophor/py-todo) - lightweight cli todo-list
   * [painter](https://github.com/aesophor/Painter) - X colorscheme manager
-  * [motd](https://github.com/aesophor/dotfiles/blob/master/scripts/.local/bin/motd) - display system info
-  * [scrotutl](https://github.com/aesophor/dotfiles/blob/master/scripts/.local/bin/scrotutl) - bring macOS screenshot keybinds to Linux
+  * [motd](https://github.com/aesophor/dotfiles/blob/linux/scripts/.local/bin/motd) - display system info
+  * [scrotutl](https://github.com/aesophor/dotfiles/blob/linux/scripts/.local/bin/scrotutl) - bring macOS screenshot keybinds to Linux
   * [ncmpcpp](https://github.com/arybczak/ncmpcpp) - ncurses based music player
 
 * GUI
