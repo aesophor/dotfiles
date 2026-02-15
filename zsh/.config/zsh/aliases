@@ -10,7 +10,6 @@ alias x86brew='arch -x86_64 /usr/local/bin/brew'
 
 # safer rm.
 alias rm='rm -i'
-#alias rm -rf='rm -irf'
 
 # corrections
 alias bitch='sudo'
@@ -47,7 +46,4 @@ alias icloud='cd /Users/aesophor/Library/Mobile\ Documents/com~apple~CloudDocs'
 alias blog='cd ~/Code/aesophor.github.io; ll'
 alias ctf='cd ~/Code/ctf; ll'
 alias req='cd ~/Code/requiem; ll'
-alias wm='cd ~/Code/wmderland; ll'
 alias os='cd ~/Code/valkyrie; ll'
-alias uva='cd ~/Code/UVa; ll'
-alias havoc='cd ~/Code/havoc.cc; ll'
