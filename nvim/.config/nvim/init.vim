@@ -143,7 +143,7 @@ require("bufferline").setup {
 }
 require("lualine").setup({
   options = {
-    theme = "catppuccin",
+    theme = "catppuccin-frappe",
     component_separators = "|",
     section_separators = { left = "", right = "" },
   },
