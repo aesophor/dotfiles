@@ -1,5 +1,5 @@
 # shortcuts
-alias ls="gls --color=auto -hX --group-directories-first"
+alias ls="gls --color=auto -h --group-directories-first"
 alias l='ls'
 alias la='ls -lAh'
 alias ll='la'
@@ -7,6 +7,7 @@ alias c='clear'
 alias cll='c; ll'
 alias rcd='cd $(pwd)'
 alias x86brew='arch -x86_64 /usr/local/bin/brew'
+alias tmux-new='tmux new-session -A -s host'
 
 # safer rm.
 alias rm='rm -i'
@@ -14,8 +15,6 @@ alias rm='rm -i'
 # corrections
 alias bitch='sudo'
 alias bitchedit='sudoedit'
-alias gdb='gdb -q'
-alias tmux='tmux new-session -A -s tmux'
 
 # typos
 alias cl='c; l'
@@ -41,9 +40,13 @@ alias games='cd ~/Games; ll'
 alias dots="cd ~/Dots; ll"
 alias vpn='cd ~/.config/143vpn/TCP; ll'
 alias icloud='cd /Users/aesophor/Library/Mobile\ Documents/com~apple~CloudDocs'
+alias syno='cd ~/Code/synology; ll'
 
 # shortcuts to my personal projects
 alias blog='cd ~/Code/aesophor.github.io; ll'
 alias ctf='cd ~/Code/ctf; ll'
 alias req='cd ~/Code/requiem; ll'
 alias os='cd ~/Code/valkyrie; ll'
+
+# misc
+alias synovpn='bitch openfortivpn -c ~/.config/openfortivpn/synology.conf'
