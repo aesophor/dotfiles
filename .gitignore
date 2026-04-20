@@ -1,8 +1,10 @@
 .DS_Store
 error.log
+git/.config/git/config.syno
 mpd/.mpd/mpdstate
 mpd/.mpd/mpd.db
 mpd/.mpd/mpd.pid
+mpd/.mpd/mpd.log
 nvim/.nvim/undo/*
 nvim/.nvim/swaps/*
 nvim/.nvim/backups/*
