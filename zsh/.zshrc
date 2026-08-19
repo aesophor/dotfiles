@@ -64,7 +64,9 @@ export PATH=$AX_ROOT/tools/cmdline:$PATH
 # Print welcome message and todo list.
 clear
 lastlogin
-bunnyfetch
+echo
+cutefetch
+echo
 todo
 
 # zoxide
