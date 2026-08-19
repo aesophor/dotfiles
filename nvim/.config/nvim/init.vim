@@ -141,6 +141,54 @@ local function open_nvim_tree()
 end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
+-- Close the nvim-tree window too when :q would leave only it behind.
+vim.api.nvim_create_autocmd("QuitPre", {
+  callback = function()
+    local tree_wins, floating_wins = {}, {}
+    local wins = vim.api.nvim_list_wins()
+    for _, w in ipairs(wins) do
+      local bufname = vim.api.nvim_buf_get_name(vim.api.nvim_win_get_buf(w))
+      if bufname:match("NvimTree_") ~= nil then
+        table.insert(tree_wins, w)
+      end
+      if vim.api.nvim_win_get_config(w).relative ~= "" then
+        table.insert(floating_wins, w)
+      end
+    end
+    if 1 == #wins - #floating_wins - #tree_wins then
+      for _, w in ipairs(tree_wins) do
+        vim.api.nvim_win_close(w, true)
+      end
+    end
+  end,
+})
+
+-- :q asks for confirmation when other buffers are still open.
+local function real_win_count()
+  local n = 0
+  for _, w in ipairs(vim.api.nvim_tabpage_list_wins(0)) do
+    local ft = vim.bo[vim.api.nvim_win_get_buf(w)].filetype
+    if vim.api.nvim_win_get_config(w).relative == "" and ft ~= "NvimTree" then
+      n = n + 1
+    end
+  end
+  return n
+end
+
+vim.api.nvim_create_user_command("Q", function(opts)
+  local listed = #vim.fn.getbufinfo({ buflisted = 1 })
+  local last_window = #vim.api.nvim_list_tabpages() == 1 and real_win_count() == 1
+  if not opts.bang and last_window and listed > 1 then
+    local msg = listed .. " buffers are still open. Quit nvim anyway?"
+    if vim.fn.confirm(msg, "&Yes\n&No", 2) ~= 1 then
+      return
+    end
+  end
+  vim.cmd(opts.bang and "quit!" or "quit")
+end, { bang = true })
+
+vim.cmd([[cnoreabbrev <expr> q (getcmdtype() ==# ":" && getcmdline() ==# "q") ? "Q" : "q"]])
+
 require("bufferline").setup {
   highlights = {
     fill = { bg = 'none' },
@@ -209,7 +257,6 @@ if executable('ag')
 endif
 
 " Custom commands.
-cnoremap q qa
 command Term :vsp | term
 
 " vim-autoclose
