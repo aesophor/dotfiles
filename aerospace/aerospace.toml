@@ -38,6 +38,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     alt-g = 'split horizontal'
     alt-v = 'split vertical'
 
+    alt-shift-q = 'close'
     alt-shift-f = 'macos-native-fullscreen'
     alt-shift-space = 'layout floating tiling' # toggle floating / tiling
 
@@ -75,8 +76,20 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
     if.app-id = 'com.googlecode.iterm2'
     run = 'move-node-to-workspace 1'
 [[on-window-detected]]
+    if.app-id = 'com.apple.dt.Xcode'
+    run = 'move-node-to-workspace 2'
+[[on-window-detected]]
+    if.app-id = 'md.obsidian'
+    run = 'move-node-to-workspace 2'
+[[on-window-detected]]
     if.app-id = 'com.apple.Safari'
     run = 'move-node-to-workspace 3'
+[[on-window-detected]]
+    if.app-id = 'com.google.Chrome'
+    run = 'move-node-to-workspace 3'
+[[on-window-detected]]
+    if.app-id = 'com.xnview.XnView'
+    run = 'move-node-to-workspace 0'
 [[on-window-detected]]
     if.app-id = 'com.apple.finder'
     run = 'layout floating'
