@@ -34,7 +34,17 @@ syntax enable
 set t_Co=256
 set encoding=utf-8
 set termguicolors
-colorscheme catppuccin-frappe
+lua << EOF
+require("catppuccin").setup({
+  integrations = {
+    nvimtree = true,
+    navic = { custom_bg = "NONE" },
+    barbecue = { dim_dirname = true, bold_basename = true },
+    bufferline = true,
+  },
+})
+EOF
+colorscheme catppuccin-macchiato
 
 " Configuration.
 set autoindent " Copy indent from last line when starting new line
@@ -107,7 +117,7 @@ set winminheight=0 " Allow splits to be reduced to a single line
 set wrapscan " Searches wrap around end of file
 set nofoldenable " disable folding
 set relativenumber " relative line numbers
-set clipboard+=unnamedplus " Copy/paste with system clipboard
+"set clipboard+=unnamedplus " Copy/paste with system clipboard
 set tags=tags " ctags
 set shell=/bin/zsh
 
@@ -130,6 +140,7 @@ local function open_nvim_tree()
   require("nvim-tree.api").tree.toggle({ focus = false })
 end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
+
 require("bufferline").setup {
   highlights = {
     fill = { bg = 'none' },
@@ -143,7 +154,7 @@ require("bufferline").setup {
 }
 require("lualine").setup({
   options = {
-    theme = "catppuccin-frappe",
+    theme = "catppuccin-macchiato",
     component_separators = "|",
     section_separators = { left = "", right = "" },
   },
@@ -186,7 +197,7 @@ vim.lsp.config('clangd', {
 })
 vim.lsp.enable('clangd')
 require("barbecue").setup()
-vim.api.nvim_set_hl(0, "MsgArea", { bg = "#2a2c3d" })
+vim.api.nvim_set_hl(0, "MsgArea", { bg = "#1e2030" })
 EOF
 
 nmap <C-c> :wincmd p<CR>
