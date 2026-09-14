@@ -141,6 +141,20 @@ local function open_nvim_tree()
 end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
+-- Hide the "~" end-of-buffer markers in NvimTree.
+local tree_api = require("nvim-tree.api")
+tree_api.events.subscribe(tree_api.events.Event.TreeRendered, function(data)
+  local w = data.winnr
+  if not w or not vim.api.nvim_win_is_valid(w) then
+    return
+  end
+  local fcs = vim.api.nvim_get_option_value("fillchars", { win = w, scope = "local" })
+  if not fcs:match("eob:") then
+    local sep = fcs == "" and "" or ","
+    vim.api.nvim_set_option_value("fillchars", fcs .. sep .. "eob: ", { win = w, scope = "local" })
+  end
+end)
+
 -- Close the nvim-tree window too when :q would leave only it behind.
 vim.api.nvim_create_autocmd("QuitPre", {
   callback = function()
