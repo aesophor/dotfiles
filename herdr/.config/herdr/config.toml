@@ -1,0 +1,57 @@
+onboarding = false
+
+# Keybindings ported from ~/Dots/tmux/.tmux.conf
+[keys]
+prefix = "ctrl+a"
+
+# Reload config (tmux: prefix r). resize_mode moved off "r" to free it.
+reload_config = "prefix+r"
+resize_mode = "prefix+shift+r"
+
+# Switch panes (tmux: prefix h/j/k/l) — same as herdr defaults
+focus_pane_left = "prefix+h"
+focus_pane_down = "prefix+j"
+focus_pane_up = "prefix+k"
+focus_pane_right = "prefix+l"
+
+# Switch tabs (tmux windows: prefix p/n, prefix 1..9)
+previous_tab = "prefix+p"
+next_tab = "prefix+n"
+switch_tab = ""
+switch_workspace = "prefix+1..9"
+
+
+# Split panes (tmux: prefix \ = side by side, prefix - = stacked)
+split_vertical = "prefix+backslash"
+split_horizontal = "prefix+minus"
+
+# Resize panes (tmux: prefix H/J/K/L)
+resize_pane_left = "prefix+shift+h"
+resize_pane_down = "prefix+shift+j"
+resize_pane_up = "prefix+shift+k"
+resize_pane_right = "prefix+shift+l"
+
+# Toggle zoom (tmux: M-z, no prefix)
+zoom = ["prefix+z", "alt+z"]
+
+# Kill pane / kill tab (tmux: prefix x / prefix X)
+close_pane = "prefix+x"
+close_tab = "prefix+shift+x"
+
+# Move tab left/right (tmux: prefix < / prefix >)
+move_tab_previous = "prefix+shift+comma"
+move_tab_next = "prefix+shift+period"
+
+# Re-number spaces after creating/closing/reordering them
+[[keys.command]]
+key = "prefix+shift+s"
+type = "shell"
+command = "herdr-number-spaces"
+
+# Show workspace number in the sidebar
+[ui.sidebar.spaces]
+row_gap = 0
+rows = [
+  ["state_icon", "$title"],
+  ["branch", "git_status"],
+]

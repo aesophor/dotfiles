@@ -1,0 +1,58 @@
+#!/usr/bin/env python3
+"""Show "N name" for each herdr workspace in the sidebar via the $title token.
+
+  herdr-number-spaces           renumber once
+  herdr-number-spaces --watch   renumber on every workspace create/move/close/rename
+"""
+import json, os, socket, sys, time
+
+SOCK = os.path.expanduser("~/.config/herdr/herdr.sock")
+EVENTS = ["workspace.created", "workspace.moved", "workspace.reordered",
+          "workspace.closed", "workspace.renamed"]
+
+
+def call(method, params=None):
+    s = socket.socket(socket.AF_UNIX)
+    s.connect(SOCK)
+    s.sendall((json.dumps({"id": "n", "method": method, "params": params or {}}) + "\n").encode())
+    buf = b""
+    while not buf.endswith(b"\n"):
+        chunk = s.recv(65536)
+        if not chunk:
+            break
+        buf += chunk
+    s.close()
+    return json.loads(buf)
+
+
+def renumber():
+    for ws in call("workspace.list")["result"]["workspaces"]:
+        call("workspace.report_metadata", {
+            "workspace_id": ws["workspace_id"],
+            "source": "numspaces",
+            "tokens": {"title": f'{ws["number"]} {ws["label"]}'},
+        })
+
+
+def watch():
+    while True:
+        try:
+            renumber()
+            s = socket.socket(socket.AF_UNIX)
+            s.connect(SOCK)
+            req = {"id": "sub", "method": "events.subscribe",
+                   "params": {"subscriptions": [{"type": t} for t in EVENTS]}}
+            s.sendall((json.dumps(req) + "\n").encode())
+            f = s.makefile()
+            f.readline()  # subscription ack
+            for line in f:
+                if '"error"' in line:  # e.g. events_lost: resubscribe
+                    break
+                renumber()
+        except (OSError, ValueError, KeyError):
+            pass
+        time.sleep(2)  # server down or restarting: retry
+
+
+if __name__ == "__main__":
+    watch() if "--watch" in sys.argv else renumber()

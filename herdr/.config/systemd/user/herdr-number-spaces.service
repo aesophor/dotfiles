@@ -1,0 +1,10 @@
+[Unit]
+Description=Number herdr workspaces in the sidebar
+
+[Service]
+ExecStart=%h/.local/bin/herdr-number-spaces --watch
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
